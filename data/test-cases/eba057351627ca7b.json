@@ -1,0 +1,202 @@
+{
+  "uid" : "eba057351627ca7b",
+  "name" : "test_tc_11_01_04",
+  "fullName" : "tests.test_gear.TestGearPage#test_tc_11_01_04",
+  "historyId" : "84b5fce36034afb0f93cabfea0284c7e",
+  "time" : {
+    "start" : 1697333280037,
+    "stop" : 1697333285385,
+    "duration" : 5348
+  },
+  "description" : "Check that fitness_equipment is displayed and enabled",
+  "descriptionHtml" : "<p>Check that fitness_equipment is displayed and enabled</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cb3f53f6b3 <unknown>\n#1 0x55cb3f2151e7 <unknown>\n#2 0x55cb3f25c566 <unknown>\n#3 0x55cb3f25c651 <unknown>\n#4 0x55cb3f299a74 <unknown>\n#5 0x55cb3f27e0ed <unknown>\n#6 0x55cb3f297322 <unknown>\n#7 0x55cb3f27de93 <unknown>\n#8 0x55cb3f250934 <unknown>\n#9 0x55cb3f25171e <unknown>\n#10 0x55cb3f504cb8 <unknown>\n#11 0x55cb3f508bf0 <unknown>\n#12 0x55cb3f51319c <unknown>\n#13 0x55cb3f509808 <unknown>\n#14 0x55cb3f4d627f <unknown>\n#15 0x55cb3f52de88 <unknown>\n#16 0x55cb3f52e059 <unknown>\n#17 0x55cb3f53e843 <unknown>\n#18 0x7fd93e694b43 <unknown>",
+  "statusTrace" : "self = <test_gear.TestGearPage object at 0x7fe0b12ffc10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4410a412e037913ff201e242489cf9cf\")>\n\n    def test_tc_11_01_04(self, driver):\n        \"\"\"Check that fitness_equipment is displayed and enabled\"\"\"\n        page = GearPage(driver, GEAR_PAGE_URL)\n        page.open()\n>       fitness_equipment = page.check_fitness_equipment_element()\n\ntests/test_gear.py:34: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/gear_page_.py:29: in check_fitness_equipment_element\n    fitness_equipment = self.element_is_clickable(self.locators.FITNESS_EQUIPMENT)\npages/base_page.py:80: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"4410a412e037913ff201e242489cf9cf\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7fe0b09b3ba0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55cb3f53f6b3 <unknown>\nE       #1 0x55cb3f2151e7 <unknown>\nE       #2 0x55cb3f25c566 <unknown>\nE       #3 0x55cb3f25c651 <unknown>\nE       #4 0x55cb3f299a74 <unknown>\nE       #5 0x55cb3f27e0ed <unknown>\nE       #6 0x55cb3f297322 <unknown>\nE       #7 0x55cb3f27de93 <unknown>\nE       #8 0x55cb3f250934 <unknown>\nE       #9 0x55cb3f25171e <unknown>\nE       #10 0x55cb3f504cb8 <unknown>\nE       #11 0x55cb3f508bf0 <unknown>\nE       #12 0x55cb3f51319c <unknown>\nE       #13 0x55cb3f509808 <unknown>\nE       #14 0x55cb3f4d627f <unknown>\nE       #15 0x55cb3f52de88 <unknown>\nE       #16 0x55cb3f52e059 <unknown>\nE       #17 0x55cb3f53e843 <unknown>\nE       #18 0x7fd93e694b43 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1697332188525,
+      "stop" : 1697332188634,
+      "duration" : 109
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1697333278980,
+      "stop" : 1697333280036,
+      "duration" : 1056
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1697332188634,
+      "stop" : 1697332188634,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that fitness_equipment is displayed and enabled",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cb3f53f6b3 <unknown>\n#1 0x55cb3f2151e7 <unknown>\n#2 0x55cb3f25c566 <unknown>\n#3 0x55cb3f25c651 <unknown>\n#4 0x55cb3f299a74 <unknown>\n#5 0x55cb3f27e0ed <unknown>\n#6 0x55cb3f297322 <unknown>\n#7 0x55cb3f27de93 <unknown>\n#8 0x55cb3f250934 <unknown>\n#9 0x55cb3f25171e <unknown>\n#10 0x55cb3f504cb8 <unknown>\n#11 0x55cb3f508bf0 <unknown>\n#12 0x55cb3f51319c <unknown>\n#13 0x55cb3f509808 <unknown>\n#14 0x55cb3f4d627f <unknown>\n#15 0x55cb3f52de88 <unknown>\n#16 0x55cb3f52e059 <unknown>\n#17 0x55cb3f53e843 <unknown>\n#18 0x7fd93e694b43 <unknown>",
+    "statusTrace" : "self = <test_gear.TestGearPage object at 0x7fe0b12ffc10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4410a412e037913ff201e242489cf9cf\")>\n\n    def test_tc_11_01_04(self, driver):\n        \"\"\"Check that fitness_equipment is displayed and enabled\"\"\"\n        page = GearPage(driver, GEAR_PAGE_URL)\n        page.open()\n>       fitness_equipment = page.check_fitness_equipment_element()\n\ntests/test_gear.py:34: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/gear_page_.py:29: in check_fitness_equipment_element\n    fitness_equipment = self.element_is_clickable(self.locators.FITNESS_EQUIPMENT)\npages/base_page.py:80: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"4410a412e037913ff201e242489cf9cf\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7fe0b09b3ba0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55cb3f53f6b3 <unknown>\nE       #1 0x55cb3f2151e7 <unknown>\nE       #2 0x55cb3f25c566 <unknown>\nE       #3 0x55cb3f25c651 <unknown>\nE       #4 0x55cb3f299a74 <unknown>\nE       #5 0x55cb3f27e0ed <unknown>\nE       #6 0x55cb3f297322 <unknown>\nE       #7 0x55cb3f27de93 <unknown>\nE       #8 0x55cb3f250934 <unknown>\nE       #9 0x55cb3f25171e <unknown>\nE       #10 0x55cb3f504cb8 <unknown>\nE       #11 0x55cb3f508bf0 <unknown>\nE       #12 0x55cb3f51319c <unknown>\nE       #13 0x55cb3f509808 <unknown>\nE       #14 0x55cb3f4d627f <unknown>\nE       #15 0x55cb3f52de88 <unknown>\nE       #16 0x55cb3f52e059 <unknown>\nE       #17 0x55cb3f53e843 <unknown>\nE       #18 0x7fd93e694b43 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1697333280037,
+        "stop" : 1697333280264,
+        "duration" : 227
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1697333280264,
+        "stop" : 1697333285384,
+        "duration" : 5120
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cb3f53f6b3 <unknown>\n#1 0x55cb3f2151e7 <unknown>\n#2 0x55cb3f25c566 <unknown>\n#3 0x55cb3f25c651 <unknown>\n#4 0x55cb3f299a74 <unknown>\n#5 0x55cb3f27e0ed <unknown>\n#6 0x55cb3f297322 <unknown>\n#7 0x55cb3f27de93 <unknown>\n#8 0x55cb3f250934 <unknown>\n#9 0x55cb3f25171e <unknown>\n#10 0x55cb3f504cb8 <unknown>\n#11 0x55cb3f508bf0 <unknown>\n#12 0x55cb3f51319c <unknown>\n#13 0x55cb3f509808 <unknown>\n#14 0x55cb3f4d627f <unknown>\n#15 0x55cb3f52de88 <unknown>\n#16 0x55cb3f52e059 <unknown>\n#17 0x55cb3f53e843 <unknown>\n#18 0x7fd93e694b43 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 80, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('xpath', \"//dl[@id='narrow-by-list2']//a[text()='Fitness Equipment']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "689971c7a7f22ad",
+      "name" : "Screenshot",
+      "source" : "689971c7a7f22ad.png",
+      "type" : "image/png",
+      "size" : 14924
+    }, {
+      "uid" : "54b537075c5bf27a",
+      "name" : "HTML source",
+      "source" : "54b537075c5bf27a.html",
+      "type" : "text/html",
+      "size" : 571
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1697333285553,
+      "stop" : 1697333285615,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1697335158583,
+      "stop" : 1697335158584,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_gear"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGearPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az163-423"
+  }, {
+    "name" : "thread",
+    "value" : "3041-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_gear"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "eba057351627ca7b.json",
+  "parameterValues" : [ ]
+}
