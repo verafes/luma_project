@@ -1,0 +1,498 @@
+{
+  "uid" : "379f8910c951c166",
+  "name" : "TC 03.02.05 Verify error on attempting to log in with empty email - Negative",
+  "fullName" : "tests.test_sign_in.TestLogin#test_03_02_05_error_if_login_with_empty_password",
+  "historyId" : "1671eade30fea13ce3a08a7945e43e0d",
+  "time" : {
+    "start" : 1700357701651,
+    "stop" : 1700357702181,
+    "duration" : 530
+  },
+  "description" : "Check error message on attempt to log in with empty password",
+  "descriptionHtml" : "<p>Check error message on attempt to log in with empty password</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1700356378984,
+      "stop" : 1700356379047,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1700357700756,
+      "stop" : 1700357701651,
+      "duration" : 895
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1700357700756,
+        "stop" : 1700357701651,
+        "duration" : 895
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1700357699799,
+      "stop" : 1700357700756,
+      "duration" : 957
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1700356379047,
+      "stop" : 1700356379047,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check error message on attempt to log in with empty password",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Fill in Email field",
+      "time" : {
+        "start" : 1700357701651,
+        "stop" : 1700357701957,
+        "duration" : 306
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Email field is clickable",
+        "time" : {
+          "start" : 1700357701651,
+          "stop" : 1700357701699,
+          "duration" : 48
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1700357701652,
+            "stop" : 1700357701699,
+            "duration" : 47
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1700357701699,
+          "stop" : 1700357701957,
+          "duration" : 258
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1700357701700,
+            "stop" : 1700357701738,
+            "duration" : 38
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"78c6a90d7f738de27e60b0048dcd0698\", element=\"D1E4C58A9B7D0D25165689CDE5B53A80_element_5\")>"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"78c6a90d7f738de27e60b0048dcd0698\", element=\"D1E4C58A9B7D0D25165689CDE5B53A80_element_5\")>"
+        }, {
+          "name" : "value",
+          "value" : "'teston120@mailinator.com'"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'teston120@mailinator.com'"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Fill in Password field",
+      "time" : {
+        "start" : 1700357701957,
+        "stop" : 1700357702087,
+        "duration" : 130
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Password field is clickable",
+        "time" : {
+          "start" : 1700357701957,
+          "stop" : 1700357702012,
+          "duration" : 55
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1700357701957,
+            "stop" : 1700357702012,
+            "duration" : 55
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#pass')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1700357702012,
+          "stop" : 1700357702087,
+          "duration" : 75
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1700357702012,
+            "stop" : 1700357702023,
+            "duration" : 11
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"78c6a90d7f738de27e60b0048dcd0698\", element=\"D1E4C58A9B7D0D25165689CDE5B53A80_element_12\")>"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"78c6a90d7f738de27e60b0048dcd0698\", element=\"D1E4C58A9B7D0D25165689CDE5B53A80_element_12\")>"
+        }, {
+          "name" : "value",
+          "value" : "''"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "''"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click on Sign In button",
+      "time" : {
+        "start" : 1700357702087,
+        "stop" : 1700357702144,
+        "duration" : 57
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Sign In button is clickable",
+        "time" : {
+          "start" : 1700357702087,
+          "stop" : 1700357702107,
+          "duration" : 20
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1700357702087,
+            "stop" : 1700357702107,
+            "duration" : 20
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//button[@id=\"send2\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get error message",
+      "time" : {
+        "start" : 1700357702144,
+        "stop" : 1700357702181,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1700357702144,
+          "stop" : 1700357702171,
+          "duration" : 27
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1700357702144,
+            "stop" : 1700357702154,
+            "duration" : 10
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', \"//div[@id='pass-error']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1700357702154,
+            "stop" : 1700357702158,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"78c6a90d7f738de27e60b0048dcd0698\", element=\"D1E4C58A9B7D0D25165689CDE5B53A80_element_19\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"//div[@id='pass-error']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('xpath', \"//div[@id='pass-error']\")"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 17,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1700357702182,
+      "stop" : 1700357702248,
+      "duration" : 66
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1700357761780,
+      "stop" : 1700357761780,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login Functionality"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1205-844"
+  }, {
+    "name" : "thread",
+    "value" : "3059-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "379f8910c951c166.json",
+  "parameterValues" : [ ]
+}
