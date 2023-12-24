@@ -3,757 +3,668 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Strength: Weak'\n  - Password Strength: Weak\n  ?                    ^^ ^\n  + Password Strength: No Password\n  ?                    ^^^^ ^^^^^^)",
+      "name" : "AssertionError: Actual text 'We know you have an assignment to complete. If this site is not functioning as expected, drop us an email. Copyright © 2013-present Magento, Inc. All rights reserved.' of Copyright section does not match expected 'Copyright © 2013-present Magento, Inc. All rights reserved.'\nassert 'We know you ...hts reserved.' == 'Copyright © ...hts reserved.'\n  - Copyright © 2013-present Magento, Inc. All rights reserved.\n  + We know you have an assignment to complete. If this site is not functioning as expected, drop us an email. Copyright © 2013-present Magento, Inc. All rights reserved.",
       "children" : [ {
-        "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "61bfc71bac7564c0",
-        "parentUid" : "96e400763a34155504bab7c8d33b4caa",
+        "name" : "TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1",
+        "uid" : "ecc7767466ec8a3e",
+        "parentUid" : "f8df26fc1cc7a491d112bacdad788852",
         "status" : "failed",
         "time" : {
-          "start" : 1702775656287,
-          "stop" : 1702775656699,
-          "duration" : 412
+          "start" : 1703380519372,
+          "stop" : 1703380520322,
+          "duration" : 950
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Weak', 'password': 'we', 'warning_color': '#ffafae', 'strength_password_hint': 'Password Strength: Weak', 'warning_password_message': 'Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored.'}" ]
-      } ],
-      "uid" : "96e400763a34155504bab7c8d33b4caa"
-    }, {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Strength: Medium'\n  - Password Strength: Medium\n  + Password Strength: No Password)",
-      "children" : [ {
-        "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "9b86786bfc45ae4c",
-        "parentUid" : "3ae3e13139a43003d29968d0489afcbf",
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      }, {
+        "name" : "TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1",
+        "uid" : "4b0706acbfc55b94",
+        "parentUid" : "f8df26fc1cc7a491d112bacdad788852",
         "status" : "failed",
         "time" : {
-          "start" : 1702775661835,
-          "stop" : 1702775662181,
-          "duration" : 346
+          "start" : 1703380521657,
+          "stop" : 1703380522595,
+          "duration" : 938
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Medium', 'password': '1234qweRE', 'warning_color': '#ffd6b3', 'strength_password_hint': 'Password Strength: Medium', 'warning_password_message': None}" ]
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
       } ],
-      "uid" : "3ae3e13139a43003d29968d0489afcbf"
-    }, {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Strength: Strong'\n  - Password Strength: Strong\n  + Password Strength: No Password)",
-      "children" : [ {
-        "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "43f707c703bfc9a5",
-        "parentUid" : "5b2db88efba0d37063145848e5a3e7de",
-        "status" : "failed",
-        "time" : {
-          "start" : 1702775664437,
-          "stop" : 1702775664803,
-          "duration" : 366
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Strong', 'password': '1234qweREe', 'warning_color': '#c5eeac', 'strength_password_hint': 'Password Strength: Strong', 'warning_password_message': None}" ]
-      } ],
-      "uid" : "5b2db88efba0d37063145848e5a3e7de"
-    }, {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Str...: Very Strong'\n  - Password Strength: Very Strong\n  + Password Strength: No Password)",
-      "children" : [ {
-        "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "57b548ba54317aad",
-        "parentUid" : "aae0399b2c15f42f816648717108e521",
-        "status" : "failed",
-        "time" : {
-          "start" : 1702775667150,
-          "stop" : 1702775667491,
-          "duration" : 341
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Very Strong', 'password': '1234qweREewe', 'warning_color': '#81b562', 'strength_password_hint': 'Password Strength: Very Strong', 'warning_password_message': None}" ]
-      } ],
-      "uid" : "aae0399b2c15f42f816648717108e521"
-    }, {
-      "name" : "AssertionError: Leave a review failed\nassert (None == 'You submitted your review for moderation.' or 'https://magento.softwaretestingboard.com/review/product/post/id' in 'https://magento.softwaretestingboard.com/meteor-workout-short.html#reviews')",
-      "children" : [ {
-        "name" : "test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star",
-        "uid" : "7a70c9960ebf49e2",
-        "parentUid" : "23c2f9a89b0287fbbec64a82c46696f3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1702776550042,
-          "stop" : 1702776558132,
-          "duration" : 8090
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "23c2f9a89b0287fbbec64a82c46696f3"
+      "uid" : "f8df26fc1cc7a491d112bacdad788852"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55bd6f8bbd33 <unknown>\n#1 0x55bd6f578f87 <unknown>\n#2 0x55bd6f5c8c0e <unknown>\n#3 0x55bd6f5c8d11 <unknown>\n#4 0x55bd6f614004 <unknown>\n#5 0x55bd6f5f236d <unknown>\n#6 0x55bd6f611297 <unknown>\n#7 0x55bd6f5f20e3 <unknown>\n#8 0x55bd6f5ba044 <unknown>\n#9 0x55bd6f5bb44e <unknown>\n#10 0x55bd6f880861 <unknown>\n#11 0x55bd6f884785 <unknown>\n#12 0x55bd6f86e285 <unknown>\n#13 0x55bd6f88541f <unknown>\n#14 0x55bd6f85220f <unknown>\n#15 0x55bd6f8a9028 <unknown>\n#16 0x55bd6f8a91f7 <unknown>\n#17 0x55bd6f8baed4 <unknown>\n#18 0x7fed44094ac3 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.25 Verify error on resetting My Password with empty email",
-        "uid" : "2c0164c7c4cbcfe3",
-        "parentUid" : "e8125a61188afb2c14f23f25d79d5fe1",
-        "status" : "broken",
-        "time" : {
-          "start" : 1702775884188,
-          "stop" : 1702775891029,
-          "duration" : 6841
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e8125a61188afb2c14f23f25d79d5fe1"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message:",
-      "children" : [ {
-        "name" : "TC 01.02.02 functionality of the \"Search\" field",
-        "uid" : "3441507d813c77bf",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1702775928549,
-          "stop" : 1702775939872,
-          "duration" : 11323
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x561b68b5ed33 <unknown>\n#1 0x561b6881bf87 <unknown>\n#2 0x561b6886bc0e <unknown>\n#3 0x561b6886bd11 <unknown>\n#4 0x561b688b7004 <unknown>\n#5 0x561b6889536d <unknown>\n#6 0x561b688b4297 <unknown>\n#7 0x561b688950e3 <unknown>\n#8 0x561b6885d044 <unknown>\n#9 0x561b6885e44e <unknown>\n#10 0x561b68b23861 <unknown>\n#11 0x561b68b27785 <unknown>\n#12 0x561b68b11285 <unknown>\n#13 0x561b68b2841f <unknown>\n#14 0x561b68af520f <unknown>\n#15 0x561b68b4c028 <unknown>\n#16 0x561b68b4c1f7 <unknown>\n#17 0x561b68b5ded4 <unknown>\n#18 0x7f3f4b494ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5654d4404d33 <unknown>\n#1 0x5654d40c1f87 <unknown>\n#2 0x5654d4111c0e <unknown>\n#3 0x5654d4111d11 <unknown>\n#4 0x5654d415d004 <unknown>\n#5 0x5654d413b36d <unknown>\n#6 0x5654d415a297 <unknown>\n#7 0x5654d413b0e3 <unknown>\n#8 0x5654d4103044 <unknown>\n#9 0x5654d410444e <unknown>\n#10 0x5654d43c9861 <unknown>\n#11 0x5654d43cd785 <unknown>\n#12 0x5654d43b7285 <unknown>\n#13 0x5654d43ce41f <unknown>\n#14 0x5654d439b20f <unknown>\n#15 0x5654d43f2028 <unknown>\n#16 0x5654d43f21f7 <unknown>\n#17 0x5654d4403ed4 <unknown>\n#18 0x7ff061494ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.09 Verify the visibility of 'Save up to $24!' promo block.",
-        "uid" : "363790c8d3b5983b",
-        "parentUid" : "63b3947461aa0f2e6c3f1345f11d2b03",
+        "uid" : "59572fe40d1db8d3",
+        "parentUid" : "1b6a4f697fe9de59792269f99925de9e",
         "status" : "broken",
         "time" : {
-          "start" : 1702776322954,
-          "stop" : 1702776329044,
-          "duration" : 6090
+          "start" : 1703381048187,
+          "stop" : 1703381054159,
+          "duration" : 5972
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "63b3947461aa0f2e6c3f1345f11d2b03"
+      "uid" : "1b6a4f697fe9de59792269f99925de9e"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x561020de0d33 <unknown>\n#1 0x561020a9df87 <unknown>\n#2 0x561020aedc0e <unknown>\n#3 0x561020aedd11 <unknown>\n#4 0x561020b39004 <unknown>\n#5 0x561020b1736d <unknown>\n#6 0x561020b36297 <unknown>\n#7 0x561020b170e3 <unknown>\n#8 0x561020adf044 <unknown>\n#9 0x561020ae044e <unknown>\n#10 0x561020da5861 <unknown>\n#11 0x561020da9785 <unknown>\n#12 0x561020d93285 <unknown>\n#13 0x561020daa41f <unknown>\n#14 0x561020d7720f <unknown>\n#15 0x561020dce028 <unknown>\n#16 0x561020dce1f7 <unknown>\n#17 0x561020ddfed4 <unknown>\n#18 0x7fb129494ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d160356d33 <unknown>\n#1 0x55d160013f87 <unknown>\n#2 0x55d160063c0e <unknown>\n#3 0x55d160063d11 <unknown>\n#4 0x55d1600af004 <unknown>\n#5 0x55d16008d36d <unknown>\n#6 0x55d1600ac297 <unknown>\n#7 0x55d16008d0e3 <unknown>\n#8 0x55d160055044 <unknown>\n#9 0x55d16005644e <unknown>\n#10 0x55d16031b861 <unknown>\n#11 0x55d16031f785 <unknown>\n#12 0x55d160309285 <unknown>\n#13 0x55d16032041f <unknown>\n#14 0x55d1602ed20f <unknown>\n#15 0x55d160344028 <unknown>\n#16 0x55d1603441f7 <unknown>\n#17 0x55d160355ed4 <unknown>\n#18 0x7f5c20894ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.10 Verify the visibility of the image in the 'Save up to $24!' promo block.",
-        "uid" : "be49a3cb3d5fd1fc",
-        "parentUid" : "f0cb345eb425787b0e92368ca4c8261c",
+        "uid" : "7402ad4b67d709f5",
+        "parentUid" : "6e47e0dfc01197d8a51cf48be32e4547",
         "status" : "broken",
         "time" : {
-          "start" : 1702776330280,
-          "stop" : 1702776336165,
-          "duration" : 5885
+          "start" : 1703381055379,
+          "stop" : 1703381061335,
+          "duration" : 5956
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f0cb345eb425787b0e92368ca4c8261c"
+      "uid" : "6e47e0dfc01197d8a51cf48be32e4547"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55730e032d33 <unknown>\n#1 0x55730dceff87 <unknown>\n#2 0x55730dd3fc0e <unknown>\n#3 0x55730dd3fd11 <unknown>\n#4 0x55730dd8b004 <unknown>\n#5 0x55730dd6936d <unknown>\n#6 0x55730dd88297 <unknown>\n#7 0x55730dd690e3 <unknown>\n#8 0x55730dd31044 <unknown>\n#9 0x55730dd3244e <unknown>\n#10 0x55730dff7861 <unknown>\n#11 0x55730dffb785 <unknown>\n#12 0x55730dfe5285 <unknown>\n#13 0x55730dffc41f <unknown>\n#14 0x55730dfc920f <unknown>\n#15 0x55730e020028 <unknown>\n#16 0x55730e0201f7 <unknown>\n#17 0x55730e031ed4 <unknown>\n#18 0x7f4d75294ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ceb896dd33 <unknown>\n#1 0x55ceb862af87 <unknown>\n#2 0x55ceb867ac0e <unknown>\n#3 0x55ceb867ad11 <unknown>\n#4 0x55ceb86c6004 <unknown>\n#5 0x55ceb86a436d <unknown>\n#6 0x55ceb86c3297 <unknown>\n#7 0x55ceb86a40e3 <unknown>\n#8 0x55ceb866c044 <unknown>\n#9 0x55ceb866d44e <unknown>\n#10 0x55ceb8932861 <unknown>\n#11 0x55ceb8936785 <unknown>\n#12 0x55ceb8920285 <unknown>\n#13 0x55ceb893741f <unknown>\n#14 0x55ceb890420f <unknown>\n#15 0x55ceb895b028 <unknown>\n#16 0x55ceb895b1f7 <unknown>\n#17 0x55ceb896ced4 <unknown>\n#18 0x7fd6c8294ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.11 Verify that the 'Save up to $24!' text in the 'Save up to $24!' promo block is visible.",
-        "uid" : "d720797cbaf9fa41",
-        "parentUid" : "2e1a25c76c1e8c7c973a4e1617d26e07",
+        "uid" : "d17fc5ada471ea8d",
+        "parentUid" : "76faea0515b875047ea8000b5f78daea",
         "status" : "broken",
         "time" : {
-          "start" : 1702776337412,
-          "stop" : 1702776343431,
-          "duration" : 6019
+          "start" : 1703381062544,
+          "stop" : 1703381068498,
+          "duration" : 5954
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2e1a25c76c1e8c7c973a4e1617d26e07"
+      "uid" : "76faea0515b875047ea8000b5f78daea"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x559406647d33 <unknown>\n#1 0x559406304f87 <unknown>\n#2 0x559406354c0e <unknown>\n#3 0x559406354d11 <unknown>\n#4 0x5594063a0004 <unknown>\n#5 0x55940637e36d <unknown>\n#6 0x55940639d297 <unknown>\n#7 0x55940637e0e3 <unknown>\n#8 0x559406346044 <unknown>\n#9 0x55940634744e <unknown>\n#10 0x55940660c861 <unknown>\n#11 0x559406610785 <unknown>\n#12 0x5594065fa285 <unknown>\n#13 0x55940661141f <unknown>\n#14 0x5594065de20f <unknown>\n#15 0x559406635028 <unknown>\n#16 0x5594066351f7 <unknown>\n#17 0x559406646ed4 <unknown>\n#18 0x7fcd77e94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e29e3a9d33 <unknown>\n#1 0x55e29e066f87 <unknown>\n#2 0x55e29e0b6c0e <unknown>\n#3 0x55e29e0b6d11 <unknown>\n#4 0x55e29e102004 <unknown>\n#5 0x55e29e0e036d <unknown>\n#6 0x55e29e0ff297 <unknown>\n#7 0x55e29e0e00e3 <unknown>\n#8 0x55e29e0a8044 <unknown>\n#9 0x55e29e0a944e <unknown>\n#10 0x55e29e36e861 <unknown>\n#11 0x55e29e372785 <unknown>\n#12 0x55e29e35c285 <unknown>\n#13 0x55e29e37341f <unknown>\n#14 0x55e29e34020f <unknown>\n#15 0x55e29e397028 <unknown>\n#16 0x55e29e3971f7 <unknown>\n#17 0x55e29e3a8ed4 <unknown>\n#18 0x7f97b5c94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.12 Verify that the 'Buy 3 Luma tees' text in the 'Save up to $24!' promo block is visible.",
-        "uid" : "317a0cd16fbf1e48",
-        "parentUid" : "b01342e715c4bbd7337cc9024d05949a",
+        "uid" : "12f29012295e5c22",
+        "parentUid" : "9e2e047c29cd7c2b4fb6211fb5b3b36b",
         "status" : "broken",
         "time" : {
-          "start" : 1702776344681,
-          "stop" : 1702776350704,
-          "duration" : 6023
+          "start" : 1703381069783,
+          "stop" : 1703381075706,
+          "duration" : 5923
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b01342e715c4bbd7337cc9024d05949a"
+      "uid" : "9e2e047c29cd7c2b4fb6211fb5b3b36b"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55de58efad33 <unknown>\n#1 0x55de58bb7f87 <unknown>\n#2 0x55de58c07c0e <unknown>\n#3 0x55de58c07d11 <unknown>\n#4 0x55de58c53004 <unknown>\n#5 0x55de58c3136d <unknown>\n#6 0x55de58c50297 <unknown>\n#7 0x55de58c310e3 <unknown>\n#8 0x55de58bf9044 <unknown>\n#9 0x55de58bfa44e <unknown>\n#10 0x55de58ebf861 <unknown>\n#11 0x55de58ec3785 <unknown>\n#12 0x55de58ead285 <unknown>\n#13 0x55de58ec441f <unknown>\n#14 0x55de58e9120f <unknown>\n#15 0x55de58ee8028 <unknown>\n#16 0x55de58ee81f7 <unknown>\n#17 0x55de58ef9ed4 <unknown>\n#18 0x7f615d094ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5613beb64d33 <unknown>\n#1 0x5613be821f87 <unknown>\n#2 0x5613be871c0e <unknown>\n#3 0x5613be871d11 <unknown>\n#4 0x5613be8bd004 <unknown>\n#5 0x5613be89b36d <unknown>\n#6 0x5613be8ba297 <unknown>\n#7 0x5613be89b0e3 <unknown>\n#8 0x5613be863044 <unknown>\n#9 0x5613be86444e <unknown>\n#10 0x5613beb29861 <unknown>\n#11 0x5613beb2d785 <unknown>\n#12 0x5613beb17285 <unknown>\n#13 0x5613beb2e41f <unknown>\n#14 0x5613beafb20f <unknown>\n#15 0x5613beb52028 <unknown>\n#16 0x5613beb521f7 <unknown>\n#17 0x5613beb63ed4 <unknown>\n#18 0x7ff9ba494ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.13 Verify that the 'Shop Tees' text in the 'Save up to $24!' promo block is visible.",
-        "uid" : "a5b6c4f045ae81f4",
-        "parentUid" : "d6e256791f33c58646c6b0d4914ff237",
+        "uid" : "977bc5c2221e2886",
+        "parentUid" : "616428f438a5724b346d20770d1cfbcb",
         "status" : "broken",
         "time" : {
-          "start" : 1702776351938,
-          "stop" : 1702776357828,
-          "duration" : 5890
+          "start" : 1703381076916,
+          "stop" : 1703381083016,
+          "duration" : 6100
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d6e256791f33c58646c6b0d4914ff237"
+      "uid" : "616428f438a5724b346d20770d1cfbcb"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564fcd8e1d33 <unknown>\n#1 0x564fcd59ef87 <unknown>\n#2 0x564fcd5eec0e <unknown>\n#3 0x564fcd5eed11 <unknown>\n#4 0x564fcd63a004 <unknown>\n#5 0x564fcd61836d <unknown>\n#6 0x564fcd637297 <unknown>\n#7 0x564fcd6180e3 <unknown>\n#8 0x564fcd5e0044 <unknown>\n#9 0x564fcd5e144e <unknown>\n#10 0x564fcd8a6861 <unknown>\n#11 0x564fcd8aa785 <unknown>\n#12 0x564fcd894285 <unknown>\n#13 0x564fcd8ab41f <unknown>\n#14 0x564fcd87820f <unknown>\n#15 0x564fcd8cf028 <unknown>\n#16 0x564fcd8cf1f7 <unknown>\n#17 0x564fcd8e0ed4 <unknown>\n#18 0x7fd813094ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c943751d33 <unknown>\n#1 0x55c94340ef87 <unknown>\n#2 0x55c94345ec0e <unknown>\n#3 0x55c94345ed11 <unknown>\n#4 0x55c9434aa004 <unknown>\n#5 0x55c94348836d <unknown>\n#6 0x55c9434a7297 <unknown>\n#7 0x55c9434880e3 <unknown>\n#8 0x55c943450044 <unknown>\n#9 0x55c94345144e <unknown>\n#10 0x55c943716861 <unknown>\n#11 0x55c94371a785 <unknown>\n#12 0x55c943704285 <unknown>\n#13 0x55c94371b41f <unknown>\n#14 0x55c9436e820f <unknown>\n#15 0x55c94373f028 <unknown>\n#16 0x55c94373f1f7 <unknown>\n#17 0x55c943750ed4 <unknown>\n#18 0x7fd6fa894ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.14 Verify the click on the block 'Save up to $24!' redirects to a correct page.",
-        "uid" : "264e2b1d6b970c2b",
-        "parentUid" : "e9d26eccd37f53da94e3ceae47f2505a",
+        "uid" : "7f1d88d4a695c2c1",
+        "parentUid" : "7ace74b8420a94071792b06ca9f109a9",
         "status" : "broken",
         "time" : {
-          "start" : 1702776359075,
-          "stop" : 1702776365073,
-          "duration" : 5998
+          "start" : 1703381084247,
+          "stop" : 1703381090416,
+          "duration" : 6169
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "e9d26eccd37f53da94e3ceae47f2505a"
+      "uid" : "7ace74b8420a94071792b06ca9f109a9"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562ce1f99d33 <unknown>\n#1 0x562ce1c56f87 <unknown>\n#2 0x562ce1ca6c0e <unknown>\n#3 0x562ce1ca6d11 <unknown>\n#4 0x562ce1cf2004 <unknown>\n#5 0x562ce1cd036d <unknown>\n#6 0x562ce1cef297 <unknown>\n#7 0x562ce1cd00e3 <unknown>\n#8 0x562ce1c98044 <unknown>\n#9 0x562ce1c9944e <unknown>\n#10 0x562ce1f5e861 <unknown>\n#11 0x562ce1f62785 <unknown>\n#12 0x562ce1f4c285 <unknown>\n#13 0x562ce1f6341f <unknown>\n#14 0x562ce1f3020f <unknown>\n#15 0x562ce1f87028 <unknown>\n#16 0x562ce1f871f7 <unknown>\n#17 0x562ce1f98ed4 <unknown>\n#18 0x7f335d494ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556642e08d33 <unknown>\n#1 0x556642ac5f87 <unknown>\n#2 0x556642b15c0e <unknown>\n#3 0x556642b15d11 <unknown>\n#4 0x556642b61004 <unknown>\n#5 0x556642b3f36d <unknown>\n#6 0x556642b5e297 <unknown>\n#7 0x556642b3f0e3 <unknown>\n#8 0x556642b07044 <unknown>\n#9 0x556642b0844e <unknown>\n#10 0x556642dcd861 <unknown>\n#11 0x556642dd1785 <unknown>\n#12 0x556642dbb285 <unknown>\n#13 0x556642dd241f <unknown>\n#14 0x556642d9f20f <unknown>\n#15 0x556642df6028 <unknown>\n#16 0x556642df61f7 <unknown>\n#17 0x556642e07ed4 <unknown>\n#18 0x7f5c85c94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.15 Verify the visibility of 'Last chance for pants' promo block.",
-        "uid" : "b400ab50135f59d2",
-        "parentUid" : "f3a07ca0942eb6c1911e1003c2377bea",
+        "uid" : "b0e86818d075f2d",
+        "parentUid" : "615e4b32acb3e91bafe95e2fe3feba9f",
         "status" : "broken",
         "time" : {
-          "start" : 1702776366309,
-          "stop" : 1702776372251,
-          "duration" : 5942
+          "start" : 1703381091626,
+          "stop" : 1703381097751,
+          "duration" : 6125
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f3a07ca0942eb6c1911e1003c2377bea"
+      "uid" : "615e4b32acb3e91bafe95e2fe3feba9f"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5558851e1d33 <unknown>\n#1 0x555884e9ef87 <unknown>\n#2 0x555884eeec0e <unknown>\n#3 0x555884eeed11 <unknown>\n#4 0x555884f3a004 <unknown>\n#5 0x555884f1836d <unknown>\n#6 0x555884f37297 <unknown>\n#7 0x555884f180e3 <unknown>\n#8 0x555884ee0044 <unknown>\n#9 0x555884ee144e <unknown>\n#10 0x5558851a6861 <unknown>\n#11 0x5558851aa785 <unknown>\n#12 0x555885194285 <unknown>\n#13 0x5558851ab41f <unknown>\n#14 0x55588517820f <unknown>\n#15 0x5558851cf028 <unknown>\n#16 0x5558851cf1f7 <unknown>\n#17 0x5558851e0ed4 <unknown>\n#18 0x7f3340a94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f9e6523d33 <unknown>\n#1 0x55f9e61e0f87 <unknown>\n#2 0x55f9e6230c0e <unknown>\n#3 0x55f9e6230d11 <unknown>\n#4 0x55f9e627c004 <unknown>\n#5 0x55f9e625a36d <unknown>\n#6 0x55f9e6279297 <unknown>\n#7 0x55f9e625a0e3 <unknown>\n#8 0x55f9e6222044 <unknown>\n#9 0x55f9e622344e <unknown>\n#10 0x55f9e64e8861 <unknown>\n#11 0x55f9e64ec785 <unknown>\n#12 0x55f9e64d6285 <unknown>\n#13 0x55f9e64ed41f <unknown>\n#14 0x55f9e64ba20f <unknown>\n#15 0x55f9e6511028 <unknown>\n#16 0x55f9e65111f7 <unknown>\n#17 0x55f9e6522ed4 <unknown>\n#18 0x7fc11a094ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.16 Verify the visibility of the image in the 'Last chance for pants' promo block.",
-        "uid" : "4bd0f9cd3d40225f",
-        "parentUid" : "2ae48941792267750f8ead29d94c6fd6",
+        "uid" : "ea12e1b6d3ad3126",
+        "parentUid" : "2f2a9b68e6ad5612654ae60355112715",
         "status" : "broken",
         "time" : {
-          "start" : 1702776373508,
-          "stop" : 1702776379541,
-          "duration" : 6033
+          "start" : 1703381098974,
+          "stop" : 1703381105145,
+          "duration" : 6171
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2ae48941792267750f8ead29d94c6fd6"
+      "uid" : "2f2a9b68e6ad5612654ae60355112715"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ba08eabd33 <unknown>\n#1 0x55ba08b68f87 <unknown>\n#2 0x55ba08bb8c0e <unknown>\n#3 0x55ba08bb8d11 <unknown>\n#4 0x55ba08c04004 <unknown>\n#5 0x55ba08be236d <unknown>\n#6 0x55ba08c01297 <unknown>\n#7 0x55ba08be20e3 <unknown>\n#8 0x55ba08baa044 <unknown>\n#9 0x55ba08bab44e <unknown>\n#10 0x55ba08e70861 <unknown>\n#11 0x55ba08e74785 <unknown>\n#12 0x55ba08e5e285 <unknown>\n#13 0x55ba08e7541f <unknown>\n#14 0x55ba08e4220f <unknown>\n#15 0x55ba08e99028 <unknown>\n#16 0x55ba08e991f7 <unknown>\n#17 0x55ba08eaaed4 <unknown>\n#18 0x7efe82a94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e081eeed33 <unknown>\n#1 0x55e081babf87 <unknown>\n#2 0x55e081bfbc0e <unknown>\n#3 0x55e081bfbd11 <unknown>\n#4 0x55e081c47004 <unknown>\n#5 0x55e081c2536d <unknown>\n#6 0x55e081c44297 <unknown>\n#7 0x55e081c250e3 <unknown>\n#8 0x55e081bed044 <unknown>\n#9 0x55e081bee44e <unknown>\n#10 0x55e081eb3861 <unknown>\n#11 0x55e081eb7785 <unknown>\n#12 0x55e081ea1285 <unknown>\n#13 0x55e081eb841f <unknown>\n#14 0x55e081e8520f <unknown>\n#15 0x55e081edc028 <unknown>\n#16 0x55e081edc1f7 <unknown>\n#17 0x55e081eeded4 <unknown>\n#18 0x7f4d20c94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.17 Verify that the 'Last chance for pants' text is visible.",
-        "uid" : "d22f5960cfa2c72e",
-        "parentUid" : "a3d6499f7a2bb0eba3fa2aefbccb8622",
+        "uid" : "feb3b6e9fa5653e9",
+        "parentUid" : "15e4fe4d1b49233b383b2400c22c74c0",
         "status" : "broken",
         "time" : {
-          "start" : 1702776380770,
-          "stop" : 1702776386688,
-          "duration" : 5918
+          "start" : 1703381106355,
+          "stop" : 1703381112505,
+          "duration" : 6150
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a3d6499f7a2bb0eba3fa2aefbccb8622"
+      "uid" : "15e4fe4d1b49233b383b2400c22c74c0"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55dad1aead33 <unknown>\n#1 0x55dad17a7f87 <unknown>\n#2 0x55dad17f7c0e <unknown>\n#3 0x55dad17f7d11 <unknown>\n#4 0x55dad1843004 <unknown>\n#5 0x55dad182136d <unknown>\n#6 0x55dad1840297 <unknown>\n#7 0x55dad18210e3 <unknown>\n#8 0x55dad17e9044 <unknown>\n#9 0x55dad17ea44e <unknown>\n#10 0x55dad1aaf861 <unknown>\n#11 0x55dad1ab3785 <unknown>\n#12 0x55dad1a9d285 <unknown>\n#13 0x55dad1ab441f <unknown>\n#14 0x55dad1a8120f <unknown>\n#15 0x55dad1ad8028 <unknown>\n#16 0x55dad1ad81f7 <unknown>\n#17 0x55dad1ae9ed4 <unknown>\n#18 0x7fe3cbc94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56116b906d33 <unknown>\n#1 0x56116b5c3f87 <unknown>\n#2 0x56116b613c0e <unknown>\n#3 0x56116b613d11 <unknown>\n#4 0x56116b65f004 <unknown>\n#5 0x56116b63d36d <unknown>\n#6 0x56116b65c297 <unknown>\n#7 0x56116b63d0e3 <unknown>\n#8 0x56116b605044 <unknown>\n#9 0x56116b60644e <unknown>\n#10 0x56116b8cb861 <unknown>\n#11 0x56116b8cf785 <unknown>\n#12 0x56116b8b9285 <unknown>\n#13 0x56116b8d041f <unknown>\n#14 0x56116b89d20f <unknown>\n#15 0x56116b8f4028 <unknown>\n#16 0x56116b8f41f7 <unknown>\n#17 0x56116b905ed4 <unknown>\n#18 0x7f1fb4a94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.18 Verify that the 'Take 20% OFF' text is visible.",
-        "uid" : "4044586f53eadb05",
-        "parentUid" : "66c4267129e09c3b08a6bb2810e2eab2",
+        "uid" : "a1dab18dbcf9a2fa",
+        "parentUid" : "e270c10f4c1ab4b8af03bc365defeaae",
         "status" : "broken",
         "time" : {
-          "start" : 1702776387932,
-          "stop" : 1702776393955,
-          "duration" : 6023
+          "start" : 1703381113724,
+          "stop" : 1703381119677,
+          "duration" : 5953
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "66c4267129e09c3b08a6bb2810e2eab2"
+      "uid" : "e270c10f4c1ab4b8af03bc365defeaae"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x565039e3ad33 <unknown>\n#1 0x565039af7f87 <unknown>\n#2 0x565039b47c0e <unknown>\n#3 0x565039b47d11 <unknown>\n#4 0x565039b93004 <unknown>\n#5 0x565039b7136d <unknown>\n#6 0x565039b90297 <unknown>\n#7 0x565039b710e3 <unknown>\n#8 0x565039b39044 <unknown>\n#9 0x565039b3a44e <unknown>\n#10 0x565039dff861 <unknown>\n#11 0x565039e03785 <unknown>\n#12 0x565039ded285 <unknown>\n#13 0x565039e0441f <unknown>\n#14 0x565039dd120f <unknown>\n#15 0x565039e28028 <unknown>\n#16 0x565039e281f7 <unknown>\n#17 0x565039e39ed4 <unknown>\n#18 0x7fa0be094ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5600623e0d33 <unknown>\n#1 0x56006209df87 <unknown>\n#2 0x5600620edc0e <unknown>\n#3 0x5600620edd11 <unknown>\n#4 0x560062139004 <unknown>\n#5 0x56006211736d <unknown>\n#6 0x560062136297 <unknown>\n#7 0x5600621170e3 <unknown>\n#8 0x5600620df044 <unknown>\n#9 0x5600620e044e <unknown>\n#10 0x5600623a5861 <unknown>\n#11 0x5600623a9785 <unknown>\n#12 0x560062393285 <unknown>\n#13 0x5600623aa41f <unknown>\n#14 0x56006237720f <unknown>\n#15 0x5600623ce028 <unknown>\n#16 0x5600623ce1f7 <unknown>\n#17 0x5600623dfed4 <unknown>\n#18 0x7f2543694ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.19 Verify that the 'Shop Pants' text is visible.",
-        "uid" : "6ed6c2202a3fade2",
-        "parentUid" : "577fc622cb84fd9e8975cb1cd4f00274",
+        "uid" : "cc8144523a20a0bc",
+        "parentUid" : "b23565885e1ed025e89496a4768a8daf",
         "status" : "broken",
         "time" : {
-          "start" : 1702776395195,
-          "stop" : 1702776401267,
-          "duration" : 6072
+          "start" : 1703381120900,
+          "stop" : 1703381126830,
+          "duration" : 5930
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "577fc622cb84fd9e8975cb1cd4f00274"
+      "uid" : "b23565885e1ed025e89496a4768a8daf"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cbf26ced33 <unknown>\n#1 0x55cbf238bf87 <unknown>\n#2 0x55cbf23dbc0e <unknown>\n#3 0x55cbf23dbd11 <unknown>\n#4 0x55cbf2427004 <unknown>\n#5 0x55cbf240536d <unknown>\n#6 0x55cbf2424297 <unknown>\n#7 0x55cbf24050e3 <unknown>\n#8 0x55cbf23cd044 <unknown>\n#9 0x55cbf23ce44e <unknown>\n#10 0x55cbf2693861 <unknown>\n#11 0x55cbf2697785 <unknown>\n#12 0x55cbf2681285 <unknown>\n#13 0x55cbf269841f <unknown>\n#14 0x55cbf266520f <unknown>\n#15 0x55cbf26bc028 <unknown>\n#16 0x55cbf26bc1f7 <unknown>\n#17 0x55cbf26cded4 <unknown>\n#18 0x7fe171c94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ef4d7ddd33 <unknown>\n#1 0x55ef4d49af87 <unknown>\n#2 0x55ef4d4eac0e <unknown>\n#3 0x55ef4d4ead11 <unknown>\n#4 0x55ef4d536004 <unknown>\n#5 0x55ef4d51436d <unknown>\n#6 0x55ef4d533297 <unknown>\n#7 0x55ef4d5140e3 <unknown>\n#8 0x55ef4d4dc044 <unknown>\n#9 0x55ef4d4dd44e <unknown>\n#10 0x55ef4d7a2861 <unknown>\n#11 0x55ef4d7a6785 <unknown>\n#12 0x55ef4d790285 <unknown>\n#13 0x55ef4d7a741f <unknown>\n#14 0x55ef4d77420f <unknown>\n#15 0x55ef4d7cb028 <unknown>\n#16 0x55ef4d7cb1f7 <unknown>\n#17 0x55ef4d7dced4 <unknown>\n#18 0x7fc31f294ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.20 Verify the click on the block 'Last chance for pants' redirects to a correct page.",
-        "uid" : "f3c69152fa56e280",
-        "parentUid" : "4ca1e06a18573d4d195d8ac6fe38891e",
+        "uid" : "24f4ee135b4c4cc7",
+        "parentUid" : "c081b9c0380ced953b168667c1714e14",
         "status" : "broken",
         "time" : {
-          "start" : 1702776402506,
-          "stop" : 1702776408508,
-          "duration" : 6002
+          "start" : 1703381128044,
+          "stop" : 1703381133820,
+          "duration" : 5776
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "4ca1e06a18573d4d195d8ac6fe38891e"
+      "uid" : "c081b9c0380ced953b168667c1714e14"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5648bd1dbd33 <unknown>\n#1 0x5648bce98f87 <unknown>\n#2 0x5648bcee8c0e <unknown>\n#3 0x5648bcee8d11 <unknown>\n#4 0x5648bcf34004 <unknown>\n#5 0x5648bcf1236d <unknown>\n#6 0x5648bcf31297 <unknown>\n#7 0x5648bcf120e3 <unknown>\n#8 0x5648bceda044 <unknown>\n#9 0x5648bcedb44e <unknown>\n#10 0x5648bd1a0861 <unknown>\n#11 0x5648bd1a4785 <unknown>\n#12 0x5648bd18e285 <unknown>\n#13 0x5648bd1a541f <unknown>\n#14 0x5648bd17220f <unknown>\n#15 0x5648bd1c9028 <unknown>\n#16 0x5648bd1c91f7 <unknown>\n#17 0x5648bd1daed4 <unknown>\n#18 0x7f69a8894ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56391c34ad33 <unknown>\n#1 0x56391c007f87 <unknown>\n#2 0x56391c057c0e <unknown>\n#3 0x56391c057d11 <unknown>\n#4 0x56391c0a3004 <unknown>\n#5 0x56391c08136d <unknown>\n#6 0x56391c0a0297 <unknown>\n#7 0x56391c0810e3 <unknown>\n#8 0x56391c049044 <unknown>\n#9 0x56391c04a44e <unknown>\n#10 0x56391c30f861 <unknown>\n#11 0x56391c313785 <unknown>\n#12 0x56391c2fd285 <unknown>\n#13 0x56391c31441f <unknown>\n#14 0x56391c2e120f <unknown>\n#15 0x56391c338028 <unknown>\n#16 0x56391c3381f7 <unknown>\n#17 0x56391c349ed4 <unknown>\n#18 0x7ff149894ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.21 Verify the visibility of 'Luma shorts' promo block.",
-        "uid" : "f0d5be0737ec48f1",
-        "parentUid" : "1867877d9baeefbdeac2fdc14579fc92",
+        "uid" : "79a9c0d766f6d4e",
+        "parentUid" : "5da7aaab85f3772a2173e95058b51a6c",
         "status" : "broken",
         "time" : {
-          "start" : 1702776409738,
-          "stop" : 1702776415703,
-          "duration" : 5965
+          "start" : 1703381135047,
+          "stop" : 1703381140799,
+          "duration" : 5752
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "1867877d9baeefbdeac2fdc14579fc92"
+      "uid" : "5da7aaab85f3772a2173e95058b51a6c"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b4a0a4dd33 <unknown>\n#1 0x55b4a070af87 <unknown>\n#2 0x55b4a075ac0e <unknown>\n#3 0x55b4a075ad11 <unknown>\n#4 0x55b4a07a6004 <unknown>\n#5 0x55b4a078436d <unknown>\n#6 0x55b4a07a3297 <unknown>\n#7 0x55b4a07840e3 <unknown>\n#8 0x55b4a074c044 <unknown>\n#9 0x55b4a074d44e <unknown>\n#10 0x55b4a0a12861 <unknown>\n#11 0x55b4a0a16785 <unknown>\n#12 0x55b4a0a00285 <unknown>\n#13 0x55b4a0a1741f <unknown>\n#14 0x55b4a09e420f <unknown>\n#15 0x55b4a0a3b028 <unknown>\n#16 0x55b4a0a3b1f7 <unknown>\n#17 0x55b4a0a4ced4 <unknown>\n#18 0x7f8c68e94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56313692ed33 <unknown>\n#1 0x5631365ebf87 <unknown>\n#2 0x56313663bc0e <unknown>\n#3 0x56313663bd11 <unknown>\n#4 0x563136687004 <unknown>\n#5 0x56313666536d <unknown>\n#6 0x563136684297 <unknown>\n#7 0x5631366650e3 <unknown>\n#8 0x56313662d044 <unknown>\n#9 0x56313662e44e <unknown>\n#10 0x5631368f3861 <unknown>\n#11 0x5631368f7785 <unknown>\n#12 0x5631368e1285 <unknown>\n#13 0x5631368f841f <unknown>\n#14 0x5631368c520f <unknown>\n#15 0x56313691c028 <unknown>\n#16 0x56313691c1f7 <unknown>\n#17 0x56313692ded4 <unknown>\n#18 0x7f6207694ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.22 Verify the visibility of the image in the 'Luma shorts' promo block.",
-        "uid" : "4f0590f31dcaaab7",
-        "parentUid" : "77b1252bf0bb29baa04fab1dba75290a",
+        "uid" : "440741007172fc5",
+        "parentUid" : "db4b9b4d750cb354980123923feddf60",
         "status" : "broken",
         "time" : {
-          "start" : 1702776416946,
-          "stop" : 1702776422986,
-          "duration" : 6040
+          "start" : 1703381142029,
+          "stop" : 1703381147779,
+          "duration" : 5750
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "77b1252bf0bb29baa04fab1dba75290a"
+      "uid" : "db4b9b4d750cb354980123923feddf60"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x561d065a2d33 <unknown>\n#1 0x561d0625ff87 <unknown>\n#2 0x561d062afc0e <unknown>\n#3 0x561d062afd11 <unknown>\n#4 0x561d062fb004 <unknown>\n#5 0x561d062d936d <unknown>\n#6 0x561d062f8297 <unknown>\n#7 0x561d062d90e3 <unknown>\n#8 0x561d062a1044 <unknown>\n#9 0x561d062a244e <unknown>\n#10 0x561d06567861 <unknown>\n#11 0x561d0656b785 <unknown>\n#12 0x561d06555285 <unknown>\n#13 0x561d0656c41f <unknown>\n#14 0x561d0653920f <unknown>\n#15 0x561d06590028 <unknown>\n#16 0x561d065901f7 <unknown>\n#17 0x561d065a1ed4 <unknown>\n#18 0x7f57dd694ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f15ecb8d33 <unknown>\n#1 0x55f15e975f87 <unknown>\n#2 0x55f15e9c5c0e <unknown>\n#3 0x55f15e9c5d11 <unknown>\n#4 0x55f15ea11004 <unknown>\n#5 0x55f15e9ef36d <unknown>\n#6 0x55f15ea0e297 <unknown>\n#7 0x55f15e9ef0e3 <unknown>\n#8 0x55f15e9b7044 <unknown>\n#9 0x55f15e9b844e <unknown>\n#10 0x55f15ec7d861 <unknown>\n#11 0x55f15ec81785 <unknown>\n#12 0x55f15ec6b285 <unknown>\n#13 0x55f15ec8241f <unknown>\n#14 0x55f15ec4f20f <unknown>\n#15 0x55f15eca6028 <unknown>\n#16 0x55f15eca61f7 <unknown>\n#17 0x55f15ecb7ed4 <unknown>\n#18 0x7faa84a94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.23 Verify that the 'Luma shorts' text is visible.",
-        "uid" : "3b82febe9498bc2a",
-        "parentUid" : "873e2ac768d386e9f53df36601e1ff72",
+        "uid" : "a8b6f4a3183cfff0",
+        "parentUid" : "c1578be39a59b153be2e5e5f28859bf7",
         "status" : "broken",
         "time" : {
-          "start" : 1702776424226,
-          "stop" : 1702776430176,
-          "duration" : 5950
+          "start" : 1703381149033,
+          "stop" : 1703381155122,
+          "duration" : 6089
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "873e2ac768d386e9f53df36601e1ff72"
+      "uid" : "c1578be39a59b153be2e5e5f28859bf7"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556ed1b94d33 <unknown>\n#1 0x556ed1851f87 <unknown>\n#2 0x556ed18a1c0e <unknown>\n#3 0x556ed18a1d11 <unknown>\n#4 0x556ed18ed004 <unknown>\n#5 0x556ed18cb36d <unknown>\n#6 0x556ed18ea297 <unknown>\n#7 0x556ed18cb0e3 <unknown>\n#8 0x556ed1893044 <unknown>\n#9 0x556ed189444e <unknown>\n#10 0x556ed1b59861 <unknown>\n#11 0x556ed1b5d785 <unknown>\n#12 0x556ed1b47285 <unknown>\n#13 0x556ed1b5e41f <unknown>\n#14 0x556ed1b2b20f <unknown>\n#15 0x556ed1b82028 <unknown>\n#16 0x556ed1b821f7 <unknown>\n#17 0x556ed1b93ed4 <unknown>\n#18 0x7fec5f694ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56303a024d33 <unknown>\n#1 0x563039ce1f87 <unknown>\n#2 0x563039d31c0e <unknown>\n#3 0x563039d31d11 <unknown>\n#4 0x563039d7d004 <unknown>\n#5 0x563039d5b36d <unknown>\n#6 0x563039d7a297 <unknown>\n#7 0x563039d5b0e3 <unknown>\n#8 0x563039d23044 <unknown>\n#9 0x563039d2444e <unknown>\n#10 0x563039fe9861 <unknown>\n#11 0x563039fed785 <unknown>\n#12 0x563039fd7285 <unknown>\n#13 0x563039fee41f <unknown>\n#14 0x563039fbb20f <unknown>\n#15 0x56303a012028 <unknown>\n#16 0x56303a0121f7 <unknown>\n#17 0x56303a023ed4 <unknown>\n#18 0x7f4efd694ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.24 Verify that the 'Cool it now' text is visible.",
-        "uid" : "c9459b74edfe753b",
-        "parentUid" : "0b61ee2e477dcbec8a3ed6a2439d5987",
+        "uid" : "995036af0350ddbf",
+        "parentUid" : "4f7ccb1cbb970b4ac080892d29c901ce",
         "status" : "broken",
         "time" : {
-          "start" : 1702776431428,
-          "stop" : 1702776437389,
-          "duration" : 5961
+          "start" : 1703381156350,
+          "stop" : 1703381162371,
+          "duration" : 6021
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "0b61ee2e477dcbec8a3ed6a2439d5987"
+      "uid" : "4f7ccb1cbb970b4ac080892d29c901ce"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555c692ead33 <unknown>\n#1 0x555c68fa7f87 <unknown>\n#2 0x555c68ff7c0e <unknown>\n#3 0x555c68ff7d11 <unknown>\n#4 0x555c69043004 <unknown>\n#5 0x555c6902136d <unknown>\n#6 0x555c69040297 <unknown>\n#7 0x555c690210e3 <unknown>\n#8 0x555c68fe9044 <unknown>\n#9 0x555c68fea44e <unknown>\n#10 0x555c692af861 <unknown>\n#11 0x555c692b3785 <unknown>\n#12 0x555c6929d285 <unknown>\n#13 0x555c692b441f <unknown>\n#14 0x555c6928120f <unknown>\n#15 0x555c692d8028 <unknown>\n#16 0x555c692d81f7 <unknown>\n#17 0x555c692e9ed4 <unknown>\n#18 0x7f1208694ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fdefa01d33 <unknown>\n#1 0x55fdef6bef87 <unknown>\n#2 0x55fdef70ec0e <unknown>\n#3 0x55fdef70ed11 <unknown>\n#4 0x55fdef75a004 <unknown>\n#5 0x55fdef73836d <unknown>\n#6 0x55fdef757297 <unknown>\n#7 0x55fdef7380e3 <unknown>\n#8 0x55fdef700044 <unknown>\n#9 0x55fdef70144e <unknown>\n#10 0x55fdef9c6861 <unknown>\n#11 0x55fdef9ca785 <unknown>\n#12 0x55fdef9b4285 <unknown>\n#13 0x55fdef9cb41f <unknown>\n#14 0x55fdef99820f <unknown>\n#15 0x55fdef9ef028 <unknown>\n#16 0x55fdef9ef1f7 <unknown>\n#17 0x55fdefa00ed4 <unknown>\n#18 0x7f1bb8e94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.25 Verify that the 'Shop Shorts' text is visible.",
-        "uid" : "bb15c6e82f5b943b",
-        "parentUid" : "b728dd6916403d05a101b50a9c64224b",
+        "uid" : "3fc9f385d444112c",
+        "parentUid" : "d95efee53cd15aeaae89448f752d700a",
         "status" : "broken",
         "time" : {
-          "start" : 1702776438655,
-          "stop" : 1702776444721,
-          "duration" : 6066
+          "start" : 1703381163598,
+          "stop" : 1703381169599,
+          "duration" : 6001
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b728dd6916403d05a101b50a9c64224b"
+      "uid" : "d95efee53cd15aeaae89448f752d700a"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562038bcbd33 <unknown>\n#1 0x562038888f87 <unknown>\n#2 0x5620388d8c0e <unknown>\n#3 0x5620388d8d11 <unknown>\n#4 0x562038924004 <unknown>\n#5 0x56203890236d <unknown>\n#6 0x562038921297 <unknown>\n#7 0x5620389020e3 <unknown>\n#8 0x5620388ca044 <unknown>\n#9 0x5620388cb44e <unknown>\n#10 0x562038b90861 <unknown>\n#11 0x562038b94785 <unknown>\n#12 0x562038b7e285 <unknown>\n#13 0x562038b9541f <unknown>\n#14 0x562038b6220f <unknown>\n#15 0x562038bb9028 <unknown>\n#16 0x562038bb91f7 <unknown>\n#17 0x562038bcaed4 <unknown>\n#18 0x7f2c08094ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fe506a7d33 <unknown>\n#1 0x55fe50364f87 <unknown>\n#2 0x55fe503b4c0e <unknown>\n#3 0x55fe503b4d11 <unknown>\n#4 0x55fe50400004 <unknown>\n#5 0x55fe503de36d <unknown>\n#6 0x55fe503fd297 <unknown>\n#7 0x55fe503de0e3 <unknown>\n#8 0x55fe503a6044 <unknown>\n#9 0x55fe503a744e <unknown>\n#10 0x55fe5066c861 <unknown>\n#11 0x55fe50670785 <unknown>\n#12 0x55fe5065a285 <unknown>\n#13 0x55fe5067141f <unknown>\n#14 0x55fe5063e20f <unknown>\n#15 0x55fe50695028 <unknown>\n#16 0x55fe506951f7 <unknown>\n#17 0x55fe506a6ed4 <unknown>\n#18 0x7efeabe94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.26 Verify the click on the block 'Luma shorts' redirects to a correct page.",
-        "uid" : "9934e152e1875b0",
-        "parentUid" : "fee0c5334438b77ff90352f4d3f56216",
+        "uid" : "2e435589064110a3",
+        "parentUid" : "c6dfb9b360c9223b3b284a0c8a1a6780",
         "status" : "broken",
         "time" : {
-          "start" : 1702776445960,
-          "stop" : 1702776451897,
-          "duration" : 5937
+          "start" : 1703381170837,
+          "stop" : 1703381176820,
+          "duration" : 5983
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "fee0c5334438b77ff90352f4d3f56216"
+      "uid" : "c6dfb9b360c9223b3b284a0c8a1a6780"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fa84ba2d33 <unknown>\n#1 0x55fa8485ff87 <unknown>\n#2 0x55fa848afc0e <unknown>\n#3 0x55fa848afd11 <unknown>\n#4 0x55fa848fb004 <unknown>\n#5 0x55fa848d936d <unknown>\n#6 0x55fa848f8297 <unknown>\n#7 0x55fa848d90e3 <unknown>\n#8 0x55fa848a1044 <unknown>\n#9 0x55fa848a244e <unknown>\n#10 0x55fa84b67861 <unknown>\n#11 0x55fa84b6b785 <unknown>\n#12 0x55fa84b55285 <unknown>\n#13 0x55fa84b6c41f <unknown>\n#14 0x55fa84b3920f <unknown>\n#15 0x55fa84b90028 <unknown>\n#16 0x55fa84b901f7 <unknown>\n#17 0x55fa84ba1ed4 <unknown>\n#18 0x7f49de094ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d856269d33 <unknown>\n#1 0x55d855f26f87 <unknown>\n#2 0x55d855f76c0e <unknown>\n#3 0x55d855f76d11 <unknown>\n#4 0x55d855fc2004 <unknown>\n#5 0x55d855fa036d <unknown>\n#6 0x55d855fbf297 <unknown>\n#7 0x55d855fa00e3 <unknown>\n#8 0x55d855f68044 <unknown>\n#9 0x55d855f6944e <unknown>\n#10 0x55d85622e861 <unknown>\n#11 0x55d856232785 <unknown>\n#12 0x55d85621c285 <unknown>\n#13 0x55d85623341f <unknown>\n#14 0x55d85620020f <unknown>\n#15 0x55d856257028 <unknown>\n#16 0x55d8562571f7 <unknown>\n#17 0x55d856268ed4 <unknown>\n#18 0x7f942ca94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.27 Verify the visibility of 'Luma tees' promo block.",
-        "uid" : "9c7c8d48fb7ae5db",
-        "parentUid" : "674a3fe0936320ccf5bf0b0075257a56",
+        "uid" : "d270d22e175d6f2d",
+        "parentUid" : "e18f56f39a673ed05b2740ee9574a7ce",
         "status" : "broken",
         "time" : {
-          "start" : 1702776453148,
-          "stop" : 1702776459145,
-          "duration" : 5997
+          "start" : 1703381178045,
+          "stop" : 1703381184186,
+          "duration" : 6141
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "674a3fe0936320ccf5bf0b0075257a56"
+      "uid" : "e18f56f39a673ed05b2740ee9574a7ce"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558327cdbd33 <unknown>\n#1 0x558327998f87 <unknown>\n#2 0x5583279e8c0e <unknown>\n#3 0x5583279e8d11 <unknown>\n#4 0x558327a34004 <unknown>\n#5 0x558327a1236d <unknown>\n#6 0x558327a31297 <unknown>\n#7 0x558327a120e3 <unknown>\n#8 0x5583279da044 <unknown>\n#9 0x5583279db44e <unknown>\n#10 0x558327ca0861 <unknown>\n#11 0x558327ca4785 <unknown>\n#12 0x558327c8e285 <unknown>\n#13 0x558327ca541f <unknown>\n#14 0x558327c7220f <unknown>\n#15 0x558327cc9028 <unknown>\n#16 0x558327cc91f7 <unknown>\n#17 0x558327cdaed4 <unknown>\n#18 0x7f0b1f494ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56536292ed33 <unknown>\n#1 0x5653625ebf87 <unknown>\n#2 0x56536263bc0e <unknown>\n#3 0x56536263bd11 <unknown>\n#4 0x565362687004 <unknown>\n#5 0x56536266536d <unknown>\n#6 0x565362684297 <unknown>\n#7 0x5653626650e3 <unknown>\n#8 0x56536262d044 <unknown>\n#9 0x56536262e44e <unknown>\n#10 0x5653628f3861 <unknown>\n#11 0x5653628f7785 <unknown>\n#12 0x5653628e1285 <unknown>\n#13 0x5653628f841f <unknown>\n#14 0x5653628c520f <unknown>\n#15 0x56536291c028 <unknown>\n#16 0x56536291c1f7 <unknown>\n#17 0x56536292ded4 <unknown>\n#18 0x7f8aa7a94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.28 Verify the visibility of the image in the 'Luma tees' promo block.",
-        "uid" : "d5e66e25721b9715",
-        "parentUid" : "33f28e3015a8d2124730d55671405bc5",
+        "uid" : "7b921178675a4aa2",
+        "parentUid" : "32ebcf2694f90fb8d938dad33e2d18b2",
         "status" : "broken",
         "time" : {
-          "start" : 1702776460385,
-          "stop" : 1702776466303,
-          "duration" : 5918
+          "start" : 1703381185418,
+          "stop" : 1703381191605,
+          "duration" : 6187
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "33f28e3015a8d2124730d55671405bc5"
+      "uid" : "32ebcf2694f90fb8d938dad33e2d18b2"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55aeaa15bd33 <unknown>\n#1 0x55aea9e18f87 <unknown>\n#2 0x55aea9e68c0e <unknown>\n#3 0x55aea9e68d11 <unknown>\n#4 0x55aea9eb4004 <unknown>\n#5 0x55aea9e9236d <unknown>\n#6 0x55aea9eb1297 <unknown>\n#7 0x55aea9e920e3 <unknown>\n#8 0x55aea9e5a044 <unknown>\n#9 0x55aea9e5b44e <unknown>\n#10 0x55aeaa120861 <unknown>\n#11 0x55aeaa124785 <unknown>\n#12 0x55aeaa10e285 <unknown>\n#13 0x55aeaa12541f <unknown>\n#14 0x55aeaa0f220f <unknown>\n#15 0x55aeaa149028 <unknown>\n#16 0x55aeaa1491f7 <unknown>\n#17 0x55aeaa15aed4 <unknown>\n#18 0x7f2743294ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56122d23ad33 <unknown>\n#1 0x56122cef7f87 <unknown>\n#2 0x56122cf47c0e <unknown>\n#3 0x56122cf47d11 <unknown>\n#4 0x56122cf93004 <unknown>\n#5 0x56122cf7136d <unknown>\n#6 0x56122cf90297 <unknown>\n#7 0x56122cf710e3 <unknown>\n#8 0x56122cf39044 <unknown>\n#9 0x56122cf3a44e <unknown>\n#10 0x56122d1ff861 <unknown>\n#11 0x56122d203785 <unknown>\n#12 0x56122d1ed285 <unknown>\n#13 0x56122d20441f <unknown>\n#14 0x56122d1d120f <unknown>\n#15 0x56122d228028 <unknown>\n#16 0x56122d2281f7 <unknown>\n#17 0x56122d239ed4 <unknown>\n#18 0x7f389e694ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.29 Verify that the 'Luma tees' text is visible.",
-        "uid" : "ab624d264d1bd64c",
-        "parentUid" : "7e581f88509f239817e7d8b2ca44fdb6",
+        "uid" : "591fb942d5d85908",
+        "parentUid" : "b2d520b1ca5015bcbcb221677b4b85d3",
         "status" : "broken",
         "time" : {
-          "start" : 1702776467541,
-          "stop" : 1702776473488,
-          "duration" : 5947
+          "start" : 1703381192834,
+          "stop" : 1703381198992,
+          "duration" : 6158
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "7e581f88509f239817e7d8b2ca44fdb6"
+      "uid" : "b2d520b1ca5015bcbcb221677b4b85d3"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564c94ab2d33 <unknown>\n#1 0x564c9476ff87 <unknown>\n#2 0x564c947bfc0e <unknown>\n#3 0x564c947bfd11 <unknown>\n#4 0x564c9480b004 <unknown>\n#5 0x564c947e936d <unknown>\n#6 0x564c94808297 <unknown>\n#7 0x564c947e90e3 <unknown>\n#8 0x564c947b1044 <unknown>\n#9 0x564c947b244e <unknown>\n#10 0x564c94a77861 <unknown>\n#11 0x564c94a7b785 <unknown>\n#12 0x564c94a65285 <unknown>\n#13 0x564c94a7c41f <unknown>\n#14 0x564c94a4920f <unknown>\n#15 0x564c94aa0028 <unknown>\n#16 0x564c94aa01f7 <unknown>\n#17 0x564c94ab1ed4 <unknown>\n#18 0x7f3e9d694ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555ad5750d33 <unknown>\n#1 0x555ad540df87 <unknown>\n#2 0x555ad545dc0e <unknown>\n#3 0x555ad545dd11 <unknown>\n#4 0x555ad54a9004 <unknown>\n#5 0x555ad548736d <unknown>\n#6 0x555ad54a6297 <unknown>\n#7 0x555ad54870e3 <unknown>\n#8 0x555ad544f044 <unknown>\n#9 0x555ad545044e <unknown>\n#10 0x555ad5715861 <unknown>\n#11 0x555ad5719785 <unknown>\n#12 0x555ad5703285 <unknown>\n#13 0x555ad571a41f <unknown>\n#14 0x555ad56e720f <unknown>\n#15 0x555ad573e028 <unknown>\n#16 0x555ad573e1f7 <unknown>\n#17 0x555ad574fed4 <unknown>\n#18 0x7f965f094ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.30 Verify that the 'Grab a tee or two!' text is visible.",
-        "uid" : "ab0a47863a4a7ee5",
-        "parentUid" : "27532822e408fd90cb2acb27f0b99ae4",
+        "uid" : "dbdade3e1cedc212",
+        "parentUid" : "9918656a030b5b8f123dde60da145ea2",
         "status" : "broken",
         "time" : {
-          "start" : 1702776474723,
-          "stop" : 1702776480642,
-          "duration" : 5919
+          "start" : 1703381200215,
+          "stop" : 1703381206397,
+          "duration" : 6182
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "27532822e408fd90cb2acb27f0b99ae4"
+      "uid" : "9918656a030b5b8f123dde60da145ea2"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d96d6a9d33 <unknown>\n#1 0x55d96d366f87 <unknown>\n#2 0x55d96d3b6c0e <unknown>\n#3 0x55d96d3b6d11 <unknown>\n#4 0x55d96d402004 <unknown>\n#5 0x55d96d3e036d <unknown>\n#6 0x55d96d3ff297 <unknown>\n#7 0x55d96d3e00e3 <unknown>\n#8 0x55d96d3a8044 <unknown>\n#9 0x55d96d3a944e <unknown>\n#10 0x55d96d66e861 <unknown>\n#11 0x55d96d672785 <unknown>\n#12 0x55d96d65c285 <unknown>\n#13 0x55d96d67341f <unknown>\n#14 0x55d96d64020f <unknown>\n#15 0x55d96d697028 <unknown>\n#16 0x55d96d6971f7 <unknown>\n#17 0x55d96d6a8ed4 <unknown>\n#18 0x7fc652e94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e30fef6d33 <unknown>\n#1 0x55e30fbb3f87 <unknown>\n#2 0x55e30fc03c0e <unknown>\n#3 0x55e30fc03d11 <unknown>\n#4 0x55e30fc4f004 <unknown>\n#5 0x55e30fc2d36d <unknown>\n#6 0x55e30fc4c297 <unknown>\n#7 0x55e30fc2d0e3 <unknown>\n#8 0x55e30fbf5044 <unknown>\n#9 0x55e30fbf644e <unknown>\n#10 0x55e30febb861 <unknown>\n#11 0x55e30febf785 <unknown>\n#12 0x55e30fea9285 <unknown>\n#13 0x55e30fec041f <unknown>\n#14 0x55e30fe8d20f <unknown>\n#15 0x55e30fee4028 <unknown>\n#16 0x55e30fee41f7 <unknown>\n#17 0x55e30fef5ed4 <unknown>\n#18 0x7fa932a94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.31 Verify that the 'Shop Tees' text is visible.",
-        "uid" : "c8210008105779af",
-        "parentUid" : "64f136c08bc44a869539f63ca7b0dc39",
+        "uid" : "20fce3baec5d2fea",
+        "parentUid" : "93a01aff834ab9cc4727b49dd348fb5c",
         "status" : "broken",
         "time" : {
-          "start" : 1702776481892,
-          "stop" : 1702776488288,
-          "duration" : 6396
+          "start" : 1703381207630,
+          "stop" : 1703381213785,
+          "duration" : 6155
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "64f136c08bc44a869539f63ca7b0dc39"
+      "uid" : "93a01aff834ab9cc4727b49dd348fb5c"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d796f4fd33 <unknown>\n#1 0x55d796c0cf87 <unknown>\n#2 0x55d796c5cc0e <unknown>\n#3 0x55d796c5cd11 <unknown>\n#4 0x55d796ca8004 <unknown>\n#5 0x55d796c8636d <unknown>\n#6 0x55d796ca5297 <unknown>\n#7 0x55d796c860e3 <unknown>\n#8 0x55d796c4e044 <unknown>\n#9 0x55d796c4f44e <unknown>\n#10 0x55d796f14861 <unknown>\n#11 0x55d796f18785 <unknown>\n#12 0x55d796f02285 <unknown>\n#13 0x55d796f1941f <unknown>\n#14 0x55d796ee620f <unknown>\n#15 0x55d796f3d028 <unknown>\n#16 0x55d796f3d1f7 <unknown>\n#17 0x55d796f4eed4 <unknown>\n#18 0x7f4c5ac94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564a5cd33d33 <unknown>\n#1 0x564a5c9f0f87 <unknown>\n#2 0x564a5ca40c0e <unknown>\n#3 0x564a5ca40d11 <unknown>\n#4 0x564a5ca8c004 <unknown>\n#5 0x564a5ca6a36d <unknown>\n#6 0x564a5ca89297 <unknown>\n#7 0x564a5ca6a0e3 <unknown>\n#8 0x564a5ca32044 <unknown>\n#9 0x564a5ca3344e <unknown>\n#10 0x564a5ccf8861 <unknown>\n#11 0x564a5ccfc785 <unknown>\n#12 0x564a5cce6285 <unknown>\n#13 0x564a5ccfd41f <unknown>\n#14 0x564a5ccca20f <unknown>\n#15 0x564a5cd21028 <unknown>\n#16 0x564a5cd211f7 <unknown>\n#17 0x564a5cd32ed4 <unknown>\n#18 0x7fefc9294ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.32 Verify the click on the block 'Luma tees' redirects to a correct page.",
-        "uid" : "b15879560013dc73",
-        "parentUid" : "bbe71ba73d417fe7c29952765817bd6c",
+        "uid" : "1af03b9e960dd022",
+        "parentUid" : "68f69c1f21db431977850e2ea7830e71",
         "status" : "broken",
         "time" : {
-          "start" : 1702776489517,
-          "stop" : 1702776495515,
-          "duration" : 5998
+          "start" : 1703381215029,
+          "stop" : 1703381221406,
+          "duration" : 6377
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "bbe71ba73d417fe7c29952765817bd6c"
+      "uid" : "68f69c1f21db431977850e2ea7830e71"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x563cd655ad33 <unknown>\n#1 0x563cd6217f87 <unknown>\n#2 0x563cd6267c0e <unknown>\n#3 0x563cd6267d11 <unknown>\n#4 0x563cd62b3004 <unknown>\n#5 0x563cd629136d <unknown>\n#6 0x563cd62b0297 <unknown>\n#7 0x563cd62910e3 <unknown>\n#8 0x563cd6259044 <unknown>\n#9 0x563cd625a44e <unknown>\n#10 0x563cd651f861 <unknown>\n#11 0x563cd6523785 <unknown>\n#12 0x563cd650d285 <unknown>\n#13 0x563cd652441f <unknown>\n#14 0x563cd64f120f <unknown>\n#15 0x563cd6548028 <unknown>\n#16 0x563cd65481f7 <unknown>\n#17 0x563cd6559ed4 <unknown>\n#18 0x7fecbbe94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5652ec7a4d33 <unknown>\n#1 0x5652ec461f87 <unknown>\n#2 0x5652ec4b1c0e <unknown>\n#3 0x5652ec4b1d11 <unknown>\n#4 0x5652ec4fd004 <unknown>\n#5 0x5652ec4db36d <unknown>\n#6 0x5652ec4fa297 <unknown>\n#7 0x5652ec4db0e3 <unknown>\n#8 0x5652ec4a3044 <unknown>\n#9 0x5652ec4a444e <unknown>\n#10 0x5652ec769861 <unknown>\n#11 0x5652ec76d785 <unknown>\n#12 0x5652ec757285 <unknown>\n#13 0x5652ec76e41f <unknown>\n#14 0x5652ec73b20f <unknown>\n#15 0x5652ec792028 <unknown>\n#16 0x5652ec7921f7 <unknown>\n#17 0x5652ec7a3ed4 <unknown>\n#18 0x7f5bb0e94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.33 Verify the visibility of 'Luma hoodies' promo block.",
-        "uid" : "14368f01c767e4ff",
-        "parentUid" : "a093f0eac8ef2e01d9db5a8fe2f9e6fe",
+        "uid" : "6dbb2d678daa1318",
+        "parentUid" : "3cedabe1029c3d35e04d59e5be428fe2",
         "status" : "broken",
         "time" : {
-          "start" : 1702776496782,
-          "stop" : 1702776502891,
-          "duration" : 6109
+          "start" : 1703381222627,
+          "stop" : 1703381228848,
+          "duration" : 6221
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a093f0eac8ef2e01d9db5a8fe2f9e6fe"
+      "uid" : "3cedabe1029c3d35e04d59e5be428fe2"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d5080f8d33 <unknown>\n#1 0x55d507db5f87 <unknown>\n#2 0x55d507e05c0e <unknown>\n#3 0x55d507e05d11 <unknown>\n#4 0x55d507e51004 <unknown>\n#5 0x55d507e2f36d <unknown>\n#6 0x55d507e4e297 <unknown>\n#7 0x55d507e2f0e3 <unknown>\n#8 0x55d507df7044 <unknown>\n#9 0x55d507df844e <unknown>\n#10 0x55d5080bd861 <unknown>\n#11 0x55d5080c1785 <unknown>\n#12 0x55d5080ab285 <unknown>\n#13 0x55d5080c241f <unknown>\n#14 0x55d50808f20f <unknown>\n#15 0x55d5080e6028 <unknown>\n#16 0x55d5080e61f7 <unknown>\n#17 0x55d5080f7ed4 <unknown>\n#18 0x7f2ecf094ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556ffff4dd33 <unknown>\n#1 0x556fffc0af87 <unknown>\n#2 0x556fffc5ac0e <unknown>\n#3 0x556fffc5ad11 <unknown>\n#4 0x556fffca6004 <unknown>\n#5 0x556fffc8436d <unknown>\n#6 0x556fffca3297 <unknown>\n#7 0x556fffc840e3 <unknown>\n#8 0x556fffc4c044 <unknown>\n#9 0x556fffc4d44e <unknown>\n#10 0x556ffff12861 <unknown>\n#11 0x556ffff16785 <unknown>\n#12 0x556ffff00285 <unknown>\n#13 0x556ffff1741f <unknown>\n#14 0x556fffee420f <unknown>\n#15 0x556ffff3b028 <unknown>\n#16 0x556ffff3b1f7 <unknown>\n#17 0x556ffff4ced4 <unknown>\n#18 0x7f5658a94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.34 Verify the visibility of the image in the 'Luma hoodies' promo block.",
-        "uid" : "f2bf8708df7968c7",
-        "parentUid" : "9eb16d55f4f3f2612f66caf0fc375477",
+        "uid" : "a65c1a4e72b5d02b",
+        "parentUid" : "ae400b6558062bd43ae1ba448ad4831a",
         "status" : "broken",
         "time" : {
-          "start" : 1702776504133,
-          "stop" : 1702776510133,
-          "duration" : 6000
+          "start" : 1703381230069,
+          "stop" : 1703381236556,
+          "duration" : 6487
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "9eb16d55f4f3f2612f66caf0fc375477"
+      "uid" : "ae400b6558062bd43ae1ba448ad4831a"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fd7e4c5d33 <unknown>\n#1 0x55fd7e182f87 <unknown>\n#2 0x55fd7e1d2c0e <unknown>\n#3 0x55fd7e1d2d11 <unknown>\n#4 0x55fd7e21e004 <unknown>\n#5 0x55fd7e1fc36d <unknown>\n#6 0x55fd7e21b297 <unknown>\n#7 0x55fd7e1fc0e3 <unknown>\n#8 0x55fd7e1c4044 <unknown>\n#9 0x55fd7e1c544e <unknown>\n#10 0x55fd7e48a861 <unknown>\n#11 0x55fd7e48e785 <unknown>\n#12 0x55fd7e478285 <unknown>\n#13 0x55fd7e48f41f <unknown>\n#14 0x55fd7e45c20f <unknown>\n#15 0x55fd7e4b3028 <unknown>\n#16 0x55fd7e4b31f7 <unknown>\n#17 0x55fd7e4c4ed4 <unknown>\n#18 0x7f9799894ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f78acbad33 <unknown>\n#1 0x55f78a977f87 <unknown>\n#2 0x55f78a9c7c0e <unknown>\n#3 0x55f78a9c7d11 <unknown>\n#4 0x55f78aa13004 <unknown>\n#5 0x55f78a9f136d <unknown>\n#6 0x55f78aa10297 <unknown>\n#7 0x55f78a9f10e3 <unknown>\n#8 0x55f78a9b9044 <unknown>\n#9 0x55f78a9ba44e <unknown>\n#10 0x55f78ac7f861 <unknown>\n#11 0x55f78ac83785 <unknown>\n#12 0x55f78ac6d285 <unknown>\n#13 0x55f78ac8441f <unknown>\n#14 0x55f78ac5120f <unknown>\n#15 0x55f78aca8028 <unknown>\n#16 0x55f78aca81f7 <unknown>\n#17 0x55f78acb9ed4 <unknown>\n#18 0x7f44ece94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.35 Verify that the 'Luma hoodies' text is visible.",
-        "uid" : "659234c489a4ab9",
-        "parentUid" : "40cb998c36b8df5881263fbaeae0b662",
+        "uid" : "eeca7d3be728bec2",
+        "parentUid" : "a4b5f7cb8b27ed449cf36ac05ce1df3c",
         "status" : "broken",
         "time" : {
-          "start" : 1702776511368,
-          "stop" : 1702776517384,
-          "duration" : 6016
+          "start" : 1703381237763,
+          "stop" : 1703381243734,
+          "duration" : 5971
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "40cb998c36b8df5881263fbaeae0b662"
+      "uid" : "a4b5f7cb8b27ed449cf36ac05ce1df3c"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f71babcd33 <unknown>\n#1 0x55f71b779f87 <unknown>\n#2 0x55f71b7c9c0e <unknown>\n#3 0x55f71b7c9d11 <unknown>\n#4 0x55f71b815004 <unknown>\n#5 0x55f71b7f336d <unknown>\n#6 0x55f71b812297 <unknown>\n#7 0x55f71b7f30e3 <unknown>\n#8 0x55f71b7bb044 <unknown>\n#9 0x55f71b7bc44e <unknown>\n#10 0x55f71ba81861 <unknown>\n#11 0x55f71ba85785 <unknown>\n#12 0x55f71ba6f285 <unknown>\n#13 0x55f71ba8641f <unknown>\n#14 0x55f71ba5320f <unknown>\n#15 0x55f71baaa028 <unknown>\n#16 0x55f71baaa1f7 <unknown>\n#17 0x55f71babbed4 <unknown>\n#18 0x7fab57894ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x563e88fa0d33 <unknown>\n#1 0x563e88c5df87 <unknown>\n#2 0x563e88cadc0e <unknown>\n#3 0x563e88cadd11 <unknown>\n#4 0x563e88cf9004 <unknown>\n#5 0x563e88cd736d <unknown>\n#6 0x563e88cf6297 <unknown>\n#7 0x563e88cd70e3 <unknown>\n#8 0x563e88c9f044 <unknown>\n#9 0x563e88ca044e <unknown>\n#10 0x563e88f65861 <unknown>\n#11 0x563e88f69785 <unknown>\n#12 0x563e88f53285 <unknown>\n#13 0x563e88f6a41f <unknown>\n#14 0x563e88f3720f <unknown>\n#15 0x563e88f8e028 <unknown>\n#16 0x563e88f8e1f7 <unknown>\n#17 0x563e88f9fed4 <unknown>\n#18 0x7f73bee94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.36 Verify that the 'Dress for fitness' text is visible.",
-        "uid" : "76dea14a9116bbcb",
-        "parentUid" : "0e4fcf9c6162bc15f5ec35f2eb6ac949",
+        "uid" : "e0a88e687f09895e",
+        "parentUid" : "eb165ae75df6b07d49d02c7c7208df69",
         "status" : "broken",
         "time" : {
-          "start" : 1702776518615,
-          "stop" : 1702776524656,
-          "duration" : 6041
+          "start" : 1703381244953,
+          "stop" : 1703381250929,
+          "duration" : 5976
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "0e4fcf9c6162bc15f5ec35f2eb6ac949"
+      "uid" : "eb165ae75df6b07d49d02c7c7208df69"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e08b1a7d33 <unknown>\n#1 0x55e08ae64f87 <unknown>\n#2 0x55e08aeb4c0e <unknown>\n#3 0x55e08aeb4d11 <unknown>\n#4 0x55e08af00004 <unknown>\n#5 0x55e08aede36d <unknown>\n#6 0x55e08aefd297 <unknown>\n#7 0x55e08aede0e3 <unknown>\n#8 0x55e08aea6044 <unknown>\n#9 0x55e08aea744e <unknown>\n#10 0x55e08b16c861 <unknown>\n#11 0x55e08b170785 <unknown>\n#12 0x55e08b15a285 <unknown>\n#13 0x55e08b17141f <unknown>\n#14 0x55e08b13e20f <unknown>\n#15 0x55e08b195028 <unknown>\n#16 0x55e08b1951f7 <unknown>\n#17 0x55e08b1a6ed4 <unknown>\n#18 0x7f79ad294ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56421e713d33 <unknown>\n#1 0x56421e3d0f87 <unknown>\n#2 0x56421e420c0e <unknown>\n#3 0x56421e420d11 <unknown>\n#4 0x56421e46c004 <unknown>\n#5 0x56421e44a36d <unknown>\n#6 0x56421e469297 <unknown>\n#7 0x56421e44a0e3 <unknown>\n#8 0x56421e412044 <unknown>\n#9 0x56421e41344e <unknown>\n#10 0x56421e6d8861 <unknown>\n#11 0x56421e6dc785 <unknown>\n#12 0x56421e6c6285 <unknown>\n#13 0x56421e6dd41f <unknown>\n#14 0x56421e6aa20f <unknown>\n#15 0x56421e701028 <unknown>\n#16 0x56421e7011f7 <unknown>\n#17 0x56421e712ed4 <unknown>\n#18 0x7fcec2a94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.37 Verify that the 'Shop Hoodies' text is visible.",
-        "uid" : "c41e76928afc9b51",
-        "parentUid" : "126005880089e4f9336cd2d29ff96a00",
+        "uid" : "4f59e23fec7ca3cc",
+        "parentUid" : "dedab5a990276dfe2ac78667c434e5b6",
         "status" : "broken",
         "time" : {
-          "start" : 1702776525904,
-          "stop" : 1702776531893,
-          "duration" : 5989
+          "start" : 1703381252153,
+          "stop" : 1703381258130,
+          "duration" : 5977
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "126005880089e4f9336cd2d29ff96a00"
+      "uid" : "dedab5a990276dfe2ac78667c434e5b6"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b82d1a7d33 <unknown>\n#1 0x55b82ce64f87 <unknown>\n#2 0x55b82ceb4c0e <unknown>\n#3 0x55b82ceb4d11 <unknown>\n#4 0x55b82cf00004 <unknown>\n#5 0x55b82cede36d <unknown>\n#6 0x55b82cefd297 <unknown>\n#7 0x55b82cede0e3 <unknown>\n#8 0x55b82cea6044 <unknown>\n#9 0x55b82cea744e <unknown>\n#10 0x55b82d16c861 <unknown>\n#11 0x55b82d170785 <unknown>\n#12 0x55b82d15a285 <unknown>\n#13 0x55b82d17141f <unknown>\n#14 0x55b82d13e20f <unknown>\n#15 0x55b82d195028 <unknown>\n#16 0x55b82d1951f7 <unknown>\n#17 0x55b82d1a6ed4 <unknown>\n#18 0x7f8d64694ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556a2807fd33 <unknown>\n#1 0x556a27d3cf87 <unknown>\n#2 0x556a27d8cc0e <unknown>\n#3 0x556a27d8cd11 <unknown>\n#4 0x556a27dd8004 <unknown>\n#5 0x556a27db636d <unknown>\n#6 0x556a27dd5297 <unknown>\n#7 0x556a27db60e3 <unknown>\n#8 0x556a27d7e044 <unknown>\n#9 0x556a27d7f44e <unknown>\n#10 0x556a28044861 <unknown>\n#11 0x556a28048785 <unknown>\n#12 0x556a28032285 <unknown>\n#13 0x556a2804941f <unknown>\n#14 0x556a2801620f <unknown>\n#15 0x556a2806d028 <unknown>\n#16 0x556a2806d1f7 <unknown>\n#17 0x556a2807eed4 <unknown>\n#18 0x7f0396c94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 14.06.38 Verify the click on the block 'Luma hoodies' redirects to a correct page.",
-        "uid" : "b786619de38d7072",
-        "parentUid" : "1bf0a322e773570fe55accc489abc461",
+        "uid" : "23b58c39a4070550",
+        "parentUid" : "d986c83dae8cf1d889a7f7545d9a6ded",
         "status" : "broken",
         "time" : {
-          "start" : 1702776533143,
-          "stop" : 1702776539072,
-          "duration" : 5929
+          "start" : 1703381259360,
+          "stop" : 1703381265339,
+          "duration" : 5979
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "1bf0a322e773570fe55accc489abc461"
+      "uid" : "d986c83dae8cf1d889a7f7545d9a6ded"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55dda3542d33 <unknown>\n#1 0x55dda31fff87 <unknown>\n#2 0x55dda324fc0e <unknown>\n#3 0x55dda324fd11 <unknown>\n#4 0x55dda329b004 <unknown>\n#5 0x55dda327936d <unknown>\n#6 0x55dda3298297 <unknown>\n#7 0x55dda32790e3 <unknown>\n#8 0x55dda3241044 <unknown>\n#9 0x55dda324244e <unknown>\n#10 0x55dda3507861 <unknown>\n#11 0x55dda350b785 <unknown>\n#12 0x55dda34f5285 <unknown>\n#13 0x55dda350c41f <unknown>\n#14 0x55dda34d920f <unknown>\n#15 0x55dda3530028 <unknown>\n#16 0x55dda35301f7 <unknown>\n#17 0x55dda3541ed4 <unknown>\n#18 0x7f6524894ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5585bfb30d33 <unknown>\n#1 0x5585bf7edf87 <unknown>\n#2 0x5585bf83dc0e <unknown>\n#3 0x5585bf83dd11 <unknown>\n#4 0x5585bf889004 <unknown>\n#5 0x5585bf86736d <unknown>\n#6 0x5585bf886297 <unknown>\n#7 0x5585bf8670e3 <unknown>\n#8 0x5585bf82f044 <unknown>\n#9 0x5585bf83044e <unknown>\n#10 0x5585bfaf5861 <unknown>\n#11 0x5585bfaf9785 <unknown>\n#12 0x5585bfae3285 <unknown>\n#13 0x5585bfafa41f <unknown>\n#14 0x5585bfac720f <unknown>\n#15 0x5585bfb1e028 <unknown>\n#16 0x5585bfb1e1f7 <unknown>\n#17 0x5585bfb2fed4 <unknown>\n#18 0x7faaec294ac3 <unknown>",
       "children" : [ {
         "name" : "TC 16.02.02 - Check the display of block 1 main",
-        "uid" : "ed5b1e2c5dc891b4",
-        "parentUid" : "a1ef7c8c8a3b7ff3798550bced3ef523",
+        "uid" : "5af3ded4dd05ccdc",
+        "parentUid" : "3c782e8c266cce7c0a611c7f29032c9d",
         "status" : "broken",
         "time" : {
-          "start" : 1702777015155,
-          "stop" : 1702777020257,
-          "duration" : 5102
+          "start" : 1703381748683,
+          "stop" : 1703381753765,
+          "duration" : 5082
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a1ef7c8c8a3b7ff3798550bced3ef523"
+      "uid" : "3c782e8c266cce7c0a611c7f29032c9d"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555c5e050d33 <unknown>\n#1 0x555c5dd0df87 <unknown>\n#2 0x555c5dd5dc0e <unknown>\n#3 0x555c5dd5dd11 <unknown>\n#4 0x555c5dda9004 <unknown>\n#5 0x555c5dd8736d <unknown>\n#6 0x555c5dda6297 <unknown>\n#7 0x555c5dd870e3 <unknown>\n#8 0x555c5dd4f044 <unknown>\n#9 0x555c5dd5044e <unknown>\n#10 0x555c5e015861 <unknown>\n#11 0x555c5e019785 <unknown>\n#12 0x555c5e003285 <unknown>\n#13 0x555c5e01a41f <unknown>\n#14 0x555c5dfe720f <unknown>\n#15 0x555c5e03e028 <unknown>\n#16 0x555c5e03e1f7 <unknown>\n#17 0x555c5e04fed4 <unknown>\n#18 0x7fd452e94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56378caaed33 <unknown>\n#1 0x56378c76bf87 <unknown>\n#2 0x56378c7bbc0e <unknown>\n#3 0x56378c7bbd11 <unknown>\n#4 0x56378c807004 <unknown>\n#5 0x56378c7e536d <unknown>\n#6 0x56378c804297 <unknown>\n#7 0x56378c7e50e3 <unknown>\n#8 0x56378c7ad044 <unknown>\n#9 0x56378c7ae44e <unknown>\n#10 0x56378ca73861 <unknown>\n#11 0x56378ca77785 <unknown>\n#12 0x56378ca61285 <unknown>\n#13 0x56378ca7841f <unknown>\n#14 0x56378ca4520f <unknown>\n#15 0x56378ca9c028 <unknown>\n#16 0x56378ca9c1f7 <unknown>\n#17 0x56378caaded4 <unknown>\n#18 0x7f77df094ac3 <unknown>",
       "children" : [ {
         "name" : "TC 16.02.03 - Check the display of block 2 erin",
-        "uid" : "abda222ad4724a79",
-        "parentUid" : "581a47158bd2d4b31ce48f9773209641",
+        "uid" : "71a858978f76d54b",
+        "parentUid" : "363a56b0139ebf276359928db2d9c09a",
         "status" : "broken",
         "time" : {
-          "start" : 1702777022341,
-          "stop" : 1702777027431,
-          "duration" : 5090
+          "start" : 1703381755888,
+          "stop" : 1703381760984,
+          "duration" : 5096
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "581a47158bd2d4b31ce48f9773209641"
+      "uid" : "363a56b0139ebf276359928db2d9c09a"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x557e4f090d33 <unknown>\n#1 0x557e4ed4df87 <unknown>\n#2 0x557e4ed9dc0e <unknown>\n#3 0x557e4ed9dd11 <unknown>\n#4 0x557e4ede9004 <unknown>\n#5 0x557e4edc736d <unknown>\n#6 0x557e4ede6297 <unknown>\n#7 0x557e4edc70e3 <unknown>\n#8 0x557e4ed8f044 <unknown>\n#9 0x557e4ed9044e <unknown>\n#10 0x557e4f055861 <unknown>\n#11 0x557e4f059785 <unknown>\n#12 0x557e4f043285 <unknown>\n#13 0x557e4f05a41f <unknown>\n#14 0x557e4f02720f <unknown>\n#15 0x557e4f07e028 <unknown>\n#16 0x557e4f07e1f7 <unknown>\n#17 0x557e4f08fed4 <unknown>\n#18 0x7f7b3ee94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5641a8fd5d33 <unknown>\n#1 0x5641a8c92f87 <unknown>\n#2 0x5641a8ce2c0e <unknown>\n#3 0x5641a8ce2d11 <unknown>\n#4 0x5641a8d2e004 <unknown>\n#5 0x5641a8d0c36d <unknown>\n#6 0x5641a8d2b297 <unknown>\n#7 0x5641a8d0c0e3 <unknown>\n#8 0x5641a8cd4044 <unknown>\n#9 0x5641a8cd544e <unknown>\n#10 0x5641a8f9a861 <unknown>\n#11 0x5641a8f9e785 <unknown>\n#12 0x5641a8f88285 <unknown>\n#13 0x5641a8f9f41f <unknown>\n#14 0x5641a8f6c20f <unknown>\n#15 0x5641a8fc3028 <unknown>\n#16 0x5641a8fc31f7 <unknown>\n#17 0x5641a8fd4ed4 <unknown>\n#18 0x7f5246694ac3 <unknown>",
       "children" : [ {
         "name" : "TC 16.02.04 - Check the display of block 3 on demand",
-        "uid" : "a29a197c6dc85137",
-        "parentUid" : "ef29a7364cc2b46ac61dc8d4781c2227",
+        "uid" : "d3d6119bd654cbf2",
+        "parentUid" : "804d4aaa964e611fbbe2eabfdecdb985",
         "status" : "broken",
         "time" : {
-          "start" : 1702777029640,
-          "stop" : 1702777034731,
-          "duration" : 5091
+          "start" : 1703381763069,
+          "stop" : 1703381768169,
+          "duration" : 5100
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "ef29a7364cc2b46ac61dc8d4781c2227"
+      "uid" : "804d4aaa964e611fbbe2eabfdecdb985"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56318a05dd33 <unknown>\n#1 0x563189d1af87 <unknown>\n#2 0x563189d6ac0e <unknown>\n#3 0x563189d6ad11 <unknown>\n#4 0x563189db6004 <unknown>\n#5 0x563189d9436d <unknown>\n#6 0x563189db3297 <unknown>\n#7 0x563189d940e3 <unknown>\n#8 0x563189d5c044 <unknown>\n#9 0x563189d5d44e <unknown>\n#10 0x56318a022861 <unknown>\n#11 0x56318a026785 <unknown>\n#12 0x56318a010285 <unknown>\n#13 0x56318a02741f <unknown>\n#14 0x563189ff420f <unknown>\n#15 0x56318a04b028 <unknown>\n#16 0x56318a04b1f7 <unknown>\n#17 0x56318a05ced4 <unknown>\n#18 0x7f4d7ba94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cc8e1ded33 <unknown>\n#1 0x55cc8de9bf87 <unknown>\n#2 0x55cc8deebc0e <unknown>\n#3 0x55cc8deebd11 <unknown>\n#4 0x55cc8df37004 <unknown>\n#5 0x55cc8df1536d <unknown>\n#6 0x55cc8df34297 <unknown>\n#7 0x55cc8df150e3 <unknown>\n#8 0x55cc8dedd044 <unknown>\n#9 0x55cc8dede44e <unknown>\n#10 0x55cc8e1a3861 <unknown>\n#11 0x55cc8e1a7785 <unknown>\n#12 0x55cc8e191285 <unknown>\n#13 0x55cc8e1a841f <unknown>\n#14 0x55cc8e17520f <unknown>\n#15 0x55cc8e1cc028 <unknown>\n#16 0x55cc8e1cc1f7 <unknown>\n#17 0x55cc8e1dded4 <unknown>\n#18 0x7f1743894ac3 <unknown>",
       "children" : [ {
         "name" : "TC 16.02.05 Verify title Training is visible and contains text 'Top Videos'",
-        "uid" : "d0ed7e7f42532659",
-        "parentUid" : "8e768295befed46a780c46a56acbd6d5",
+        "uid" : "4f31ea44e08f29f3",
+        "parentUid" : "7ff3fcd05cb0b5c4c78021215db00289",
         "status" : "broken",
         "time" : {
-          "start" : 1702777036831,
-          "stop" : 1702777041919,
+          "start" : 1703381770214,
+          "stop" : 1703381775317,
+          "duration" : 5103
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7ff3fcd05cb0b5c4c78021215db00289"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x563f264dcd33 <unknown>\n#1 0x563f26199f87 <unknown>\n#2 0x563f261e9c0e <unknown>\n#3 0x563f261e9d11 <unknown>\n#4 0x563f26235004 <unknown>\n#5 0x563f2621336d <unknown>\n#6 0x563f26232297 <unknown>\n#7 0x563f262130e3 <unknown>\n#8 0x563f261db044 <unknown>\n#9 0x563f261dc44e <unknown>\n#10 0x563f264a1861 <unknown>\n#11 0x563f264a5785 <unknown>\n#12 0x563f2648f285 <unknown>\n#13 0x563f264a641f <unknown>\n#14 0x563f2647320f <unknown>\n#15 0x563f264ca028 <unknown>\n#16 0x563f264ca1f7 <unknown>\n#17 0x563f264dbed4 <unknown>\n#18 0x7efd18494ac3 <unknown>",
+      "children" : [ {
+        "name" : "TC 16.02.06 Check the cursor change to block training main ",
+        "uid" : "b7fde2e4f72a3e46",
+        "parentUid" : "579b10732b50685e6e7aa17aaa9eab17",
+        "status" : "broken",
+        "time" : {
+          "start" : 1703381777600,
+          "stop" : 1703381782688,
           "duration" : 5088
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8e768295befed46a780c46a56acbd6d5"
+      "uid" : "579b10732b50685e6e7aa17aaa9eab17"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b91bfa3d33 <unknown>\n#1 0x55b91bc60f87 <unknown>\n#2 0x55b91bcb0c0e <unknown>\n#3 0x55b91bcb0d11 <unknown>\n#4 0x55b91bcfc004 <unknown>\n#5 0x55b91bcda36d <unknown>\n#6 0x55b91bcf9297 <unknown>\n#7 0x55b91bcda0e3 <unknown>\n#8 0x55b91bca2044 <unknown>\n#9 0x55b91bca344e <unknown>\n#10 0x55b91bf68861 <unknown>\n#11 0x55b91bf6c785 <unknown>\n#12 0x55b91bf56285 <unknown>\n#13 0x55b91bf6d41f <unknown>\n#14 0x55b91bf3a20f <unknown>\n#15 0x55b91bf91028 <unknown>\n#16 0x55b91bf911f7 <unknown>\n#17 0x55b91bfa2ed4 <unknown>\n#18 0x7fb126094ac3 <unknown>",
-      "children" : [ {
-        "name" : "TC 16.02.06 Check the cursor change to block training main ",
-        "uid" : "beda7b95ba3f8e1d",
-        "parentUid" : "77e9b6d4562fb4199e521637046ce9df",
-        "status" : "broken",
-        "time" : {
-          "start" : 1702777043985,
-          "stop" : 1702777049080,
-          "duration" : 5095
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "77e9b6d4562fb4199e521637046ce9df"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e074f01d33 <unknown>\n#1 0x55e074bbef87 <unknown>\n#2 0x55e074c0ec0e <unknown>\n#3 0x55e074c0ed11 <unknown>\n#4 0x55e074c5a004 <unknown>\n#5 0x55e074c3836d <unknown>\n#6 0x55e074c57297 <unknown>\n#7 0x55e074c380e3 <unknown>\n#8 0x55e074c00044 <unknown>\n#9 0x55e074c0144e <unknown>\n#10 0x55e074ec6861 <unknown>\n#11 0x55e074eca785 <unknown>\n#12 0x55e074eb4285 <unknown>\n#13 0x55e074ecb41f <unknown>\n#14 0x55e074e9820f <unknown>\n#15 0x55e074eef028 <unknown>\n#16 0x55e074eef1f7 <unknown>\n#17 0x55e074f00ed4 <unknown>\n#18 0x7f909d694ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x559eaab52d33 <unknown>\n#1 0x559eaa80ff87 <unknown>\n#2 0x559eaa85fc0e <unknown>\n#3 0x559eaa85fd11 <unknown>\n#4 0x559eaa8ab004 <unknown>\n#5 0x559eaa88936d <unknown>\n#6 0x559eaa8a8297 <unknown>\n#7 0x559eaa8890e3 <unknown>\n#8 0x559eaa851044 <unknown>\n#9 0x559eaa85244e <unknown>\n#10 0x559eaab17861 <unknown>\n#11 0x559eaab1b785 <unknown>\n#12 0x559eaab05285 <unknown>\n#13 0x559eaab1c41f <unknown>\n#14 0x559eaaae920f <unknown>\n#15 0x559eaab40028 <unknown>\n#16 0x559eaab401f7 <unknown>\n#17 0x559eaab51ed4 <unknown>\n#18 0x7fa26fc94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 16.02.07 Check the cursor change to block training erin",
-        "uid" : "78458ca6dfcbe558",
-        "parentUid" : "dd247aa9319ba835508bacbf19b0f38e",
+        "uid" : "38bbb8551ec49f2f",
+        "parentUid" : "c5be22a43fdae46b54bb0e02824daf90",
         "status" : "broken",
         "time" : {
-          "start" : 1702777051218,
-          "stop" : 1702777056324,
-          "duration" : 5106
+          "start" : 1703381784800,
+          "stop" : 1703381789890,
+          "duration" : 5090
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "dd247aa9319ba835508bacbf19b0f38e"
+      "uid" : "c5be22a43fdae46b54bb0e02824daf90"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cc2803bd33 <unknown>\n#1 0x55cc27cf8f87 <unknown>\n#2 0x55cc27d48c0e <unknown>\n#3 0x55cc27d48d11 <unknown>\n#4 0x55cc27d94004 <unknown>\n#5 0x55cc27d7236d <unknown>\n#6 0x55cc27d91297 <unknown>\n#7 0x55cc27d720e3 <unknown>\n#8 0x55cc27d3a044 <unknown>\n#9 0x55cc27d3b44e <unknown>\n#10 0x55cc28000861 <unknown>\n#11 0x55cc28004785 <unknown>\n#12 0x55cc27fee285 <unknown>\n#13 0x55cc2800541f <unknown>\n#14 0x55cc27fd220f <unknown>\n#15 0x55cc28029028 <unknown>\n#16 0x55cc280291f7 <unknown>\n#17 0x55cc2803aed4 <unknown>\n#18 0x7f2a50494ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f982ee2d33 <unknown>\n#1 0x55f982b9ff87 <unknown>\n#2 0x55f982befc0e <unknown>\n#3 0x55f982befd11 <unknown>\n#4 0x55f982c3b004 <unknown>\n#5 0x55f982c1936d <unknown>\n#6 0x55f982c38297 <unknown>\n#7 0x55f982c190e3 <unknown>\n#8 0x55f982be1044 <unknown>\n#9 0x55f982be244e <unknown>\n#10 0x55f982ea7861 <unknown>\n#11 0x55f982eab785 <unknown>\n#12 0x55f982e95285 <unknown>\n#13 0x55f982eac41f <unknown>\n#14 0x55f982e7920f <unknown>\n#15 0x55f982ed0028 <unknown>\n#16 0x55f982ed01f7 <unknown>\n#17 0x55f982ee1ed4 <unknown>\n#18 0x7f3c11894ac3 <unknown>",
       "children" : [ {
         "name" : "TC 16.02.08 Check the cursor change to block training on demand",
-        "uid" : "4a807d4efb7d9605",
-        "parentUid" : "5fc82ee0236dc77355d90d751240f0f5",
+        "uid" : "9680558b69b9239d",
+        "parentUid" : "662343f3c96d701209c8d7178db7f973",
         "status" : "broken",
         "time" : {
-          "start" : 1702777058544,
-          "stop" : 1702777063642,
-          "duration" : 5098
+          "start" : 1703381792011,
+          "stop" : 1703381797101,
+          "duration" : 5090
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "5fc82ee0236dc77355d90d751240f0f5"
+      "uid" : "662343f3c96d701209c8d7178db7f973"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
