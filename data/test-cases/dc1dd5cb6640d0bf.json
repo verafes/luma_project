@@ -1,0 +1,200 @@
+{
+  "uid" : "dc1dd5cb6640d0bf",
+  "name" : "TC 02.01.27 - Check text of 'Contact us' link on each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_27_check_text_of_contact_us_link_on_pages",
+  "historyId" : "d999284d8d453aea511c7e5dc7de6ee3",
+  "time" : {
+    "start" : 1705799891923,
+    "stop" : 1705799892907,
+    "duration" : 984
+  },
+  "description" : "Checks if text of 'Contact us' link is correct on each page in DATA_1",
+  "descriptionHtml" : "<p>Checks if text of 'Contact us' link is correct on each page in DATA_1</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Actual text 'Subscribe to our mailing list' of 'Contact us' link does not match expected 'Contact us'\nassert 'Subscribe to... mailing list' == 'Contact us'\n  - Contact us\n  + Subscribe to our mailing list",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7fb98bc54a10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"eeab2885a9aeed148caf90c1a2f6053b\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.27 - Check text of 'Contact us' link on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_27_check_text_of_contact_us_link_on_pages(self, driver, URL):\n        \"\"\"Checks if text of 'Contact us' link is correct on each page in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n        actual_text = page.check_text_of_contact_us_link()\n        expected_text = FooterElementsText.CONTACT_US_LINK_TEXT\n>       assert actual_text == expected_text, \\\n            f\"Actual text '{actual_text}' of 'Contact us' link does not match expected '{expected_text}'\"\nE       AssertionError: Actual text 'Subscribe to our mailing list' of 'Contact us' link does not match expected 'Contact us'\nE       assert 'Subscribe to... mailing list' == 'Contact us'\nE         - Contact us\nE         + Subscribe to our mailing list\n\ntests/test_footer.py:230: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1705799890968,
+      "stop" : 1705799891922,
+      "duration" : 954
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1705799700414,
+      "stop" : 1705799700478,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1705799700478,
+      "stop" : 1705799700478,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Checks if text of 'Contact us' link is correct on each page in DATA_1",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Actual text 'Subscribe to our mailing list' of 'Contact us' link does not match expected 'Contact us'\nassert 'Subscribe to... mailing list' == 'Contact us'\n  - Contact us\n  + Subscribe to our mailing list",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7fb98bc54a10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"eeab2885a9aeed148caf90c1a2f6053b\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.27 - Check text of 'Contact us' link on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_27_check_text_of_contact_us_link_on_pages(self, driver, URL):\n        \"\"\"Checks if text of 'Contact us' link is correct on each page in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n        actual_text = page.check_text_of_contact_us_link()\n        expected_text = FooterElementsText.CONTACT_US_LINK_TEXT\n>       assert actual_text == expected_text, \\\n            f\"Actual text '{actual_text}' of 'Contact us' link does not match expected '{expected_text}'\"\nE       AssertionError: Actual text 'Subscribe to our mailing list' of 'Contact us' link does not match expected 'Contact us'\nE       assert 'Subscribe to... mailing list' == 'Contact us'\nE         - Contact us\nE         + Subscribe to our mailing list\n\ntests/test_footer.py:230: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1705799891923,
+        "stop" : 1705799892887,
+        "duration" : 964
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Check the text of Contact Us link",
+      "time" : {
+        "start" : 1705799892887,
+        "stop" : 1705799892907,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "25eb4c58651b22c2",
+      "name" : "Screenshot",
+      "source" : "25eb4c58651b22c2.png",
+      "type" : "image/png",
+      "size" : 479032
+    }, {
+      "uid" : "1a2c1a7602b859d2",
+      "name" : "HTML source",
+      "source" : "1a2c1a7602b859d2.html",
+      "type" : "text/html",
+      "size" : 121350
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1705799893134,
+      "stop" : 1705799893214,
+      "duration" : 80
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1705801214630,
+      "stop" : 1705801214630,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az695-494"
+  }, {
+    "name" : "thread",
+    "value" : "3100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "dc1dd5cb6640d0bf.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}

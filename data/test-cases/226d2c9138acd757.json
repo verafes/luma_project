@@ -1,0 +1,200 @@
+{
+  "uid" : "226d2c9138acd757",
+  "name" : "TC 02.01.56 - Check text of 'Subscribe to our mailing list' link on each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_56_check_text_of_subscribe_to_our_mailing_list_link_on_pages",
+  "historyId" : "3034ce0c593600c0719d9d82d6fd6e4f",
+  "time" : {
+    "start" : 1705799945859,
+    "stop" : 1705799947001,
+    "duration" : 1142
+  },
+  "description" : "Checks if text of 'Subscribe to our mailing list' link is correct on each page in DATA_1",
+  "descriptionHtml" : "<p>Checks if text of 'Subscribe to our mailing list' link is correct on each page in DATA_1</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Actual text 'Write for us' of 'Subscribe to our mailing list' link does not match expected 'Subscribe to our mailing list'\nassert 'Write for us' == 'Subscribe to... mailing list'\n  - Subscribe to our mailing list\n  + Write for us",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7fb98cbe8450>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b3cc4ffd81fb7fd1fffb64cac2acc8b0\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.56 - Check text of 'Subscribe to our mailing list' link on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_56_check_text_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):\n        \"\"\"Checks if text of 'Subscribe to our mailing list' link is correct on each page in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n        actual_text = page.check_text_of_subscribe_to_our_mailing_list_link()\n        expected_text = FooterElementsText.SUBSCRIBE_TO_OUR_MAILING_LIST_TEXT\n>       assert actual_text == expected_text, \\\n            f\"Actual text '{actual_text}' of 'Subscribe to our mailing list' link does not match expected '{expected_text}'\"\nE       AssertionError: Actual text 'Write for us' of 'Subscribe to our mailing list' link does not match expected 'Subscribe to our mailing list'\nE       assert 'Write for us' == 'Subscribe to... mailing list'\nE         - Subscribe to our mailing list\nE         + Write for us\n\ntests/test_footer.py:497: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1705799944899,
+      "stop" : 1705799945858,
+      "duration" : 959
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1705799700414,
+      "stop" : 1705799700478,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1705799700478,
+      "stop" : 1705799700478,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Checks if text of 'Subscribe to our mailing list' link is correct on each page in DATA_1",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Actual text 'Write for us' of 'Subscribe to our mailing list' link does not match expected 'Subscribe to our mailing list'\nassert 'Write for us' == 'Subscribe to... mailing list'\n  - Subscribe to our mailing list\n  + Write for us",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7fb98cbe8450>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b3cc4ffd81fb7fd1fffb64cac2acc8b0\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.56 - Check text of 'Subscribe to our mailing list' link on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_56_check_text_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):\n        \"\"\"Checks if text of 'Subscribe to our mailing list' link is correct on each page in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n        actual_text = page.check_text_of_subscribe_to_our_mailing_list_link()\n        expected_text = FooterElementsText.SUBSCRIBE_TO_OUR_MAILING_LIST_TEXT\n>       assert actual_text == expected_text, \\\n            f\"Actual text '{actual_text}' of 'Subscribe to our mailing list' link does not match expected '{expected_text}'\"\nE       AssertionError: Actual text 'Write for us' of 'Subscribe to our mailing list' link does not match expected 'Subscribe to our mailing list'\nE       assert 'Write for us' == 'Subscribe to... mailing list'\nE         - Subscribe to our mailing list\nE         + Write for us\n\ntests/test_footer.py:497: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1705799945859,
+        "stop" : 1705799946975,
+        "duration" : 1116
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Check the text of 'Subscribe to our mailing list' link",
+      "time" : {
+        "start" : 1705799946975,
+        "stop" : 1705799947001,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "1064060e306a5939",
+      "name" : "Screenshot",
+      "source" : "1064060e306a5939.png",
+      "type" : "image/png",
+      "size" : 526037
+    }, {
+      "uid" : "e285abb70be2ecda",
+      "name" : "HTML source",
+      "source" : "e285abb70be2ecda.html",
+      "type" : "text/html",
+      "size" : 122173
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1705799947253,
+      "stop" : 1705799947326,
+      "duration" : 73
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1705801214630,
+      "stop" : 1705801214630,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az695-494"
+  }, {
+    "name" : "thread",
+    "value" : "3100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "226d2c9138acd757.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}
