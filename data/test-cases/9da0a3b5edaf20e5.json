@@ -1,0 +1,200 @@
+{
+  "uid" : "9da0a3b5edaf20e5",
+  "name" : "TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_32_check_text_of_write_for_us_link_on_pages",
+  "historyId" : "27d4644d484c5fead378278f7d4af6ee",
+  "time" : {
+    "start" : 1706404348153,
+    "stop" : 1706404348960,
+    "duration" : 807
+  },
+  "description" : "Checks if text of Write for us link is correct on each page in DATA_1",
+  "descriptionHtml" : "<p>Checks if text of Write for us link is correct on each page in DATA_1</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Actual text 'Notes' of Write for us link does not match expected 'Write for us'\nassert 'Notes' == 'Write for us'\n  - Write for us\n  + Notes",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7fc8ee1dfb10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c33a1af31c0f1e3e7799fe25ec03a053\")>\nURL = 'https://magento.softwaretestingboard.com/'\n\n    @allure.title(\"TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_32_check_text_of_write_for_us_link_on_pages(self, driver, URL):\n        \"\"\"Checks if text of Write for us link is correct on each page in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n        actual_text = page.check_text_of_write_for_us_link()\n        expected_text = FooterElementsText.WRITE_FOR_US_LINK_TEXT\n>       assert actual_text == expected_text, \\\n            f\"Actual text '{actual_text}' of Write for us link does not match expected '{expected_text}'\"\nE       AssertionError: Actual text 'Notes' of Write for us link does not match expected 'Write for us'\nE       assert 'Notes' == 'Write for us'\nE         - Write for us\nE         + Notes\n\ntests/test_footer.py:268: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1706404159960,
+      "stop" : 1706404160025,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1706404160025,
+      "stop" : 1706404160025,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1706404347202,
+      "stop" : 1706404348153,
+      "duration" : 951
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Checks if text of Write for us link is correct on each page in DATA_1",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Actual text 'Notes' of Write for us link does not match expected 'Write for us'\nassert 'Notes' == 'Write for us'\n  - Write for us\n  + Notes",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7fc8ee1dfb10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c33a1af31c0f1e3e7799fe25ec03a053\")>\nURL = 'https://magento.softwaretestingboard.com/'\n\n    @allure.title(\"TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_32_check_text_of_write_for_us_link_on_pages(self, driver, URL):\n        \"\"\"Checks if text of Write for us link is correct on each page in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n        actual_text = page.check_text_of_write_for_us_link()\n        expected_text = FooterElementsText.WRITE_FOR_US_LINK_TEXT\n>       assert actual_text == expected_text, \\\n            f\"Actual text '{actual_text}' of Write for us link does not match expected '{expected_text}'\"\nE       AssertionError: Actual text 'Notes' of Write for us link does not match expected 'Write for us'\nE       assert 'Notes' == 'Write for us'\nE         - Write for us\nE         + Notes\n\ntests/test_footer.py:268: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1706404348154,
+        "stop" : 1706404348942,
+        "duration" : 788
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check the text of Write for us link",
+      "time" : {
+        "start" : 1706404348942,
+        "stop" : 1706404348960,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "bc9227216cd806c2",
+      "name" : "Screenshot",
+      "source" : "bc9227216cd806c2.png",
+      "type" : "image/png",
+      "size" : 653911
+    }, {
+      "uid" : "c72645fbebdaa17a",
+      "name" : "HTML source",
+      "source" : "c72645fbebdaa17a.html",
+      "type" : "text/html",
+      "size" : 116981
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1706405428240,
+      "stop" : 1706405428240,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1706404349295,
+      "stop" : 1706404349362,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az891-606"
+  }, {
+    "name" : "thread",
+    "value" : "3076-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "9da0a3b5edaf20e5.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/'" ]
+}
