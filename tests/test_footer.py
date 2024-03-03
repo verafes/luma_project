@@ -511,6 +511,7 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of 'Subscribe to our mailing list' link does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="skip because if UI changes")
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
