@@ -1,0 +1,262 @@
+{
+  "uid" : "69e910d35d04edd1",
+  "name" : "TC 02.02.01 - Check Search Terms link in footer leads to the correct page from each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_02_01_check_search_terms_link_functionality",
+  "historyId" : "ea03f5d2a5cc823dd58a43009716b412",
+  "time" : {
+    "start" : 1709428322283,
+    "stop" : 1709428323105,
+    "duration" : 822
+  },
+  "description" : "Check that Search Terms link in footer is correct",
+  "descriptionHtml" : "<p>Check that Search Terms link in footer is correct</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size\n  (Session info: chrome=122.0.6261.69)\nStacktrace:\n#0 0x564edd97e793 <unknown>\n#1 0x564edd6721c6 <unknown>\n#2 0x564edd6be67f <unknown>\n#3 0x564edd6b2247 <unknown>\n#4 0x564edd6df3d2 <unknown>\n#5 0x564edd6b1bd8 <unknown>\n#6 0x564edd6df59e <unknown>\n#7 0x564edd6fddd9 <unknown>\n#8 0x564edd6df173 <unknown>\n#9 0x564edd6b02d3 <unknown>\n#10 0x564edd6b0c9e <unknown>\n#11 0x564edd9428cb <unknown>\n#12 0x564edd946745 <unknown>\n#13 0x564edd92f2e1 <unknown>\n#14 0x564edd9472d2 <unknown>\n#15 0x564edd91317f <unknown>\n#16 0x564edd96cdc8 <unknown>\n#17 0x564edd96cfc3 <unknown>\n#18 0x564edd97d944 <unknown>\n#19 0x7fed5d694ac3 <unknown>",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7f2b73bd9b10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"90ea9c75070f087b098c769556dec3c2\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.02.01 - Check Search Terms link in footer leads to the correct page \"\n                  \"from each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_02_01_check_search_terms_link_functionality(self, driver, URL):\n        \"\"\"Check that Search Terms link in footer is correct\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n>       page.check_search_terms_link_functionality()\n\ntests/test_footer.py:507: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/footer_page.py:279: in check_search_terms_link_functionality\n    link_functionality = search_terms_link.click()\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f2b73cdaf50>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element not interactable\",\"message\":\"element not interactable: element ha...\\\\n#17 0x564edd96cfc3 \\\\u003Cunknown>\\\\n#18 0x564edd97d944 \\\\u003Cunknown>\\\\n#19 0x7fed5d694ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size\nE         (Session info: chrome=122.0.6261.69)\nE       Stacktrace:\nE       #0 0x564edd97e793 <unknown>\nE       #1 0x564edd6721c6 <unknown>\nE       #2 0x564edd6be67f <unknown>\nE       #3 0x564edd6b2247 <unknown>\nE       #4 0x564edd6df3d2 <unknown>\nE       #5 0x564edd6b1bd8 <unknown>\nE       #6 0x564edd6df59e <unknown>\nE       #7 0x564edd6fddd9 <unknown>\nE       #8 0x564edd6df173 <unknown>\nE       #9 0x564edd6b02d3 <unknown>\nE       #10 0x564edd6b0c9e <unknown>\nE       #11 0x564edd9428cb <unknown>\nE       #12 0x564edd946745 <unknown>\nE       #13 0x564edd92f2e1 <unknown>\nE       #14 0x564edd9472d2 <unknown>\nE       #15 0x564edd91317f <unknown>\nE       #16 0x564edd96cdc8 <unknown>\nE       #17 0x564edd96cfc3 <unknown>\nE       #18 0x564edd97d944 <unknown>\nE       #19 0x7fed5d694ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementNotInteractableException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1709428048866,
+      "stop" : 1709428048866,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1709428321258,
+      "stop" : 1709428322282,
+      "duration" : 1024
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1709428048803,
+      "stop" : 1709428048866,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that Search Terms link in footer is correct",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size\n  (Session info: chrome=122.0.6261.69)\nStacktrace:\n#0 0x564edd97e793 <unknown>\n#1 0x564edd6721c6 <unknown>\n#2 0x564edd6be67f <unknown>\n#3 0x564edd6b2247 <unknown>\n#4 0x564edd6df3d2 <unknown>\n#5 0x564edd6b1bd8 <unknown>\n#6 0x564edd6df59e <unknown>\n#7 0x564edd6fddd9 <unknown>\n#8 0x564edd6df173 <unknown>\n#9 0x564edd6b02d3 <unknown>\n#10 0x564edd6b0c9e <unknown>\n#11 0x564edd9428cb <unknown>\n#12 0x564edd946745 <unknown>\n#13 0x564edd92f2e1 <unknown>\n#14 0x564edd9472d2 <unknown>\n#15 0x564edd91317f <unknown>\n#16 0x564edd96cdc8 <unknown>\n#17 0x564edd96cfc3 <unknown>\n#18 0x564edd97d944 <unknown>\n#19 0x7fed5d694ac3 <unknown>",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7f2b73bd9b10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"90ea9c75070f087b098c769556dec3c2\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.02.01 - Check Search Terms link in footer leads to the correct page \"\n                  \"from each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_02_01_check_search_terms_link_functionality(self, driver, URL):\n        \"\"\"Check that Search Terms link in footer is correct\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n>       page.check_search_terms_link_functionality()\n\ntests/test_footer.py:507: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/footer_page.py:279: in check_search_terms_link_functionality\n    link_functionality = search_terms_link.click()\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f2b73cdaf50>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element not interactable\",\"message\":\"element not interactable: element ha...\\\\n#17 0x564edd96cfc3 \\\\u003Cunknown>\\\\n#18 0x564edd97d944 \\\\u003Cunknown>\\\\n#19 0x7fed5d694ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size\nE         (Session info: chrome=122.0.6261.69)\nE       Stacktrace:\nE       #0 0x564edd97e793 <unknown>\nE       #1 0x564edd6721c6 <unknown>\nE       #2 0x564edd6be67f <unknown>\nE       #3 0x564edd6b2247 <unknown>\nE       #4 0x564edd6df3d2 <unknown>\nE       #5 0x564edd6b1bd8 <unknown>\nE       #6 0x564edd6df59e <unknown>\nE       #7 0x564edd6fddd9 <unknown>\nE       #8 0x564edd6df173 <unknown>\nE       #9 0x564edd6b02d3 <unknown>\nE       #10 0x564edd6b0c9e <unknown>\nE       #11 0x564edd9428cb <unknown>\nE       #12 0x564edd946745 <unknown>\nE       #13 0x564edd92f2e1 <unknown>\nE       #14 0x564edd9472d2 <unknown>\nE       #15 0x564edd91317f <unknown>\nE       #16 0x564edd96cdc8 <unknown>\nE       #17 0x564edd96cfc3 <unknown>\nE       #18 0x564edd97d944 <unknown>\nE       #19 0x7fed5d694ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementNotInteractableException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1709428322283,
+        "stop" : 1709428323011,
+        "duration" : 728
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check Search Terms link leads to the correct page",
+      "time" : {
+        "start" : 1709428323011,
+        "stop" : 1709428323104,
+        "duration" : 93
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size\n  (Session info: chrome=122.0.6261.69)\nStacktrace:\n#0 0x564edd97e793 <unknown>\n#1 0x564edd6721c6 <unknown>\n#2 0x564edd6be67f <unknown>\n#3 0x564edd6b2247 <unknown>\n#4 0x564edd6df3d2 <unknown>\n#5 0x564edd6b1bd8 <unknown>\n#6 0x564edd6df59e <unknown>\n#7 0x564edd6fddd9 <unknown>\n#8 0x564edd6df173 <unknown>\n#9 0x564edd6b02d3 <unknown>\n#10 0x564edd6b0c9e <unknown>\n#11 0x564edd9428cb <unknown>\n#12 0x564edd946745 <unknown>\n#13 0x564edd92f2e1 <unknown>\n#14 0x564edd9472d2 <unknown>\n#15 0x564edd91317f <unknown>\n#16 0x564edd96cdc8 <unknown>\n#17 0x564edd96cfc3 <unknown>\n#18 0x564edd97d944 <unknown>\n#19 0x7fed5d694ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/footer_page.py\", line 279, in check_search_terms_link_functionality\n    link_functionality = search_terms_link.click()\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 93, in click\n    self._execute(Command.CLICK_ELEMENT)\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 344, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1709428323011,
+          "stop" : 1709428323052,
+          "duration" : 41
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1709428323011,
+            "stop" : 1709428323020,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.footer > :nth-child(1) > a')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1709428323020,
+            "stop" : 1709428323024,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"90ea9c75070f087b098c769556dec3c2\", element=\"f.4E79F5DDD4D1A48D0FE5E5F5E37B73E9.d.E658892D7D6DB6E92080D3A6C01BFE67.e.12\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.footer > :nth-child(1) > a')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "4a52d074b87eb5a7",
+      "name" : "Screenshot",
+      "source" : "4a52d074b87eb5a7.png",
+      "type" : "image/png",
+      "size" : 354224
+    }, {
+      "uid" : "edae167633f6de3c",
+      "name" : "HTML source",
+      "source" : "edae167633f6de3c.html",
+      "type" : "text/html",
+      "size" : 107889
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1709429313072,
+      "stop" : 1709429313072,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1709428323347,
+      "stop" : 1709428323414,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az973-604"
+  }, {
+    "name" : "thread",
+    "value" : "2984-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "69e910d35d04edd1.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}
