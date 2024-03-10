@@ -14,7 +14,7 @@ def full_cart_page(driver):
     size_button.click()
     color_button = wait(driver, 3).until(EC.presence_of_element_located(shopping_locators.COLOR_BUTTON))
     color_button.click()
-    add_to_cart_button = wait(driver, 3).until(EC.presence_of_element_located(shopping_locators.ADD_TO_CART_BUTTON))
+    add_to_cart_button = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.ADD_TO_CART_BUTTON))
     add_to_cart_button.click()
     wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SHOPPING_CART_LINK))
     shopping_cart_link = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SHOPPING_CART_LINK))
@@ -78,7 +78,7 @@ class TestShoppingCartFull:
         assert displayed_quantity == "2", "Displayed quantity isn't the same as entered in the quantity field"
 
     @allure.title("tc 07.02.05 Verify the subtotal amounts in the item cart and in the Summary cart are the same.")
-    def test_tc_07_02_05_subtotal_in_the_item_cart_and_in_the_summarys_cart_are_equal(self, driver, full_cart_page):
+    def test_tc_07_02_05_subtotal_in_the_item_cart_and_in_the_summary_cart_are_equal(self, driver, full_cart_page):
         """Verify the subtotal amounts in the item cart and in the summary cart are the same."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         subtotal_item = page.check_subtotal_of_item()

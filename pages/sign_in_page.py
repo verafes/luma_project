@@ -114,7 +114,7 @@ class SignInPage(BasePage):
     @allure.step('Check Forgot Your Password_link')
     def check_forgot_your_password_link(self):
         """This method finds 'Forgot your password?' link"""
-        return self.element_is_visible(self.locators.FORGOT_PASSWORD)
+        return self.element_is_visible(self.locators.FORGOT_PASSWORD_LINK)
 
     @allure.step('Click Forgot Your Password_link')
     def click_forgot_your_password_link(self):
