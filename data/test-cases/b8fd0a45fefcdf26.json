@@ -1,0 +1,331 @@
+{
+  "uid" : "b8fd0a45fefcdf26",
+  "name" : "TC 17.01.25 Verify error on resetting My Password with empty email",
+  "fullName" : "tests.test_forgot_your_password.TestForgotYourPasswordFunctionality#test_17_01_25_error_if_reset_my_password_with_empty_email",
+  "historyId" : "3fc451d87c8653c0431c5bf955165f1b",
+  "time" : {
+    "start" : 1710033088394,
+    "stop" : 1710033094567,
+    "duration" : 6173
+  },
+  "description" : "Check error message on attempt to reset password with empty email field",
+  "descriptionHtml" : "<p>Check error message on attempt to reset password with empty email field</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>",
+  "statusTrace" : "self = <test_forgot_your_password.TestForgotYourPasswordFunctionality object at 0x7f66994204d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"345a28629b7bff783c1811cc79cdf303\")>\nforgot_psw_page = <pages.forgot_your_password_page.ForgotYourPasswordPage object at 0x7f66993ea5d0>\n\n    @allure.title('TC 17.01.25 Verify error on resetting My Password with empty email')\n    def test_17_01_25_error_if_reset_my_password_with_empty_email(self, driver, forgot_psw_page):\n        \"\"\"Check error message on attempt to reset password with empty email field\"\"\"\n        # forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)\n        forgot_psw_page.click_reset_my_password_button()\n>       error_message = forgot_psw_page.get_error_email_input_is_required()\n\ntests/test_forgot_your_password.py:210: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/forgot_your_password_page.py:139: in get_error_email_input_is_required\n    return self.get_error_message(self.locators.RESET_MY_PASSWORD_EMAIL_ERROR)\npages/base_page.py:337: in get_error_message\n    error = self.element_is_visible(locator)\npages/base_page.py:29: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:50: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"345a28629b7bff783c1811cc79cdf303\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f66976523e0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x56103e358e93 <unknown>\nE       #1 0x56103e050ce6 <unknown>\nE       #2 0x56103e09be48 <unknown>\nE       #3 0x56103e09bf01 <unknown>\nE       #4 0x56103e0df3f4 <unknown>\nE       #5 0x56103e0bdedd <unknown>\nE       #6 0x56103e0dc899 <unknown>\nE       #7 0x56103e0bdc53 <unknown>\nE       #8 0x56103e08edb3 <unknown>\nE       #9 0x56103e08f77e <unknown>\nE       #10 0x56103e31e7cb <unknown>\nE       #11 0x56103e3227e5 <unknown>\nE       #12 0x56103e30c0e1 <unknown>\nE       #13 0x56103e323372 <unknown>\nE       #14 0x56103e2f01bf <unknown>\nE       #15 0x56103e347488 <unknown>\nE       #16 0x56103e347683 <unknown>\nE       #17 0x56103e358044 <unknown>\nE       #18 0x7fca59294ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1710033086444,
+      "stop" : 1710033087463,
+      "duration" : 1019
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1710032898287,
+      "stop" : 1710032898287,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "forgot_psw_page",
+    "time" : {
+      "start" : 1710033087464,
+      "stop" : 1710033088393,
+      "duration" : 929
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1710033087464,
+        "stop" : 1710033088393,
+        "duration" : 929
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1710032898224,
+      "stop" : 1710032898287,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check error message on attempt to reset password with empty email field",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>",
+    "statusTrace" : "self = <test_forgot_your_password.TestForgotYourPasswordFunctionality object at 0x7f66994204d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"345a28629b7bff783c1811cc79cdf303\")>\nforgot_psw_page = <pages.forgot_your_password_page.ForgotYourPasswordPage object at 0x7f66993ea5d0>\n\n    @allure.title('TC 17.01.25 Verify error on resetting My Password with empty email')\n    def test_17_01_25_error_if_reset_my_password_with_empty_email(self, driver, forgot_psw_page):\n        \"\"\"Check error message on attempt to reset password with empty email field\"\"\"\n        # forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)\n        forgot_psw_page.click_reset_my_password_button()\n>       error_message = forgot_psw_page.get_error_email_input_is_required()\n\ntests/test_forgot_your_password.py:210: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/forgot_your_password_page.py:139: in get_error_email_input_is_required\n    return self.get_error_message(self.locators.RESET_MY_PASSWORD_EMAIL_ERROR)\npages/base_page.py:337: in get_error_message\n    error = self.element_is_visible(locator)\npages/base_page.py:29: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:50: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"345a28629b7bff783c1811cc79cdf303\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f66976523e0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x56103e358e93 <unknown>\nE       #1 0x56103e050ce6 <unknown>\nE       #2 0x56103e09be48 <unknown>\nE       #3 0x56103e09bf01 <unknown>\nE       #4 0x56103e0df3f4 <unknown>\nE       #5 0x56103e0bdedd <unknown>\nE       #6 0x56103e0dc899 <unknown>\nE       #7 0x56103e0bdc53 <unknown>\nE       #8 0x56103e08edb3 <unknown>\nE       #9 0x56103e08f77e <unknown>\nE       #10 0x56103e31e7cb <unknown>\nE       #11 0x56103e3227e5 <unknown>\nE       #12 0x56103e30c0e1 <unknown>\nE       #13 0x56103e323372 <unknown>\nE       #14 0x56103e2f01bf <unknown>\nE       #15 0x56103e347488 <unknown>\nE       #16 0x56103e347683 <unknown>\nE       #17 0x56103e358044 <unknown>\nE       #18 0x7fca59294ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Click on Reset My Password button button",
+      "time" : {
+        "start" : 1710033088394,
+        "stop" : 1710033089463,
+        "duration" : 1069
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Reset My Password button is clickable",
+        "time" : {
+          "start" : 1710033088394,
+          "stop" : 1710033088418,
+          "duration" : 24
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1710033088394,
+            "stop" : 1710033088418,
+            "duration" : 24
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'button[class=\"action submit primary\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get error for email input is required ",
+      "time" : {
+        "start" : 1710033089463,
+        "stop" : 1710033094566,
+        "duration" : 5103
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/forgot_your_password_page.py\", line 139, in get_error_email_input_is_required\n    return self.get_error_message(self.locators.RESET_MY_PASSWORD_EMAIL_ERROR)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 337, in get_error_message\n    error = self.element_is_visible(locator)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Get error message",
+        "time" : {
+          "start" : 1710033089463,
+          "stop" : 1710033094566,
+          "duration" : 5103
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 337, in get_error_message\n    error = self.element_is_visible(locator)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1710033089463,
+            "stop" : 1710033094566,
+            "duration" : 5103
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1710033089463,
+              "stop" : 1710033094565,
+              "duration" : 5102
+            },
+            "status" : "broken",
+            "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>\n\n",
+            "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.8/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '#email_address-error')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : true,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email_address-error')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#email_address-error')"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "ceb5bfe683ed3fd7",
+      "name" : "Screenshot",
+      "source" : "ceb5bfe683ed3fd7.png",
+      "type" : "image/png",
+      "size" : 99628
+    }, {
+      "uid" : "51e48c4c1d97f966",
+      "name" : "HTML source",
+      "source" : "51e48c4c1d97f966.html",
+      "type" : "text/html",
+      "size" : 80255
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1710033094698,
+      "stop" : 1710033094767,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1710033990781,
+      "stop" : 1710033990781,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Forgot Your Password Functionality"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_forgot_your_password"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestForgotYourPasswordFunctionality"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1118-482"
+  }, {
+    "name" : "thread",
+    "value" : "3057-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_forgot_your_password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b8fd0a45fefcdf26.json",
+  "parameterValues" : [ ]
+}
