@@ -329,11 +329,10 @@ class BasePage:
         return valid_email is not None
 
     @allure.step('Get error message')
-    def get_error_message(self, locator):
+    def get_error_message(self, locator, timeout=5):
         """
         This method validates that the error message is displayed
         on attempt to sign in with incorrect credentials.
         """
-        # error = self.element_is_visible(locator)
         error = wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
         return error.text if error else None
