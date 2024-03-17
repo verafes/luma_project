@@ -1,0 +1,402 @@
+{
+  "uid" : "451cb63e7c5bb473",
+  "name" : "tc 07.02.25 Verify the message coupon code is not valid is displayed correct",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_25_verify_msg_coupon_code_is_not_valid_is_displayed",
+  "historyId" : "492343fa43b6d6d286e390bbb49df7ba",
+  "time" : {
+    "start" : 1710638589738,
+    "stop" : 1710638593810,
+    "duration" : 4072
+  },
+  "description" : "Check that message coupon code is not valid is displayed correct",
+  "descriptionHtml" : "<p>Check that message coupon code is not valid is displayed correct</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1710637714205,
+      "stop" : 1710637714267,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1710638585374,
+      "stop" : 1710638589737,
+      "duration" : 4363
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1710638584339,
+      "stop" : 1710638585373,
+      "duration" : 1034
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1710637714267,
+      "stop" : 1710637714267,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that message coupon code is not valid is displayed correct",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1710638589738,
+        "stop" : 1710638590908,
+        "duration" : 1170
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Apply Discount Code on click",
+      "time" : {
+        "start" : 1710638590908,
+        "stop" : 1710638591152,
+        "duration" : 244
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1710638590908,
+          "stop" : 1710638591088,
+          "duration" : 180
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#block-discount-heading')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Send discount code",
+      "time" : {
+        "start" : 1710638591152,
+        "stop" : 1710638591305,
+        "duration" : 153
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1710638591152,
+          "stop" : 1710638591305,
+          "duration" : 153
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1710638591152,
+            "stop" : 1710638591212,
+            "duration" : 60
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#coupon_code')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#coupon_code')"
+        }, {
+          "name" : "value",
+          "value" : "'bzdighgr'"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "code",
+        "value" : "'bzdighgr'"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click button Apply Discount",
+      "time" : {
+        "start" : 1710638591305,
+        "stop" : 1710638593120,
+        "duration" : 1815
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1710638591305,
+          "stop" : 1710638591323,
+          "duration" : 18
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#discount-coupon-form > div > div.actions-toolbar > div > button')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get message discount code is not valid by page",
+      "time" : {
+        "start" : 1710638593120,
+        "stop" : 1710638593810,
+        "duration" : 690
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1710638593120,
+          "stop" : 1710638593801,
+          "duration" : 681
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1710638593120,
+            "stop" : 1710638593157,
+            "duration" : 37
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#maincontent > div.page.messages > div:nth-child(2) > div > div > div')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1710638593157,
+            "stop" : 1710638593247,
+            "duration" : 90
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"14a4733f10fa157a45e08d358cb6c6c7\", element=\"f.8F81F338FC50BA66DC614D31127B5CEC.d.A7416AF4B90E20C04F6D484734CE8364.e.246\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#maincontent > div.page.messages > div:nth-child(2) > div > div > div')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get valid message coupon code",
+      "time" : {
+        "start" : 1710638593810,
+        "stop" : 1710638593810,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "code",
+        "value" : "'bzdighgr'"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1710638593811,
+      "stop" : 1710638593886,
+      "duration" : 75
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1710638770108,
+      "stop" : 1710638770108,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1490-915"
+  }, {
+    "name" : "thread",
+    "value" : "3042-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "451cb63e7c5bb473.json",
+  "parameterValues" : [ ]
+}

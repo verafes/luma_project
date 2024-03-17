@@ -1,0 +1,546 @@
+{
+  "uid" : "2210df409e470434",
+  "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
+  "fullName" : "tests.test_create_an_account.TestCreateAnAccount#test_04_02_09_13_password_strength_hint",
+  "historyId" : "28106a9cc1547854957aea01aae941ab",
+  "time" : {
+    "start" : 1710637782496,
+    "stop" : 1710637782905,
+    "duration" : 409
+  },
+  "description" : " Verify presence of Password Strength hint and warning color of weak password ",
+  "descriptionHtml" : "<p>Verify presence of Password Strength hint and warning color of weak password</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1710637714205,
+      "stop" : 1710637714267,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1710637780540,
+      "stop" : 1710637781565,
+      "duration" : 1025
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1710637714267,
+      "stop" : 1710637714267,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "create_account_page",
+    "time" : {
+      "start" : 1710637781566,
+      "stop" : 1710637782495,
+      "duration" : 929
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1710637781566,
+        "stop" : 1710637782495,
+        "duration" : 929
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : " Verify presence of Password Strength hint and warning color of weak password ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Check password strength hint and color",
+      "time" : {
+        "start" : 1710637782496,
+        "stop" : 1710637782905,
+        "duration" : 409
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Password input field is visible",
+        "time" : {
+          "start" : 1710637782496,
+          "stop" : 1710637782570,
+          "duration" : 74
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1710637782496,
+            "stop" : 1710637782570,
+            "duration" : 74
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1710637782496,
+              "stop" : 1710637782518,
+              "duration" : 22
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '[id=\"password\"]')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1710637782518,
+              "stop" : 1710637782525,
+              "duration" : 7
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"42625a9e4d5a209dcc2f4a6634fcf0dd\", element=\"f.AFCA1B0C49A0E718D2BCEBCFF0D0D10C.d.E8A14734855DD43D4E0A128A9091BD83.e.6\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '[id=\"password\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check Create An Account Button is visible",
+        "time" : {
+          "start" : 1710637782712,
+          "stop" : 1710637782762,
+          "duration" : 50
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1710637782712,
+            "stop" : 1710637782762,
+            "duration" : 50
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1710637782712,
+              "stop" : 1710637782745,
+              "duration" : 33
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', 'button[title=\"Create an Account\"]')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1710637782745,
+              "stop" : 1710637782749,
+              "duration" : 4
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"42625a9e4d5a209dcc2f4a6634fcf0dd\", element=\"f.AFCA1B0C49A0E718D2BCEBCFF0D0D10C.d.E8A14734855DD43D4E0A128A9091BD83.e.15\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'button[title=\"Create an Account\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check Password Strength hint is visible",
+        "time" : {
+          "start" : 1710637782815,
+          "stop" : 1710637782871,
+          "duration" : 56
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1710637782815,
+            "stop" : 1710637782871,
+            "duration" : 56
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1710637782815,
+              "stop" : 1710637782857,
+              "duration" : 42
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('id', 'password-strength-meter')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1710637782857,
+              "stop" : 1710637782860,
+              "duration" : 3
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"42625a9e4d5a209dcc2f4a6634fcf0dd\", element=\"f.AFCA1B0C49A0E718D2BCEBCFF0D0D10C.d.E8A14734855DD43D4E0A128A9091BD83.e.30\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('id', 'password-strength-meter')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check color password strength hint",
+        "time" : {
+          "start" : 1710637782871,
+          "stop" : 1710637782895,
+          "duration" : 24
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Check Password Strength hint is visible",
+          "time" : {
+            "start" : 1710637782871,
+            "stop" : 1710637782891,
+            "duration" : 20
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a visible element",
+            "time" : {
+              "start" : 1710637782871,
+              "stop" : 1710637782891,
+              "duration" : 20
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Find a present element",
+              "time" : {
+                "start" : 1710637782871,
+                "stop" : 1710637782877,
+                "duration" : 6
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "locator",
+                "value" : "('id', 'password-strength-meter')"
+              }, {
+                "name" : "timeout",
+                "value" : "5"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            }, {
+              "name" : "Go to specified element",
+              "time" : {
+                "start" : 1710637782877,
+                "stop" : 1710637782880,
+                "duration" : 3
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "element",
+                "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"42625a9e4d5a209dcc2f4a6634fcf0dd\", element=\"f.AFCA1B0C49A0E718D2BCEBCFF0D0D10C.d.E8A14734855DD43D4E0A128A9091BD83.e.30\")>"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('id', 'password-strength-meter')"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 3,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get property \"background-color\" of the pseudo-class",
+          "time" : {
+            "start" : 1710637782891,
+            "stop" : 1710637782891,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 5,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Transform rgb color to hex form",
+        "time" : {
+          "start" : 1710637782895,
+          "stop" : 1710637782895,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "rgb_color",
+          "value" : "'rgb(255, 214, 179)'"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password_strength_msg",
+        "value" : "{'strength_password': 'Medium', 'password': '1234qweRE', 'warning_color': '#ffd6b3', 'strength_password_hint': 'Password Strength: Medium', 'warning_password_message': None}"
+      } ],
+      "stepsCount" : 19,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 20,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1710637782906,
+      "stop" : 1710637782975,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1710638770108,
+      "stop" : 1710638770108,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Create An Account"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_create_an_account"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCreateAnAccount"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1490-915"
+  }, {
+    "name" : "thread",
+    "value" : "3042-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_create_an_account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "password_strength_msg",
+    "value" : "{'strength_password': 'Medium', 'password': '1234qweRE', 'warning_color': '#ffd6b3', 'strength_password_hint': 'Password Strength: Medium', 'warning_password_message': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2210df409e470434.json",
+  "parameterValues" : [ "{'strength_password': 'Medium', 'password': '1234qweRE', 'warning_color': '#ffd6b3', 'strength_password_hint': 'Password Strength: Medium', 'warning_password_message': None}" ]
+}

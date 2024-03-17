@@ -3,111 +3,43 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Strength: Strong'\n  - Password Strength: Strong\n  + Password Strength: No Password)",
+      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Strength: Weak'\n  - Password Strength: Weak\n  ?                    ^^ ^\n  + Password Strength: No Password\n  ?                    ^^^^ ^^^^^^)",
       "children" : [ {
         "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "e1038763b8876f89",
-        "parentUid" : "5b2db88efba0d37063145848e5a3e7de",
+        "uid" : "914256d338adea7",
+        "parentUid" : "96e400763a34155504bab7c8d33b4caa",
         "status" : "failed",
         "time" : {
-          "start" : 1710032970481,
-          "stop" : 1710032970793,
-          "duration" : 312
+          "start" : 1710637777516,
+          "stop" : 1710637777921,
+          "duration" : 405
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Strong', 'password': '1234qweREe', 'warning_color': '#c5eeac', 'strength_password_hint': 'Password Strength: Strong', 'warning_password_message': None}" ]
+        "parameters" : [ "{'strength_password': 'Weak', 'password': 'we', 'warning_color': '#ffafae', 'strength_password_hint': 'Password Strength: Weak', 'warning_password_message': 'Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored.'}" ]
       } ],
-      "uid" : "5b2db88efba0d37063145848e5a3e7de"
-    }, {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Str...: Very Strong'\n  - Password Strength: Very Strong\n  + Password Strength: No Password)",
-      "children" : [ {
-        "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "f807527a940317cd",
-        "parentUid" : "aae0399b2c15f42f816648717108e521",
-        "status" : "failed",
-        "time" : {
-          "start" : 1710032973054,
-          "stop" : 1710032973426,
-          "duration" : 372
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Very Strong', 'password': '1234qweREewe', 'warning_color': '#81b562', 'strength_password_hint': 'Password Strength: Very Strong', 'warning_password_message': None}" ]
-      } ],
-      "uid" : "aae0399b2c15f42f816648717108e521"
-    }, {
-      "name" : "AssertionError: Forgot Your Password link is not present\nassert (True and None == 'https://magento.softwaretestingboard.com/customer/account/forgotpassword/')\n +  where True = <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"456a0ae99913f63838fe8015ebed53cb\", element=\"f.3129A1D361834DF8BB14CBD983152CCE.d.3DF9CC44E0D772E391C6A7DEC49F4C80.e.19\")>>()\n +    where <bound method WebElement.is_displayed of <selenium.webdriver.remote.webelement.WebElement (session=\"456a0ae99913f63838fe8015ebed53cb\", element=\"f.3129A1D361834DF8BB14CBD983152CCE.d.3DF9CC44E0D772E391C6A7DEC49F4C80.e.19\")>> = <selenium.webdriver.remote.webelement.WebElement (session=\"456a0ae99913f63838fe8015ebed53cb\", element=\"f.3129A1D361834DF8BB14CBD983152CCE.d.3DF9CC44E0D772E391C6A7DEC49F4C80.e.19\")>.is_displayed",
-      "children" : [ {
-        "name" : "TC 03.01.16 Verify Forgot Your Password link is present",
-        "uid" : "64cc143cc17a01fa",
-        "parentUid" : "d7a0802b8fafb174e897866e1f1313f7",
-        "status" : "failed",
-        "time" : {
-          "start" : 1710033863007,
-          "stop" : 1710033863151,
-          "duration" : 144
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d7a0802b8fafb174e897866e1f1313f7"
+      "uid" : "96e400763a34155504bab7c8d33b4caa"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56103e358e93 <unknown>\n#1 0x56103e050ce6 <unknown>\n#2 0x56103e09be48 <unknown>\n#3 0x56103e09bf01 <unknown>\n#4 0x56103e0df3f4 <unknown>\n#5 0x56103e0bdedd <unknown>\n#6 0x56103e0dc899 <unknown>\n#7 0x56103e0bdc53 <unknown>\n#8 0x56103e08edb3 <unknown>\n#9 0x56103e08f77e <unknown>\n#10 0x56103e31e7cb <unknown>\n#11 0x56103e3227e5 <unknown>\n#12 0x56103e30c0e1 <unknown>\n#13 0x56103e323372 <unknown>\n#14 0x56103e2f01bf <unknown>\n#15 0x56103e347488 <unknown>\n#16 0x56103e347683 <unknown>\n#17 0x56103e358044 <unknown>\n#18 0x7fca59294ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5b0d084eaec3 <unknown>\n#1 0x5b0d081e2ce6 <unknown>\n#2 0x5b0d0822de48 <unknown>\n#3 0x5b0d0822df01 <unknown>\n#4 0x5b0d082713f4 <unknown>\n#5 0x5b0d0824fedd <unknown>\n#6 0x5b0d0826e899 <unknown>\n#7 0x5b0d0824fc53 <unknown>\n#8 0x5b0d08220db3 <unknown>\n#9 0x5b0d0822177e <unknown>\n#10 0x5b0d084b07fb <unknown>\n#11 0x5b0d084b4815 <unknown>\n#12 0x5b0d0849e111 <unknown>\n#13 0x5b0d084b53a2 <unknown>\n#14 0x5b0d084821ef <unknown>\n#15 0x5b0d084d94b8 <unknown>\n#16 0x5b0d084d96b3 <unknown>\n#17 0x5b0d084ea074 <unknown>\n#18 0x73e426e94ac3 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.25 Verify error on resetting My Password with empty email",
-        "uid" : "b8fd0a45fefcdf26",
-        "parentUid" : "aef92a3fd73536b752a4830abe9b6edb",
+        "uid" : "598870165be9d878",
+        "parentUid" : "332f42c55be4b3b7f78989e3c61cccc1",
         "status" : "broken",
         "time" : {
-          "start" : 1710033088394,
-          "stop" : 1710033094567,
-          "duration" : 6173
+          "start" : 1710637900687,
+          "stop" : 1710637906750,
+          "duration" : 6063
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "aef92a3fd73536b752a4830abe9b6edb"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message:",
-      "children" : [ {
-        "name" : "TC 01.02.02 functionality of the \"Search\" field",
-        "uid" : "a16a7a9c3c1ff032",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1710033130470,
-          "stop" : 1710033141583,
-          "duration" : 11113
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
-    }, {
-      "name" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button type=\"submit\" title=\"Add to Cart\" class=\"action primary tocart\" id=\"product-addtocart-button\">...</button> is not clickable at point (1187, 861). Other element would receive the click: <div class=\"fieldset\">...</div>\n  (Session info: chrome=122.0.6261.94)\nStacktrace:\n#0 0x55a94b950e93 <unknown>\n#1 0x55a94b648ce6 <unknown>\n#2 0x55a94b69aa73 <unknown>\n#3 0x55a94b69898e <unknown>\n#4 0x55a94b696367 <unknown>\n#5 0x55a94b695732 <unknown>\n#6 0x55a94b688d27 <unknown>\n#7 0x55a94b6b5eb2 <unknown>\n#8 0x55a94b6886b8 <unknown>\n#9 0x55a94b6b607e <unknown>\n#10 0x55a94b6d4899 <unknown>\n#11 0x55a94b6b5c53 <unknown>\n#12 0x55a94b686db3 <unknown>\n#13 0x55a94b68777e <unknown>\n#14 0x55a94b9167cb <unknown>\n#15 0x55a94b91a7e5 <unknown>\n#16 0x55a94b9040e1 <unknown>\n#17 0x55a94b91b372 <unknown>\n#18 0x55a94b8e81bf <unknown>\n#19 0x55a94b93f488 <unknown>\n#20 0x55a94b93f683 <unknown>\n#21 0x55a94b950044 <unknown>\n#22 0x7f81ac094ac3 <unknown>",
-      "children" : [ {
-        "name" : "tc 07.02.05 Verify the subtotal amounts in the item cart and in the Summary cart are the same.",
-        "uid" : "e009d761d17a4dfc",
-        "parentUid" : "4d6436e582e888013b8dec1fbbce9b68",
-        "status" : "broken",
-        "time" : {
-          "start" : 1710033699984,
-          "stop" : 1710033699984,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4d6436e582e888013b8dec1fbbce9b68"
+      "uid" : "332f42c55be4b3b7f78989e3c61cccc1"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
