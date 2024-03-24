@@ -3,43 +3,43 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Strength: Weak'\n  - Password Strength: Weak\n  ?                    ^^ ^\n  + Password Strength: No Password\n  ?                    ^^^^ ^^^^^^)",
+      "name" : "AssertionError: Password Strength hint is not present or not displayed or has wrong color\nassert ('Password Str...: No Password' == 'Password Str...: Very Strong'\n  - Password Strength: Very Strong\n  + Password Strength: No Password)",
       "children" : [ {
         "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
-        "uid" : "914256d338adea7",
-        "parentUid" : "96e400763a34155504bab7c8d33b4caa",
+        "uid" : "a2dd2d4ac68db06d",
+        "parentUid" : "aae0399b2c15f42f816648717108e521",
         "status" : "failed",
         "time" : {
-          "start" : 1710637777516,
-          "stop" : 1710637777921,
-          "duration" : 405
+          "start" : 1711242725926,
+          "stop" : 1711242726261,
+          "duration" : 335
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "{'strength_password': 'Weak', 'password': 'we', 'warning_color': '#ffafae', 'strength_password_hint': 'Password Strength: Weak', 'warning_password_message': 'Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored.'}" ]
+        "parameters" : [ "{'strength_password': 'Very Strong', 'password': '1234qweREewe', 'warning_color': '#81b562', 'strength_password_hint': 'Password Strength: Very Strong', 'warning_password_message': None}" ]
       } ],
-      "uid" : "96e400763a34155504bab7c8d33b4caa"
+      "uid" : "aae0399b2c15f42f816648717108e521"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5b0d084eaec3 <unknown>\n#1 0x5b0d081e2ce6 <unknown>\n#2 0x5b0d0822de48 <unknown>\n#3 0x5b0d0822df01 <unknown>\n#4 0x5b0d082713f4 <unknown>\n#5 0x5b0d0824fedd <unknown>\n#6 0x5b0d0826e899 <unknown>\n#7 0x5b0d0824fc53 <unknown>\n#8 0x5b0d08220db3 <unknown>\n#9 0x5b0d0822177e <unknown>\n#10 0x5b0d084b07fb <unknown>\n#11 0x5b0d084b4815 <unknown>\n#12 0x5b0d0849e111 <unknown>\n#13 0x5b0d084b53a2 <unknown>\n#14 0x5b0d084821ef <unknown>\n#15 0x5b0d084d94b8 <unknown>\n#16 0x5b0d084d96b3 <unknown>\n#17 0x5b0d084ea074 <unknown>\n#18 0x73e426e94ac3 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5623a719ff33 <unknown>\n#1 0x5623a6e97ce6 <unknown>\n#2 0x5623a6ee2e48 <unknown>\n#3 0x5623a6ee2f01 <unknown>\n#4 0x5623a6f263f4 <unknown>\n#5 0x5623a6f04edd <unknown>\n#6 0x5623a6f23899 <unknown>\n#7 0x5623a6f04c53 <unknown>\n#8 0x5623a6ed5db3 <unknown>\n#9 0x5623a6ed677e <unknown>\n#10 0x5623a716586b <unknown>\n#11 0x5623a7169885 <unknown>\n#12 0x5623a7153181 <unknown>\n#13 0x5623a716a412 <unknown>\n#14 0x5623a713725f <unknown>\n#15 0x5623a718e528 <unknown>\n#16 0x5623a718e723 <unknown>\n#17 0x5623a719f0e4 <unknown>\n#18 0x7f3cd2694ac3 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.25 Verify error on resetting My Password with empty email",
-        "uid" : "598870165be9d878",
-        "parentUid" : "332f42c55be4b3b7f78989e3c61cccc1",
+        "uid" : "3891c538eab46f19",
+        "parentUid" : "63bc8e3b29edaffe4d4413ac6f61b52a",
         "status" : "broken",
         "time" : {
-          "start" : 1710637900687,
-          "stop" : 1710637906750,
-          "duration" : 6063
+          "start" : 1711242845660,
+          "stop" : 1711242851852,
+          "duration" : 6192
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "332f42c55be4b3b7f78989e3c61cccc1"
+      "uid" : "63bc8e3b29edaffe4d4413ac6f61b52a"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

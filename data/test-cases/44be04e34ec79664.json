@@ -1,0 +1,283 @@
+{
+  "uid" : "44be04e34ec79664",
+  "name" : "TC 02.01.06 Check if Search Terms link is interactive",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_06_check_interactivity_of_search_terms_link",
+  "historyId" : "2ec5175ab49cd51021eb8da58d481c73",
+  "time" : {
+    "start" : 1711242743105,
+    "stop" : 1711242744207,
+    "duration" : 1102
+  },
+  "description" : "This test checks if Search Terms link is underlined while hovering over it",
+  "descriptionHtml" : "<p>This test checks if Search Terms link is underlined while hovering over it</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL In CI the test is not stable and needs to be improved\n\nAssertionError: The Search Terms link is not underlined while hovering over it\nassert 'underline' in 'none solid rgb(87, 87, 87)'",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7fd00748e510>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"36b9a500c045b5e98d446f9091598a3d\")>\n\n    @pytest.mark.xfail(reason=\"In CI the test is not stable and needs to be improved\")\n    @allure.title(\"TC 02.01.06 Check if Search Terms link is interactive\")\n    def test_tc_02_01_06_check_interactivity_of_search_terms_link(self, driver):\n        \"\"\"This test checks if Search Terms link is underlined while hovering over it\"\"\"\n        page = FooterPage(driver, MAIN_PAGE_URL)\n        page.open()\n        underlined_link = page.check_element_hover_style(page.footer_locators.SEARCH_TERMS_LINK, \"text-decoration\", 2)\n>       assert \"underline\" in underlined_link, \"The Search Terms link is not underlined while hovering over it\"\nE       AssertionError: The Search Terms link is not underlined while hovering over it\nE       assert 'underline' in 'none solid rgb(87, 87, 87)'\n\ntests/test_footer.py:66: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1711242646170,
+      "stop" : 1711242646234,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1711242646234,
+      "stop" : 1711242646234,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1711242742129,
+      "stop" : 1711242743105,
+      "duration" : 976
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks if Search Terms link is underlined while hovering over it",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL In CI the test is not stable and needs to be improved\n\nAssertionError: The Search Terms link is not underlined while hovering over it\nassert 'underline' in 'none solid rgb(87, 87, 87)'",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7fd00748e510>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"36b9a500c045b5e98d446f9091598a3d\")>\n\n    @pytest.mark.xfail(reason=\"In CI the test is not stable and needs to be improved\")\n    @allure.title(\"TC 02.01.06 Check if Search Terms link is interactive\")\n    def test_tc_02_01_06_check_interactivity_of_search_terms_link(self, driver):\n        \"\"\"This test checks if Search Terms link is underlined while hovering over it\"\"\"\n        page = FooterPage(driver, MAIN_PAGE_URL)\n        page.open()\n        underlined_link = page.check_element_hover_style(page.footer_locators.SEARCH_TERMS_LINK, \"text-decoration\", 2)\n>       assert \"underline\" in underlined_link, \"The Search Terms link is not underlined while hovering over it\"\nE       AssertionError: The Search Terms link is not underlined while hovering over it\nE       assert 'underline' in 'none solid rgb(87, 87, 87)'\n\ntests/test_footer.py:66: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1711242743105,
+        "stop" : 1711242743883,
+        "duration" : 778
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check element hover style",
+      "time" : {
+        "start" : 1711242743883,
+        "stop" : 1711242744206,
+        "duration" : 323
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1711242743883,
+          "stop" : 1711242743927,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1711242743883,
+            "stop" : 1711242743892,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.footer > :nth-child(1) > a')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1711242743893,
+            "stop" : 1711242743897,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"36b9a500c045b5e98d446f9091598a3d\", element=\"f.488207A08CF3E3D3BB7633BABBB75208.d.2AECED549733F6411A3013ADBDA025C2.e.15\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.footer > :nth-child(1) > a')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Move cursor to element",
+        "time" : {
+          "start" : 1711242743927,
+          "stop" : 1711242744199,
+          "duration" : 272
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"36b9a500c045b5e98d446f9091598a3d\", element=\"f.488207A08CF3E3D3BB7633BABBB75208.d.2AECED549733F6411A3013ADBDA025C2.e.15\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.footer > :nth-child(1) > a')"
+      }, {
+        "name" : "css_property",
+        "value" : "'text-decoration'"
+      }, {
+        "name" : "seconds",
+        "value" : "2"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "58f68935f0a06d99",
+      "name" : "Screenshot",
+      "source" : "58f68935f0a06d99.png",
+      "type" : "image/png",
+      "size" : 278841
+    }, {
+      "uid" : "2ef39048fc2a3dc9",
+      "name" : "HTML source",
+      "source" : "2ef39048fc2a3dc9.html",
+      "type" : "text/html",
+      "size" : 117256
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1711243767481,
+      "stop" : 1711243767481,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1711242744362,
+      "stop" : 1711242744430,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='In CI the test is not stable and needs to be improved')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az529-345"
+  }, {
+    "name" : "thread",
+    "value" : "3072-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='In CI the test is not stable and needs to be improved')" ]
+  },
+  "source" : "44be04e34ec79664.json",
+  "parameterValues" : [ ]
+}
