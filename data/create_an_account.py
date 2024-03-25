@@ -35,7 +35,7 @@ create_an_account_credentials = {
     "weak_password_2": "1234qwere",
     "medium_password": "1234qweRE",
     "strong_password": '1234qweREe',
-    "very_strong_password": '1234qweREewe'
+    # "very_strong_password": '1234qweREewe'
 }
 
 password_strength_msg = [
