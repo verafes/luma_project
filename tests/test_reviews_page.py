@@ -60,7 +60,6 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
-    @pytest.mark.xfail(reason="Flaky behavior on CI")
     def test_tc_01_15_02_check_that_it_is_possible_to_vote_for_2_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -116,7 +115,6 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
-    @pytest.mark.xfail(reason="Flaky behavior on CI")
     def test_tc_01_15_03_check_that_it_is_possible_to_vote_for_3_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -168,7 +166,6 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
-    @pytest.mark.xfail(reason="Flaky behavior on CI")
     def test_tc_01_15_04_check_that_it_is_possible_to_vote_for_4_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -220,7 +217,6 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
-    @pytest.mark.xfail(reason="Flaky behavior on CI")
     def test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
