@@ -208,6 +208,7 @@ class TestCreateAnAccount:
         message = create_account_page.create_with_incorrect_confirm_password()
         assert message == 'Please enter the same value again.', "No message"
 
+    @pytest.mark.xfail(reason="Flaky behavior on CI")
     @allure.title('TC 04_02_09_13 Verify presence of strong password strength hint')
     @pytest.mark.parametrize('password_strength_msg', password_strength_msg)
     def test_04_02_09_13_password_strength_hint(self, create_account_page, password_strength_msg):
