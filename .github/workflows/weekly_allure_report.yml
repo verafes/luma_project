@@ -37,8 +37,7 @@ jobs:
             sleep 1
 
         - name: Run Pytest
-          run: |
-            DISPLAY=:99 pytest -s -v --alluredir=allure-results
+          run: DISPLAY=:99 pytest -s -v --alluredir=allure-results
           continue-on-error: true
 
         - name: Allure Report action
