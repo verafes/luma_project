@@ -1,0 +1,312 @@
+{
+  "uid" : "85ab5469fca27545",
+  "name" : "tc 07.02.05 Verify the subtotal amounts in the item cart and in the Summary cart are the same.",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_05_subtotal_in_the_item_cart_and_in_the_summary_cart_are_equal",
+  "historyId" : "8df5413c76224c3b64d7aa42225e7551",
+  "time" : {
+    "start" : 1715477589624,
+    "stop" : 1715477590272,
+    "duration" : 648
+  },
+  "description" : "Verify the subtotal amounts in the item cart and in the summary cart are the same.",
+  "descriptionHtml" : "<p>Verify the subtotal amounts in the item cart and in the summary cart are the same.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1715477585003,
+      "stop" : 1715477589624,
+      "duration" : 4621
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1715477583723,
+      "stop" : 1715477585002,
+      "duration" : 1279
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1715476468052,
+      "stop" : 1715476468052,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1715476467990,
+      "stop" : 1715476468052,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Verify the subtotal amounts in the item cart and in the summary cart are the same.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Check subtotal of item",
+      "time" : {
+        "start" : 1715477589624,
+        "stop" : 1715477589673,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1715477589624,
+          "stop" : 1715477589661,
+          "duration" : 37
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1715477589624,
+            "stop" : 1715477589636,
+            "duration" : 12
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'td.col.subtotal span.price')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1715477589636,
+            "stop" : 1715477589642,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ff250ea67cb240a815392e6b2f31f5c4\", element=\"f.AC66525DF5C99DC0FB9DE34BB87BE50C.d.B2498E3451457DAC54AE001A57C16657.e.128\")>"
+          } ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'td.col.subtotal span.price')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Check subtotal in the Summary Cart",
+      "time" : {
+        "start" : 1715477589673,
+        "stop" : 1715477590272,
+        "duration" : 599
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1715477589673,
+          "stop" : 1715477590266,
+          "duration" : 593
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1715477589673,
+            "stop" : 1715477590244,
+            "duration" : 571
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'td.amount span[data-th=\"Subtotal\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1715477590244,
+            "stop" : 1715477590249,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ff250ea67cb240a815392e6b2f31f5c4\", element=\"f.AC66525DF5C99DC0FB9DE34BB87BE50C.d.B2498E3451457DAC54AE001A57C16657.e.149\")>"
+          } ],
+          "shouldDisplayMessage" : false,
+          "hasContent" : true,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'td.amount span[data-th=\"Subtotal\"]')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 8,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1715477590273,
+      "stop" : 1715477590350,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1715477996250,
+      "stop" : 1715477996250,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1530-39"
+  }, {
+    "name" : "thread",
+    "value" : "3034-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85ab5469fca27545.json",
+  "parameterValues" : [ ]
+}
