@@ -1,5 +1,5 @@
-# LUMA_PROJECT
-
+# LUMA PROJECT
+This project focuses on automating the testing of a Magento test e-commerce app with Pytest, Selenium, Allure, and GitHub Actions to ensure its functionality.
 This GitHub project, led by Denis Tadzhibaev, was initiated by a team under his leadership at RedRoverSchool. 
 Contributors:
 
@@ -13,12 +13,12 @@ Contributors:
 4. #### *Alena Krauchuk* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/alena-krauchuk/) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/alena-krauchuk)
 5. #### *Nikita Krasnopeev* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](#) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/NKrap)
 6. #### *Alina Mukhamatnurova* &nbsp;&nbsp;&nbsp;  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/crlinm/) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/crlinm)
-7. #### *Galina Danilova* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/galina-danilova) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/gdanilova)
+7. #### *Galina Danilova* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/galina-danilova) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/gdanilova)
 8. #### *Vasileva Irina* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/irina-vasileva-iv/) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/IraSilva)
 9. #### *Illia Levchenko* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/illialevchenko/) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dev0011111000101010)
-10. #### *Kanikovskii Aleksei* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/alekseikanikovskii) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/AOKanikovskii)
-11.  #### *Anastasiya Lipatnikova* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](#) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipatnikova)
-12.   #### *Jenny Kadzova* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](http://www.linkedin.com/in/jennykadzova) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/kadzova)
+10. #### *Kanikovskii Aleksei* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](https://www.linkedin.com/in/alekseikanikovskii) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/AOKanikovskii)
+11.  #### *Anastasiya Lipatnikova* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](#) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipatnikova)
+12.   #### *Jenny Kadzova* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white&link=)](http://www.linkedin.com/in/jennykadzova) &nbsp;&nbsp; [![github](https://img.shields.io/badge/GitHub-100000?style=flat&style=for-the-badge&logo=github&logoColor=white)](https://github.com/kadzova)
 <br>
 <br>
 
@@ -42,8 +42,6 @@ The website provides access to an admin interface for configuring and managing t
 Testers can perform functionality testing by adding items to the cart, placing orders, and exploring the user interface.
 It offers an opportunity for performance testing, allowing testers to evaluate page load times and assess system responsiveness under load.
 Please note that the data and content on this test instance are not real and are solely for testing purposes.
-
-(This description was created by ChatGPT)
 
 [**Link to test cases**](https://docs.google.com/spreadsheets/d/1Ixzm4xA6LoCwpKffuYDdv0syJ530mTBOu5SRCaYZMZg/edit#gid=0)
 
