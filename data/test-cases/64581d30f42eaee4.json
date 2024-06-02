@@ -1,0 +1,162 @@
+{
+  "uid" : "64581d30f42eaee4",
+  "name" : "test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible[t_header0]",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible",
+  "historyId" : "db5adbbcdb60cbd28e9b59d5e64a4ad5",
+  "time" : {
+    "start" : 1717292233408,
+    "stop" : 1717292233408,
+    "duration" : 0
+  },
+  "description" : "Check that table headers in item cart are visible",
+  "descriptionHtml" : "<p>Check that table headers in item cart are visible</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55655bf7be8a <unknown>\n#1 0x55655bc6545c <unknown>\n#2 0x55655bcb15b5 <unknown>\n#3 0x55655bcb1671 <unknown>\n#4 0x55655bcf5f14 <unknown>\n#5 0x55655bcd44dd <unknown>\n#6 0x55655bcf32cc <unknown>\n#7 0x55655bcd4253 <unknown>\n#8 0x55655bca41c7 <unknown>\n#9 0x55655bca4b3e <unknown>\n#10 0x55655bf422cb <unknown>\n#11 0x55655bf46377 <unknown>\n#12 0x55655bf2edfe <unknown>\n#13 0x55655bf46e42 <unknown>\n#14 0x55655bf1379f <unknown>\n#15 0x55655bf6b178 <unknown>\n#16 0x55655bf6b34b <unknown>\n#17 0x55655bf7afbc <unknown>\n#18 0x7fd8e1094ac3 <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b616e7eb138f47032940633e2af0a8e8\")>\n\n    @pytest.fixture(scope=\"function\")\n    def full_cart_page(driver):\n        driver.get(ITEM_CART_URL)\n        size_button = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SIZE_BUTTON))\n        size_button.click()\n        color_button = wait(driver, 3).until(EC.presence_of_element_located(shopping_locators.COLOR_BUTTON))\n        color_button.click()\n        add_to_cart_button = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.ADD_TO_CART_BUTTON))\n        add_to_cart_button.click()\n>       wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SHOPPING_CART_LINK))\n\ntests/test_shopping_cart.py:19: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"b616e7eb138f47032940633e2af0a8e8\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fe204eccd60>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55655bf7be8a <unknown>\nE       #1 0x55655bc6545c <unknown>\nE       #2 0x55655bcb15b5 <unknown>\nE       #3 0x55655bcb1671 <unknown>\nE       #4 0x55655bcf5f14 <unknown>\nE       #5 0x55655bcd44dd <unknown>\nE       #6 0x55655bcf32cc <unknown>\nE       #7 0x55655bcd4253 <unknown>\nE       #8 0x55655bca41c7 <unknown>\nE       #9 0x55655bca4b3e <unknown>\nE       #10 0x55655bf422cb <unknown>\nE       #11 0x55655bf46377 <unknown>\nE       #12 0x55655bf2edfe <unknown>\nE       #13 0x55655bf46e42 <unknown>\nE       #14 0x55655bf1379f <unknown>\nE       #15 0x55655bf6b178 <unknown>\nE       #16 0x55655bf6b34b <unknown>\nE       #17 0x55655bf7afbc <unknown>\nE       #18 0x7fd8e1094ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717292233408,
+      "stop" : 1717292234681,
+      "duration" : 1273
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1717290932259,
+      "stop" : 1717290932325,
+      "duration" : 66
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1717292234681,
+      "stop" : 1717292243678,
+      "duration" : 8997
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55655bf7be8a <unknown>\n#1 0x55655bc6545c <unknown>\n#2 0x55655bcb15b5 <unknown>\n#3 0x55655bcb1671 <unknown>\n#4 0x55655bcf5f14 <unknown>\n#5 0x55655bcd44dd <unknown>\n#6 0x55655bcf32cc <unknown>\n#7 0x55655bcd4253 <unknown>\n#8 0x55655bca41c7 <unknown>\n#9 0x55655bca4b3e <unknown>\n#10 0x55655bf422cb <unknown>\n#11 0x55655bf46377 <unknown>\n#12 0x55655bf2edfe <unknown>\n#13 0x55655bf46e42 <unknown>\n#14 0x55655bf1379f <unknown>\n#15 0x55655bf6b178 <unknown>\n#16 0x55655bf6b34b <unknown>\n#17 0x55655bf7afbc <unknown>\n#18 0x7fd8e1094ac3 <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/tests/test_shopping_cart.py\", line 19, in full_cart_page\n    wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SHOPPING_CART_LINK))\n  File \"/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1717290932326,
+      "stop" : 1717290932326,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717292243685,
+      "stop" : 1717292243758,
+      "duration" : 73
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1717292565586,
+      "stop" : 1717292565586,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "fv-az564-185"
+  }, {
+    "name" : "thread",
+    "value" : "2866-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "t_header",
+    "value" : "('css selector', 'th.col.item span')"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "64581d30f42eaee4.json",
+  "parameterValues" : [ "('css selector', 'th.col.item span')" ]
+}
