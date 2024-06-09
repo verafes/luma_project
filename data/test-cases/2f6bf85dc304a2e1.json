@@ -1,0 +1,274 @@
+{
+  "uid" : "2f6bf85dc304a2e1",
+  "name" : "TC 10.02.01 - Verify 'MEN'S DEALS' title is correct",
+  "fullName" : "tests.test_sale.TestSideMenuBarMen#test_tc_10_02_01",
+  "historyId" : "7d9cc06b830a248f9ded0f57b7152948",
+  "time" : {
+    "start" : 1717896879053,
+    "stop" : 1717896879095,
+    "duration" : 42
+  },
+  "description" : "Check title of Men's Deals section",
+  "descriptionHtml" : "<p>Check title of Men's Deals section</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL This test is expecting failure == Assertion Error because of error in spelling Men's\n\nAssertionError: Expected title: 'MEN'S DEALS', Actual title: MENS'S DEALS\nassert \"MENS'S DEALS\" == \"MEN'S DEALS\"\n  - MEN'S DEALS\n  + MENS'S DEALS\n  ?    +",
+  "statusTrace" : "self = <test_sale.TestSalePage.TestSideMenuBarMen object at 0x7f55719f57d0>\nsale_page = <pages.sale_page.SalePage object at 0x7f5572133350>\n\n    @allure.title(\"TC 10.02.01 - Verify 'MEN'S DEALS' title is correct\")\n    @pytest.mark.xfail(reason=\"This test is expecting failure == Assertion Error \"\n                              \"because of error in spelling Men's\")\n    def test_tc_10_02_01(self, sale_page):\n        \"\"\"Check title of Men's Deals section\"\"\"\n        title = sale_page.check_text_in_men_deals_title()\n>       assert title == \"MEN'S DEALS\", f\"Expected title: 'MEN'S DEALS', Actual title: {title}\"\nE       AssertionError: Expected title: 'MEN'S DEALS', Actual title: MENS'S DEALS\nE       assert \"MENS'S DEALS\" == \"MEN'S DEALS\"\nE         - MEN'S DEALS\nE         + MENS'S DEALS\nE         ?    +\n\ntests/test_sale.py:66: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1717895870955,
+      "stop" : 1717895871018,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1717895871019,
+      "stop" : 1717895871019,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sale_page",
+    "time" : {
+      "start" : 1717896877806,
+      "stop" : 1717896879053,
+      "duration" : 1247
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1717896877807,
+        "stop" : 1717896879053,
+        "duration" : 1246
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717896876517,
+      "stop" : 1717896877806,
+      "duration" : 1289
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check title of Men's Deals section",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL This test is expecting failure == Assertion Error because of error in spelling Men's\n\nAssertionError: Expected title: 'MEN'S DEALS', Actual title: MENS'S DEALS\nassert \"MENS'S DEALS\" == \"MEN'S DEALS\"\n  - MEN'S DEALS\n  + MENS'S DEALS\n  ?    +",
+    "statusTrace" : "self = <test_sale.TestSalePage.TestSideMenuBarMen object at 0x7f55719f57d0>\nsale_page = <pages.sale_page.SalePage object at 0x7f5572133350>\n\n    @allure.title(\"TC 10.02.01 - Verify 'MEN'S DEALS' title is correct\")\n    @pytest.mark.xfail(reason=\"This test is expecting failure == Assertion Error \"\n                              \"because of error in spelling Men's\")\n    def test_tc_10_02_01(self, sale_page):\n        \"\"\"Check title of Men's Deals section\"\"\"\n        title = sale_page.check_text_in_men_deals_title()\n>       assert title == \"MEN'S DEALS\", f\"Expected title: 'MEN'S DEALS', Actual title: {title}\"\nE       AssertionError: Expected title: 'MEN'S DEALS', Actual title: MENS'S DEALS\nE       assert \"MENS'S DEALS\" == \"MEN'S DEALS\"\nE         - MEN'S DEALS\nE         + MENS'S DEALS\nE         ?    +\n\ntests/test_sale.py:66: AssertionError",
+    "steps" : [ {
+      "name" : "Check text in Men's deals title",
+      "time" : {
+        "start" : 1717896879053,
+        "stop" : 1717896879094,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1717896879054,
+          "stop" : 1717896879085,
+          "duration" : 31
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1717896879054,
+            "stop" : 1717896879063,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.categories-menu > strong:nth-child(3) > span')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1717896879063,
+            "stop" : 1717896879067,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"0b574598504d9df04ffa854f81ca7d69\", element=\"f.B1CC8B583C10F0E11E285B5A4565E456.d.5BB4D1DCDC8274DD6B81A7D6B1A73D08.e.16\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.categories-menu > strong:nth-child(3) > span')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "1e74c90cc58c3e81",
+      "name" : "Screenshot",
+      "source" : "1e74c90cc58c3e81.png",
+      "type" : "image/png",
+      "size" : 626872
+    }, {
+      "uid" : "8c4017a3f68c3a35",
+      "name" : "HTML source",
+      "source" : "8c4017a3f68c3a35.html",
+      "type" : "text/html",
+      "size" : 98720
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1717897424526,
+      "stop" : 1717897424526,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717896879294,
+      "stop" : 1717896879363,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Sale Page"
+  }, {
+    "name" : "feature",
+    "value" : "Testing Side Menu Bar - Men's Deals Section"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='This test is expecting failure == Assertion Error because of error in spelling Men's')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sale"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSalePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1121-517"
+  }, {
+    "name" : "thread",
+    "value" : "2868-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sale"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='This test is expecting failure == Assertion Error because of error in spelling Men's')" ]
+  },
+  "source" : "2f6bf85dc304a2e1.json",
+  "parameterValues" : [ ]
+}
