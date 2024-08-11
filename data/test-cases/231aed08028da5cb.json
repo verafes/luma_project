@@ -1,0 +1,411 @@
+{
+  "uid" : "231aed08028da5cb",
+  "name" : "TC 01_15_01 Verify possibility to vote with 1 star",
+  "fullName" : "tests.test_reviews_page.TestReviews#test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star",
+  "historyId" : "cfd828a389f57bf8c414a44a924590cf",
+  "time" : {
+    "start" : 1723340123376,
+    "stop" : 1723340129026,
+    "duration" : 5650
+  },
+  "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 1 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\"\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+  "descriptionHtml" : "<pre><code>    The user is NOT logged in, located in the product card, section &quot;Reviews&quot;\n    1. All required fields are filled with correct data\n    2. Pressed 1 star\n    3.The &quot;Submit Review&quot; button is pressed\n    Result: Present in the DOM and visible on the page the message: &quot;You submitted your review for moderation.&quot;\n    This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n    When interacting with the GitHub Action, it checks not for the text of the &quot;Success&quot; message, but for the &quot;Success&quot; URL&quot;\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1723339357466,
+      "stop" : 1723339357541,
+      "duration" : 75
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1723340122161,
+      "stop" : 1723340123376,
+      "duration" : 1215
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1723339357542,
+      "stop" : 1723339357542,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 1 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\"\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1723340123376,
+        "stop" : 1723340124422,
+        "duration" : 1046
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1723340124426,
+        "stop" : 1723340124476,
+        "duration" : 50
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#tab-label-reviews-title')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1723340124523,
+        "stop" : 1723340124555,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#Rating_1_label')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1723340124585,
+        "stop" : 1723340124605,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#nickname_field')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1723340124689,
+        "stop" : 1723340124709,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#summary_field')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1723340124784,
+        "stop" : 1723340124803,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#review_field')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Move cursor to element. Perform a click action without navigating to a new page",
+      "time" : {
+        "start" : 1723340125873,
+        "stop" : 1723340128947,
+        "duration" : 3074
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find element (unpacking)",
+        "time" : {
+          "start" : 1723340125873,
+          "stop" : 1723340125885,
+          "duration" : 12
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.submit')"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.submit')"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Shows all opened windows",
+      "time" : {
+        "start" : 1723340128947,
+        "stop" : 1723340128948,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking if 1 or more browser windows are open. If the 2nd is detected, then it returns to the 1st",
+      "time" : {
+        "start" : 1723340128948,
+        "stop" : 1723340128962,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get element text",
+      "time" : {
+        "start" : 1723340128962,
+        "stop" : 1723340129023,
+        "duration" : 61
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1723340128963,
+          "stop" : 1723340129010,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1723340128963,
+            "stop" : 1723340128991,
+            "duration" : 28
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.message-success')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1723340128991,
+            "stop" : 1723340128997,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"3a38d893e79502cb1a64e30cb01966f3\", element=\"f.8B8DEBF5D464D93967B547BFA6476F12.d.AFC4CB8C13BE8346687664B89F016746.e.162\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.message-success')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.message-success')"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 14,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1723340129026,
+      "stop" : 1723340129102,
+      "duration" : 76
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1723340647918,
+      "stop" : 1723340647918,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Review Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_reviews_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestReviews"
+  }, {
+    "name" : "host",
+    "value" : "fv-az883-728"
+  }, {
+    "name" : "thread",
+    "value" : "2866-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_reviews_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "231aed08028da5cb.json",
+  "parameterValues" : [ ]
+}
