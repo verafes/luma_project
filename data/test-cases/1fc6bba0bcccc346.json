@@ -1,0 +1,343 @@
+{
+  "uid" : "1fc6bba0bcccc346",
+  "name" : "Check the display of the add to wish and add to compare buttons",
+  "fullName" : "tests.test_main_page.TestHotSellerSection#test_tc_06_01_15_check_the_display_of_the_card_buttons",
+  "historyId" : "d70dfd5ecc36ca529952457121aeed29",
+  "time" : {
+    "start" : 1728784115494,
+    "stop" : 1728784117794,
+    "duration" : 2300
+  },
+  "description" : "\n            This test will check that the add to wishlist and add to compare buttons are visible on the screen\n            ",
+  "descriptionHtml" : "<pre><code>        This test will check that the add to wishlist and add to compare buttons are visible on the screen\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL In CI the test failed in PR#182\n\nAssertionError: Element is not displayed\nassert False",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7fb5b5b0de50>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"fa031c71bd3f33f685e4cf624c69c8af\")>\nitem = 'add_to_compare'\n\n    @pytest.mark.xfail(reason=\"In CI the test failed in PR#182\")\n    @allure.title(\"Check the display of the add to wish and add to compare buttons\")\n    @pytest.mark.parametrize(\"item\", product_card_button)\n    def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):\n        \"\"\"\n        This test will check that the add to wishlist and add to compare buttons are visible on the screen\n        \"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        check_display = page.check_element_display(item)\n>       assert check_display, \"Element is not displayed\"\nE       AssertionError: Element is not displayed\nE       assert False\n\ntests/test_main_page.py:97: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1728783437390,
+      "stop" : 1728783437391,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1728784114230,
+      "stop" : 1728784115494,
+      "duration" : 1264
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1728783437325,
+      "stop" : 1728783437390,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n            This test will check that the add to wishlist and add to compare buttons are visible on the screen\n            ",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL In CI the test failed in PR#182\n\nAssertionError: Element is not displayed\nassert False",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7fb5b5b0de50>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"fa031c71bd3f33f685e4cf624c69c8af\")>\nitem = 'add_to_compare'\n\n    @pytest.mark.xfail(reason=\"In CI the test failed in PR#182\")\n    @allure.title(\"Check the display of the add to wish and add to compare buttons\")\n    @pytest.mark.parametrize(\"item\", product_card_button)\n    def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):\n        \"\"\"\n        This test will check that the add to wishlist and add to compare buttons are visible on the screen\n        \"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        check_display = page.check_element_display(item)\n>       assert check_display, \"Element is not displayed\"\nE       AssertionError: Element is not displayed\nE       assert False\n\ntests/test_main_page.py:97: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1728784115494,
+        "stop" : 1728784117356,
+        "duration" : 1862
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Checking the display of an element on the screen",
+      "time" : {
+        "start" : 1728784117356,
+        "stop" : 1728784117794,
+        "duration" : 438
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1728784117356,
+          "stop" : 1728784117422,
+          "duration" : 66
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1728784117357,
+            "stop" : 1728784117366,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(1) div[class='product-item-info']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1728784117366,
+            "stop" : 1728784117374,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"fa031c71bd3f33f685e4cf624c69c8af\", element=\"f.6C4F3FAF0D8234936E13FE6F3355C3BD.d.9FA28E7E47DC52E5F2B92A4A63E95708.e.85\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(1) div[class='product-item-info']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Move cursor to element",
+        "time" : {
+          "start" : 1728784117422,
+          "stop" : 1728784117756,
+          "duration" : 334
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"fa031c71bd3f33f685e4cf624c69c8af\", element=\"f.6C4F3FAF0D8234936E13FE6F3355C3BD.d.9FA28E7E47DC52E5F2B92A4A63E95708.e.85\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1728784117756,
+          "stop" : 1728784117782,
+          "duration" : 26
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1728784117756,
+            "stop" : 1728784117765,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(1) a[class='action tocompare']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1728784117765,
+            "stop" : 1728784117768,
+            "duration" : 3
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"fa031c71bd3f33f685e4cf624c69c8af\", element=\"f.6C4F3FAF0D8234936E13FE6F3355C3BD.d.9FA28E7E47DC52E5F2B92A4A63E95708.e.87\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(1) a[class='action tocompare']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "item",
+        "value" : "'add_to_compare'"
+      } ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "e753ae74da6da58",
+      "name" : "Screenshot",
+      "source" : "e753ae74da6da58.png",
+      "type" : "image/png",
+      "size" : 113536
+    }, {
+      "uid" : "6496000aca995ac9",
+      "name" : "HTML source",
+      "source" : "6496000aca995ac9.html",
+      "type" : "text/html",
+      "size" : 223372
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1728784941763,
+      "stop" : 1728784941763,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1728784117920,
+      "stop" : 1728784117993,
+      "duration" : 73
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Hot Seller Section"
+  }, {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='In CI the test failed in PR#182')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az841-587"
+  }, {
+    "name" : "thread",
+    "value" : "2894-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "item",
+    "value" : "'add_to_compare'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='In CI the test failed in PR#182')" ]
+  },
+  "source" : "1fc6bba0bcccc346.json",
+  "parameterValues" : [ "'add_to_compare'" ]
+}
