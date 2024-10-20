@@ -1,0 +1,256 @@
+{
+  "uid" : "768891b62c2a2af1",
+  "name" : "tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart",
+  "historyId" : "5053e2aaf151bae37a933169d86f4d65",
+  "time" : {
+    "start" : 1729389633374,
+    "stop" : 1729389634784,
+    "duration" : 1410
+  },
+  "description" : "Verify subtotal for items: subtotal = price * qty and displayed correctly.",
+  "descriptionHtml" : "<p>Verify subtotal for items: subtotal = price * qty and displayed correctly.</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button type=\"submit\" name=\"update_cart_action\" data-cart-item-update=\"\" value=\"update_qty\" title=\"Update Shopping Cart\" class=\"action update\">...</button> is not clickable at point (1114, 844). Other element would receive the click: <iframe id=\"aswift_5\" name=\"aswift_5\" browsingtopics=\"true\" style=\"width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20241014/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=4\" data-google-container-id=\"a!6\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CKC35LXum4kDFQ0CaAgd3UQQWw\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n#0 0x556ad37620aa <unknown>\n#1 0x556ad32791a0 <unknown>\n#2 0x556ad32cc896 <unknown>\n#3 0x556ad32ca82d <unknown>\n#4 0x556ad32c82d7 <unknown>\n#5 0x556ad32c76f1 <unknown>\n#6 0x556ad32bacf8 <unknown>\n#7 0x556ad32e9d82 <unknown>\n#8 0x556ad32ba6d8 <unknown>\n#9 0x556ad32e9f4e <unknown>\n#10 0x556ad3308866 <unknown>\n#11 0x556ad32e9b23 <unknown>\n#12 0x556ad32b8990 <unknown>\n#13 0x556ad32b996e <unknown>\n#14 0x556ad372e16b <unknown>\n#15 0x556ad3731f68 <unknown>\n#16 0x556ad371b64c <unknown>\n#17 0x556ad3732ae7 <unknown>\n#18 0x556ad37004af <unknown>\n#19 0x556ad37504f8 <unknown>\n#20 0x556ad37506c0 <unknown>\n#21 0x556ad3760f26 <unknown>\n#22 0x7f8a94494ac3 <unknown>",
+  "statusTrace" : "self = <test_shopping_cart.TestShoppingCartFull object at 0x7f9749734d90>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3ba26ea0ccb7fe801875edd0640c2576\")>\nfull_cart_page = None\n\n    @allure.title(\"tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.\")\n    def test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):\n        \"\"\"Verify subtotal for items: subtotal = price * qty and displayed correctly.\"\"\"\n        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)\n>       subtotal = page.check_subtotal_of_item_price_multiply_qty()\n\ntests/test_shopping_cart.py:106: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/shopping_cart_page.py:103: in check_subtotal_of_item_price_multiply_qty\n    update_button.click()\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f9749f1d310>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#20 0x556ad37506c0 \\\\u003Cunknown>\\\\n#21 0x556ad3760f26 \\\\u003Cunknown>\\\\n#22 0x7f8a94494ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button type=\"submit\" name=\"update_cart_action\" data-cart-item-update=\"\" value=\"update_qty\" title=\"Update Shopping Cart\" class=\"action update\">...</button> is not clickable at point (1114, 844). Other element would receive the click: <iframe id=\"aswift_5\" name=\"aswift_5\" browsingtopics=\"true\" style=\"width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20241014/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=4\" data-google-container-id=\"a!6\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CKC35LXum4kDFQ0CaAgd3UQQWw\" data-load-complete=\"true\"></iframe>\nE         (Session info: chrome=130.0.6723.58)\nE       Stacktrace:\nE       #0 0x556ad37620aa <unknown>\nE       #1 0x556ad32791a0 <unknown>\nE       #2 0x556ad32cc896 <unknown>\nE       #3 0x556ad32ca82d <unknown>\nE       #4 0x556ad32c82d7 <unknown>\nE       #5 0x556ad32c76f1 <unknown>\nE       #6 0x556ad32bacf8 <unknown>\nE       #7 0x556ad32e9d82 <unknown>\nE       #8 0x556ad32ba6d8 <unknown>\nE       #9 0x556ad32e9f4e <unknown>\nE       #10 0x556ad3308866 <unknown>\nE       #11 0x556ad32e9b23 <unknown>\nE       #12 0x556ad32b8990 <unknown>\nE       #13 0x556ad32b996e <unknown>\nE       #14 0x556ad372e16b <unknown>\nE       #15 0x556ad3731f68 <unknown>\nE       #16 0x556ad371b64c <unknown>\nE       #17 0x556ad3732ae7 <unknown>\nE       #18 0x556ad37004af <unknown>\nE       #19 0x556ad37504f8 <unknown>\nE       #20 0x556ad37506c0 <unknown>\nE       #21 0x556ad3760f26 <unknown>\nE       #22 0x7f8a94494ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1729388330700,
+      "stop" : 1729388330701,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1729389627957,
+      "stop" : 1729389633373,
+      "duration" : 5416
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1729388330640,
+      "stop" : 1729388330700,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1729389626774,
+      "stop" : 1729389627957,
+      "duration" : 1183
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Verify subtotal for items: subtotal = price * qty and displayed correctly.",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button type=\"submit\" name=\"update_cart_action\" data-cart-item-update=\"\" value=\"update_qty\" title=\"Update Shopping Cart\" class=\"action update\">...</button> is not clickable at point (1114, 844). Other element would receive the click: <iframe id=\"aswift_5\" name=\"aswift_5\" browsingtopics=\"true\" style=\"width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20241014/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=4\" data-google-container-id=\"a!6\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CKC35LXum4kDFQ0CaAgd3UQQWw\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n#0 0x556ad37620aa <unknown>\n#1 0x556ad32791a0 <unknown>\n#2 0x556ad32cc896 <unknown>\n#3 0x556ad32ca82d <unknown>\n#4 0x556ad32c82d7 <unknown>\n#5 0x556ad32c76f1 <unknown>\n#6 0x556ad32bacf8 <unknown>\n#7 0x556ad32e9d82 <unknown>\n#8 0x556ad32ba6d8 <unknown>\n#9 0x556ad32e9f4e <unknown>\n#10 0x556ad3308866 <unknown>\n#11 0x556ad32e9b23 <unknown>\n#12 0x556ad32b8990 <unknown>\n#13 0x556ad32b996e <unknown>\n#14 0x556ad372e16b <unknown>\n#15 0x556ad3731f68 <unknown>\n#16 0x556ad371b64c <unknown>\n#17 0x556ad3732ae7 <unknown>\n#18 0x556ad37004af <unknown>\n#19 0x556ad37504f8 <unknown>\n#20 0x556ad37506c0 <unknown>\n#21 0x556ad3760f26 <unknown>\n#22 0x7f8a94494ac3 <unknown>",
+    "statusTrace" : "self = <test_shopping_cart.TestShoppingCartFull object at 0x7f9749734d90>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3ba26ea0ccb7fe801875edd0640c2576\")>\nfull_cart_page = None\n\n    @allure.title(\"tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.\")\n    def test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):\n        \"\"\"Verify subtotal for items: subtotal = price * qty and displayed correctly.\"\"\"\n        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)\n>       subtotal = page.check_subtotal_of_item_price_multiply_qty()\n\ntests/test_shopping_cart.py:106: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/shopping_cart_page.py:103: in check_subtotal_of_item_price_multiply_qty\n    update_button.click()\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f9749f1d310>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#20 0x556ad37506c0 \\\\u003Cunknown>\\\\n#21 0x556ad3760f26 \\\\u003Cunknown>\\\\n#22 0x7f8a94494ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button type=\"submit\" name=\"update_cart_action\" data-cart-item-update=\"\" value=\"update_qty\" title=\"Update Shopping Cart\" class=\"action update\">...</button> is not clickable at point (1114, 844). Other element would receive the click: <iframe id=\"aswift_5\" name=\"aswift_5\" browsingtopics=\"true\" style=\"width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20241014/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=4\" data-google-container-id=\"a!6\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CKC35LXum4kDFQ0CaAgd3UQQWw\" data-load-complete=\"true\"></iframe>\nE         (Session info: chrome=130.0.6723.58)\nE       Stacktrace:\nE       #0 0x556ad37620aa <unknown>\nE       #1 0x556ad32791a0 <unknown>\nE       #2 0x556ad32cc896 <unknown>\nE       #3 0x556ad32ca82d <unknown>\nE       #4 0x556ad32c82d7 <unknown>\nE       #5 0x556ad32c76f1 <unknown>\nE       #6 0x556ad32bacf8 <unknown>\nE       #7 0x556ad32e9d82 <unknown>\nE       #8 0x556ad32ba6d8 <unknown>\nE       #9 0x556ad32e9f4e <unknown>\nE       #10 0x556ad3308866 <unknown>\nE       #11 0x556ad32e9b23 <unknown>\nE       #12 0x556ad32b8990 <unknown>\nE       #13 0x556ad32b996e <unknown>\nE       #14 0x556ad372e16b <unknown>\nE       #15 0x556ad3731f68 <unknown>\nE       #16 0x556ad371b64c <unknown>\nE       #17 0x556ad3732ae7 <unknown>\nE       #18 0x556ad37004af <unknown>\nE       #19 0x556ad37504f8 <unknown>\nE       #20 0x556ad37506c0 <unknown>\nE       #21 0x556ad3760f26 <unknown>\nE       #22 0x7f8a94494ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+    "steps" : [ {
+      "name" : "Check subtotal for items: price * qty",
+      "time" : {
+        "start" : 1729389633374,
+        "stop" : 1729389634784,
+        "duration" : 1410
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button type=\"submit\" name=\"update_cart_action\" data-cart-item-update=\"\" value=\"update_qty\" title=\"Update Shopping Cart\" class=\"action update\">...</button> is not clickable at point (1114, 844). Other element would receive the click: <iframe id=\"aswift_5\" name=\"aswift_5\" browsingtopics=\"true\" style=\"width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20241014/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=6&amp;uci=a!6&amp;btvi=4\" data-google-container-id=\"a!6\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CKC35LXum4kDFQ0CaAgd3UQQWw\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n#0 0x556ad37620aa <unknown>\n#1 0x556ad32791a0 <unknown>\n#2 0x556ad32cc896 <unknown>\n#3 0x556ad32ca82d <unknown>\n#4 0x556ad32c82d7 <unknown>\n#5 0x556ad32c76f1 <unknown>\n#6 0x556ad32bacf8 <unknown>\n#7 0x556ad32e9d82 <unknown>\n#8 0x556ad32ba6d8 <unknown>\n#9 0x556ad32e9f4e <unknown>\n#10 0x556ad3308866 <unknown>\n#11 0x556ad32e9b23 <unknown>\n#12 0x556ad32b8990 <unknown>\n#13 0x556ad32b996e <unknown>\n#14 0x556ad372e16b <unknown>\n#15 0x556ad3731f68 <unknown>\n#16 0x556ad371b64c <unknown>\n#17 0x556ad3732ae7 <unknown>\n#18 0x556ad37004af <unknown>\n#19 0x556ad37504f8 <unknown>\n#20 0x556ad37506c0 <unknown>\n#21 0x556ad3760f26 <unknown>\n#22 0x7f8a94494ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/shopping_cart_page.py\", line 103, in check_subtotal_of_item_price_multiply_qty\n    update_button.click()\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 93, in click\n    self._execute(Command.CLICK_ELEMENT)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 344, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1729389633374,
+          "stop" : 1729389633514,
+          "duration" : 140
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'input.input-text.qty')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 0
+      }, {
+        "name" : "Get a random number between 1 and 10",
+        "time" : {
+          "start" : 1729389633624,
+          "stop" : 1729389633624,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1729389633658,
+          "stop" : 1729389633696,
+          "duration" : 38
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'button.action.update')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 3
+    } ],
+    "attachments" : [ {
+      "uid" : "6ecef4ae07cc4fa1",
+      "name" : "Screenshot",
+      "source" : "6ecef4ae07cc4fa1.png",
+      "type" : "image/png",
+      "size" : 113022
+    }, {
+      "uid" : "9977048535f2031",
+      "name" : "HTML source",
+      "source" : "9977048535f2031.html",
+      "type" : "text/html",
+      "size" : 239975
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 4
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1729389971625,
+      "stop" : 1729389971625,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1729389634928,
+      "stop" : 1729389635005,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1118-588"
+  }, {
+    "name" : "thread",
+    "value" : "2830-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "768891b62c2a2af1.json",
+  "parameterValues" : [ ]
+}
