@@ -1,0 +1,199 @@
+{
+  "uid" : "8df8cb4d781d9e84",
+  "name" : "TC 14.03.03 Verify the link 'Hoodies&Sweatshirts' redirects to a correct page.",
+  "fullName" : "tests.test_men.TestMenPage#test_tc_14_03_03",
+  "historyId" : "4f7652e301e35024cc0f442d41574f60",
+  "time" : {
+    "start" : 1729997109830,
+    "stop" : 1729997113022,
+    "duration" : 3192
+  },
+  "description" : "Verify that the link 'Hoodies&Sweatshirts' correctly opens and redirects to a new webpage, the header         'Hoodies&Sweatshirt' is displayed",
+  "descriptionHtml" : "<p>Verify that the link 'Hoodies&amp;Sweatshirts' correctly opens and redirects to a new webpage, the header         'Hoodies&amp;Sweatshirt' is displayed</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href=\"https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html\">...</a> is not clickable at point (395, 851). Other element would receive the click: <div id=\"aswift_6_host\" style=\"border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n#0 0x55c11587c0aa <unknown>\n#1 0x55c1153931a0 <unknown>\n#2 0x55c1153e6896 <unknown>\n#3 0x55c1153e482d <unknown>\n#4 0x55c1153e22d7 <unknown>\n#5 0x55c1153e16f1 <unknown>\n#6 0x55c1153d4cf8 <unknown>\n#7 0x55c115403d82 <unknown>\n#8 0x55c1153d46d8 <unknown>\n#9 0x55c115403f4e <unknown>\n#10 0x55c115422866 <unknown>\n#11 0x55c115403b23 <unknown>\n#12 0x55c1153d2990 <unknown>\n#13 0x55c1153d396e <unknown>\n#14 0x55c11584816b <unknown>\n#15 0x55c11584bf68 <unknown>\n#16 0x55c11583564c <unknown>\n#17 0x55c11584cae7 <unknown>\n#18 0x55c11581a4af <unknown>\n#19 0x55c11586a4f8 <unknown>\n#20 0x55c11586a6c0 <unknown>\n#21 0x55c11587af26 <unknown>\n#22 0x7f58ae894ac3 <unknown>",
+  "statusTrace" : "self = <test_men.TestMenPage object at 0x7fc6ee7b7b90>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4f95f82e899d5f49432b9abc2c8f262f\")>\n\n    @allure.title(\"TC 14.03.03 Verify the link 'Hoodies&Sweatshirts' redirects to a correct page.\")\n    def test_tc_14_03_03(self, driver):\n        \"\"\"Verify that the link 'Hoodies&Sweatshirts' correctly opens and redirects to a new webpage, the header \\\n        'Hoodies&Sweatshirt' is displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n>       current_page = page.verify_hoodies_redirects_to_a_correct_page()\n\ntests/test_men.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/men_page.py:132: in verify_hoodies_redirects_to_a_correct_page\n    element.click()\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fc6ee3caa10>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#20 0x55c11586a6c0 \\\\u003Cunknown>\\\\n#21 0x55c11587af26 \\\\u003Cunknown>\\\\n#22 0x7f58ae894ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href=\"https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html\">...</a> is not clickable at point (395, 851). Other element would receive the click: <div id=\"aswift_6_host\" style=\"border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\nE         (Session info: chrome=130.0.6723.58)\nE       Stacktrace:\nE       #0 0x55c11587c0aa <unknown>\nE       #1 0x55c1153931a0 <unknown>\nE       #2 0x55c1153e6896 <unknown>\nE       #3 0x55c1153e482d <unknown>\nE       #4 0x55c1153e22d7 <unknown>\nE       #5 0x55c1153e16f1 <unknown>\nE       #6 0x55c1153d4cf8 <unknown>\nE       #7 0x55c115403d82 <unknown>\nE       #8 0x55c1153d46d8 <unknown>\nE       #9 0x55c115403f4e <unknown>\nE       #10 0x55c115422866 <unknown>\nE       #11 0x55c115403b23 <unknown>\nE       #12 0x55c1153d2990 <unknown>\nE       #13 0x55c1153d396e <unknown>\nE       #14 0x55c11584816b <unknown>\nE       #15 0x55c11584bf68 <unknown>\nE       #16 0x55c11583564c <unknown>\nE       #17 0x55c11584cae7 <unknown>\nE       #18 0x55c11581a4af <unknown>\nE       #19 0x55c11586a4f8 <unknown>\nE       #20 0x55c11586a6c0 <unknown>\nE       #21 0x55c11587af26 <unknown>\nE       #22 0x7f58ae894ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1729993092064,
+      "stop" : 1729993092065,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1729997108635,
+      "stop" : 1729997109829,
+      "duration" : 1194
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1729993092000,
+      "stop" : 1729993092064,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify that the link 'Hoodies&Sweatshirts' correctly opens and redirects to a new webpage, the header         'Hoodies&Sweatshirt' is displayed",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href=\"https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html\">...</a> is not clickable at point (395, 851). Other element would receive the click: <div id=\"aswift_6_host\" style=\"border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n#0 0x55c11587c0aa <unknown>\n#1 0x55c1153931a0 <unknown>\n#2 0x55c1153e6896 <unknown>\n#3 0x55c1153e482d <unknown>\n#4 0x55c1153e22d7 <unknown>\n#5 0x55c1153e16f1 <unknown>\n#6 0x55c1153d4cf8 <unknown>\n#7 0x55c115403d82 <unknown>\n#8 0x55c1153d46d8 <unknown>\n#9 0x55c115403f4e <unknown>\n#10 0x55c115422866 <unknown>\n#11 0x55c115403b23 <unknown>\n#12 0x55c1153d2990 <unknown>\n#13 0x55c1153d396e <unknown>\n#14 0x55c11584816b <unknown>\n#15 0x55c11584bf68 <unknown>\n#16 0x55c11583564c <unknown>\n#17 0x55c11584cae7 <unknown>\n#18 0x55c11581a4af <unknown>\n#19 0x55c11586a4f8 <unknown>\n#20 0x55c11586a6c0 <unknown>\n#21 0x55c11587af26 <unknown>\n#22 0x7f58ae894ac3 <unknown>",
+    "statusTrace" : "self = <test_men.TestMenPage object at 0x7fc6ee7b7b90>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4f95f82e899d5f49432b9abc2c8f262f\")>\n\n    @allure.title(\"TC 14.03.03 Verify the link 'Hoodies&Sweatshirts' redirects to a correct page.\")\n    def test_tc_14_03_03(self, driver):\n        \"\"\"Verify that the link 'Hoodies&Sweatshirts' correctly opens and redirects to a new webpage, the header \\\n        'Hoodies&Sweatshirt' is displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n>       current_page = page.verify_hoodies_redirects_to_a_correct_page()\n\ntests/test_men.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/men_page.py:132: in verify_hoodies_redirects_to_a_correct_page\n    element.click()\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fc6ee3caa10>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#20 0x55c11586a6c0 \\\\u003Cunknown>\\\\n#21 0x55c11587af26 \\\\u003Cunknown>\\\\n#22 0x7f58ae894ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href=\"https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html\">...</a> is not clickable at point (395, 851). Other element would receive the click: <div id=\"aswift_6_host\" style=\"border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\nE         (Session info: chrome=130.0.6723.58)\nE       Stacktrace:\nE       #0 0x55c11587c0aa <unknown>\nE       #1 0x55c1153931a0 <unknown>\nE       #2 0x55c1153e6896 <unknown>\nE       #3 0x55c1153e482d <unknown>\nE       #4 0x55c1153e22d7 <unknown>\nE       #5 0x55c1153e16f1 <unknown>\nE       #6 0x55c1153d4cf8 <unknown>\nE       #7 0x55c115403d82 <unknown>\nE       #8 0x55c1153d46d8 <unknown>\nE       #9 0x55c115403f4e <unknown>\nE       #10 0x55c115422866 <unknown>\nE       #11 0x55c115403b23 <unknown>\nE       #12 0x55c1153d2990 <unknown>\nE       #13 0x55c1153d396e <unknown>\nE       #14 0x55c11584816b <unknown>\nE       #15 0x55c11584bf68 <unknown>\nE       #16 0x55c11583564c <unknown>\nE       #17 0x55c11584cae7 <unknown>\nE       #18 0x55c11581a4af <unknown>\nE       #19 0x55c11586a4f8 <unknown>\nE       #20 0x55c11586a6c0 <unknown>\nE       #21 0x55c11587af26 <unknown>\nE       #22 0x7f58ae894ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1729997109830,
+        "stop" : 1729997111897,
+        "duration" : 2067
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Correct redirection of the link \"Hoodies&Sweatshirts\" on Men page",
+      "time" : {
+        "start" : 1729997111897,
+        "stop" : 1729997113022,
+        "duration" : 1125
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href=\"https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html\">...</a> is not clickable at point (395, 851). Other element would receive the click: <div id=\"aswift_6_host\" style=\"border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n#0 0x55c11587c0aa <unknown>\n#1 0x55c1153931a0 <unknown>\n#2 0x55c1153e6896 <unknown>\n#3 0x55c1153e482d <unknown>\n#4 0x55c1153e22d7 <unknown>\n#5 0x55c1153e16f1 <unknown>\n#6 0x55c1153d4cf8 <unknown>\n#7 0x55c115403d82 <unknown>\n#8 0x55c1153d46d8 <unknown>\n#9 0x55c115403f4e <unknown>\n#10 0x55c115422866 <unknown>\n#11 0x55c115403b23 <unknown>\n#12 0x55c1153d2990 <unknown>\n#13 0x55c1153d396e <unknown>\n#14 0x55c11584816b <unknown>\n#15 0x55c11584bf68 <unknown>\n#16 0x55c11583564c <unknown>\n#17 0x55c11584cae7 <unknown>\n#18 0x55c11581a4af <unknown>\n#19 0x55c11586a4f8 <unknown>\n#20 0x55c11586a6c0 <unknown>\n#21 0x55c11587af26 <unknown>\n#22 0x7f58ae894ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/men_page.py\", line 132, in verify_hoodies_redirects_to_a_correct_page\n    element.click()\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 93, in click\n    self._execute(Command.CLICK_ELEMENT)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 344, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "d7258ebf0659a006",
+      "name" : "Screenshot",
+      "source" : "d7258ebf0659a006.png",
+      "type" : "image/png",
+      "size" : 449910
+    }, {
+      "uid" : "eacc571df2cce522",
+      "name" : "HTML source",
+      "source" : "eacc571df2cce522.html",
+      "type" : "text/html",
+      "size" : 166219
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1729999808072,
+      "stop" : 1729999808072,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1729997113227,
+      "stop" : 1729997113302,
+      "duration" : 75
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "MenPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_men"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMenPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az841-46"
+  }, {
+    "name" : "thread",
+    "value" : "2812-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_men"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8df8cb4d781d9e84.json",
+  "parameterValues" : [ ]
+}
