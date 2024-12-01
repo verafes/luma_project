@@ -1,0 +1,288 @@
+{
+  "uid" : "44a0b64dfb8ff1ac",
+  "name" : "TC 03.02.01 to 03_02_10 Verify Failed Login, no error validation",
+  "fullName" : "tests.test_sign_in.TestFailedLogin#test_03_02_01_to_03_02_10_login",
+  "historyId" : "13d92d3fc34ad3cd8390ae027b651bbc",
+  "time" : {
+    "start" : 1733019624695,
+    "stop" : 1733019628252,
+    "duration" : 3557
+  },
+  "description" : "Check Success and Failed Login, no error validation",
+  "descriptionHtml" : "<p>Check Success and Failed Login, no error validation</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name=\"login[username]\" value=\"\" autocomplete=\"off\" id=\"email\" type=\"email\" class=\"input-text\" title=\"Email\" data-validate=\"{required:true, 'validate-email':true}\" aria-required=\"true\"> is not clickable at point (560, 772). Other element would receive the click: <div id=\"aswift_3_host\" style=\"border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55796c16831a <unknown>\n#1 0x55796bc7e6e0 <unknown>\n#2 0x55796bcd40f6 <unknown>\n#3 0x55796bcd205d <unknown>\n#4 0x55796bccf775 <unknown>\n#5 0x55796bcce92f <unknown>\n#6 0x55796bcc20d5 <unknown>\n#7 0x55796bcf1462 <unknown>\n#8 0x55796bcc1a18 <unknown>\n#9 0x55796bcf162e <unknown>\n#10 0x55796bd0fed7 <unknown>\n#11 0x55796bcf1203 <unknown>\n#12 0x55796bcbfcc0 <unknown>\n#13 0x55796bcc0c9e <unknown>\n#14 0x55796c135d0b <unknown>\n#15 0x55796c139c92 <unknown>\n#16 0x55796c122b3c <unknown>\n#17 0x55796c13a807 <unknown>\n#18 0x55796c1080df <unknown>\n#19 0x55796c157578 <unknown>\n#20 0x55796c157740 <unknown>\n#21 0x55796c167196 <unknown>\n#22 0x7fd1f5494ac3 <unknown>",
+  "statusTrace" : "self = <test_sign_in.TestFailedLogin object at 0x7f9b6a94a8d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"cf4f12b6015908ddc91bc5b857554d9c\")>\nemail = 'teston110@mailinator.com', password = 'Test#12p@ssword'\n\n    @allure.title('TC 03.02.01 to 03_02_10 Verify Failed Login, no error validation')\n    @pytest.mark.parametrize('email, password', LOGIN)\n    def test_03_02_01_to_03_02_10_login(self, driver, email, password):\n        \"\"\"Check Success and Failed Login, no error validation\"\"\"\n        sign_in_page = SignInPage(driver, SIGN_IN_URL)\n        sign_in_page.open()\n>       sign_in_page.fill_in_email_field(email)\n\ntests/test_sign_in.py:256: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/sign_in_page.py:54: in fill_in_email_field\n    self.fill_in_field(self.check_customer_email_field_is_clickable(), email)\npages/base_page.py:319: in fill_in_field\n    input_field.click()\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f9b6bffb9d0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#20 0x55796c157740 \\\\u003Cunknown>\\\\n#21 0x55796c167196 \\\\u003Cunknown>\\\\n#22 0x7fd1f5494ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name=\"login[username]\" value=\"\" autocomplete=\"off\" id=\"email\" type=\"email\" class=\"input-text\" title=\"Email\" data-validate=\"{required:true, 'validate-email':true}\" aria-required=\"true\"> is not clickable at point (560, 772). Other element would receive the click: <div id=\"aswift_3_host\" style=\"border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\nE         (Session info: chrome=131.0.6778.85)\nE       Stacktrace:\nE       #0 0x55796c16831a <unknown>\nE       #1 0x55796bc7e6e0 <unknown>\nE       #2 0x55796bcd40f6 <unknown>\nE       #3 0x55796bcd205d <unknown>\nE       #4 0x55796bccf775 <unknown>\nE       #5 0x55796bcce92f <unknown>\nE       #6 0x55796bcc20d5 <unknown>\nE       #7 0x55796bcf1462 <unknown>\nE       #8 0x55796bcc1a18 <unknown>\nE       #9 0x55796bcf162e <unknown>\nE       #10 0x55796bd0fed7 <unknown>\nE       #11 0x55796bcf1203 <unknown>\nE       #12 0x55796bcbfcc0 <unknown>\nE       #13 0x55796bcc0c9e <unknown>\nE       #14 0x55796c135d0b <unknown>\nE       #15 0x55796c139c92 <unknown>\nE       #16 0x55796c122b3c <unknown>\nE       #17 0x55796c13a807 <unknown>\nE       #18 0x55796c1080df <unknown>\nE       #19 0x55796c157578 <unknown>\nE       #20 0x55796c157740 <unknown>\nE       #21 0x55796c167196 <unknown>\nE       #22 0x7fd1f5494ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1733017969452,
+      "stop" : 1733017969516,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1733019623405,
+      "stop" : 1733019624694,
+      "duration" : 1289
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1733017969516,
+      "stop" : 1733017969516,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "Check Success and Failed Login, no error validation",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name=\"login[username]\" value=\"\" autocomplete=\"off\" id=\"email\" type=\"email\" class=\"input-text\" title=\"Email\" data-validate=\"{required:true, 'validate-email':true}\" aria-required=\"true\"> is not clickable at point (560, 772). Other element would receive the click: <div id=\"aswift_3_host\" style=\"border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55796c16831a <unknown>\n#1 0x55796bc7e6e0 <unknown>\n#2 0x55796bcd40f6 <unknown>\n#3 0x55796bcd205d <unknown>\n#4 0x55796bccf775 <unknown>\n#5 0x55796bcce92f <unknown>\n#6 0x55796bcc20d5 <unknown>\n#7 0x55796bcf1462 <unknown>\n#8 0x55796bcc1a18 <unknown>\n#9 0x55796bcf162e <unknown>\n#10 0x55796bd0fed7 <unknown>\n#11 0x55796bcf1203 <unknown>\n#12 0x55796bcbfcc0 <unknown>\n#13 0x55796bcc0c9e <unknown>\n#14 0x55796c135d0b <unknown>\n#15 0x55796c139c92 <unknown>\n#16 0x55796c122b3c <unknown>\n#17 0x55796c13a807 <unknown>\n#18 0x55796c1080df <unknown>\n#19 0x55796c157578 <unknown>\n#20 0x55796c157740 <unknown>\n#21 0x55796c167196 <unknown>\n#22 0x7fd1f5494ac3 <unknown>",
+    "statusTrace" : "self = <test_sign_in.TestFailedLogin object at 0x7f9b6a94a8d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"cf4f12b6015908ddc91bc5b857554d9c\")>\nemail = 'teston110@mailinator.com', password = 'Test#12p@ssword'\n\n    @allure.title('TC 03.02.01 to 03_02_10 Verify Failed Login, no error validation')\n    @pytest.mark.parametrize('email, password', LOGIN)\n    def test_03_02_01_to_03_02_10_login(self, driver, email, password):\n        \"\"\"Check Success and Failed Login, no error validation\"\"\"\n        sign_in_page = SignInPage(driver, SIGN_IN_URL)\n        sign_in_page.open()\n>       sign_in_page.fill_in_email_field(email)\n\ntests/test_sign_in.py:256: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/sign_in_page.py:54: in fill_in_email_field\n    self.fill_in_field(self.check_customer_email_field_is_clickable(), email)\npages/base_page.py:319: in fill_in_field\n    input_field.click()\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f9b6bffb9d0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#20 0x55796c157740 \\\\u003Cunknown>\\\\n#21 0x55796c167196 \\\\u003Cunknown>\\\\n#22 0x7fd1f5494ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name=\"login[username]\" value=\"\" autocomplete=\"off\" id=\"email\" type=\"email\" class=\"input-text\" title=\"Email\" data-validate=\"{required:true, 'validate-email':true}\" aria-required=\"true\"> is not clickable at point (560, 772). Other element would receive the click: <div id=\"aswift_3_host\" style=\"border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\nE         (Session info: chrome=131.0.6778.85)\nE       Stacktrace:\nE       #0 0x55796c16831a <unknown>\nE       #1 0x55796bc7e6e0 <unknown>\nE       #2 0x55796bcd40f6 <unknown>\nE       #3 0x55796bcd205d <unknown>\nE       #4 0x55796bccf775 <unknown>\nE       #5 0x55796bcce92f <unknown>\nE       #6 0x55796bcc20d5 <unknown>\nE       #7 0x55796bcf1462 <unknown>\nE       #8 0x55796bcc1a18 <unknown>\nE       #9 0x55796bcf162e <unknown>\nE       #10 0x55796bd0fed7 <unknown>\nE       #11 0x55796bcf1203 <unknown>\nE       #12 0x55796bcbfcc0 <unknown>\nE       #13 0x55796bcc0c9e <unknown>\nE       #14 0x55796c135d0b <unknown>\nE       #15 0x55796c139c92 <unknown>\nE       #16 0x55796c122b3c <unknown>\nE       #17 0x55796c13a807 <unknown>\nE       #18 0x55796c1080df <unknown>\nE       #19 0x55796c157578 <unknown>\nE       #20 0x55796c157740 <unknown>\nE       #21 0x55796c167196 <unknown>\nE       #22 0x7fd1f5494ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1733019624695,
+        "stop" : 1733019627040,
+        "duration" : 2345
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Fill in Email field",
+      "time" : {
+        "start" : 1733019627040,
+        "stop" : 1733019628252,
+        "duration" : 1212
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name=\"login[username]\" value=\"\" autocomplete=\"off\" id=\"email\" type=\"email\" class=\"input-text\" title=\"Email\" data-validate=\"{required:true, 'validate-email':true}\" aria-required=\"true\"> is not clickable at point (560, 772). Other element would receive the click: <div id=\"aswift_3_host\" style=\"border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55796c16831a <unknown>\n#1 0x55796bc7e6e0 <unknown>\n#2 0x55796bcd40f6 <unknown>\n#3 0x55796bcd205d <unknown>\n#4 0x55796bccf775 <unknown>\n#5 0x55796bcce92f <unknown>\n#6 0x55796bcc20d5 <unknown>\n#7 0x55796bcf1462 <unknown>\n#8 0x55796bcc1a18 <unknown>\n#9 0x55796bcf162e <unknown>\n#10 0x55796bd0fed7 <unknown>\n#11 0x55796bcf1203 <unknown>\n#12 0x55796bcbfcc0 <unknown>\n#13 0x55796bcc0c9e <unknown>\n#14 0x55796c135d0b <unknown>\n#15 0x55796c139c92 <unknown>\n#16 0x55796c122b3c <unknown>\n#17 0x55796c13a807 <unknown>\n#18 0x55796c1080df <unknown>\n#19 0x55796c157578 <unknown>\n#20 0x55796c157740 <unknown>\n#21 0x55796c167196 <unknown>\n#22 0x7fd1f5494ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/sign_in_page.py\", line 54, in fill_in_email_field\n    self.fill_in_field(self.check_customer_email_field_is_clickable(), email)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 319, in fill_in_field\n    input_field.click()\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 93, in click\n    self._execute(Command.CLICK_ELEMENT)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 344, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Check Email field is clickable",
+        "time" : {
+          "start" : 1733019627040,
+          "stop" : 1733019627079,
+          "duration" : 39
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1733019627040,
+            "stop" : 1733019627079,
+            "duration" : 39
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1733019627079,
+          "stop" : 1733019628251,
+          "duration" : 1172
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name=\"login[username]\" value=\"\" autocomplete=\"off\" id=\"email\" type=\"email\" class=\"input-text\" title=\"Email\" data-validate=\"{required:true, 'validate-email':true}\" aria-required=\"true\"> is not clickable at point (560, 772). Other element would receive the click: <div id=\"aswift_3_host\" style=\"border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;\">...</div>\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55796c16831a <unknown>\n#1 0x55796bc7e6e0 <unknown>\n#2 0x55796bcd40f6 <unknown>\n#3 0x55796bcd205d <unknown>\n#4 0x55796bccf775 <unknown>\n#5 0x55796bcce92f <unknown>\n#6 0x55796bcc20d5 <unknown>\n#7 0x55796bcf1462 <unknown>\n#8 0x55796bcc1a18 <unknown>\n#9 0x55796bcf162e <unknown>\n#10 0x55796bd0fed7 <unknown>\n#11 0x55796bcf1203 <unknown>\n#12 0x55796bcbfcc0 <unknown>\n#13 0x55796bcc0c9e <unknown>\n#14 0x55796c135d0b <unknown>\n#15 0x55796c139c92 <unknown>\n#16 0x55796c122b3c <unknown>\n#17 0x55796c13a807 <unknown>\n#18 0x55796c1080df <unknown>\n#19 0x55796c157578 <unknown>\n#20 0x55796c157740 <unknown>\n#21 0x55796c167196 <unknown>\n#22 0x7fd1f5494ac3 <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 319, in fill_in_field\n    input_field.click()\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 93, in click\n    self._execute(Command.CLICK_ELEMENT)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webelement.py\", line 394, in _execute\n    return self._parent.execute(command, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 344, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1733019627079,
+            "stop" : 1733019627098,
+            "duration" : 19
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"cf4f12b6015908ddc91bc5b857554d9c\", element=\"f.CED39666314E5B61F19D09B33327FD4E.d.DA8C1A155EC1BDD8D5CF2A389DFFC72F.e.3\")>"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"cf4f12b6015908ddc91bc5b857554d9c\", element=\"f.CED39666314E5B61F19D09B33327FD4E.d.DA8C1A155EC1BDD8D5CF2A389DFFC72F.e.3\")>"
+        }, {
+          "name" : "value",
+          "value" : "'teston110@mailinator.com'"
+        } ],
+        "stepsCount" : 1,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'teston110@mailinator.com'"
+      } ],
+      "stepsCount" : 4,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "e8ff96f0798032b6",
+      "name" : "Screenshot",
+      "source" : "e8ff96f0798032b6.png",
+      "type" : "image/png",
+      "size" : 164958
+    }, {
+      "uid" : "36cfd74083ac7124",
+      "name" : "HTML source",
+      "source" : "36cfd74083ac7124.html",
+      "type" : "text/html",
+      "size" : 168716
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1733019628401,
+      "stop" : 1733019628480,
+      "duration" : 79
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1733019760033,
+      "stop" : 1733019760033,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Failed Login Functionality"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFailedLogin"
+  }, {
+    "name" : "host",
+    "value" : "fv-az730-633"
+  }, {
+    "name" : "thread",
+    "value" : "2826-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "email",
+    "value" : "'teston110@mailinator.com'"
+  }, {
+    "name" : "password",
+    "value" : "'Test#12p@ssword'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "44a0b64dfb8ff1ac.json",
+  "parameterValues" : [ "'teston110@mailinator.com'", "'Test#12p@ssword'" ]
+}
