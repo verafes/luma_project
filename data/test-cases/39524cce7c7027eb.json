@@ -1,0 +1,482 @@
+{
+  "uid" : "39524cce7c7027eb",
+  "name" : "TC 07.02.28 Verify that the price in list of items in the Shopping Cart is displayed correct",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_28_verify_price_in_cart_vs_price_item_from_more_choicesis",
+  "historyId" : "30eb67e051fdd271a3d3cf56a9b94025",
+  "time" : {
+    "start" : 1734832824005,
+    "stop" : 1734832826895,
+    "duration" : 2890
+  },
+  "description" : "Check that the price in list of items in the Shopping Cart\n        contains item with correct price which was added from More Choices",
+  "descriptionHtml" : "<p>Check that the price in list of items in the Shopping Cart\ncontains item with correct price which was added from More Choices</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: The list of items in the Shopping Cart does not contains the added product from More Choices with correct price\nassert '$22.00' in '$29.00'",
+  "statusTrace" : "self = <test_shopping_cart.TestShoppingCartFull object at 0x7f4b956f6990>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c13dad126e504a19cc052ac2d26961c0\")>\nfull_cart_page = None\n\n    @allure.title(\"TC 07.02.28 Verify that the price in list of items in the Shopping Cart \"\n                  \"is displayed correct\")\n    def test_tc_07_02_28_verify_price_in_cart_vs_price_item_from_more_choicesis(self, driver, full_cart_page):\n        \"\"\"Check that the price in list of items in the Shopping Cart\n        contains item with correct price which was added from More Choices\"\"\"\n        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)\n        page.open()\n        page.go_to_item_in_more_choices(driver)\n        expected_price = page.get_price_item_in_more_choices()\n        page.click_btn_add_to_cart(driver)\n        actual_price = page.get_price_last_item()\n>       assert expected_price in actual_price, 'The list of items in the Shopping Cart does not contains ' \\\n                                                'the added product from More Choices with correct price'\nE       AssertionError: The list of items in the Shopping Cart does not contains the added product from More Choices with correct price\nE       assert '$22.00' in '$29.00'\n\ntests/test_shopping_cart.py:192: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1734832818477,
+      "stop" : 1734832819689,
+      "duration" : 1212
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1734832819689,
+      "stop" : 1734832824004,
+      "duration" : 4315
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1734831518879,
+      "stop" : 1734831518879,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1734831518817,
+      "stop" : 1734831518878,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that the price in list of items in the Shopping Cart\n        contains item with correct price which was added from More Choices",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: The list of items in the Shopping Cart does not contains the added product from More Choices with correct price\nassert '$22.00' in '$29.00'",
+    "statusTrace" : "self = <test_shopping_cart.TestShoppingCartFull object at 0x7f4b956f6990>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"c13dad126e504a19cc052ac2d26961c0\")>\nfull_cart_page = None\n\n    @allure.title(\"TC 07.02.28 Verify that the price in list of items in the Shopping Cart \"\n                  \"is displayed correct\")\n    def test_tc_07_02_28_verify_price_in_cart_vs_price_item_from_more_choicesis(self, driver, full_cart_page):\n        \"\"\"Check that the price in list of items in the Shopping Cart\n        contains item with correct price which was added from More Choices\"\"\"\n        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)\n        page.open()\n        page.go_to_item_in_more_choices(driver)\n        expected_price = page.get_price_item_in_more_choices()\n        page.click_btn_add_to_cart(driver)\n        actual_price = page.get_price_last_item()\n>       assert expected_price in actual_price, 'The list of items in the Shopping Cart does not contains ' \\\n                                                'the added product from More Choices with correct price'\nE       AssertionError: The list of items in the Shopping Cart does not contains the added product from More Choices with correct price\nE       assert '$22.00' in '$29.00'\n\ntests/test_shopping_cart.py:192: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1734832824005,
+        "stop" : 1734832825198,
+        "duration" : 1193
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Go down to More Choices",
+      "time" : {
+        "start" : 1734832825198,
+        "stop" : 1734832825562,
+        "duration" : 364
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1734832825205,
+          "stop" : 1734832825297,
+          "duration" : 92
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1734832825205,
+            "stop" : 1734832825219,
+            "duration" : 14
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'div.block-content.content > div > ol > li:nth-child(3) > div')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1734832825220,
+            "stop" : 1734832825249,
+            "duration" : 29
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"c13dad126e504a19cc052ac2d26961c0\", element=\"f.EC0EFC3B6C646840CCEA93E968C1D7DF.d.814931E4AEE3242D51398B7561DCC57B.e.170\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'div.block-content.content > div > ol > li:nth-child(3) > div')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Move cursor to element",
+        "time" : {
+          "start" : 1734832825297,
+          "stop" : 1734832825562,
+          "duration" : 265
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"c13dad126e504a19cc052ac2d26961c0\", element=\"f.EC0EFC3B6C646840CCEA93E968C1D7DF.d.814931E4AEE3242D51398B7561DCC57B.e.170\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "driver",
+        "value" : "<selenium.webdriver.chrome.webdriver.WebDriver (session=\"c13dad126e504a19cc052ac2d26961c0\")>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get price item in More Choices",
+      "time" : {
+        "start" : 1734832825562,
+        "stop" : 1734832825601,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1734832825562,
+          "stop" : 1734832825590,
+          "duration" : 28
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1734832825562,
+            "stop" : 1734832825571,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//div[1]/ol[1]/li[3]/div[1]/div[1]/div[1]//span[1]/span[1]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1734832825571,
+            "stop" : 1734832825575,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"c13dad126e504a19cc052ac2d26961c0\", element=\"f.EC0EFC3B6C646840CCEA93E968C1D7DF.d.814931E4AEE3242D51398B7561DCC57B.e.217\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//div[1]/ol[1]/li[3]/div[1]/div[1]/div[1]//span[1]/span[1]')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click button Add to Cart and refresh page",
+      "time" : {
+        "start" : 1734832825601,
+        "stop" : 1734832826829,
+        "duration" : 1228
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1734832825601,
+          "stop" : 1734832825624,
+          "duration" : 23
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1734832825601,
+            "stop" : 1734832825609,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//div[1]/ol[1]/li[3]//button[1]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1734832825609,
+            "stop" : 1734832825613,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"c13dad126e504a19cc052ac2d26961c0\", element=\"f.EC0EFC3B6C646840CCEA93E968C1D7DF.d.814931E4AEE3242D51398B7561DCC57B.e.208\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//div[1]/ol[1]/li[3]//button[1]')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "driver",
+        "value" : "<selenium.webdriver.chrome.webdriver.WebDriver (session=\"c13dad126e504a19cc052ac2d26961c0\")>"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get the last price in items list in Shopping Cart",
+      "time" : {
+        "start" : 1734832826829,
+        "stop" : 1734832826894,
+        "duration" : 65
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find visible elements",
+        "time" : {
+          "start" : 1734832826829,
+          "stop" : 1734832826874,
+          "duration" : 45
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'td.col.price > span > span > span')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "85e1a30506736bcf",
+      "name" : "Screenshot",
+      "source" : "85e1a30506736bcf.png",
+      "type" : "image/png",
+      "size" : 214367
+    }, {
+      "uid" : "ed351234faa5ef86",
+      "name" : "HTML source",
+      "source" : "ed351234faa5ef86.html",
+      "type" : "text/html",
+      "size" : 200172
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 16,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1734832827037,
+      "stop" : 1734832827115,
+      "duration" : 78
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1734833003282,
+      "stop" : 1734833003282,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1307-152"
+  }, {
+    "name" : "thread",
+    "value" : "2800-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "39524cce7c7027eb.json",
+  "parameterValues" : [ ]
+}
