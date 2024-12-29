@@ -1,0 +1,282 @@
+{
+  "uid" : "79380daad258a7c2",
+  "name" : "TC 04_02_09_13 Verify presence of strong password strength hint",
+  "fullName" : "tests.test_create_an_account.TestCreateAnAccount#test_04_02_09_13_password_strength_hint",
+  "historyId" : "ed9840125a9f44379362aeb23614e078",
+  "time" : {
+    "start" : 1735438089129,
+    "stop" : 1735438094262,
+    "duration" : 5133
+  },
+  "description" : " Verify presence of Password Strength hint and warning color of weak password ",
+  "descriptionHtml" : "<p>Verify presence of Password Strength hint and warning color of weak password</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL Flaky behavior on CI\n\nselenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a2f3be031a <unknown>\n#1 0x55a2f36f66e0 <unknown>\n#2 0x55a2f37453e6 <unknown>\n#3 0x55a2f3745681 <unknown>\n#4 0x55a2f378ab04 <unknown>\n#5 0x55a2f376948d <unknown>\n#6 0x55a2f3787ed7 <unknown>\n#7 0x55a2f3769203 <unknown>\n#8 0x55a2f3737cc0 <unknown>\n#9 0x55a2f3738c9e <unknown>\n#10 0x55a2f3badd0b <unknown>\n#11 0x55a2f3bb1c92 <unknown>\n#12 0x55a2f3b9ab3c <unknown>\n#13 0x55a2f3bb2807 <unknown>\n#14 0x55a2f3b800df <unknown>\n#15 0x55a2f3bcf578 <unknown>\n#16 0x55a2f3bcf740 <unknown>\n#17 0x55a2f3bdf196 <unknown>\n#18 0x7f25c509ca94 <unknown>\n#19 0x7f25c5129c3c <unknown>",
+  "statusTrace" : "self = <test_create_an_account.TestCreateAnAccount object at 0x7fcc684b0790>\ncreate_account_page = <pages.create_an_account_page.CreateAccountPage object at 0x7fcc69086f90>\npassword_strength_msg = {'password': '1234qwere', 'strength_password': 'Weak', 'strength_password_hint': 'Password Strength: Weak', 'warning_color': '#ffafae', ...}\n\n    @pytest.mark.xfail(reason=\"Flaky behavior on CI\")\n    @allure.title('TC 04_02_09_13 Verify presence of strong password strength hint')\n    @pytest.mark.parametrize('password_strength_msg', password_strength_msg)\n    def test_04_02_09_13_password_strength_hint(self, create_account_page, password_strength_msg):\n        \"\"\" Verify presence of Password Strength hint and warning color of weak password \"\"\"\n        password_strength_hint_message, message_error, hex_color = \\\n>           create_account_page.check_password_strength_hint_with_different_passwords(password_strength_msg)\n\ntests/test_create_an_account.py:217: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/create_an_account_page.py:267: in check_password_strength_hint_with_different_passwords\n    password_input = self.check_password_input()\npages/create_an_account_page.py:55: in check_password_input\n    return self.element_is_visible(self.locators.PASSWORD)\npages/base_page.py:29: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:50: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"388b7e57370a7dae5b87fa6f6c061b13\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fcc67490900>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55a2f3be031a <unknown>\nE       #1 0x55a2f36f66e0 <unknown>\nE       #2 0x55a2f37453e6 <unknown>\nE       #3 0x55a2f3745681 <unknown>\nE       #4 0x55a2f378ab04 <unknown>\nE       #5 0x55a2f376948d <unknown>\nE       #6 0x55a2f3787ed7 <unknown>\nE       #7 0x55a2f3769203 <unknown>\nE       #8 0x55a2f3737cc0 <unknown>\nE       #9 0x55a2f3738c9e <unknown>\nE       #10 0x55a2f3badd0b <unknown>\nE       #11 0x55a2f3bb1c92 <unknown>\nE       #12 0x55a2f3b9ab3c <unknown>\nE       #13 0x55a2f3bb2807 <unknown>\nE       #14 0x55a2f3b800df <unknown>\nE       #15 0x55a2f3bcf578 <unknown>\nE       #16 0x55a2f3bcf740 <unknown>\nE       #17 0x55a2f3bdf196 <unknown>\nE       #18 0x7f25c509ca94 <unknown>\nE       #19 0x7f25c5129c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1735438087797,
+      "stop" : 1735438089035,
+      "duration" : 1238
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1735436375854,
+      "stop" : 1735436375914,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "create_account_page",
+    "time" : {
+      "start" : 1735438089035,
+      "stop" : 1735438089129,
+      "duration" : 94
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1735438089035,
+        "stop" : 1735438089129,
+        "duration" : 94
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1735436375915,
+      "stop" : 1735436375915,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : " Verify presence of Password Strength hint and warning color of weak password ",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL Flaky behavior on CI\n\nselenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a2f3be031a <unknown>\n#1 0x55a2f36f66e0 <unknown>\n#2 0x55a2f37453e6 <unknown>\n#3 0x55a2f3745681 <unknown>\n#4 0x55a2f378ab04 <unknown>\n#5 0x55a2f376948d <unknown>\n#6 0x55a2f3787ed7 <unknown>\n#7 0x55a2f3769203 <unknown>\n#8 0x55a2f3737cc0 <unknown>\n#9 0x55a2f3738c9e <unknown>\n#10 0x55a2f3badd0b <unknown>\n#11 0x55a2f3bb1c92 <unknown>\n#12 0x55a2f3b9ab3c <unknown>\n#13 0x55a2f3bb2807 <unknown>\n#14 0x55a2f3b800df <unknown>\n#15 0x55a2f3bcf578 <unknown>\n#16 0x55a2f3bcf740 <unknown>\n#17 0x55a2f3bdf196 <unknown>\n#18 0x7f25c509ca94 <unknown>\n#19 0x7f25c5129c3c <unknown>",
+    "statusTrace" : "self = <test_create_an_account.TestCreateAnAccount object at 0x7fcc684b0790>\ncreate_account_page = <pages.create_an_account_page.CreateAccountPage object at 0x7fcc69086f90>\npassword_strength_msg = {'password': '1234qwere', 'strength_password': 'Weak', 'strength_password_hint': 'Password Strength: Weak', 'warning_color': '#ffafae', ...}\n\n    @pytest.mark.xfail(reason=\"Flaky behavior on CI\")\n    @allure.title('TC 04_02_09_13 Verify presence of strong password strength hint')\n    @pytest.mark.parametrize('password_strength_msg', password_strength_msg)\n    def test_04_02_09_13_password_strength_hint(self, create_account_page, password_strength_msg):\n        \"\"\" Verify presence of Password Strength hint and warning color of weak password \"\"\"\n        password_strength_hint_message, message_error, hex_color = \\\n>           create_account_page.check_password_strength_hint_with_different_passwords(password_strength_msg)\n\ntests/test_create_an_account.py:217: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/create_an_account_page.py:267: in check_password_strength_hint_with_different_passwords\n    password_input = self.check_password_input()\npages/create_an_account_page.py:55: in check_password_input\n    return self.element_is_visible(self.locators.PASSWORD)\npages/base_page.py:29: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:50: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"388b7e57370a7dae5b87fa6f6c061b13\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fcc67490900>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55a2f3be031a <unknown>\nE       #1 0x55a2f36f66e0 <unknown>\nE       #2 0x55a2f37453e6 <unknown>\nE       #3 0x55a2f3745681 <unknown>\nE       #4 0x55a2f378ab04 <unknown>\nE       #5 0x55a2f376948d <unknown>\nE       #6 0x55a2f3787ed7 <unknown>\nE       #7 0x55a2f3769203 <unknown>\nE       #8 0x55a2f3737cc0 <unknown>\nE       #9 0x55a2f3738c9e <unknown>\nE       #10 0x55a2f3badd0b <unknown>\nE       #11 0x55a2f3bb1c92 <unknown>\nE       #12 0x55a2f3b9ab3c <unknown>\nE       #13 0x55a2f3bb2807 <unknown>\nE       #14 0x55a2f3b800df <unknown>\nE       #15 0x55a2f3bcf578 <unknown>\nE       #16 0x55a2f3bcf740 <unknown>\nE       #17 0x55a2f3bdf196 <unknown>\nE       #18 0x7f25c509ca94 <unknown>\nE       #19 0x7f25c5129c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Check password strength hint and color",
+      "time" : {
+        "start" : 1735438089130,
+        "stop" : 1735438094262,
+        "duration" : 5132
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a2f3be031a <unknown>\n#1 0x55a2f36f66e0 <unknown>\n#2 0x55a2f37453e6 <unknown>\n#3 0x55a2f3745681 <unknown>\n#4 0x55a2f378ab04 <unknown>\n#5 0x55a2f376948d <unknown>\n#6 0x55a2f3787ed7 <unknown>\n#7 0x55a2f3769203 <unknown>\n#8 0x55a2f3737cc0 <unknown>\n#9 0x55a2f3738c9e <unknown>\n#10 0x55a2f3badd0b <unknown>\n#11 0x55a2f3bb1c92 <unknown>\n#12 0x55a2f3b9ab3c <unknown>\n#13 0x55a2f3bb2807 <unknown>\n#14 0x55a2f3b800df <unknown>\n#15 0x55a2f3bcf578 <unknown>\n#16 0x55a2f3bcf740 <unknown>\n#17 0x55a2f3bdf196 <unknown>\n#18 0x7f25c509ca94 <unknown>\n#19 0x7f25c5129c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/create_an_account_page.py\", line 267, in check_password_strength_hint_with_different_passwords\n    password_input = self.check_password_input()\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/create_an_account_page.py\", line 55, in check_password_input\n    return self.element_is_visible(self.locators.PASSWORD)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Check Password input field is visible",
+        "time" : {
+          "start" : 1735438089130,
+          "stop" : 1735438094262,
+          "duration" : 5132
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a2f3be031a <unknown>\n#1 0x55a2f36f66e0 <unknown>\n#2 0x55a2f37453e6 <unknown>\n#3 0x55a2f3745681 <unknown>\n#4 0x55a2f378ab04 <unknown>\n#5 0x55a2f376948d <unknown>\n#6 0x55a2f3787ed7 <unknown>\n#7 0x55a2f3769203 <unknown>\n#8 0x55a2f3737cc0 <unknown>\n#9 0x55a2f3738c9e <unknown>\n#10 0x55a2f3badd0b <unknown>\n#11 0x55a2f3bb1c92 <unknown>\n#12 0x55a2f3b9ab3c <unknown>\n#13 0x55a2f3bb2807 <unknown>\n#14 0x55a2f3b800df <unknown>\n#15 0x55a2f3bcf578 <unknown>\n#16 0x55a2f3bcf740 <unknown>\n#17 0x55a2f3bdf196 <unknown>\n#18 0x7f25c509ca94 <unknown>\n#19 0x7f25c5129c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/create_an_account_page.py\", line 55, in check_password_input\n    return self.element_is_visible(self.locators.PASSWORD)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1735438089130,
+            "stop" : 1735438094261,
+            "duration" : 5131
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a2f3be031a <unknown>\n#1 0x55a2f36f66e0 <unknown>\n#2 0x55a2f37453e6 <unknown>\n#3 0x55a2f3745681 <unknown>\n#4 0x55a2f378ab04 <unknown>\n#5 0x55a2f376948d <unknown>\n#6 0x55a2f3787ed7 <unknown>\n#7 0x55a2f3769203 <unknown>\n#8 0x55a2f3737cc0 <unknown>\n#9 0x55a2f3738c9e <unknown>\n#10 0x55a2f3badd0b <unknown>\n#11 0x55a2f3bb1c92 <unknown>\n#12 0x55a2f3b9ab3c <unknown>\n#13 0x55a2f3bb2807 <unknown>\n#14 0x55a2f3b800df <unknown>\n#15 0x55a2f3bcf578 <unknown>\n#16 0x55a2f3bcf740 <unknown>\n#17 0x55a2f3bdf196 <unknown>\n#18 0x7f25c509ca94 <unknown>\n#19 0x7f25c5129c3c <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1735438089130,
+              "stop" : 1735438094261,
+              "duration" : 5131
+            },
+            "status" : "broken",
+            "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a2f3be031a <unknown>\n#1 0x55a2f36f66e0 <unknown>\n#2 0x55a2f37453e6 <unknown>\n#3 0x55a2f3745681 <unknown>\n#4 0x55a2f378ab04 <unknown>\n#5 0x55a2f376948d <unknown>\n#6 0x55a2f3787ed7 <unknown>\n#7 0x55a2f3769203 <unknown>\n#8 0x55a2f3737cc0 <unknown>\n#9 0x55a2f3738c9e <unknown>\n#10 0x55a2f3badd0b <unknown>\n#11 0x55a2f3bb1c92 <unknown>\n#12 0x55a2f3b9ab3c <unknown>\n#13 0x55a2f3bb2807 <unknown>\n#14 0x55a2f3b800df <unknown>\n#15 0x55a2f3bcf578 <unknown>\n#16 0x55a2f3bcf740 <unknown>\n#17 0x55a2f3bdf196 <unknown>\n#18 0x7f25c509ca94 <unknown>\n#19 0x7f25c5129c3c <unknown>\n\n",
+            "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '[id=\"password\"]')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : true,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '[id=\"password\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password_strength_msg",
+        "value" : "{'strength_password': 'Weak', 'password': '1234qwere', 'warning_color': '#ffafae', 'strength_password_hint': 'Password Strength: Weak', 'warning_password_message': 'Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.'}"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "1d25c7daf190461f",
+      "name" : "Screenshot",
+      "source" : "1d25c7daf190461f.png",
+      "type" : "image/png",
+      "size" : 87715
+    }, {
+      "uid" : "c44d9a8eb747af8b",
+      "name" : "HTML source",
+      "source" : "c44d9a8eb747af8b.html",
+      "type" : "text/html",
+      "size" : 6658
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1735438094368,
+      "stop" : 1735438094432,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1735439409300,
+      "stop" : 1735439409300,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Create An Account"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='Flaky behavior on CI')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_create_an_account"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCreateAnAccount"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1110-580"
+  }, {
+    "name" : "thread",
+    "value" : "2884-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_create_an_account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "password_strength_msg",
+    "value" : "{'strength_password': 'Weak', 'password': '1234qwere', 'warning_color': '#ffafae', 'strength_password_hint': 'Password Strength: Weak', 'warning_password_message': 'Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='Flaky behavior on CI')" ]
+  },
+  "source" : "79380daad258a7c2.json",
+  "parameterValues" : [ "{'strength_password': 'Weak', 'password': '1234qwere', 'warning_color': '#ffafae', 'strength_password_hint': 'Password Strength: Weak', 'warning_password_message': 'Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.'}" ]
+}
