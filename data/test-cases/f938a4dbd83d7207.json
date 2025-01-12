@@ -1,0 +1,257 @@
+{
+  "uid" : "f938a4dbd83d7207",
+  "name" : "TC 14.03.01 Verify the 'TOPS' subhead is displayed",
+  "fullName" : "tests.test_men.TestMenPage#test_tc_14_03_01",
+  "historyId" : "8cc1ebc6c10db11a094d7f985c3c0762",
+  "time" : {
+    "start" : 1736646967570,
+    "stop" : 1736646968561,
+    "duration" : 991
+  },
+  "description" : "Verify that the subhead 'TOPS' is displayed",
+  "descriptionHtml" : "<p>Verify that the subhead 'TOPS' is displayed</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'Tops' == 'TOPS'\n  - TOPS\n  + Tops",
+  "statusTrace" : "self = <test_men.TestMenPage object at 0x7f052a1ef250>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f0ba25ff01532c41b2cd9e67ca6267c7\")>\n\n    @allure.title(\"TC 14.03.01 Verify the 'TOPS' subhead is displayed\")\n    def test_tc_14_03_01(self, driver):\n        \"\"\"Verify that the subhead 'TOPS' is displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n        subhead_title = page.verify_subhead_tops_is_visible()\n>       assert subhead_title == \"TOPS\"\nE       AssertionError: assert 'Tops' == 'TOPS'\nE         - TOPS\nE         + Tops\n\ntests/test_men.py:47: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1736646966378,
+      "stop" : 1736646967569,
+      "duration" : 1191
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1736646008929,
+      "stop" : 1736646008990,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1736646008990,
+      "stop" : 1736646008990,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify that the subhead 'TOPS' is displayed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 'Tops' == 'TOPS'\n  - TOPS\n  + Tops",
+    "statusTrace" : "self = <test_men.TestMenPage object at 0x7f052a1ef250>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f0ba25ff01532c41b2cd9e67ca6267c7\")>\n\n    @allure.title(\"TC 14.03.01 Verify the 'TOPS' subhead is displayed\")\n    def test_tc_14_03_01(self, driver):\n        \"\"\"Verify that the subhead 'TOPS' is displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n        subhead_title = page.verify_subhead_tops_is_visible()\n>       assert subhead_title == \"TOPS\"\nE       AssertionError: assert 'Tops' == 'TOPS'\nE         - TOPS\nE         + Tops\n\ntests/test_men.py:47: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1736646967570,
+        "stop" : 1736646968500,
+        "duration" : 930
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify subhead \"TOPS\" on Men page",
+      "time" : {
+        "start" : 1736646968500,
+        "stop" : 1736646968560,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1736646968501,
+          "stop" : 1736646968549,
+          "duration" : 48
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1736646968501,
+            "stop" : 1736646968511,
+            "duration" : 10
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//*[@id=\"maincontent\"]/div[4]/div[2]/div[2]/div/strong/span')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1736646968511,
+            "stop" : 1736646968517,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"f0ba25ff01532c41b2cd9e67ca6267c7\", element=\"f.5DD86FECDF319E8798CFCA0E12CE9E39.d.B90CC8FED6480FFE55E012F44801B20E.e.25\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//*[@id=\"maincontent\"]/div[4]/div[2]/div[2]/div/strong/span')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "c22e312715f4a9ce",
+      "name" : "Screenshot",
+      "source" : "c22e312715f4a9ce.png",
+      "type" : "image/png",
+      "size" : 418613
+    }, {
+      "uid" : "f210952ab5557151",
+      "name" : "HTML source",
+      "source" : "f210952ab5557151.html",
+      "type" : "text/html",
+      "size" : 128030
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1736646968752,
+      "stop" : 1736646968824,
+      "duration" : 72
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1736647526709,
+      "stop" : 1736647526709,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "MenPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_men"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMenPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1371-476"
+  }, {
+    "name" : "thread",
+    "value" : "2824-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_men"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f938a4dbd83d7207.json",
+  "parameterValues" : [ ]
+}
