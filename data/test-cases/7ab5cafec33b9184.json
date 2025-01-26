@@ -1,0 +1,205 @@
+{
+  "uid" : "7ab5cafec33b9184",
+  "name" : "TC 13.01.36_01 - Check correctness of the image in block 5 'home-eco' in the Promo Block",
+  "fullName" : "tests.test_main_page.TestPromoBlock#test_tc_13_01_36_01_check_image_correctness_in_section2_block5",
+  "historyId" : "affe465dc61b2411feabe8a3013a4db8",
+  "time" : {
+    "start" : 1737855965788,
+    "stop" : 1737855966044,
+    "duration" : 256
+  },
+  "description" : "This test checks if the image in section 2 block 5 'home-eco' is correct",
+  "descriptionHtml" : "<p>This test checks if the image in section 2 block 5 'home-eco' is correct</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=132.0.6834.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x56472feb87ca <unknown>\n#1 0x56472f9b02f0 <unknown>\n#2 0x56472fa00035 <unknown>\n#3 0x56472fa00251 <unknown>\n#4 0x56472fa46054 <unknown>\n#5 0x56472fa249dd <unknown>\n#6 0x56472fa433b3 <unknown>\n#7 0x56472fa24753 <unknown>\n#8 0x56472f9f1baa <unknown>\n#9 0x56472f9f2dfe <unknown>\n#10 0x56472fe8338b <unknown>\n#11 0x56472fe87307 <unknown>\n#12 0x56472fe6fe7c <unknown>\n#13 0x56472fe87ec7 <unknown>\n#14 0x56472fe5424f <unknown>\n#15 0x56472fea72f8 <unknown>\n#16 0x56472fea74c0 <unknown>\n#17 0x56472feb7646 <unknown>\n#18 0x7f120989ca94 <unknown>\n#19 0x7f1209929c3c <unknown>",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestPromoBlock object at 0x7fc2e82c04d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"8d4f431c2ca288a7ab60a744b213d068\")>\n\n    @allure.title(\"TC 13.01.36_01 - Check correctness of the image in block 5 'home-eco' in the Promo Block\")\n    def test_tc_13_01_36_01_check_image_correctness_in_section2_block5(self, driver):\n        \"\"\"This test checks if the image in section 2 block 5 'home-eco' is correct\"\"\"\n        page = PromoBlock(driver, MAIN_PAGE_URL)\n        page.open()\n>       block5_image = page.find_element(self.locators.SECTION_2_BLOCK_5_IMAGE)\n\ntests/test_main_page.py:504: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/base_page.py:201: in find_element\n    return self.driver.find_element(*locator)\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:738: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fc2e77556d0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...\\\\n#17 0x56472feb7646 \\\\u003Cunknown>\\\\n#18 0x7f120989ca94 \\\\u003Cunknown>\\\\n#19 0x7f1209929c3c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\nE         (Session info: chrome=132.0.6834.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nE       Stacktrace:\nE       #0 0x56472feb87ca <unknown>\nE       #1 0x56472f9b02f0 <unknown>\nE       #2 0x56472fa00035 <unknown>\nE       #3 0x56472fa00251 <unknown>\nE       #4 0x56472fa46054 <unknown>\nE       #5 0x56472fa249dd <unknown>\nE       #6 0x56472fa433b3 <unknown>\nE       #7 0x56472fa24753 <unknown>\nE       #8 0x56472f9f1baa <unknown>\nE       #9 0x56472f9f2dfe <unknown>\nE       #10 0x56472fe8338b <unknown>\nE       #11 0x56472fe87307 <unknown>\nE       #12 0x56472fe6fe7c <unknown>\nE       #13 0x56472fe87ec7 <unknown>\nE       #14 0x56472fe5424f <unknown>\nE       #15 0x56472fea72f8 <unknown>\nE       #16 0x56472fea74c0 <unknown>\nE       #17 0x56472feb7646 <unknown>\nE       #18 0x7f120989ca94 <unknown>\nE       #19 0x7f1209929c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: NoSuchElementException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1737854757354,
+      "stop" : 1737854757354,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1737854757290,
+      "stop" : 1737854757353,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1737855964606,
+      "stop" : 1737855965788,
+      "duration" : 1182
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks if the image in section 2 block 5 'home-eco' is correct",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=132.0.6834.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x56472feb87ca <unknown>\n#1 0x56472f9b02f0 <unknown>\n#2 0x56472fa00035 <unknown>\n#3 0x56472fa00251 <unknown>\n#4 0x56472fa46054 <unknown>\n#5 0x56472fa249dd <unknown>\n#6 0x56472fa433b3 <unknown>\n#7 0x56472fa24753 <unknown>\n#8 0x56472f9f1baa <unknown>\n#9 0x56472f9f2dfe <unknown>\n#10 0x56472fe8338b <unknown>\n#11 0x56472fe87307 <unknown>\n#12 0x56472fe6fe7c <unknown>\n#13 0x56472fe87ec7 <unknown>\n#14 0x56472fe5424f <unknown>\n#15 0x56472fea72f8 <unknown>\n#16 0x56472fea74c0 <unknown>\n#17 0x56472feb7646 <unknown>\n#18 0x7f120989ca94 <unknown>\n#19 0x7f1209929c3c <unknown>",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestPromoBlock object at 0x7fc2e82c04d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"8d4f431c2ca288a7ab60a744b213d068\")>\n\n    @allure.title(\"TC 13.01.36_01 - Check correctness of the image in block 5 'home-eco' in the Promo Block\")\n    def test_tc_13_01_36_01_check_image_correctness_in_section2_block5(self, driver):\n        \"\"\"This test checks if the image in section 2 block 5 'home-eco' is correct\"\"\"\n        page = PromoBlock(driver, MAIN_PAGE_URL)\n        page.open()\n>       block5_image = page.find_element(self.locators.SECTION_2_BLOCK_5_IMAGE)\n\ntests/test_main_page.py:504: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/base_page.py:201: in find_element\n    return self.driver.find_element(*locator)\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:738: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fc2e77556d0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...\\\\n#17 0x56472feb7646 \\\\u003Cunknown>\\\\n#18 0x7f120989ca94 \\\\u003Cunknown>\\\\n#19 0x7f1209929c3c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\nE         (Session info: chrome=132.0.6834.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nE       Stacktrace:\nE       #0 0x56472feb87ca <unknown>\nE       #1 0x56472f9b02f0 <unknown>\nE       #2 0x56472fa00035 <unknown>\nE       #3 0x56472fa00251 <unknown>\nE       #4 0x56472fa46054 <unknown>\nE       #5 0x56472fa249dd <unknown>\nE       #6 0x56472fa433b3 <unknown>\nE       #7 0x56472fa24753 <unknown>\nE       #8 0x56472f9f1baa <unknown>\nE       #9 0x56472f9f2dfe <unknown>\nE       #10 0x56472fe8338b <unknown>\nE       #11 0x56472fe87307 <unknown>\nE       #12 0x56472fe6fe7c <unknown>\nE       #13 0x56472fe87ec7 <unknown>\nE       #14 0x56472fe5424f <unknown>\nE       #15 0x56472fea72f8 <unknown>\nE       #16 0x56472fea74c0 <unknown>\nE       #17 0x56472feb7646 <unknown>\nE       #18 0x7f120989ca94 <unknown>\nE       #19 0x7f1209929c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:229: NoSuchElementException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1737855965788,
+        "stop" : 1737855966024,
+        "duration" : 236
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find element (unpacking)",
+      "time" : {
+        "start" : 1737855966024,
+        "stop" : 1737855966043,
+        "duration" : 19
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=132.0.6834.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x56472feb87ca <unknown>\n#1 0x56472f9b02f0 <unknown>\n#2 0x56472fa00035 <unknown>\n#3 0x56472fa00251 <unknown>\n#4 0x56472fa46054 <unknown>\n#5 0x56472fa249dd <unknown>\n#6 0x56472fa433b3 <unknown>\n#7 0x56472fa24753 <unknown>\n#8 0x56472f9f1baa <unknown>\n#9 0x56472f9f2dfe <unknown>\n#10 0x56472fe8338b <unknown>\n#11 0x56472fe87307 <unknown>\n#12 0x56472fe6fe7c <unknown>\n#13 0x56472fe87ec7 <unknown>\n#14 0x56472fe5424f <unknown>\n#15 0x56472fea72f8 <unknown>\n#16 0x56472fea74c0 <unknown>\n#17 0x56472feb7646 <unknown>\n#18 0x7f120989ca94 <unknown>\n#19 0x7f1209929c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 201, in find_element\n    return self.driver.find_element(*locator)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 738, in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 344, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.home-eco img')"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "883691ad95688f4b",
+      "name" : "Screenshot",
+      "source" : "883691ad95688f4b.png",
+      "type" : "image/png",
+      "size" : 25650
+    }, {
+      "uid" : "7d5827246d7d2a5d",
+      "name" : "HTML source",
+      "source" : "7d5827246d7d2a5d.html",
+      "type" : "text/html",
+      "size" : 258745
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1737857182853,
+      "stop" : 1737857182853,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1737855966193,
+      "stop" : 1737855966256,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Promo Block Testing"
+  }, {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1922-652"
+  }, {
+    "name" : "thread",
+    "value" : "2797-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7ab5cafec33b9184.json",
+  "parameterValues" : [ ]
+}
