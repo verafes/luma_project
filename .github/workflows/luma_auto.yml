@@ -5,12 +5,12 @@ name: LUMA_schedule
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 0'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    timeout-minutes: 420
 
     steps:
     - uses: actions/checkout@v3

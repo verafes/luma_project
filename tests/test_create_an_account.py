@@ -16,6 +16,7 @@ def create_account_page(driver):
 @allure.epic('Create An Account')
 class TestCreateAnAccount:
     @allure.title('TC 04_01_01 Verify Create An Account Page h1 Header')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_01_h1_heading(self, create_account_page):
         """ Verify that the Create An Account page heading is present. """
         h1_heading = create_account_page.check_h1_header()
@@ -23,6 +24,7 @@ class TestCreateAnAccount:
             "h1 heading is not present"
 
     @allure.title('TC 04_01_02 Verify Personal Information heading')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_02_personal_information_heading(self, create_account_page):
         """ Verify that Personal Information heading is present """
         personal_information_legend = create_account_page.check_personal_information_label()
@@ -30,6 +32,7 @@ class TestCreateAnAccount:
             "Personal information legend is incorrect or not present"
 
     @allure.title('TC 04_01_03 Verify presence of First name label and the required asterisk')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_03_firstname_labeled(self, create_account_page):
         """ Verify presence of First name label and the required asterisk """
         firstname_label = create_account_page.check_firstname_label()
@@ -38,6 +41,7 @@ class TestCreateAnAccount:
             "First name label is not present or not displayed"
 
     @allure.title('TC 04_01_04 Verify First name input field highlighting on label click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_04_firstname_highlighted_by_label(self, create_account_page):
         """ Verify that First name input field highlighted when label is clicked"""
         before_activate, after_activate = create_account_page.\
@@ -45,13 +49,15 @@ class TestCreateAnAccount:
         assert before_activate != after_activate, "First name field is not highlighted when label is clicked"
 
     @allure.title('TC 04_01_05 Verify First name input field highlighting on click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_05_firstname_field_is_highlighted(self, create_account_page):
         """ Verify that First name input field highlighted when clicked"""
         before_activate, after_activate = create_account_page.\
             check_first_name_field_style_before_and_after_click()
         assert before_activate != after_activate, "First name field is not highlighted when clicked"
 
-    @allure.title('TC 04_01_06')
+    @allure.title('TC 04_01_06 Verify presence of Last name label and the required asterisk')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_06_lastname_labeled(self, create_account_page):
         """ Verify presence of Last name label and the required asterisk """
         lastname_label = create_account_page.check_lastname_label()
@@ -60,6 +66,7 @@ class TestCreateAnAccount:
             "Last name label is not present or not displayed"
 
     @allure.title('TC 04_01_07 Verify Last name input field highlighting on label click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_04_lastname_highlighted_by_label(self, create_account_page):
         """ Verify that Last name input field highlighted when label is clicked"""
         before_activate, after_activate = create_account_page.\
@@ -67,6 +74,7 @@ class TestCreateAnAccount:
         assert before_activate != after_activate, "Last name field is not highlighted when label is clicked"
 
     @allure.title('TC 04_01_08 Verify Last name input field highlighting on click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_08_lastname_field_is_highlighted(self, create_account_page):
         """ Verify that Last name input field highlighted when clicked"""
         before_activate, after_activate = create_account_page. \
@@ -85,6 +93,7 @@ class TestCreateAnAccount:
             "Sign Up for Newsletter checkbox is not presented or not unchecked"
 
     @allure.title('TC 04_01_10 Verify Sign in Information heading')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_10_sign_in_information_label(self, create_account_page):
         """ Verify that Sign in Information heading is present"""
         sign_in_information_label = create_account_page.check_sign_in_information_label()
@@ -92,6 +101,7 @@ class TestCreateAnAccount:
             "Sign in Information label is not presented or not visible"
 
     @allure.title('TC 04_01_11 Verify presence of email label and the required asterisk')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_11_email_labeled(self, create_account_page):
         """ Verify presence of Email label and the required asterisk """
         email_label = create_account_page.check_email_label()
@@ -102,6 +112,7 @@ class TestCreateAnAccount:
             "Email label is not present or not displayed or email field is not highlighted when clicked"
 
     @allure.title('TC 04_01_12 Verify Email input field highlighting on click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_12_email_field_is_highlighted(self, create_account_page):
         """ Verify that Email input field highlighted when clicked"""
         email_input = create_account_page.check_email_input()
@@ -111,6 +122,7 @@ class TestCreateAnAccount:
             "Email field is not highlighted when clicked"
 
     @allure.title('TC 04_01_13 Verify presence of Password label and the required asterisk')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_13_password_labeled(self, create_account_page):
         """ Verify presence of Password label and the required asterisk """
         password_label = create_account_page.check_password_label()
@@ -122,6 +134,7 @@ class TestCreateAnAccount:
             "Password label is not present or not displayed or password field is not highlighted when clicked"
 
     @allure.title('TC 04_01_14 Verify Password input field highlighting on click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_04_01_14_password_field_is_highlighted(self, create_account_page):
         """ Verify that Password input field highlighted when clicked"""
         password_input = create_account_page.check_password_input()
@@ -131,6 +144,7 @@ class TestCreateAnAccount:
             "Password field is not highlighted when clicked"
 
     @allure.title('TC 04_01_15 Verify presence of password strength hint')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_15_password_strength_labeled(self, create_account_page):
         """ Verify presence of Password Strength note """
         password_strength_hint = create_account_page.check_password_strength_hint()
@@ -138,6 +152,7 @@ class TestCreateAnAccount:
             "Password Strength label is not present or not displayed"
 
     @allure.title('TC 04_01_16 Verify presence of Confirm Password label and the required asterisk')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_16_confirm_password_labeled(self, create_account_page):
         """ Verify presence of Confirm Password label and the required asterisk """
         confirm_password_label = create_account_page.check_password_confirmation_label()
@@ -149,6 +164,7 @@ class TestCreateAnAccount:
             "First name label is not present or not displayed or confirm password field is not highlighted when clicked"
 
     @allure.title('TC 04_01_17 Verify Confirm Password input field highlighting on click')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_04_01_17_confirm_password_field_is_highlighted(self, create_account_page):
         """ Verify that Confirm Password input field highlighted when clicked"""
         confirm_password_input = create_account_page.check_password_confirmation_label()
@@ -159,6 +175,7 @@ class TestCreateAnAccount:
                 "Confirm Password field is not highlighted when clicked"
 
     @allure.title('test 04.02.08 create an account with registered email')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_04_02_08_create_account_with_registered_email(self, create_account_page):
         """ Verify that customer can't Create An Account with registered email before """
         message = create_account_page.create_with_email()
@@ -166,6 +183,7 @@ class TestCreateAnAccount:
                           ' email address, click here to get your password and access your account.', "No error message"
 
     @allure.title('test 04.02.01 create an account with correct data')
+    @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.skip(reason="customer will Create An Account with correct data")
     def test_tc_04_02_01_create_account_with_correct_data(self, create_account_page):
         """ Verify that customer can Create An Account with correct data"""
@@ -173,36 +191,42 @@ class TestCreateAnAccount:
         assert message == 'Thank you for registering with Main Website Store.', "No success message"
 
     @allure.title('test 04.02.02 create an account with empty first name')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_tc_04_02_02_create_account_with_empty_first_name(self, create_account_page):
         """ Verify that customer can't Create An Account with empty first name"""
         message = create_account_page.create_with_empty_first_name()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.03 create an account with empty last name')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_tc_04_02_03_create_account_with_empty_last_name(self, create_account_page):
         """ Verify that customer can't Create An Account with empty last name"""
         message = create_account_page.create_with_empty_last_name()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.04 create an account with empty e-mail')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_04_02_04_create_account_with_empty_email(self, create_account_page):
         """ Verify that customer can't Create An Account with empty e-mail"""
         message = create_account_page.create_with_empty_email()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.05 create an account with empty password')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_04_02_05_create_account_with_empty_password(self, create_account_page):
         """ Verify that customer can't Create An Account with empty password"""
         message = create_account_page.create_with_empty_password()
         assert message == ('Password Strength: No Password', 'This is a required field.'), "No message"
 
     @allure.title('test 04.02.06 create an account with empty confirm password')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_04_02_06_create_account_with_empty_confirm_password(self, create_account_page):
         """ Verify that customer can't Create An Account with empty confirm password"""
         message = create_account_page.create_with_empty_confirm_password()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.07 create an account with incorrect confirm password')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_04_02_07_create_account_with_incorrect_confirm_password(self, create_account_page):
         """ Verify that customer can't Create An Account with incorrect confirm password"""
         message = create_account_page.create_with_incorrect_confirm_password()
@@ -210,6 +234,7 @@ class TestCreateAnAccount:
 
     @pytest.mark.xfail(reason="Flaky behavior on CI")
     @allure.title('TC 04_02_09_13 Verify presence of strong password strength hint')
+    @allure.severity(allure.severity_level.BLOCKER)
     @pytest.mark.parametrize('password_strength_msg', password_strength_msg)
     def test_04_02_09_13_password_strength_hint(self, create_account_page, password_strength_msg):
         """ Verify presence of Password Strength hint and warning color of weak password """

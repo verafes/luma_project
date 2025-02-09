@@ -7,6 +7,7 @@ import pytest
 @allure.epic("MenPage")
 class TestMenPage:
     @allure.title("TC 14.02.02 Verify the link Tops is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_02_02(self, driver):
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
@@ -14,6 +15,7 @@ class TestMenPage:
         assert link, "The link 'Tops' is not visible"
 
     @allure.title("TC 14.02.03 Verify the link Tops redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_02_03(self, driver):
         """Verify that the link 'Tops' correctly opens and redirects to a new webpage, the header 'Tops' is
               displayed"""
@@ -23,6 +25,7 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Tops' subhead is incorrect"
 
     @allure.title("TC 14.02.04 Verify the link 'Bottoms' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_02_04(self, driver):
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
@@ -30,6 +33,7 @@ class TestMenPage:
         assert link, "The link 'Bottoms' is not visible"
 
     @allure.title("TC 14.02.05 Verify the link 'Bottoms' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_02_05(self, driver):
         """Verify that the link 'Bottoms' correctly opens and redirects to a new webpage, the header 'Bottoms' is
           displayed"""
@@ -39,14 +43,16 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Bottoms' subhead is incorrect"
 
     @allure.title("TC 14.03.01 Verify the 'TOPS' subhead is displayed")
+    @allure.severity(allure.severity_level.NORMAL)
     def test_tc_14_03_01(self, driver):
         """Verify that the subhead 'TOPS' is displayed"""
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
         subhead_title = page.verify_subhead_tops_is_visible()
-        assert subhead_title == "TOPS"
+        assert subhead_title == "Tops"
 
     @allure.title("TC 14.03.02 Verify the link 'Hoodies&Sweatshirts' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_02(self, driver):
         """Verify that the link 'Hoodies&Sweatshirts' is displayed and clickable"""
         page = MenPage(driver, MEN_PAGE_URL)
@@ -55,6 +61,7 @@ class TestMenPage:
         assert link, "The link 'Hoodies&Sweatshirts' is not visible"
 
     @allure.title("TC 14.03.03 Verify the link 'Hoodies&Sweatshirts' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_03(self, driver):
         """Verify that the link 'Hoodies&Sweatshirts' correctly opens and redirects to a new webpage, the header \
         'Hoodies&Sweatshirt' is displayed"""
@@ -64,6 +71,7 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Hoodies & Sweatshirts' subhead is incorrect"
 
     @allure.title("TC 14.03.04 Verify the link 'Jackets' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_04(self, driver):
         """Verify that the link 'Jackets' is displayed and clickable"""
         page = MenPage(driver, MEN_PAGE_URL)
@@ -72,6 +80,7 @@ class TestMenPage:
         assert link, "The link 'Jackets' is not visible"
 
     @allure.title("TC 14.03.05 Verify the link 'Jackets' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_05(self, driver):
         """Verify that the link 'Jackets' correctly opens and redirects to a new webpage, the header 'Jackets' is
           displayed"""
@@ -81,6 +90,7 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Jackets' subhead is incorrect"
 
     @allure.title("TC 14.03.06 Verify the link 'Tees' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_06(self, driver):
         """Verify that the link 'Tees' is displayed and clickable"""
         page = MenPage(driver, MEN_PAGE_URL)
@@ -89,6 +99,7 @@ class TestMenPage:
         assert link, "The link 'Tees' is not visible"
 
     @allure.title("TC 14.03.07 Verify the link 'Tees' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_07(self, driver):
         """Verify that the link 'Tees' correctly opens and redirects to a new webpage, the header 'Tees' is
         displayed"""
@@ -98,6 +109,7 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Tees' subhead is incorrect"
 
     @allure.title("TC 14.03.08 Verify the link 'Tanks' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_08(self, driver):
         """Verify that the link 'Tanks' is displayed and clickable"""
         page = MenPage(driver, MEN_PAGE_URL)
@@ -106,6 +118,7 @@ class TestMenPage:
         assert link, "The link 'Tanks' is not visible"
 
     @allure.title("TC 14.03.09 Verify the link 'Tanks' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_03_09(self, driver):
         """Verify that the link 'Tanks' correctly opens and redirects to a new webpage,\
          the header 'Tanks' is displayed"""
@@ -115,14 +128,16 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Tanks' subhead is incorrect"
 
     @allure.title("TC 14.04.01 Verify the 'BOTTOMS' subhead is displayed")
+    @allure.severity(allure.severity_level.NORMAL)
     def test_tc_14_04_01(self, driver):
         """Verify that the subhead 'BOTTOMS' is displayed"""
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
         subhead_title = page.verify_subhead_bottoms_is_visible()
-        assert subhead_title == "BOTTOMS"
+        assert subhead_title == "Bottoms"
 
     @allure.title("TC 14.04.02 Verify the link 'Pants' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_04_02(self, driver):
         """Verify that the link 'Pants' is displayed and clickable"""
         page = MenPage(driver, MEN_PAGE_URL)
@@ -131,6 +146,7 @@ class TestMenPage:
         assert link, "The link 'Pants' is not visible"
 
     @allure.title("TC 14.04.03 Verify the link 'Pants' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_04_03(self, driver):
         """Verify that the link 'Pants' correctly opens and redirects to a new webpage, the header 'Pants' is
               displayed"""
@@ -140,6 +156,7 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Pants' subhead is incorrect"
 
     @allure.title("TC 14.04.04 Verify the link 'Shorts' is visible and clickable.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_04_04(self, driver):
         """Verify that the link 'Shorts' is displayed and clickable"""
         page = MenPage(driver, MEN_PAGE_URL)
@@ -148,6 +165,7 @@ class TestMenPage:
         assert link, "The link 'Shorts' is not visible"
 
     @allure.title("TC 14.04.05 Verify the link 'Shorts' redirects to a correct page.")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_04_05(self, driver):
         """Verify that the link 'Shorts' correctly opens and redirects to a new webpage, the header 'Pants' is
               displayed"""
@@ -161,6 +179,7 @@ class TestMenPage:
 class TestMenPagePromoBlock:
 
     @allure.title("TC 14.06.01 Verify the 'Men' header is displayed")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_tc_14_06_01(self, driver):
         """Verify that the header 'Men' is displayed"""
         page = MenPage(driver, MEN_PAGE_URL)

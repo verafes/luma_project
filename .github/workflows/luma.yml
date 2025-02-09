@@ -54,7 +54,7 @@ jobs:
       run: |
         kill -s INT ${{ steps.video-recording.outputs.ffmpeg_pid }}
         tail --pid=${{ steps.video-recording.outputs.ffmpeg_pid }} -f /dev/null
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       if: always() && steps.changed-py-files.outputs.any_changed == 'true'
       with:
         name: recording

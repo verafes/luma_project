@@ -17,10 +17,12 @@ def sign_in_page(driver):
     sign_in_page.open()
     return sign_in_page
 
+
 @allure.epic('Sign In Page')
 @allure.feature('Registered Customers')
 class TestRegisteredCustomers:
     @allure.title('TC 03.01.01 Verify Sign In Page h1 Header')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_01_h1_heading(self, driver, sign_in_page):
         """Check Login Page Heading is present """
         h1_heading = sign_in_page.check_h1_header()
@@ -28,6 +30,7 @@ class TestRegisteredCustomers:
             "H1 Heading is incorrect or not present"
 
     @allure.title('TC 03.01.02 Verify Registered Customers Heading')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_02_registered_customers_heading(self, driver, sign_in_page):
         """Check Registered Customers Heading is present """
         heading = sign_in_page.check_registered_customers_heading()
@@ -35,6 +38,7 @@ class TestRegisteredCustomers:
             "Registered Customers heading is incorrect or not present"
 
     @allure.title('TC 03.01.03 Verify Registered Customers note')
+    @allure.severity(allure.severity_level.MINOR)
     def test_03_01_03_registered_customers_note(self, driver, sign_in_page):
         """Check Registered Customers note is present """
         note = sign_in_page.check_registered_customers_note()
@@ -42,12 +46,14 @@ class TestRegisteredCustomers:
             "Registered Customers note is incorrect or not present"
 
     @allure.title('TC 03.01.04 Verify Email field is present')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_04_email_field_is_present(self, driver, sign_in_page):
         """Check if the Email input field is present"""
         email_input = sign_in_page.check_customer_email_field_is_clickable()
         assert email_input.is_displayed(), "Email input field is not displayed"
 
     @allure.title('TC 03.01.05 Verify Email field is correct format and clickable')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_05_email_field_is_correct_format_and_clickable(self, driver, sign_in_page):
         """Check if the Email input is of correct format (input-text) and clickable"""
         email_input = sign_in_page.check_customer_email_field_is_clickable()
@@ -56,6 +62,7 @@ class TestRegisteredCustomers:
             "Email input field does not accept text or is not clickable"
 
     @allure.title('TC 03.01.06 Verify Email field is appropriately labeled')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_06_email_is_appropriately_labeled(self, driver, sign_in_page):
         """Check if Email field is appropriately labeled """
         label = sign_in_page.check_customer_email_label()
@@ -64,6 +71,7 @@ class TestRegisteredCustomers:
             "Email label or asterisk is not present for Email field"
 
     @allure.title('TC 03.01.07 Verify Email field highlighting on click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_03_01_07_email_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
         """
         Check the Email field is activated with a cursor and gets highlighted when clicked
@@ -73,6 +81,7 @@ class TestRegisteredCustomers:
             "Error: Email field style doesn't change on activation"
 
     @allure.title('TC 03.01.08 Verify displayed email matches the entered email in Email field')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_08_value_in_email_matches(self, driver, sign_in_page):
         """Check if the displayed email matches the entered email in Email field"""
         sign_in_page.fill_in_email_field(credentials['email'])
@@ -80,12 +89,14 @@ class TestRegisteredCustomers:
         assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"
 
     @allure.title('TC 03.01.09 Verify Password field is present')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_09_password_field_is_present(self, driver, sign_in_page):
         """Check if the password input field is present"""
         password_input = sign_in_page.check_customer_password_field_is_clickable()
         assert password_input.is_displayed(), "Password input field is not displayed"
 
     @allure.title('TC 03.01.10 Verify Password field is correct format and clickable')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_03_01_10_password_field_is_correct_format_and_clickable(self, driver, sign_in_page):
         """Check if the password input field is of correct format (input-text) and clickable"""
         password_input = sign_in_page.check_customer_password_field_is_clickable()
@@ -94,6 +105,7 @@ class TestRegisteredCustomers:
             "Password input field does not accept text or is not clickable"
 
     @allure.title('TC 03.01.11 Verify Password field is appropriately labeled')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_11_password_is_appropriately_labeled(self, driver, sign_in_page):
         """Check if Password field is appropriately labeled """
         label = sign_in_page.check_customer_password_label()
@@ -102,6 +114,7 @@ class TestRegisteredCustomers:
             "Password label or asterisk is not present for Password field"
 
     @allure.title('TC 03.01.12 Verify Password field highlighting on click')
+    @allure.severity(allure.severity_level.MINOR)
     def test_03_01_12_password_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
         """
         Check the Password field is activated with a cursor and gets highlighted when clicked
@@ -111,24 +124,29 @@ class TestRegisteredCustomers:
             "Error: Password field style doesn't change on activation"
 
     @allure.title('TC 03.01.13 Verify Password is masked')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_13_password_masking(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
         password_input = sign_in_page.check_password_value_masking(credentials['password'])
         assert password_input == "password", "Password input field is not marked as password type"
 
     @allure.title('TC 03.01.14 Verify Sign in button is present')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_03_01_14_sign_in_button_is_present(self, driver, sign_in_page):
+        """Check if Sign In button is present"""
         button = sign_in_page.check_sign_in_button_is_visible()
         assert button is not None and button.text == sign_in_data['sign_in_btn'], \
             f'''The {sign_in_data['sign_in_btn']} is not visible'''
 
     @allure.title('TC 03.01.15 Verify Sign in button is clickable')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_15_sign_in_button_is_clickable(self, driver, sign_in_page):
         """Check if Sign In button is clickable"""
         sign_in_button = sign_in_page.check_sign_in_button_is_clickable()
         assert sign_in_button is not None, "Sign In button element not found"
 
     @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
         """Verify that the 'Forgot your password?' link is present"""
         element = sign_in_page.check_forgot_your_password_link()
@@ -136,15 +154,17 @@ class TestRegisteredCustomers:
         assert element.is_displayed() and element_href == FORGOT_YOUR_PASSWORD_URL, "Forgot Your Password link is not present"
 
     @allure.title('TC 03.01.17 Verify Forgot Your Password link is functional')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_17_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
         """Verify that click 'Forgot your password?' link opens correct page"""
         sign_in_page.click_forgot_your_password_link()
         header = sign_in_page.check_h1_header()
         assert driver.current_url == FORGOT_YOUR_PASSWORD_URL \
                and header is not None and header.text == "Forgot Your Password?", \
-            "Verify Forgot Your Password link is incorrect or not redirect to correct page"
+               "Verify Forgot Your Password link is incorrect or not redirect to correct page"
 
     @allure.title('TC 03.01.18 Verify Email field for correct email format')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check error message for incorrect email format in email field"""
         sign_in_page.fill_in_email_field(credentials['incorrect_email'])
@@ -159,6 +179,7 @@ class TestRegisteredCustomers:
 @allure.feature('New Customers')
 class TestNewCustomers:
     @allure.title('TC 03.01.19 Verify New Customers Heading')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_01_19_new_customers_heading(self, driver, sign_in_page):
         """Check New Customers Heading is present """
         h1_heading = sign_in_page.check_new_customers_heading()
@@ -166,6 +187,7 @@ class TestNewCustomers:
             "New Customers heading is incorrect or not present"
 
     @allure.title('TC 03.01.20 Verify New Customers note')
+    @allure.severity(allure.severity_level.MINOR)
     def test_03_01_03_new_customers_note(self, driver, sign_in_page):
         """Check if Note is present under New Customers Heading"""
         note = sign_in_page.check_new_customers_note()
@@ -173,6 +195,7 @@ class TestNewCustomers:
             "Note is incorrect or not present under New Customers"
 
     @allure.title('TC 03.01.21 Verify presence of Create an Account button ')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_03_01_21_create_an_account_button_is_present(self, driver, sign_in_page):
         """Check if 'Create an Account' button is present"""
         button = sign_in_page.check_create_an_account_button()
@@ -180,6 +203,7 @@ class TestNewCustomers:
             f"{sign_in_data['create_account_btn']} is not visible"
 
     @allure.title('TC 03.01.22 Verify Create an Account button link')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_03_01_22_create_an_account_button_link(self, driver, sign_in_page):
         """Check if 'Create an Account' button has correct link and is clickable"""
         button = sign_in_page.check_create_an_account_button()
@@ -188,17 +212,20 @@ class TestNewCustomers:
             f"{sign_in_data['create_account_btn']} doesn't have link ot is not clickable"
 
     @allure.title('TC 03.01.23 Verify Create an Account button is functional')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_01_23_create_an_account_button_(self, driver, sign_in_page):
         """Check if 'Create an Account' button link opens correct page"""
         sign_in_page.click_create_an_account_button()
         header = sign_in_page.check_h1_header()
         assert driver.current_url == CREATE_ACCOUNT_PAGE_URL \
                and header is not None and header.text == "Create New Customer Account", \
-               "Verify Create an Account button is incorrect or not redirect to correct page"
+            "Verify Create an Account button is incorrect or not redirect to correct page"
+
 
 @allure.feature('Login Functionality')
 class TestLogin:
     @allure.title('TC 03.02.01 Verify login with valid email valid password - Positive')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_02_01_login_with_valid_email_valid_password_success(self, driver, sign_in_page):
         """Check Success Login with correct credentials"""
         sign_in_page.fill_in_email_field(credentials['valid_email'])
@@ -208,6 +235,7 @@ class TestLogin:
                and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], "Login failed"
 
     @allure.title('TC 03.02.04 Verify error on attempting to log in with empty email - Negative')
+    @allure.severity(allure.severity_level.NORMAL)
     def test_03_02_04_error_if_login_with_empty_email(self, driver, sign_in_page):
         """Check error message on attempt to log in with empty email"""
         sign_in_page.fill_in_email_field('')
@@ -217,6 +245,7 @@ class TestLogin:
         assert message == sign_in_errors['required_field_msg']
 
     @allure.title('TC 03.02.05 Verify error on attempting to log in with empty email - Negative')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_02_05_error_if_login_with_empty_password(self, driver, sign_in_page):
         """Check error message on attempt to log in with empty password"""
         sign_in_page.fill_in_email_field(credentials['email'])
@@ -226,6 +255,7 @@ class TestLogin:
         assert message == sign_in_errors['required_field_msg']
 
     @allure.title('TC 03.02.06 Verify login with valid mix-cased email valid password - Positive')
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_03_02_06_login_with_valid_case_sensitive_email(self, driver, sign_in_page):
         """Check Success Login with correct credentials"""
         sign_in_page.fill_in_email_field(credentials['valid_case_sensitive_email'])
@@ -235,6 +265,7 @@ class TestLogin:
                and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], "Login failed"
 
     @allure.title('TC 03.02.09 Verify login with valid mail containing trailing leading_spaces - Positive')
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_03_02_09_login_with_valid_email_containing_trailing_leading_spaces(self, driver, sign_in_page):
         """Check Success Login with correct credentials"""
         sign_in_page.fill_in_email_field(credentials['valid_case_sensitive_email'])
@@ -248,6 +279,7 @@ class TestLogin:
 # @pytest.mark.skip(reason="to be run with secret code for captcha")
 class TestFailedLogin:
     @allure.title('TC 03.02.01 to 03_02_10 Verify Failed Login, no error validation')
+    @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.parametrize('email, password', LOGIN)
     def test_03_02_01_to_03_02_10_login(self, driver, email, password):
         """Check Success and Failed Login, no error validation"""
@@ -265,6 +297,7 @@ class TestFailedLogin:
             return False
 
     @allure.title('TC 03.02.02 to 03_02_10 Verify Error on Failed Login with invalid credentials')
+    @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.parametrize('email, password', [LOGIN[i] for i in [1, 2, 6, 8, 9]])
     def test_03_02_02_to_10_error_if_login_with_invalid_credentials(self, driver, sign_in_page, email, password):
         """Check error on Failed Login with invalid credentials, case-sensitive password and password with spaces"""
@@ -272,6 +305,6 @@ class TestFailedLogin:
         sign_in_page.fill_in_password_field(password)
         sign_in_page.click_sign_in_button()
 
-        error_message = sign_in_page.get_error_message((SingInPageLocators.ERROR_MESSAGE))
+        error_message = sign_in_page.get_error_message(SingInPageLocators.ERROR_MESSAGE)
         assert error_message in [sign_in_errors['invalid_credentials_msg']], \
             "The error message is incorrect or missing"
