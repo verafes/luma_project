@@ -1,0 +1,510 @@
+{
+  "uid" : "ac3fb5f0d78a33a",
+  "name" : "tc 07.02.23 Verify Order Total in Summury displayed correctly.",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_23_verify_order_total_displayed_correctly_in_summary_card",
+  "historyId" : "597b8b4212fe5b0c206872c37e1ad00c",
+  "time" : {
+    "start" : 1739066164465,
+    "stop" : 1739066178210,
+    "duration" : 13745
+  },
+  "description" : "Verify Order Total in Summary: Order Total = Subtotal - Discount + Tax and displayed correctly.",
+  "descriptionHtml" : "<p>Verify Order Total in Summary: Order Total = Subtotal - Discount + Tax and displayed correctly.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1739064926805,
+      "stop" : 1739064926805,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1739064926740,
+      "stop" : 1739064926805,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1739066160051,
+      "stop" : 1739066164465,
+      "duration" : 4414
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1739066158766,
+      "stop" : 1739066160051,
+      "duration" : 1285
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify Order Total in Summary: Order Total = Subtotal - Discount + Tax and displayed correctly.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Check Order Total in the Summary Card",
+      "time" : {
+        "start" : 1739066164465,
+        "stop" : 1739066178166,
+        "duration" : 13701
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1739066164466,
+          "stop" : 1739066164496,
+          "duration" : 30
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'input.input-text.qty')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get a random number between 1 and 10",
+        "time" : {
+          "start" : 1739066164600,
+          "stop" : 1739066164600,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1739066164634,
+          "stop" : 1739066164674,
+          "duration" : 40
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'button.action.update')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get Subtotal in the Summary Card",
+        "time" : {
+          "start" : 1739066166724,
+          "stop" : 1739066167884,
+          "duration" : 1160
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1739066166724,
+            "stop" : 1739066167872,
+            "duration" : 1148
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1739066166724,
+              "stop" : 1739066167856,
+              "duration" : 1132
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', 'td.amount span[data-th=\"Subtotal\"]')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1739066167856,
+              "stop" : 1739066167860,
+              "duration" : 4
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"f135efa3664ccccadab6d2278ae7493a\", element=\"f.DA590BD933E3997D091541921663B7FA.d.396E5C93A54A24F375A9A7E02A7D8AF9.e.221\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'td.amount span[data-th=\"Subtotal\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get Discount in the Summary Card",
+        "time" : {
+          "start" : 1739066167884,
+          "stop" : 1739066173029,
+          "duration" : 5145
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5566730ac53a <unknown>\n#1 0x556672ba7f00 <unknown>\n#2 0x556672bf7c0c <unknown>\n#3 0x556672bf7e31 <unknown>\n#4 0x556672c3dbd4 <unknown>\n#5 0x556672c1c5cd <unknown>\n#6 0x556672c3af84 <unknown>\n#7 0x556672c1c343 <unknown>\n#8 0x556672be978a <unknown>\n#9 0x556672bea9de <unknown>\n#10 0x5566730762cb <unknown>\n#11 0x55667307a242 <unknown>\n#12 0x5566730637ac <unknown>\n#13 0x55667307adf7 <unknown>\n#14 0x556673047b2f <unknown>\n#15 0x55667309b1a8 <unknown>\n#16 0x55667309b370 <unknown>\n#17 0x5566730ab3b6 <unknown>\n#18 0x7f8c3249ca94 <unknown>\n#19 0x7f8c32529c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/shopping_cart_page.py\", line 128, in get_discount_in_summary\n    discount = self.element_is_visible(self.shopping_locators.DISCOUNT_SUMMARY)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1739066167884,
+            "stop" : 1739066173029,
+            "duration" : 5145
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5566730ac53a <unknown>\n#1 0x556672ba7f00 <unknown>\n#2 0x556672bf7c0c <unknown>\n#3 0x556672bf7e31 <unknown>\n#4 0x556672c3dbd4 <unknown>\n#5 0x556672c1c5cd <unknown>\n#6 0x556672c3af84 <unknown>\n#7 0x556672c1c343 <unknown>\n#8 0x556672be978a <unknown>\n#9 0x556672bea9de <unknown>\n#10 0x5566730762cb <unknown>\n#11 0x55667307a242 <unknown>\n#12 0x5566730637ac <unknown>\n#13 0x55667307adf7 <unknown>\n#14 0x556673047b2f <unknown>\n#15 0x55667309b1a8 <unknown>\n#16 0x55667309b370 <unknown>\n#17 0x5566730ab3b6 <unknown>\n#18 0x7f8c3249ca94 <unknown>\n#19 0x7f8c32529c3c <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1739066167884,
+              "stop" : 1739066173029,
+              "duration" : 5145
+            },
+            "status" : "broken",
+            "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5566730ac53a <unknown>\n#1 0x556672ba7f00 <unknown>\n#2 0x556672bf7c0c <unknown>\n#3 0x556672bf7e31 <unknown>\n#4 0x556672c3dbd4 <unknown>\n#5 0x556672c1c5cd <unknown>\n#6 0x556672c3af84 <unknown>\n#7 0x556672c1c343 <unknown>\n#8 0x556672be978a <unknown>\n#9 0x556672bea9de <unknown>\n#10 0x5566730762cb <unknown>\n#11 0x55667307a242 <unknown>\n#12 0x5566730637ac <unknown>\n#13 0x55667307adf7 <unknown>\n#14 0x556673047b2f <unknown>\n#15 0x55667309b1a8 <unknown>\n#16 0x55667309b370 <unknown>\n#17 0x5566730ab3b6 <unknown>\n#18 0x7f8c3249ca94 <unknown>\n#19 0x7f8c32529c3c <unknown>\n\n",
+            "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', 'tbody > tr:nth-child(2) > td > span > span')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : true,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'tbody > tr:nth-child(2) > td > span > span')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get Tax in the Summary Card",
+        "time" : {
+          "start" : 1739066173030,
+          "stop" : 1739066178165,
+          "duration" : 5135
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5566730ac53a <unknown>\n#1 0x556672ba7f00 <unknown>\n#2 0x556672bf7c0c <unknown>\n#3 0x556672bf7e31 <unknown>\n#4 0x556672c3dbd4 <unknown>\n#5 0x556672c1c5cd <unknown>\n#6 0x556672c3af84 <unknown>\n#7 0x556672c1c343 <unknown>\n#8 0x556672be978a <unknown>\n#9 0x556672bea9de <unknown>\n#10 0x5566730762cb <unknown>\n#11 0x55667307a242 <unknown>\n#12 0x5566730637ac <unknown>\n#13 0x55667307adf7 <unknown>\n#14 0x556673047b2f <unknown>\n#15 0x55667309b1a8 <unknown>\n#16 0x55667309b370 <unknown>\n#17 0x5566730ab3b6 <unknown>\n#18 0x7f8c3249ca94 <unknown>\n#19 0x7f8c32529c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/shopping_cart_page.py\", line 135, in get_tax_in_summary\n    tax = self.element_is_visible(self.shopping_locators.TAX_SUMMARY)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1739066173030,
+            "stop" : 1739066178165,
+            "duration" : 5135
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5566730ac53a <unknown>\n#1 0x556672ba7f00 <unknown>\n#2 0x556672bf7c0c <unknown>\n#3 0x556672bf7e31 <unknown>\n#4 0x556672c3dbd4 <unknown>\n#5 0x556672c1c5cd <unknown>\n#6 0x556672c3af84 <unknown>\n#7 0x556672c1c343 <unknown>\n#8 0x556672be978a <unknown>\n#9 0x556672bea9de <unknown>\n#10 0x5566730762cb <unknown>\n#11 0x55667307a242 <unknown>\n#12 0x5566730637ac <unknown>\n#13 0x55667307adf7 <unknown>\n#14 0x556673047b2f <unknown>\n#15 0x55667309b1a8 <unknown>\n#16 0x55667309b370 <unknown>\n#17 0x5566730ab3b6 <unknown>\n#18 0x7f8c3249ca94 <unknown>\n#19 0x7f8c32529c3c <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 29, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1739066173030,
+              "stop" : 1739066178165,
+              "duration" : 5135
+            },
+            "status" : "broken",
+            "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5566730ac53a <unknown>\n#1 0x556672ba7f00 <unknown>\n#2 0x556672bf7c0c <unknown>\n#3 0x556672bf7e31 <unknown>\n#4 0x556672c3dbd4 <unknown>\n#5 0x556672c1c5cd <unknown>\n#6 0x556672c3af84 <unknown>\n#7 0x556672c1c343 <unknown>\n#8 0x556672be978a <unknown>\n#9 0x556672bea9de <unknown>\n#10 0x5566730762cb <unknown>\n#11 0x55667307a242 <unknown>\n#12 0x5566730637ac <unknown>\n#13 0x55667307adf7 <unknown>\n#14 0x556673047b2f <unknown>\n#15 0x55667309b1a8 <unknown>\n#16 0x55667309b370 <unknown>\n#17 0x5566730ab3b6 <unknown>\n#18 0x7f8c3249ca94 <unknown>\n#19 0x7f8c32529c3c <unknown>\n\n",
+            "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '#cart-totals > div > table > tbody > tr.totals-tax > td > span')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : true,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#cart-totals > div > table > tbody > tr.totals-tax > td > span')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 13,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get Order Total in the Summary Card",
+      "time" : {
+        "start" : 1739066178166,
+        "stop" : 1739066178210,
+        "duration" : 44
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1739066178166,
+          "stop" : 1739066178202,
+          "duration" : 36
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1739066178166,
+            "stop" : 1739066178175,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.grand.totals > td > strong > span')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1739066178175,
+            "stop" : 1739066178181,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"f135efa3664ccccadab6d2278ae7493a\", element=\"f.DA590BD933E3997D091541921663B7FA.d.396E5C93A54A24F375A9A7E02A7D8AF9.e.233\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.grand.totals > td > strong > span')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 18,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1739066439675,
+      "stop" : 1739066439675,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1739066178211,
+      "stop" : 1739066178295,
+      "duration" : 84
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "fv-az2032-678"
+  }, {
+    "name" : "thread",
+    "value" : "2808-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ac3fb5f0d78a33a.json",
+  "parameterValues" : [ ]
+}
