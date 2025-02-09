@@ -2,19 +2,20 @@ name: Weekly Allure Report
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # запуск каждое воскресенье в полночь
+    - cron: '0 0 * * 1'
   workflow_dispatch: null
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 420
 
     steps:
         - uses: actions/checkout@v3
-        - name: Set up Python 3.11
+        - name: Set up Python 3.12.3
           uses: actions/setup-python@v3
           with:
-            python-version: "3.11"
+            python-version: "3.12.3"
 
         - name: Install dependencies
           run: |
