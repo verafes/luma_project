@@ -1,0 +1,347 @@
+{
+  "uid" : "55b89178cd2e1035",
+  "name" : "Check the display of the add to wish and add to compare buttons",
+  "fullName" : "tests.test_main_page.TestHotSellerSection#test_tc_06_01_15_check_the_display_of_the_card_buttons",
+  "historyId" : "d70dfd5ecc36ca529952457121aeed29",
+  "time" : {
+    "start" : 1740359569275,
+    "stop" : 1740359580800,
+    "duration" : 11525
+  },
+  "description" : "\n            This test will check that the add to wishlist and add to compare buttons are visible on the screen\n            ",
+  "descriptionHtml" : "<pre><code>        This test will check that the add to wishlist and add to compare buttons are visible on the screen\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL In CI the test failed in PR#182\n\nselenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7efebb4f2960>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e9858f99a0c6a6b398333e01ca6db1f5\")>\nitem = 'add_to_compare'\n\n    @pytest.mark.xfail(reason=\"In CI the test failed in PR#182\")\n    @allure.title(\"Check the display of the add to wish and add to compare buttons\")\n    @pytest.mark.parametrize(\"item\", product_card_button)\n    def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):\n        \"\"\"\n        This test will check that the add to wishlist and add to compare buttons are visible on the screen\n        \"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n>       check_display = page.check_element_display(item)\n\ntests/test_main_page.py:96: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:124: in check_element_display\n    element = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[item])\npages/base_page.py:31: in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"e9858f99a0c6a6b398333e01ca6db1f5\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7efebb79b9c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1740359027300,
+      "stop" : 1740359027300,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1740359027230,
+      "stop" : 1740359027299,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1740359567987,
+      "stop" : 1740359569274,
+      "duration" : 1287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n            This test will check that the add to wishlist and add to compare buttons are visible on the screen\n            ",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL In CI the test failed in PR#182\n\nselenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7efebb4f2960>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e9858f99a0c6a6b398333e01ca6db1f5\")>\nitem = 'add_to_compare'\n\n    @pytest.mark.xfail(reason=\"In CI the test failed in PR#182\")\n    @allure.title(\"Check the display of the add to wish and add to compare buttons\")\n    @pytest.mark.parametrize(\"item\", product_card_button)\n    def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):\n        \"\"\"\n        This test will check that the add to wishlist and add to compare buttons are visible on the screen\n        \"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n>       check_display = page.check_element_display(item)\n\ntests/test_main_page.py:96: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:124: in check_element_display\n    element = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[item])\npages/base_page.py:31: in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"e9858f99a0c6a6b398333e01ca6db1f5\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7efebb79b9c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1740359569275,
+        "stop" : 1740359570459,
+        "duration" : 1184
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Checking the display of an element on the screen",
+      "time" : {
+        "start" : 1740359570459,
+        "stop" : 1740359580800,
+        "duration" : 10341
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/main_page.py\", line 124, in check_element_display\n    element = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[item])\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 31, in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1740359570459,
+          "stop" : 1740359570498,
+          "duration" : 39
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1740359570459,
+            "stop" : 1740359570470,
+            "duration" : 11
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(1) div[class='product-item-info']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1740359570470,
+            "stop" : 1740359570475,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e9858f99a0c6a6b398333e01ca6db1f5\", element=\"f.8BBAC8C30AD2B999BB978E5B8F7A3C03.d.7919628E8732D9AE0FA7C1A248385DBC.e.56\")>"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(1) div[class='product-item-info']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "Move cursor to element",
+        "time" : {
+          "start" : 1740359570499,
+          "stop" : 1740359570763,
+          "duration" : 264
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e9858f99a0c6a6b398333e01ca6db1f5\", element=\"f.8BBAC8C30AD2B999BB978E5B8F7A3C03.d.7919628E8732D9AE0FA7C1A248385DBC.e.56\")>"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1740359570763,
+          "stop" : 1740359580799,
+          "duration" : 10036
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 31, in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1740359570764,
+            "stop" : 1740359570772,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(1) a[class='action tocompare']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1740359570773,
+            "stop" : 1740359570778,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e9858f99a0c6a6b398333e01ca6db1f5\", element=\"f.8BBAC8C30AD2B999BB978E5B8F7A3C03.d.7919628E8732D9AE0FA7C1A248385DBC.e.59\")>"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(1) a[class='action tocompare']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "item",
+        "value" : "'add_to_compare'"
+      } ],
+      "stepsCount" : 7,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "84abb8e5575c67fd",
+      "name" : "Screenshot",
+      "source" : "84abb8e5575c67fd.png",
+      "type" : "image/png",
+      "size" : 82301
+    }, {
+      "uid" : "53f75661bf236f57",
+      "name" : "HTML source",
+      "source" : "53f75661bf236f57.html",
+      "type" : "text/html",
+      "size" : 144822
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "hasContent" : true,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1740360543226,
+      "stop" : 1740360543226,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1740359580920,
+      "stop" : 1740359581074,
+      "duration" : 154
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Hot Seller Section"
+  }, {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='In CI the test failed in PR#182')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1370-687"
+  }, {
+    "name" : "thread",
+    "value" : "2896-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "item",
+    "value" : "'add_to_compare'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='In CI the test failed in PR#182')" ]
+  },
+  "source" : "55b89178cd2e1035.json",
+  "parameterValues" : [ "'add_to_compare'" ]
+}
