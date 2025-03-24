@@ -1,0 +1,225 @@
+{
+  "uid" : "5d367f9aba13d92c",
+  "name" : "TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickablein the Promo Block on the main page",
+  "fullName" : "tests.test_main_page.TestPromoBlock#test_tc_13_01_51_check_section2_block2_clickability",
+  "historyId" : "599c946c7673dcaba5711e72e07bfb3f",
+  "time" : {
+    "start" : 1742779254010,
+    "stop" : 1742779260880,
+    "duration" : 6870
+  },
+  "description" : "This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable",
+  "descriptionHtml" : "<p>This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ad75b6aa1a <unknown>\n#1 0x55ad75622390 <unknown>\n#2 0x55ad75673c85 <unknown>\n#3 0x55ad75673eb1 <unknown>\n#4 0x55ad756c2d64 <unknown>\n#5 0x55ad75699bfd <unknown>\n#6 0x55ad756c007b <unknown>\n#7 0x55ad756999a3 <unknown>\n#8 0x55ad7566560e <unknown>\n#9 0x55ad75666dd1 <unknown>\n#10 0x55ad75b30ddb <unknown>\n#11 0x55ad75b34cbc <unknown>\n#12 0x55ad75b18392 <unknown>\n#13 0x55ad75b35834 <unknown>\n#14 0x55ad75afc1ef <unknown>\n#15 0x55ad75b59038 <unknown>\n#16 0x55ad75b59216 <unknown>\n#17 0x55ad75b69896 <unknown>\n#18 0x7f8ceb69caa4 <unknown>\n#19 0x7f8ceb729c3c <unknown>",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestPromoBlock object at 0x7f48ee2ba480>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2b561959a5ca97c7cc883000f500b06c\")>\n\n    @allure.title(\"TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickable\"\n                  \"in the Promo Block on the main page\")\n    def test_tc_13_01_51_check_section2_block2_clickability(self, driver):\n        \"\"\"This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable\"\"\"\n        page = PromoBlock(driver, MAIN_PAGE_URL)\n        page.open()\n>       section2_block2 = page.check_section2_block2_clickability()\n\ntests/test_main_page.py:654: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:334: in check_section2_block2_clickability\n    section2_block2 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_2)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"2b561959a5ca97c7cc883000f500b06c\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f48edfd1ee0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55ad75b6aa1a <unknown>\nE       #1 0x55ad75622390 <unknown>\nE       #2 0x55ad75673c85 <unknown>\nE       #3 0x55ad75673eb1 <unknown>\nE       #4 0x55ad756c2d64 <unknown>\nE       #5 0x55ad75699bfd <unknown>\nE       #6 0x55ad756c007b <unknown>\nE       #7 0x55ad756999a3 <unknown>\nE       #8 0x55ad7566560e <unknown>\nE       #9 0x55ad75666dd1 <unknown>\nE       #10 0x55ad75b30ddb <unknown>\nE       #11 0x55ad75b34cbc <unknown>\nE       #12 0x55ad75b18392 <unknown>\nE       #13 0x55ad75b35834 <unknown>\nE       #14 0x55ad75afc1ef <unknown>\nE       #15 0x55ad75b59038 <unknown>\nE       #16 0x55ad75b59216 <unknown>\nE       #17 0x55ad75b69896 <unknown>\nE       #18 0x7f8ceb69caa4 <unknown>\nE       #19 0x7f8ceb729c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1742778442384,
+      "stop" : 1742778442451,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1742778442451,
+      "stop" : 1742778442451,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1742779252807,
+      "stop" : 1742779254010,
+      "duration" : 1203
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ad75b6aa1a <unknown>\n#1 0x55ad75622390 <unknown>\n#2 0x55ad75673c85 <unknown>\n#3 0x55ad75673eb1 <unknown>\n#4 0x55ad756c2d64 <unknown>\n#5 0x55ad75699bfd <unknown>\n#6 0x55ad756c007b <unknown>\n#7 0x55ad756999a3 <unknown>\n#8 0x55ad7566560e <unknown>\n#9 0x55ad75666dd1 <unknown>\n#10 0x55ad75b30ddb <unknown>\n#11 0x55ad75b34cbc <unknown>\n#12 0x55ad75b18392 <unknown>\n#13 0x55ad75b35834 <unknown>\n#14 0x55ad75afc1ef <unknown>\n#15 0x55ad75b59038 <unknown>\n#16 0x55ad75b59216 <unknown>\n#17 0x55ad75b69896 <unknown>\n#18 0x7f8ceb69caa4 <unknown>\n#19 0x7f8ceb729c3c <unknown>",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestPromoBlock object at 0x7f48ee2ba480>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2b561959a5ca97c7cc883000f500b06c\")>\n\n    @allure.title(\"TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickable\"\n                  \"in the Promo Block on the main page\")\n    def test_tc_13_01_51_check_section2_block2_clickability(self, driver):\n        \"\"\"This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable\"\"\"\n        page = PromoBlock(driver, MAIN_PAGE_URL)\n        page.open()\n>       section2_block2 = page.check_section2_block2_clickability()\n\ntests/test_main_page.py:654: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:334: in check_section2_block2_clickability\n    section2_block2 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_2)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"2b561959a5ca97c7cc883000f500b06c\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f48edfd1ee0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55ad75b6aa1a <unknown>\nE       #1 0x55ad75622390 <unknown>\nE       #2 0x55ad75673c85 <unknown>\nE       #3 0x55ad75673eb1 <unknown>\nE       #4 0x55ad756c2d64 <unknown>\nE       #5 0x55ad75699bfd <unknown>\nE       #6 0x55ad756c007b <unknown>\nE       #7 0x55ad756999a3 <unknown>\nE       #8 0x55ad7566560e <unknown>\nE       #9 0x55ad75666dd1 <unknown>\nE       #10 0x55ad75b30ddb <unknown>\nE       #11 0x55ad75b34cbc <unknown>\nE       #12 0x55ad75b18392 <unknown>\nE       #13 0x55ad75b35834 <unknown>\nE       #14 0x55ad75afc1ef <unknown>\nE       #15 0x55ad75b59038 <unknown>\nE       #16 0x55ad75b59216 <unknown>\nE       #17 0x55ad75b69896 <unknown>\nE       #18 0x7f8ceb69caa4 <unknown>\nE       #19 0x7f8ceb729c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1742779254011,
+        "stop" : 1742779255490,
+        "duration" : 1479
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check clickability of the block 2 'home-t-shirts' in the section 2 in the Promo Block",
+      "time" : {
+        "start" : 1742779255490,
+        "stop" : 1742779260878,
+        "duration" : 5388
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ad75b6aa1a <unknown>\n#1 0x55ad75622390 <unknown>\n#2 0x55ad75673c85 <unknown>\n#3 0x55ad75673eb1 <unknown>\n#4 0x55ad756c2d64 <unknown>\n#5 0x55ad75699bfd <unknown>\n#6 0x55ad756c007b <unknown>\n#7 0x55ad756999a3 <unknown>\n#8 0x55ad7566560e <unknown>\n#9 0x55ad75666dd1 <unknown>\n#10 0x55ad75b30ddb <unknown>\n#11 0x55ad75b34cbc <unknown>\n#12 0x55ad75b18392 <unknown>\n#13 0x55ad75b35834 <unknown>\n#14 0x55ad75afc1ef <unknown>\n#15 0x55ad75b59038 <unknown>\n#16 0x55ad75b59216 <unknown>\n#17 0x55ad75b69896 <unknown>\n#18 0x7f8ceb69caa4 <unknown>\n#19 0x7f8ceb729c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/main_page.py\", line 334, in check_section2_block2_clickability\n    section2_block2 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_2)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1742779255490,
+          "stop" : 1742779260877,
+          "duration" : 5387
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ad75b6aa1a <unknown>\n#1 0x55ad75622390 <unknown>\n#2 0x55ad75673c85 <unknown>\n#3 0x55ad75673eb1 <unknown>\n#4 0x55ad756c2d64 <unknown>\n#5 0x55ad75699bfd <unknown>\n#6 0x55ad756c007b <unknown>\n#7 0x55ad756999a3 <unknown>\n#8 0x55ad7566560e <unknown>\n#9 0x55ad75666dd1 <unknown>\n#10 0x55ad75b30ddb <unknown>\n#11 0x55ad75b34cbc <unknown>\n#12 0x55ad75b18392 <unknown>\n#13 0x55ad75b35834 <unknown>\n#14 0x55ad75afc1ef <unknown>\n#15 0x55ad75b59038 <unknown>\n#16 0x55ad75b59216 <unknown>\n#17 0x55ad75b69896 <unknown>\n#18 0x7f8ceb69caa4 <unknown>\n#19 0x7f8ceb729c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.home-t-shirts')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "e25b777b7d0034ec",
+      "name" : "Screenshot",
+      "source" : "e25b777b7d0034ec.png",
+      "type" : "image/png",
+      "size" : 548905
+    }, {
+      "uid" : "b3aa14de8d8dfffd",
+      "name" : "HTML source",
+      "source" : "b3aa14de8d8dfffd.html",
+      "type" : "text/html",
+      "size" : 144009
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1742779916908,
+      "stop" : 1742779916908,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1742779262336,
+      "stop" : 1742779262497,
+      "duration" : 161
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "feature",
+    "value" : "Promo Block Testing"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1712-60"
+  }, {
+    "name" : "thread",
+    "value" : "2930-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5d367f9aba13d92c.json",
+  "parameterValues" : [ ]
+}
