@@ -1,0 +1,262 @@
+{
+  "uid" : "b078a9c297c65928",
+  "name" : "TC 06.01.02 - verify the card is interactive on hover",
+  "fullName" : "tests.test_main_page.TestHotSellerSection#test_verify_the_card_is_interactive_on_hover",
+  "historyId" : "0ae3fd0cada57213a5c961202c8dada8",
+  "time" : {
+    "start" : 1745198355567,
+    "stop" : 1745198357057,
+    "duration" : 1490
+  },
+  "description" : "This test checks that the card is interactive",
+  "descriptionHtml" : "<p>This test checks that the card is interactive</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL In CI the test failed in PR#203\n\nAssertionError: Card is not interactive\nassert 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px' != 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px'",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7fbf7d229a00>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3f956658a955414a8d4f9dfa710c2c2b\")>\n\n    @pytest.mark.xfail(reason=\"In CI the test failed in PR#203\")\n    @allure.title(\"TC 06.01.02 - verify the card is interactive on hover\")\n    def test_verify_the_card_is_interactive_on_hover(self, driver):\n        \"\"\"This test checks that the card is interactive\"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        shadow_before, shadow_after = page.check_for_shadow_appearance_when_hovering_over_the_card()\n>       assert shadow_before != shadow_after, \\\n            \"Card is not interactive\"\nE       AssertionError: Card is not interactive\nE       assert 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px' != 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px'\n\ntests/test_main_page.py:25: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1745197862690,
+      "stop" : 1745197862690,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1745197862622,
+      "stop" : 1745197862690,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1745198354375,
+      "stop" : 1745198355567,
+      "duration" : 1192
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks that the card is interactive",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL In CI the test failed in PR#203\n\nAssertionError: Card is not interactive\nassert 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px' != 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px'",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7fbf7d229a00>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3f956658a955414a8d4f9dfa710c2c2b\")>\n\n    @pytest.mark.xfail(reason=\"In CI the test failed in PR#203\")\n    @allure.title(\"TC 06.01.02 - verify the card is interactive on hover\")\n    def test_verify_the_card_is_interactive_on_hover(self, driver):\n        \"\"\"This test checks that the card is interactive\"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        shadow_before, shadow_after = page.check_for_shadow_appearance_when_hovering_over_the_card()\n>       assert shadow_before != shadow_after, \\\n            \"Card is not interactive\"\nE       AssertionError: Card is not interactive\nE       assert 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px' != 'rgba(0, 0, 0, 0.3) 3px 4px 4px 0px'\n\ntests/test_main_page.py:25: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1745198355568,
+        "stop" : 1745198356732,
+        "duration" : 1164
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find a visible element",
+      "time" : {
+        "start" : 1745198356733,
+        "stop" : 1745198356782,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a present element",
+        "time" : {
+          "start" : 1745198356733,
+          "stop" : 1745198356744,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(3) div[class='product-item-info']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Go to specified element",
+        "time" : {
+          "start" : 1745198356744,
+          "stop" : 1745198356750,
+          "duration" : 6
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"3f956658a955414a8d4f9dfa710c2c2b\", element=\"f.0E54F8D4AB178CF15842BDDDEEB45C21.d.EB3D37BA7E3813475BBDEF0F399400B1.e.55\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', \"li[class='product-item']:nth-child(3) div[class='product-item-info']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "10"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Move cursor to element",
+      "time" : {
+        "start" : 1745198356789,
+        "stop" : 1745198357052,
+        "duration" : 263
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "element",
+        "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"3f956658a955414a8d4f9dfa710c2c2b\", element=\"f.0E54F8D4AB178CF15842BDDDEEB45C21.d.EB3D37BA7E3813475BBDEF0F399400B1.e.55\")>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "ed6be477a59688c1",
+      "name" : "Screenshot",
+      "source" : "ed6be477a59688c1.png",
+      "type" : "image/png",
+      "size" : 280950
+    }, {
+      "uid" : "2bb7b2719574a4e1",
+      "name" : "HTML source",
+      "source" : "2bb7b2719574a4e1.html",
+      "type" : "text/html",
+      "size" : 136058
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1745199391300,
+      "stop" : 1745199391300,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1745198357209,
+      "stop" : 1745198357276,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Hot Seller Section"
+  }, {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='In CI the test failed in PR#203')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1928-941"
+  }, {
+    "name" : "thread",
+    "value" : "2939-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='In CI the test failed in PR#203')" ]
+  },
+  "source" : "b078a9c297c65928.json",
+  "parameterValues" : [ ]
+}
