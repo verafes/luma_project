@@ -1,0 +1,275 @@
+{
+  "uid" : "71190168de24db2f",
+  "name" : "TC 10.03.01 - Verify 'GEAR DEALS' title is correct",
+  "fullName" : "tests.test_sale.TestSideMenuBarGear#test_tc_10_03_01",
+  "historyId" : "cf1509f33217635e02ba8ef437b791e6",
+  "time" : {
+    "start" : 1747013467591,
+    "stop" : 1747013467655,
+    "duration" : 64
+  },
+  "description" : "Check title of Gear Deals section",
+  "descriptionHtml" : "<p>Check title of Gear Deals section</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Expected title: 'GEAR DEALS', Actual title: Gear Deals\nassert 'Gear Deals' == 'GEAR DEALS'\n  - GEAR DEALS\n  + Gear Deals",
+  "statusTrace" : "self = <test_sale.TestSalePage.TestSideMenuBarGear object at 0x7f5e720c0c50>\nsale_page = <pages.sale_page.SalePage object at 0x7f5e72146780>\n\n    @allure.title(\"TC 10.03.01 - Verify 'GEAR DEALS' title is correct\")\n    def test_tc_10_03_01(self, sale_page):\n        \"\"\"Check title of Gear Deals section\"\"\"\n        title = sale_page.check_text_in_gear_deals_title()\n>       assert title == \"GEAR DEALS\", f\"Expected title: 'GEAR DEALS', Actual title: {title}\"\nE       AssertionError: Expected title: 'GEAR DEALS', Actual title: Gear Deals\nE       assert 'Gear Deals' == 'GEAR DEALS'\nE         - GEAR DEALS\nE         + Gear Deals\n\ntests/test_sale.py:101: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1747013465562,
+      "stop" : 1747013466822,
+      "duration" : 1260
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1747012363273,
+      "stop" : 1747012363273,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sale_page",
+    "time" : {
+      "start" : 1747013466822,
+      "stop" : 1747013467591,
+      "duration" : 769
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1747013466822,
+        "stop" : 1747013467591,
+        "duration" : 769
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1747012363206,
+      "stop" : 1747012363273,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check title of Gear Deals section",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Expected title: 'GEAR DEALS', Actual title: Gear Deals\nassert 'Gear Deals' == 'GEAR DEALS'\n  - GEAR DEALS\n  + Gear Deals",
+    "statusTrace" : "self = <test_sale.TestSalePage.TestSideMenuBarGear object at 0x7f5e720c0c50>\nsale_page = <pages.sale_page.SalePage object at 0x7f5e72146780>\n\n    @allure.title(\"TC 10.03.01 - Verify 'GEAR DEALS' title is correct\")\n    def test_tc_10_03_01(self, sale_page):\n        \"\"\"Check title of Gear Deals section\"\"\"\n        title = sale_page.check_text_in_gear_deals_title()\n>       assert title == \"GEAR DEALS\", f\"Expected title: 'GEAR DEALS', Actual title: {title}\"\nE       AssertionError: Expected title: 'GEAR DEALS', Actual title: Gear Deals\nE       assert 'Gear Deals' == 'GEAR DEALS'\nE         - GEAR DEALS\nE         + Gear Deals\n\ntests/test_sale.py:101: AssertionError",
+    "steps" : [ {
+      "name" : "Check text in Gear deals title",
+      "time" : {
+        "start" : 1747013467591,
+        "stop" : 1747013467655,
+        "duration" : 64
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1747013467592,
+          "stop" : 1747013467642,
+          "duration" : 50
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1747013467592,
+            "stop" : 1747013467618,
+            "duration" : 26
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.categories-menu > strong:nth-child(5) > span')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1747013467618,
+            "stop" : 1747013467623,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"fcefb09e7296108756920b4d41d1efce\", element=\"f.71086ED8EA6DBA546735539FE410077C.d.8B357F9B15D43F7FF45C09119E08EC37.e.10\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.categories-menu > strong:nth-child(5) > span')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "3b19a8519be22dbb",
+      "name" : "Screenshot",
+      "source" : "3b19a8519be22dbb.png",
+      "type" : "image/png",
+      "size" : 436989
+    }, {
+      "uid" : "f8367ccdaf930545",
+      "name" : "HTML source",
+      "source" : "f8367ccdaf930545.html",
+      "type" : "text/html",
+      "size" : 87453
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1747013467836,
+      "stop" : 1747013467901,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1747013852458,
+      "stop" : 1747013852458,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Side Menu Bar - Gear Deals Section"
+  }, {
+    "name" : "epic",
+    "value" : "Sale Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sale"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSalePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1701-693"
+  }, {
+    "name" : "thread",
+    "value" : "2885-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sale"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "71190168de24db2f.json",
+  "parameterValues" : [ ]
+}
