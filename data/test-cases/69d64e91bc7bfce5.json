@@ -1,0 +1,401 @@
+{
+  "uid" : "69d64e91bc7bfce5",
+  "name" : "test_check_for_duplicate_titles_after_clicking_on_the_card",
+  "fullName" : "tests.test_main_page.TestHotSellerSection#test_check_for_duplicate_titles_after_clicking_on_the_card",
+  "historyId" : "68fb1c5ac03cc03f622fc487e4058f4a",
+  "time" : {
+    "start" : 1750642120136,
+    "stop" : 1750642122649,
+    "duration" : 2513
+  },
+  "description" : "This test checks for the same titles after clicking on the product card and going to the product page",
+  "descriptionHtml" : "<p>This test checks for the same titles after clicking on the product card and going to the product page</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Headers are not equal or redirect to the wrong page of the site\nassert 'Fusion Backpack' == 'Home Page'\n  - Home Page\n  + Fusion Backpack",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7fd0567acec0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6809d97713d3f609c6ab29374db1c550\")>\n\n    def test_check_for_duplicate_titles_after_clicking_on_the_card(self, driver):\n        \"\"\"This test checks for the same titles after clicking on the product card and going to the product page\"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        text_before, text_after = page.check_the_correct_page_title_after_click_on_the_card()\n>       assert text_before == text_after, \\\n            \"Headers are not equal or redirect to the wrong page of the site\"\nE       AssertionError: Headers are not equal or redirect to the wrong page of the site\nE       assert 'Fusion Backpack' == 'Home Page'\nE         - Home Page\nE         + Fusion Backpack\n\ntests/test_main_page.py:40: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1750641429906,
+      "stop" : 1750641429975,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1750641429975,
+      "stop" : 1750641429975,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1750642118869,
+      "stop" : 1750642120135,
+      "duration" : 1266
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks for the same titles after clicking on the product card and going to the product page",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Headers are not equal or redirect to the wrong page of the site\nassert 'Fusion Backpack' == 'Home Page'\n  - Home Page\n  + Fusion Backpack",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7fd0567acec0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6809d97713d3f609c6ab29374db1c550\")>\n\n    def test_check_for_duplicate_titles_after_clicking_on_the_card(self, driver):\n        \"\"\"This test checks for the same titles after clicking on the product card and going to the product page\"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        text_before, text_after = page.check_the_correct_page_title_after_click_on_the_card()\n>       assert text_before == text_after, \\\n            \"Headers are not equal or redirect to the wrong page of the site\"\nE       AssertionError: Headers are not equal or redirect to the wrong page of the site\nE       assert 'Fusion Backpack' == 'Home Page'\nE         - Home Page\nE         + Fusion Backpack\n\ntests/test_main_page.py:40: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1750642120136,
+        "stop" : 1750642121557,
+        "duration" : 1421
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get element text",
+      "time" : {
+        "start" : 1750642121557,
+        "stop" : 1750642121693,
+        "duration" : 136
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1750642121557,
+          "stop" : 1750642121601,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1750642121557,
+            "stop" : 1750642121569,
+            "duration" : 12
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(5)  strong[class='product-item-name']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1750642121570,
+            "stop" : 1750642121582,
+            "duration" : 12
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"6809d97713d3f609c6ab29374db1c550\", element=\"f.17560B323A1009575795FEC96676BCA9.d.B52EC7AC84D7EF9FEDD9C41B8496C7CD.e.56\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(5)  strong[class='product-item-name']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', \"li[class='product-item']:nth-child(5)  strong[class='product-item-name']\")"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find a visible element",
+      "time" : {
+        "start" : 1750642121694,
+        "stop" : 1750642121721,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a present element",
+        "time" : {
+          "start" : 1750642121694,
+          "stop" : 1750642121702,
+          "duration" : 8
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(5) img[class='product-image-photo']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Go to specified element",
+        "time" : {
+          "start" : 1750642121702,
+          "stop" : 1750642121706,
+          "duration" : 4
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"6809d97713d3f609c6ab29374db1c550\", element=\"f.17560B323A1009575795FEC96676BCA9.d.B52EC7AC84D7EF9FEDD9C41B8496C7CD.e.57\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', \"li[class='product-item']:nth-child(5) img[class='product-image-photo']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "10"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get element text",
+      "time" : {
+        "start" : 1750642122482,
+        "stop" : 1750642122648,
+        "duration" : 166
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1750642122482,
+          "stop" : 1750642122612,
+          "duration" : 130
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1750642122482,
+            "stop" : 1750642122540,
+            "duration" : 58
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"h1[class='page-title']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1750642122540,
+            "stop" : 1750642122565,
+            "duration" : 25
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"6809d97713d3f609c6ab29374db1c550\", element=\"f.17560B323A1009575795FEC96676BCA9.d.B52EC7AC84D7EF9FEDD9C41B8496C7CD.e.65\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"h1[class='page-title']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', \"h1[class='page-title']\")"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "8d8ec388816801b3",
+      "name" : "Screenshot",
+      "source" : "8d8ec388816801b3.png",
+      "type" : "image/png",
+      "size" : 688554
+    }, {
+      "uid" : "2c80f021b2583e3e",
+      "name" : "HTML source",
+      "source" : "2c80f021b2583e3e.html",
+      "type" : "text/html",
+      "size" : 191013
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 12,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1750643522322,
+      "stop" : 1750643522322,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1750642123118,
+      "stop" : 1750642123202,
+      "duration" : 84
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Hot Seller Section"
+  }, {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1065-163"
+  }, {
+    "name" : "thread",
+    "value" : "3597-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "69d64e91bc7bfce5.json",
+  "parameterValues" : [ ]
+}

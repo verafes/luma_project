@@ -1,0 +1,485 @@
+{
+  "uid" : "65e9eba1754985a7",
+  "name" : "TC 01.03.06 correctness of the \"Tops\" link of the \"Women\" section",
+  "fullName" : "tests.test_header.TestHeader#test_tc_01_03_06_correctness_of_the_tops_women_section_link",
+  "historyId" : "eb64da7942c3a36c02bfa39d41443e78",
+  "time" : {
+    "start" : 1750642066675,
+    "stop" : 1750642069284,
+    "duration" : 2609
+  },
+  "description" : "Check 'Tops' subsection link click in 'Women' section redirects to the Tops-women page and         the 'Tops' header is displayed",
+  "descriptionHtml" : "<p>Check 'Tops' subsection link click in 'Women' section redirects to the Tops-women page and         the 'Tops' header is displayed</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Tops-women page of Women section is either not opened or the page header is incorrect\nassert ('https://mage...ogle_vignette' == 'https://mage...ps-women.html'\n  - https://magento.softwaretestingboard.com/women/tops-women.html\n  ?                                          ^ ^  ^ ^^^^^^^ ------\n  + https://magento.softwaretestingboard.com/#google_vignette\n  ?                                          ^^ ^^^ ++++ ^ ^)",
+  "statusTrace" : "self = <test_header.TestHeader object at 0x7fd0567a6300>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"ebd6911081fc2e7e7522ab8d870eaff3\")>\n\n    @allure.title('TC 01.03.06 correctness of the \"Tops\" link of the \"Women\" section')\n    def test_tc_01_03_06_correctness_of_the_tops_women_section_link(self, driver):\n        \"\"\"Check 'Tops' subsection link click in 'Women' section redirects to the Tops-women page and \\\n        the 'Tops' header is displayed\"\"\"\n        page = HeaderPage(driver, MAIN_PAGE_URL)\n        page.open()\n        page.check_redirection_of_tops_subsection_of_women_section_link()\n        header = page.check_common_header()\n>       assert driver.current_url == WOMEN_TOPS_URL and header.text == \"Tops\", \\\n            \"Tops-women page of Women section is either not opened or the page header is incorrect\"\nE       AssertionError: Tops-women page of Women section is either not opened or the page header is incorrect\nE       assert ('https://mage...ogle_vignette' == 'https://mage...ps-women.html'\nE         - https://magento.softwaretestingboard.com/women/tops-women.html\nE         ?                                          ^ ^  ^ ^^^^^^^ ------\nE         + https://magento.softwaretestingboard.com/#google_vignette\nE         ?                                          ^^ ^^^ ++++ ^ ^)\n\ntests/test_header.py:444: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1750641429906,
+      "stop" : 1750641429975,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1750641429975,
+      "stop" : 1750641429975,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1750642065416,
+      "stop" : 1750642066675,
+      "duration" : 1259
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check 'Tops' subsection link click in 'Women' section redirects to the Tops-women page and         the 'Tops' header is displayed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Tops-women page of Women section is either not opened or the page header is incorrect\nassert ('https://mage...ogle_vignette' == 'https://mage...ps-women.html'\n  - https://magento.softwaretestingboard.com/women/tops-women.html\n  ?                                          ^ ^  ^ ^^^^^^^ ------\n  + https://magento.softwaretestingboard.com/#google_vignette\n  ?                                          ^^ ^^^ ++++ ^ ^)",
+    "statusTrace" : "self = <test_header.TestHeader object at 0x7fd0567a6300>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"ebd6911081fc2e7e7522ab8d870eaff3\")>\n\n    @allure.title('TC 01.03.06 correctness of the \"Tops\" link of the \"Women\" section')\n    def test_tc_01_03_06_correctness_of_the_tops_women_section_link(self, driver):\n        \"\"\"Check 'Tops' subsection link click in 'Women' section redirects to the Tops-women page and \\\n        the 'Tops' header is displayed\"\"\"\n        page = HeaderPage(driver, MAIN_PAGE_URL)\n        page.open()\n        page.check_redirection_of_tops_subsection_of_women_section_link()\n        header = page.check_common_header()\n>       assert driver.current_url == WOMEN_TOPS_URL and header.text == \"Tops\", \\\n            \"Tops-women page of Women section is either not opened or the page header is incorrect\"\nE       AssertionError: Tops-women page of Women section is either not opened or the page header is incorrect\nE       assert ('https://mage...ogle_vignette' == 'https://mage...ps-women.html'\nE         - https://magento.softwaretestingboard.com/women/tops-women.html\nE         ?                                          ^ ^  ^ ^^^^^^^ ------\nE         + https://magento.softwaretestingboard.com/#google_vignette\nE         ?                                          ^^ ^^^ ++++ ^ ^)\n\ntests/test_header.py:444: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1750642066675,
+        "stop" : 1750642068595,
+        "duration" : 1920
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check redirection of the \"Tops\" subsection of the \"Women\" section link",
+      "time" : {
+        "start" : 1750642068596,
+        "stop" : 1750642069222,
+        "duration" : 626
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1750642068599,
+          "stop" : 1750642068767,
+          "duration" : 168
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1750642068599,
+            "stop" : 1750642068634,
+            "duration" : 35
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', \"(//a[@id='ui-id-4'])[1]\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1750642068634,
+            "stop" : 1750642068656,
+            "duration" : 22
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ebd6911081fc2e7e7522ab8d870eaff3\", element=\"f.C0571C477BBA79A4DF4879DA22E63A0C.d.1FFF891EFE4180CA39B4AC4B736AEF74.e.58\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"(//a[@id='ui-id-4'])[1]\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Move cursor to element",
+        "time" : {
+          "start" : 1750642068768,
+          "stop" : 1750642069060,
+          "duration" : 292
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ebd6911081fc2e7e7522ab8d870eaff3\", element=\"f.C0571C477BBA79A4DF4879DA22E63A0C.d.1FFF891EFE4180CA39B4AC4B736AEF74.e.58\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1750642069060,
+          "stop" : 1750642069091,
+          "duration" : 31
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1750642069060,
+            "stop" : 1750642069070,
+            "duration" : 10
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//*[@id=\"ui-id-2\"]/li[2]/ul/li[1]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1750642069070,
+            "stop" : 1750642069074,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ebd6911081fc2e7e7522ab8d870eaff3\", element=\"f.C0571C477BBA79A4DF4879DA22E63A0C.d.1FFF891EFE4180CA39B4AC4B736AEF74.e.59\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//*[@id=\"ui-id-2\"]/li[2]/ul/li[1]')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check h1 header is visible",
+        "time" : {
+          "start" : 1750642069146,
+          "stop" : 1750642069222,
+          "duration" : 76
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1750642069146,
+            "stop" : 1750642069222,
+            "duration" : 76
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1750642069146,
+              "stop" : 1750642069184,
+              "duration" : 38
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', 'h1')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1750642069184,
+              "stop" : 1750642069188,
+              "duration" : 4
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ebd6911081fc2e7e7522ab8d870eaff3\", element=\"f.C0571C477BBA79A4DF4879DA22E63A0C.d.1FFF891EFE4180CA39B4AC4B736AEF74.e.60\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'h1')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 11,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check h1 header is visible",
+      "time" : {
+        "start" : 1750642069222,
+        "stop" : 1750642069276,
+        "duration" : 54
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1750642069222,
+          "stop" : 1750642069276,
+          "duration" : 54
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1750642069222,
+            "stop" : 1750642069237,
+            "duration" : 15
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'h1')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1750642069238,
+            "stop" : 1750642069248,
+            "duration" : 10
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"ebd6911081fc2e7e7522ab8d870eaff3\", element=\"f.C0571C477BBA79A4DF4879DA22E63A0C.d.1FFF891EFE4180CA39B4AC4B736AEF74.e.60\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'h1')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "9dc218092977a975",
+      "name" : "Screenshot",
+      "source" : "9dc218092977a975.png",
+      "type" : "image/png",
+      "size" : 332631
+    }, {
+      "uid" : "287aefdcbaba937a",
+      "name" : "HTML source",
+      "source" : "287aefdcbaba937a.html",
+      "type" : "text/html",
+      "size" : 182861
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 17,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1750643522322,
+      "stop" : 1750643522322,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1750642069770,
+      "stop" : 1750642069852,
+      "duration" : 82
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Header"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_header"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestHeader"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1065-163"
+  }, {
+    "name" : "thread",
+    "value" : "3597-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_header"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "65e9eba1754985a7.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,443 @@
+{
+  "uid" : "824ef7378c32c1ba",
+  "name" : "TC 03.02.06 Verify login with valid mix-cased email valid password - Positive",
+  "fullName" : "tests.test_sign_in.TestLogin#test_03_02_06_login_with_valid_case_sensitive_email",
+  "historyId" : "5e954d7df1d4d04c463edc305153e798",
+  "time" : {
+    "start" : 1750643345674,
+    "stop" : 1750643349286,
+    "duration" : 3612
+  },
+  "description" : "Check Success Login with correct credentials",
+  "descriptionHtml" : "<p>Check Success Login with correct credentials</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Login failed\nassert ('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' in 'https://magento.softwaretestingboard.com/customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')\n +  where 'https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")>.current_url\n +    where <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")> = <pages.sign_in_page.SignInPage object at 0x7fd056548860>.driver",
+  "statusTrace" : "self = <test_sign_in.TestLogin object at 0x7fd0567d02f0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7fd056548860>\n\n    @allure.title('TC 03.02.06 Verify login with valid mix-cased email valid password - Positive')\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_03_02_06_login_with_valid_case_sensitive_email(self, driver, sign_in_page):\n        \"\"\"Check Success Login with correct credentials\"\"\"\n        sign_in_page.fill_in_email_field(credentials['valid_case_sensitive_email'])\n        sign_in_page.fill_in_password_field(credentials['password'])\n        sign_in_page.click_sign_in_button()\n>       assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \\\n               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], \"Login failed\"\nE       AssertionError: Login failed\nE       assert ('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' in 'https://magento.softwaretestingboard.com/customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')\nE        +  where 'https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")>.current_url\nE        +    where <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")> = <pages.sign_in_page.SignInPage object at 0x7fd056548860>.driver\n\ntests/test_sign_in.py:264: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1750641429906,
+      "stop" : 1750641429975,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1750643341585,
+      "stop" : 1750643342856,
+      "duration" : 1271
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1750641429975,
+      "stop" : 1750641429975,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1750643342856,
+      "stop" : 1750643345673,
+      "duration" : 2817
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1750643342856,
+        "stop" : 1750643345673,
+        "duration" : 2817
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "Check Success Login with correct credentials",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Login failed\nassert ('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' in 'https://magento.softwaretestingboard.com/customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')\n +  where 'https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")>.current_url\n +    where <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")> = <pages.sign_in_page.SignInPage object at 0x7fd056548860>.driver",
+    "statusTrace" : "self = <test_sign_in.TestLogin object at 0x7fd0567d02f0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7fd056548860>\n\n    @allure.title('TC 03.02.06 Verify login with valid mix-cased email valid password - Positive')\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_03_02_06_login_with_valid_case_sensitive_email(self, driver, sign_in_page):\n        \"\"\"Check Success Login with correct credentials\"\"\"\n        sign_in_page.fill_in_email_field(credentials['valid_case_sensitive_email'])\n        sign_in_page.fill_in_password_field(credentials['password'])\n        sign_in_page.click_sign_in_button()\n>       assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \\\n               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], \"Login failed\"\nE       AssertionError: Login failed\nE       assert ('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' in 'https://magento.softwaretestingboard.com/customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')\nE        +  where 'https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")>.current_url\nE        +    where <selenium.webdriver.chrome.webdriver.WebDriver (session=\"18e3c09e7af2276c232182485e224099\")> = <pages.sign_in_page.SignInPage object at 0x7fd056548860>.driver\n\ntests/test_sign_in.py:264: AssertionError",
+    "steps" : [ {
+      "name" : "Fill in Email field",
+      "time" : {
+        "start" : 1750643345674,
+        "stop" : 1750643345956,
+        "duration" : 282
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Email field is clickable",
+        "time" : {
+          "start" : 1750643345674,
+          "stop" : 1750643345709,
+          "duration" : 35
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1750643345674,
+            "stop" : 1750643345709,
+            "duration" : 35
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1750643345710,
+          "stop" : 1750643345956,
+          "duration" : 246
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1750643345710,
+            "stop" : 1750643345726,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"18e3c09e7af2276c232182485e224099\", element=\"f.B987E67E365D58612FAA4FF0D020FC11.d.8D0EE414EA2D3F21410761CEC68A4522.e.3\")>"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"18e3c09e7af2276c232182485e224099\", element=\"f.B987E67E365D58612FAA4FF0D020FC11.d.8D0EE414EA2D3F21410761CEC68A4522.e.3\")>"
+        }, {
+          "name" : "value",
+          "value" : "'Test130@Mailinator.com'"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'Test130@Mailinator.com'"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Fill in Password field",
+      "time" : {
+        "start" : 1750643345956,
+        "stop" : 1750643346099,
+        "duration" : 143
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Password field is clickable",
+        "time" : {
+          "start" : 1750643345956,
+          "stop" : 1750643345981,
+          "duration" : 25
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1750643345956,
+            "stop" : 1750643345981,
+            "duration" : 25
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#pass')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1750643345981,
+          "stop" : 1750643346099,
+          "duration" : 118
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1750643345981,
+            "stop" : 1750643345994,
+            "duration" : 13
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"18e3c09e7af2276c232182485e224099\", element=\"f.B987E67E365D58612FAA4FF0D020FC11.d.8D0EE414EA2D3F21410761CEC68A4522.e.4\")>"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"18e3c09e7af2276c232182485e224099\", element=\"f.B987E67E365D58612FAA4FF0D020FC11.d.8D0EE414EA2D3F21410761CEC68A4522.e.4\")>"
+        }, {
+          "name" : "value",
+          "value" : "'Test#12p@ssword'"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "'Test#12p@ssword'"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click on Sign In button",
+      "time" : {
+        "start" : 1750643346099,
+        "stop" : 1750643346175,
+        "duration" : 76
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Sign In button is clickable",
+        "time" : {
+          "start" : 1750643346099,
+          "stop" : 1750643346120,
+          "duration" : 21
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1750643346099,
+            "stop" : 1750643346120,
+            "duration" : 21
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//button[@id=\"send2\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "112b28f4a35cc050",
+      "name" : "Screenshot",
+      "source" : "112b28f4a35cc050.png",
+      "type" : "image/png",
+      "size" : 552730
+    }, {
+      "uid" : "e217ec36e17d0e31",
+      "name" : "HTML source",
+      "source" : "e217ec36e17d0e31.html",
+      "type" : "text/html",
+      "size" : 194421
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1750643349524,
+      "stop" : 1750643349604,
+      "duration" : 80
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1750643522322,
+      "stop" : 1750643522322,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login Functionality"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1065-163"
+  }, {
+    "name" : "thread",
+    "value" : "3597-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "824ef7378c32c1ba.json",
+  "parameterValues" : [ ]
+}
