@@ -1,0 +1,202 @@
+{
+  "uid" : "3ba3e3b06cacf897",
+  "name" : "TC 01_15_01 Verify possibility to vote with 5 stars",
+  "fullName" : "tests.test_reviews_page.TestReviews#test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star",
+  "historyId" : "755b1737df3094dbd00131c119354342",
+  "time" : {
+    "start" : 1751247531942,
+    "stop" : 1751247535772,
+    "duration" : 3830
+  },
+  "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 5 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+  "descriptionHtml" : "<pre><code>    The user is NOT logged in, located in the product card, section &quot;Reviews&quot;\n    1. All required fields are filled with correct data\n    2. Pressed 5 star\n    3.The &quot;Submit Review&quot; button is pressed\n    Result: Present in the DOM and visible on the page the message: &quot;You submitted your review for moderation.\n    This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n    When interacting with the GitHub Action, it checks not for the text of the &quot;Success&quot; message, but for the &quot;Success&quot; URL&quot;\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL Flaky behavior on CI\n\nselenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a class=\"data switch\" tabindex=\"-1\" data-toggle=\"trigger\" href=\"#reviews\" id=\"tab-label-reviews-title\">...</a> is not clickable at point (696, 838). Other element would receive the click: <iframe id=\"aswift_4\" name=\"aswift_4\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250625/r20190131/zrt_lookup_fy2021.html#RS-3-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=5&amp;uci=a!5&amp;btvi=2\" data-google-container-id=\"a!5\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CLv-6LiBmI4DFXbyTAIdLis6HA\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=137.0.7151.119)\nStacktrace:\n#0 0x563cf2d3f45a <unknown>\n#1 0x563cf27e4760 <unknown>\n#2 0x563cf283cf9c <unknown>\n#3 0x563cf283ae4a <unknown>\n#4 0x563cf28384a2 <unknown>\n#5 0x563cf2837bc0 <unknown>\n#6 0x563cf282a32d <unknown>\n#7 0x563cf285be52 <unknown>\n#8 0x563cf2829caa <unknown>\n#9 0x563cf285c01e <unknown>\n#10 0x563cf288230b <unknown>\n#11 0x563cf285bc23 <unknown>\n#12 0x563cf28284a5 <unknown>\n#13 0x563cf2829111 <unknown>\n#14 0x563cf2d03f1b <unknown>\n#15 0x563cf2d07e19 <unknown>\n#16 0x563cf2ceaac9 <unknown>\n#17 0x563cf2d089c8 <unknown>\n#18 0x563cf2ccf34f <unknown>\n#19 0x563cf2d2ca28 <unknown>\n#20 0x563cf2d2cc06 <unknown>\n#21 0x563cf2d3e336 <unknown>\n#22 0x7fd9cc09caa4 <unknown>\n#23 0x7fd9cc129c3c <unknown>",
+  "statusTrace" : "self = <test_reviews_page.TestReviews object at 0x7f0d75168230>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2f5e4305d21eb3d82c2ad23a63bc8b3e\")>\n\n    @pytest.mark.xfail(reason=\"Flaky behavior on CI\")\n    @allure.title('TC 01_15_01 Verify possibility to vote with 5 stars')\n    def test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star(self, driver):\n        \"\"\"\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 5 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        \"\"\"\n    \n        \"\"\"Steps\"\"\"\n        page = ReviewsPage(driver, REVIEWS_URL_GENERAL)\n        page.open()\n    \n        \"\"\"Get the current URL and print it\"\"\"\n        page.get_the_current_URL_and_print_it()\n    \n        \"\"\"Steps\"\"\"\n>       page.open_review_menu()\n\ntests/test_reviews_page.py:252: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/reviews_page.py:15: in open_review_menu\n    review_menu.click()\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f0d751ea3c0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#21 0x563cf2d3e336 \\\\u003Cunknown>\\\\n#22 0x7fd9cc09caa4 \\\\u003Cunknown>\\\\n#23 0x7fd9cc129c3c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a class=\"data switch\" tabindex=\"-1\" data-toggle=\"trigger\" href=\"#reviews\" id=\"tab-label-reviews-title\">...</a> is not clickable at point (696, 838). Other element would receive the click: <iframe id=\"aswift_4\" name=\"aswift_4\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250625/r20190131/zrt_lookup_fy2021.html#RS-3-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=5&amp;uci=a!5&amp;btvi=2\" data-google-container-id=\"a!5\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CLv-6LiBmI4DFXbyTAIdLis6HA\" data-load-complete=\"true\"></iframe>\nE         (Session info: chrome=137.0.7151.119)\nE       Stacktrace:\nE       #0 0x563cf2d3f45a <unknown>\nE       #1 0x563cf27e4760 <unknown>\nE       #2 0x563cf283cf9c <unknown>\nE       #3 0x563cf283ae4a <unknown>\nE       #4 0x563cf28384a2 <unknown>\nE       #5 0x563cf2837bc0 <unknown>\nE       #6 0x563cf282a32d <unknown>\nE       #7 0x563cf285be52 <unknown>\nE       #8 0x563cf2829caa <unknown>\nE       #9 0x563cf285c01e <unknown>\nE       #10 0x563cf288230b <unknown>\nE       #11 0x563cf285bc23 <unknown>\nE       #12 0x563cf28284a5 <unknown>\nE       #13 0x563cf2829111 <unknown>\nE       #14 0x563cf2d03f1b <unknown>\nE       #15 0x563cf2d07e19 <unknown>\nE       #16 0x563cf2ceaac9 <unknown>\nE       #17 0x563cf2d089c8 <unknown>\nE       #18 0x563cf2ccf34f <unknown>\nE       #19 0x563cf2d2ca28 <unknown>\nE       #20 0x563cf2d2cc06 <unknown>\nE       #21 0x563cf2d3e336 <unknown>\nE       #22 0x7fd9cc09caa4 <unknown>\nE       #23 0x7fd9cc129c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1751246266617,
+      "stop" : 1751246266617,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1751247530662,
+      "stop" : 1751247531941,
+      "duration" : 1279
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1751246266547,
+      "stop" : 1751246266617,
+      "duration" : 70
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 5 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL Flaky behavior on CI\n\nselenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a class=\"data switch\" tabindex=\"-1\" data-toggle=\"trigger\" href=\"#reviews\" id=\"tab-label-reviews-title\">...</a> is not clickable at point (696, 838). Other element would receive the click: <iframe id=\"aswift_4\" name=\"aswift_4\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250625/r20190131/zrt_lookup_fy2021.html#RS-3-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=5&amp;uci=a!5&amp;btvi=2\" data-google-container-id=\"a!5\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CLv-6LiBmI4DFXbyTAIdLis6HA\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=137.0.7151.119)\nStacktrace:\n#0 0x563cf2d3f45a <unknown>\n#1 0x563cf27e4760 <unknown>\n#2 0x563cf283cf9c <unknown>\n#3 0x563cf283ae4a <unknown>\n#4 0x563cf28384a2 <unknown>\n#5 0x563cf2837bc0 <unknown>\n#6 0x563cf282a32d <unknown>\n#7 0x563cf285be52 <unknown>\n#8 0x563cf2829caa <unknown>\n#9 0x563cf285c01e <unknown>\n#10 0x563cf288230b <unknown>\n#11 0x563cf285bc23 <unknown>\n#12 0x563cf28284a5 <unknown>\n#13 0x563cf2829111 <unknown>\n#14 0x563cf2d03f1b <unknown>\n#15 0x563cf2d07e19 <unknown>\n#16 0x563cf2ceaac9 <unknown>\n#17 0x563cf2d089c8 <unknown>\n#18 0x563cf2ccf34f <unknown>\n#19 0x563cf2d2ca28 <unknown>\n#20 0x563cf2d2cc06 <unknown>\n#21 0x563cf2d3e336 <unknown>\n#22 0x7fd9cc09caa4 <unknown>\n#23 0x7fd9cc129c3c <unknown>",
+    "statusTrace" : "self = <test_reviews_page.TestReviews object at 0x7f0d75168230>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2f5e4305d21eb3d82c2ad23a63bc8b3e\")>\n\n    @pytest.mark.xfail(reason=\"Flaky behavior on CI\")\n    @allure.title('TC 01_15_01 Verify possibility to vote with 5 stars')\n    def test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star(self, driver):\n        \"\"\"\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 5 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        \"\"\"\n    \n        \"\"\"Steps\"\"\"\n        page = ReviewsPage(driver, REVIEWS_URL_GENERAL)\n        page.open()\n    \n        \"\"\"Get the current URL and print it\"\"\"\n        page.get_the_current_URL_and_print_it()\n    \n        \"\"\"Steps\"\"\"\n>       page.open_review_menu()\n\ntests/test_reviews_page.py:252: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/reviews_page.py:15: in open_review_menu\n    review_menu.click()\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f0d751ea3c0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#21 0x563cf2d3e336 \\\\u003Cunknown>\\\\n#22 0x7fd9cc09caa4 \\\\u003Cunknown>\\\\n#23 0x7fd9cc129c3c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a class=\"data switch\" tabindex=\"-1\" data-toggle=\"trigger\" href=\"#reviews\" id=\"tab-label-reviews-title\">...</a> is not clickable at point (696, 838). Other element would receive the click: <iframe id=\"aswift_4\" name=\"aswift_4\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250625/r20190131/zrt_lookup_fy2021.html#RS-3-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=5&amp;uci=a!5&amp;btvi=2\" data-google-container-id=\"a!5\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CLv-6LiBmI4DFXbyTAIdLis6HA\" data-load-complete=\"true\"></iframe>\nE         (Session info: chrome=137.0.7151.119)\nE       Stacktrace:\nE       #0 0x563cf2d3f45a <unknown>\nE       #1 0x563cf27e4760 <unknown>\nE       #2 0x563cf283cf9c <unknown>\nE       #3 0x563cf283ae4a <unknown>\nE       #4 0x563cf28384a2 <unknown>\nE       #5 0x563cf2837bc0 <unknown>\nE       #6 0x563cf282a32d <unknown>\nE       #7 0x563cf285be52 <unknown>\nE       #8 0x563cf2829caa <unknown>\nE       #9 0x563cf285c01e <unknown>\nE       #10 0x563cf288230b <unknown>\nE       #11 0x563cf285bc23 <unknown>\nE       #12 0x563cf28284a5 <unknown>\nE       #13 0x563cf2829111 <unknown>\nE       #14 0x563cf2d03f1b <unknown>\nE       #15 0x563cf2d07e19 <unknown>\nE       #16 0x563cf2ceaac9 <unknown>\nE       #17 0x563cf2d089c8 <unknown>\nE       #18 0x563cf2ccf34f <unknown>\nE       #19 0x563cf2d2ca28 <unknown>\nE       #20 0x563cf2d2cc06 <unknown>\nE       #21 0x563cf2d3e336 <unknown>\nE       #22 0x7fd9cc09caa4 <unknown>\nE       #23 0x7fd9cc129c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1751247531942,
+        "stop" : 1751247534594,
+        "duration" : 2652
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1751247534598,
+        "stop" : 1751247534632,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#tab-label-reviews-title')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "d0170a3da3aafd5f",
+      "name" : "Screenshot",
+      "source" : "d0170a3da3aafd5f.png",
+      "type" : "image/png",
+      "size" : 242618
+    }, {
+      "uid" : "2c615e8fbe8eb4a5",
+      "name" : "HTML source",
+      "source" : "2c615e8fbe8eb4a5.html",
+      "type" : "text/html",
+      "size" : 301357
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1751248141261,
+      "stop" : 1751248141261,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1751247535961,
+      "stop" : 1751247536038,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Review Page"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='Flaky behavior on CI')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_reviews_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestReviews"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1778-829"
+  }, {
+    "name" : "thread",
+    "value" : "2950-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_reviews_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='Flaky behavior on CI')" ]
+  },
+  "source" : "3ba3e3b06cacf897.json",
+  "parameterValues" : [ ]
+}
