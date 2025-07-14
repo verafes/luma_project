@@ -1,0 +1,230 @@
+{
+  "uid" : "1902c8eaa9d9444e",
+  "name" : "TC 10.04.03, 10.04.06, 10.04.09 - Verify that links in Main block, 2 columns block open the correct pages",
+  "fullName" : "tests.test_sale.TestPromoBlocks#test_tc_10_04_03__06__09",
+  "historyId" : "b20d5dc2ce5484cdda1432abdfc354f6",
+  "time" : {
+    "start" : 1752458726373,
+    "stop" : 1752458727631,
+    "duration" : 1258
+  },
+  "description" : "Check that two links in Gear Deals section lead to the correct pages after click",
+  "descriptionHtml" : "<p>Check that two links in Gear Deals section lead to the correct pages after click</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <span class=\"more icon\">...</span> is not clickable at point (906, 850). Other element would receive the click: <iframe id=\"aswift_7\" name=\"aswift_7\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250702/r20190131/zrt_lookup_fy2021.html#RS-1-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=8&amp;uci=a!8&amp;btvi=4\" data-google-container-id=\"a!8\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CJDx872hu44DFdm-jggdr58fYQ\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=138.0.7204.100)\nStacktrace:\n#0 0x556b0c30423a <unknown>\n#1 0x556b0bdaeab0 <unknown>\n#2 0x556b0be0755c <unknown>\n#3 0x556b0be053f4 <unknown>\n#4 0x556b0be02a62 <unknown>\n#5 0x556b0be02180 <unknown>\n#6 0x556b0bdf490a <unknown>\n#7 0x556b0be261a2 <unknown>\n#8 0x556b0bdf428a <unknown>\n#9 0x556b0be2636e <unknown>\n#10 0x556b0be4bfee <unknown>\n#11 0x556b0be25f73 <unknown>\n#12 0x556b0bdf2aeb <unknown>\n#13 0x556b0bdf3751 <unknown>\n#14 0x556b0c2c8b4b <unknown>\n#15 0x556b0c2cc929 <unknown>\n#16 0x556b0c2af929 <unknown>\n#17 0x556b0c2cd4e8 <unknown>\n#18 0x556b0c2940df <unknown>\n#19 0x556b0c2f18e8 <unknown>\n#20 0x556b0c2f1ac6 <unknown>\n#21 0x556b0c303556 <unknown>\n#22 0x7f516449caa4 <unknown>\n#23 0x7f5164529c3c <unknown>",
+  "statusTrace" : "self = <test_sale.TestSalePage.TestPromoBlocks object at 0x7f1525dee0f0>\nsale_page = <pages.sale_page.SalePage object at 0x7f1525b74500>\nelement_locator = ('css selector', '.sale-mens .more')\nexpected_title = 'Men Sale'\nexpected_url = 'https://magento.softwaretestingboard.com/promotions/men-sale.html'\n\n    @allure.title(\"TC 10.04.03, 10.04.06, 10.04.09 - \"\n                  \"Verify that links in Main block, 2 columns block open the correct pages\")\n    @pytest.mark.parametrize(\n        \"element_locator, expected_title, expected_url\",\n        zip(\n            MainContentPromoBlocks.MAIN_AND_2COLUMNS_BLOCKS_BUTTONS.values(),\n            expected_titles_promo_blocks.values(),\n            expected_urls_promo_blocks.values(),\n        )\n    )\n    def test_tc_10_04_03__06__09(self, sale_page, element_locator, expected_title, expected_url):\n        \"\"\"Check that two links in Gear Deals section lead to the correct pages after click\"\"\"\n        element_in_promo_block = sale_page.element_is_clickable(element_locator)\n>       element_in_promo_block.click()\n\ntests/test_sale.py:188: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f1525b71460>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#21 0x556b0c303556 \\\\u003Cunknown>\\\\n#22 0x7f516449caa4 \\\\u003Cunknown>\\\\n#23 0x7f5164529c3c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <span class=\"more icon\">...</span> is not clickable at point (906, 850). Other element would receive the click: <iframe id=\"aswift_7\" name=\"aswift_7\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250702/r20190131/zrt_lookup_fy2021.html#RS-1-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=8&amp;uci=a!8&amp;btvi=4\" data-google-container-id=\"a!8\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CJDx872hu44DFdm-jggdr58fYQ\" data-load-complete=\"true\"></iframe>\nE         (Session info: chrome=138.0.7204.100)\nE       Stacktrace:\nE       #0 0x556b0c30423a <unknown>\nE       #1 0x556b0bdaeab0 <unknown>\nE       #2 0x556b0be0755c <unknown>\nE       #3 0x556b0be053f4 <unknown>\nE       #4 0x556b0be02a62 <unknown>\nE       #5 0x556b0be02180 <unknown>\nE       #6 0x556b0bdf490a <unknown>\nE       #7 0x556b0be261a2 <unknown>\nE       #8 0x556b0bdf428a <unknown>\nE       #9 0x556b0be2636e <unknown>\nE       #10 0x556b0be4bfee <unknown>\nE       #11 0x556b0be25f73 <unknown>\nE       #12 0x556b0bdf2aeb <unknown>\nE       #13 0x556b0bdf3751 <unknown>\nE       #14 0x556b0c2c8b4b <unknown>\nE       #15 0x556b0c2cc929 <unknown>\nE       #16 0x556b0c2af929 <unknown>\nE       #17 0x556b0c2cd4e8 <unknown>\nE       #18 0x556b0c2940df <unknown>\nE       #19 0x556b0c2f18e8 <unknown>\nE       #20 0x556b0c2f1ac6 <unknown>\nE       #21 0x556b0c303556 <unknown>\nE       #22 0x7f516449caa4 <unknown>\nE       #23 0x7f5164529c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1752455934384,
+      "stop" : 1752455934384,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1752458722341,
+      "stop" : 1752458723638,
+      "duration" : 1297
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sale_page",
+    "time" : {
+      "start" : 1752458723638,
+      "stop" : 1752458726372,
+      "duration" : 2734
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1752458723638,
+        "stop" : 1752458726372,
+        "duration" : 2734
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1752455934316,
+      "stop" : 1752455934384,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that two links in Gear Deals section lead to the correct pages after click",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <span class=\"more icon\">...</span> is not clickable at point (906, 850). Other element would receive the click: <iframe id=\"aswift_7\" name=\"aswift_7\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250702/r20190131/zrt_lookup_fy2021.html#RS-1-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=8&amp;uci=a!8&amp;btvi=4\" data-google-container-id=\"a!8\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CJDx872hu44DFdm-jggdr58fYQ\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=138.0.7204.100)\nStacktrace:\n#0 0x556b0c30423a <unknown>\n#1 0x556b0bdaeab0 <unknown>\n#2 0x556b0be0755c <unknown>\n#3 0x556b0be053f4 <unknown>\n#4 0x556b0be02a62 <unknown>\n#5 0x556b0be02180 <unknown>\n#6 0x556b0bdf490a <unknown>\n#7 0x556b0be261a2 <unknown>\n#8 0x556b0bdf428a <unknown>\n#9 0x556b0be2636e <unknown>\n#10 0x556b0be4bfee <unknown>\n#11 0x556b0be25f73 <unknown>\n#12 0x556b0bdf2aeb <unknown>\n#13 0x556b0bdf3751 <unknown>\n#14 0x556b0c2c8b4b <unknown>\n#15 0x556b0c2cc929 <unknown>\n#16 0x556b0c2af929 <unknown>\n#17 0x556b0c2cd4e8 <unknown>\n#18 0x556b0c2940df <unknown>\n#19 0x556b0c2f18e8 <unknown>\n#20 0x556b0c2f1ac6 <unknown>\n#21 0x556b0c303556 <unknown>\n#22 0x7f516449caa4 <unknown>\n#23 0x7f5164529c3c <unknown>",
+    "statusTrace" : "self = <test_sale.TestSalePage.TestPromoBlocks object at 0x7f1525dee0f0>\nsale_page = <pages.sale_page.SalePage object at 0x7f1525b74500>\nelement_locator = ('css selector', '.sale-mens .more')\nexpected_title = 'Men Sale'\nexpected_url = 'https://magento.softwaretestingboard.com/promotions/men-sale.html'\n\n    @allure.title(\"TC 10.04.03, 10.04.06, 10.04.09 - \"\n                  \"Verify that links in Main block, 2 columns block open the correct pages\")\n    @pytest.mark.parametrize(\n        \"element_locator, expected_title, expected_url\",\n        zip(\n            MainContentPromoBlocks.MAIN_AND_2COLUMNS_BLOCKS_BUTTONS.values(),\n            expected_titles_promo_blocks.values(),\n            expected_urls_promo_blocks.values(),\n        )\n    )\n    def test_tc_10_04_03__06__09(self, sale_page, element_locator, expected_title, expected_url):\n        \"\"\"Check that two links in Gear Deals section lead to the correct pages after click\"\"\"\n        element_in_promo_block = sale_page.element_is_clickable(element_locator)\n>       element_in_promo_block.click()\n\ntests/test_sale.py:188: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:93: in click\n    self._execute(Command.CLICK_ELEMENT)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:394: in _execute\n    return self._parent.execute(command, params)\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:344: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f1525b71460>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"element click intercepted\",\"message\":\"element click intercepted: Element ...\\\\n#21 0x556b0c303556 \\\\u003Cunknown>\\\\n#22 0x7f516449caa4 \\\\u003Cunknown>\\\\n#23 0x7f5164529c3c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <span class=\"more icon\">...</span> is not clickable at point (906, 850). Other element would receive the click: <iframe id=\"aswift_7\" name=\"aswift_7\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"728\" height=\"90\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250702/r20190131/zrt_lookup_fy2021.html#RS-1-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=8&amp;uci=a!8&amp;btvi=4\" data-google-container-id=\"a!8\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CJDx872hu44DFdm-jggdr58fYQ\" data-load-complete=\"true\"></iframe>\nE         (Session info: chrome=138.0.7204.100)\nE       Stacktrace:\nE       #0 0x556b0c30423a <unknown>\nE       #1 0x556b0bdaeab0 <unknown>\nE       #2 0x556b0be0755c <unknown>\nE       #3 0x556b0be053f4 <unknown>\nE       #4 0x556b0be02a62 <unknown>\nE       #5 0x556b0be02180 <unknown>\nE       #6 0x556b0bdf490a <unknown>\nE       #7 0x556b0be261a2 <unknown>\nE       #8 0x556b0bdf428a <unknown>\nE       #9 0x556b0be2636e <unknown>\nE       #10 0x556b0be4bfee <unknown>\nE       #11 0x556b0be25f73 <unknown>\nE       #12 0x556b0bdf2aeb <unknown>\nE       #13 0x556b0bdf3751 <unknown>\nE       #14 0x556b0c2c8b4b <unknown>\nE       #15 0x556b0c2cc929 <unknown>\nE       #16 0x556b0c2af929 <unknown>\nE       #17 0x556b0c2cd4e8 <unknown>\nE       #18 0x556b0c2940df <unknown>\nE       #19 0x556b0c2f18e8 <unknown>\nE       #20 0x556b0c2f1ac6 <unknown>\nE       #21 0x556b0c303556 <unknown>\nE       #22 0x7f516449caa4 <unknown>\nE       #23 0x7f5164529c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: ElementClickInterceptedException",
+    "steps" : [ {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1752458726373,
+        "stop" : 1752458726483,
+        "duration" : 110
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.sale-mens .more')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "72adc3fc74db3204",
+      "name" : "Screenshot",
+      "source" : "72adc3fc74db3204.png",
+      "type" : "image/png",
+      "size" : 389503
+    }, {
+      "uid" : "88ed8d307954c135",
+      "name" : "HTML source",
+      "source" : "88ed8d307954c135.html",
+      "type" : "text/html",
+      "size" : 202514
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1752459821686,
+      "stop" : 1752459821686,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1752458727830,
+      "stop" : 1752458727916,
+      "duration" : 86
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Promo Blocks, Main Block (Women's Deals) and 2 columns block - Men's Bargain, Gear Steals"
+  }, {
+    "name" : "epic",
+    "value" : "Sale Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sale"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSalePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1278-766"
+  }, {
+    "name" : "thread",
+    "value" : "2969-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sale"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "element_locator",
+    "value" : "('css selector', '.sale-mens .more')"
+  }, {
+    "name" : "expected_title",
+    "value" : "'Men Sale'"
+  }, {
+    "name" : "expected_url",
+    "value" : "'https://magento.softwaretestingboard.com/promotions/men-sale.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1902c8eaa9d9444e.json",
+  "parameterValues" : [ "('css selector', '.sale-mens .more')", "'Men Sale'", "'https://magento.softwaretestingboard.com/promotions/men-sale.html'" ]
+}

@@ -1,0 +1,239 @@
+{
+  "uid" : "86e87ec69a380da8",
+  "name" : "test_TC_11_01_07",
+  "fullName" : "tests.test_gear.TestGearPage#test_TC_11_01_07",
+  "historyId" : "538d92f52c7cc128f9581aa2bf37b489",
+  "time" : {
+    "start" : 1752456283817,
+    "stop" : 1752456286479,
+    "duration" : 2662
+  },
+  "description" : "Check that watches link is correct",
+  "descriptionHtml" : "<p>Check that watches link is correct</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: The link is not correct\nassert 'https://mage...ogle_vignette' == 'https://mage.../watches.html'\n  - https://magento.softwaretestingboard.com/gear/watches.html\n  ?                                              --------\n  + https://magento.softwaretestingboard.com/gear.html#google_vignette\n  ?                                                   ++++++++++++++++",
+  "statusTrace" : "self = <test_gear.TestGearPage object at 0x7f1525dcb080>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"485cc829760f1e656970bf524e42dd86\")>\n\n    def test_TC_11_01_07(self, driver):\n        \"\"\"Check that watches link is correct\"\"\"\n        page = GearPage(driver, GEAR_PAGE_URL)\n        page.open()\n        page.check_watches_functionality()\n>       assert page.get_actual_url(driver) == expected_link['watches_url'], \\\n            'The link is not correct'\nE       AssertionError: The link is not correct\nE       assert 'https://mage...ogle_vignette' == 'https://mage.../watches.html'\nE         - https://magento.softwaretestingboard.com/gear/watches.html\nE         ?                                              --------\nE         + https://magento.softwaretestingboard.com/gear.html#google_vignette\nE         ?                                                   ++++++++++++++++\n\ntests/test_gear.py:57: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1752456282531,
+      "stop" : 1752456283816,
+      "duration" : 1285
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1752455934384,
+      "stop" : 1752455934384,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1752455934316,
+      "stop" : 1752455934384,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that watches link is correct",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: The link is not correct\nassert 'https://mage...ogle_vignette' == 'https://mage.../watches.html'\n  - https://magento.softwaretestingboard.com/gear/watches.html\n  ?                                              --------\n  + https://magento.softwaretestingboard.com/gear.html#google_vignette\n  ?                                                   ++++++++++++++++",
+    "statusTrace" : "self = <test_gear.TestGearPage object at 0x7f1525dcb080>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"485cc829760f1e656970bf524e42dd86\")>\n\n    def test_TC_11_01_07(self, driver):\n        \"\"\"Check that watches link is correct\"\"\"\n        page = GearPage(driver, GEAR_PAGE_URL)\n        page.open()\n        page.check_watches_functionality()\n>       assert page.get_actual_url(driver) == expected_link['watches_url'], \\\n            'The link is not correct'\nE       AssertionError: The link is not correct\nE       assert 'https://mage...ogle_vignette' == 'https://mage.../watches.html'\nE         - https://magento.softwaretestingboard.com/gear/watches.html\nE         ?                                              --------\nE         + https://magento.softwaretestingboard.com/gear.html#google_vignette\nE         ?                                                   ++++++++++++++++\n\ntests/test_gear.py:57: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1752456283817,
+        "stop" : 1752456286228,
+        "duration" : 2411
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find a visible element",
+      "time" : {
+        "start" : 1752456286229,
+        "stop" : 1752456286318,
+        "duration" : 89
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a present element",
+        "time" : {
+          "start" : 1752456286229,
+          "stop" : 1752456286240,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"//dl[@id='narrow-by-list2']//a[text()='Watches']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Go to specified element",
+        "time" : {
+          "start" : 1752456286240,
+          "stop" : 1752456286276,
+          "duration" : 36
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"485cc829760f1e656970bf524e42dd86\", element=\"f.7A804A8F6F55116A1CB32C42035A1720.d.E31EC200C4B5291E95109417DED42ECF.e.65\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('xpath', \"//dl[@id='narrow-by-list2']//a[text()='Watches']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "10"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "58815d7da84814a9",
+      "name" : "Screenshot",
+      "source" : "58815d7da84814a9.png",
+      "type" : "image/png",
+      "size" : 703655
+    }, {
+      "uid" : "ce7d18f6018462fa",
+      "name" : "HTML source",
+      "source" : "ce7d18f6018462fa.html",
+      "type" : "text/html",
+      "size" : 280130
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1752456287289,
+      "stop" : 1752456287393,
+      "duration" : 104
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1752459821686,
+      "stop" : 1752459821686,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_gear"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGearPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1278-766"
+  }, {
+    "name" : "thread",
+    "value" : "2969-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_gear"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "86e87ec69a380da8.json",
+  "parameterValues" : [ ]
+}
