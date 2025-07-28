@@ -1,0 +1,278 @@
+{
+  "uid" : "86f7c843abd561d3",
+  "name" : "tc 07.02.10 Verify that remove button deletes item from the shipping page",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_10_verify_remove_button_delete_item",
+  "historyId" : "b1af673dcf0fa76b7bc15b6028fb0cde",
+  "time" : {
+    "start" : 1753667112993,
+    "stop" : 1753667114799,
+    "duration" : 1806
+  },
+  "description" : "Check that remove button deletes item from the shipping page",
+  "descriptionHtml" : "<p>Check that remove button deletes item from the shipping page</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Remove button doesn't works correctly\nassert 'You have no ...opping  cart.' == 'You have no ...hopping cart.'\n  - You have no items in your shopping cart.\n  + You have no items in your  shopping  cart.\n  ?                          +          +",
+  "statusTrace" : "self = <test_shopping_cart.TestShoppingCartFull object at 0x7f042da34a10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2d1082235e7026c86a58892dde7698af\")>\nfull_cart_page = None\n\n    @allure.title(\"tc 07.02.10 Verify that remove button deletes item from the shipping page\")\n    def test_tc_07_02_10_verify_remove_button_delete_item(self, driver, full_cart_page):\n        \"\"\"Check that remove button deletes item from the shipping page\"\"\"\n        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)\n        message = page.check_remove_button_deletes_item_from_shopping_cart()\n>       assert message == \"You have no items in your shopping cart.\", \"Remove button doesn't works correctly\"\nE       AssertionError: Remove button doesn't works correctly\nE       assert 'You have no ...opping  cart.' == 'You have no ...hopping cart.'\nE         - You have no items in your shopping cart.\nE         + You have no items in your  shopping  cart.\nE         ?                          +          +\n\ntests/test_shopping_cart.py:131: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1753667106571,
+      "stop" : 1753667107839,
+      "duration" : 1268
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1753665754091,
+      "stop" : 1753665754158,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1753665754158,
+      "stop" : 1753665754158,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1753667107840,
+      "stop" : 1753667112992,
+      "duration" : 5152
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that remove button deletes item from the shipping page",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Remove button doesn't works correctly\nassert 'You have no ...opping  cart.' == 'You have no ...hopping cart.'\n  - You have no items in your shopping cart.\n  + You have no items in your  shopping  cart.\n  ?                          +          +",
+    "statusTrace" : "self = <test_shopping_cart.TestShoppingCartFull object at 0x7f042da34a10>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2d1082235e7026c86a58892dde7698af\")>\nfull_cart_page = None\n\n    @allure.title(\"tc 07.02.10 Verify that remove button deletes item from the shipping page\")\n    def test_tc_07_02_10_verify_remove_button_delete_item(self, driver, full_cart_page):\n        \"\"\"Check that remove button deletes item from the shipping page\"\"\"\n        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)\n        message = page.check_remove_button_deletes_item_from_shopping_cart()\n>       assert message == \"You have no items in your shopping cart.\", \"Remove button doesn't works correctly\"\nE       AssertionError: Remove button doesn't works correctly\nE       assert 'You have no ...opping  cart.' == 'You have no ...hopping cart.'\nE         - You have no items in your shopping cart.\nE         + You have no items in your  shopping  cart.\nE         ?                          +          +\n\ntests/test_shopping_cart.py:131: AssertionError",
+    "steps" : [ {
+      "name" : "Check remove button deletes item from the shipping page",
+      "time" : {
+        "start" : 1753667112993,
+        "stop" : 1753667114798,
+        "duration" : 1805
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1753667112993,
+          "stop" : 1753667113019,
+          "duration" : 26
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'a.action.action-delete')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1753667113126,
+          "stop" : 1753667114785,
+          "duration" : 1659
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1753667113126,
+            "stop" : 1753667114766,
+            "duration" : 1640
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'div.cart-empty > p:nth-child(1)')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1753667114767,
+            "stop" : 1753667114771,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"2d1082235e7026c86a58892dde7698af\", element=\"f.5BA0A9DBC8071B2D5AFA99A90DF511F4.d.D4A9115B8BD7CCE8C4A85F2E18DDD430.e.182\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'div.cart-empty > p:nth-child(1)')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "171b3074099ccbd0",
+      "name" : "Screenshot",
+      "source" : "171b3074099ccbd0.png",
+      "type" : "image/png",
+      "size" : 62623
+    }, {
+      "uid" : "3259baebc2e9d9cd",
+      "name" : "HTML source",
+      "source" : "3259baebc2e9d9cd.html",
+      "type" : "text/html",
+      "size" : 165139
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1753667115096,
+      "stop" : 1753667115175,
+      "duration" : 79
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1753667421389,
+      "stop" : 1753667421389,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmpptgkbjq6m"
+  }, {
+    "name" : "thread",
+    "value" : "2983-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "86f7c843abd561d3.json",
+  "parameterValues" : [ ]
+}

@@ -3,50 +3,67 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: The 'Gear' page isn't opened or the page header is incorrect\nassert False",
+      "name" : "AssertionError: Training page isn't opened or the page header is incorrect\nassert False",
       "children" : [ {
-        "name" : "TC 01.03.28 correctly redirected the link \"Gear\"",
-        "uid" : "ea53fc6a4f5a134d",
-        "parentUid" : "5b8f65ff37a93af635739cc4154bb25a",
+        "name" : "TC 01.03.33 correctly redirected the link \"Training\"",
+        "uid" : "b84c8d1b7fb28368",
+        "parentUid" : "ebe70c7c786f15d5ae58cdf1c1fe4721",
         "status" : "failed",
         "time" : {
-          "start" : 1753061275828,
-          "stop" : 1753061277904,
-          "duration" : 2076
+          "start" : 1753666086832,
+          "stop" : 1753666088902,
+          "duration" : 2070
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "5b8f65ff37a93af635739cc4154bb25a"
+      "uid" : "ebe70c7c786f15d5ae58cdf1c1fe4721"
     }, {
-      "name" : "AssertionError: New page isn't open or the 'Shorts' subhead is incorrect\nassert False",
+      "name" : "AssertionError: 'Women' page isn't open or the 'Women' header is incorrect\nassert False",
       "children" : [ {
-        "name" : "TC 14.04.05 Verify the link 'Shorts' redirects to a correct page.",
-        "uid" : "3eb61c37172a9a83",
-        "parentUid" : "1b7c13ff3bcb2c507f955c6647c9c5d1",
+        "name" : "TC 01.03.04 correct redirection of the link \"Women\"",
+        "uid" : "5ea6e6ef229c2242",
+        "parentUid" : "62a6c15764227a77619686433d12d94e",
         "status" : "failed",
         "time" : {
-          "start" : 1753061980399,
-          "stop" : 1753061983646,
-          "duration" : 3247
+          "start" : 1753666103998,
+          "stop" : 1753666106251,
+          "duration" : 2253
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "1b7c13ff3bcb2c507f955c6647c9c5d1"
+      "uid" : "62a6c15764227a77619686433d12d94e"
+    }, {
+      "name" : "AssertionError: Tops-men page of Men section is either not opened or the page header is incorrect\nassert ('https://mage...ogle_vignette' == 'https://mage...tops-men.html'\n  - https://magento.softwaretestingboard.com/men/tops-men.html\n  ?                                          ^  ^ ^^^^^ ------\n  + https://magento.softwaretestingboard.com/#google_vignette\n  ?                                          ^^^^^^ ++++ ^ ^)",
+      "children" : [ {
+        "name" : "TC 01.03.18 correctness of the \"Tops\" link of the \"Men\" section",
+        "uid" : "ded8ef0be84e331d",
+        "parentUid" : "0a3429b53b31bcdff4f32b7c1d821279",
+        "status" : "failed",
+        "time" : {
+          "start" : 1753666207160,
+          "stop" : 1753666209100,
+          "duration" : 1940
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0a3429b53b31bcdff4f32b7c1d821279"
     }, {
       "name" : "AssertionError: Expected title: 'WOMEN'S DEALS', Actual title: Women's Deals\nassert \"Women's Deals\" == \"WOMEN'S DEALS\"\n  - WOMEN'S DEALS\n  + Women's Deals",
       "children" : [ {
         "name" : "TC 10.01.01 - Verify 'WOMEN'S DEALS' title is correct",
-        "uid" : "2af7a167ecf0036c",
+        "uid" : "c6a52bef660942c0",
         "parentUid" : "1870ed13ab4ba659502ea4465eb99ed0",
         "status" : "failed",
         "time" : {
-          "start" : 1753062066675,
-          "stop" : 1753062066819,
-          "duration" : 144
+          "start" : 1753666870205,
+          "stop" : 1753666870360,
+          "duration" : 155
         },
         "flaky" : false,
         "newFailed" : false,
@@ -57,13 +74,13 @@
       "name" : "AssertionError: Expected title: 'GEAR DEALS', Actual title: Gear Deals\nassert 'Gear Deals' == 'GEAR DEALS'\n  - GEAR DEALS\n  + Gear Deals",
       "children" : [ {
         "name" : "TC 10.03.01 - Verify 'GEAR DEALS' title is correct",
-        "uid" : "b2cb3870bc0a658a",
+        "uid" : "1b81406075535d9c",
         "parentUid" : "c5e32cdef90f0ccdea09cbc459d89b7f",
         "status" : "failed",
         "time" : {
-          "start" : 1753062149608,
-          "stop" : 1753062149788,
-          "duration" : 180
+          "start" : 1753666947496,
+          "stop" : 1753666947586,
+          "duration" : 90
         },
         "flaky" : false,
         "newFailed" : false,
@@ -74,53 +91,19 @@
       "name" : "AssertionError: Remove button doesn't works correctly\nassert 'You have no ...opping  cart.' == 'You have no ...hopping cart.'\n  - You have no items in your shopping cart.\n  + You have no items in your  shopping  cart.\n  ?                          +          +",
       "children" : [ {
         "name" : "tc 07.02.10 Verify that remove button deletes item from the shipping page",
-        "uid" : "bf0f5dd3c2a238c2",
+        "uid" : "86f7c843abd561d3",
         "parentUid" : "63c4df562242512b27c1f380e3ee11af",
         "status" : "failed",
         "time" : {
-          "start" : 1753062323924,
-          "stop" : 1753062325654,
-          "duration" : 1730
+          "start" : 1753667112993,
+          "stop" : 1753667114799,
+          "duration" : 1806
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "63c4df562242512b27c1f380e3ee11af"
-    }, {
-      "name" : "AssertionError: Verify Forgot Your Password link is incorrect or not redirect to correct page\nassert ('https://mage...ogle_vignette' == 'https://mage...rgotpassword/'\n  - https://magento.softwaretestingboard.com/customer/account/forgotpassword/\n  + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/#google_vignette)",
-      "children" : [ {
-        "name" : "TC 03.01.17 Verify Forgot Your Password link is functional",
-        "uid" : "7f5e866b70720b6c",
-        "parentUid" : "fe3e87b93a4404f6291f8ddc7047d3b1",
-        "status" : "failed",
-        "time" : {
-          "start" : 1753062472363,
-          "stop" : 1753062472760,
-          "duration" : 397
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fe3e87b93a4404f6291f8ddc7047d3b1"
-    }, {
-      "name" : "AssertionError: Verify Create an Account button is incorrect or not redirect to correct page\nassert ('https://mage...ogle_vignette' == 'https://mage...count/create/'\n  - https://magento.softwaretestingboard.com/customer/account/create/\n  + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/#google_vignette)",
-      "children" : [ {
-        "name" : "TC 03.01.23 Verify Create an Account button is functional",
-        "uid" : "bd3006f549855afa",
-        "parentUid" : "92c20bf1b947c6ed50473ffb24100167",
-        "status" : "failed",
-        "time" : {
-          "start" : 1753062491668,
-          "stop" : 1753062491884,
-          "duration" : 216
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "92c20bf1b947c6ed50473ffb24100167"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
@@ -129,91 +112,91 @@
       "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
         "name" : "TC 01.01.06 absence of the \"Create an account\" link display",
-        "uid" : "fd9632d57478b9da",
+        "uid" : "8037bfdb460f08cf",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061303081,
-          "stop" : 1753061311663,
-          "duration" : 8582
+          "start" : 1753666160269,
+          "stop" : 1753666170876,
+          "duration" : 10607
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC 01.01.07 absence of the \"Sign In\" link display",
-        "uid" : "a3a506073ba315f",
+        "uid" : "d4982a475f9879b0",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061313126,
-          "stop" : 1753061324753,
-          "duration" : 11627
+          "start" : 1753666172376,
+          "stop" : 1753666184007,
+          "duration" : 11631
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC 01.01.08 display of the dropdown list button ",
-        "uid" : "c5df69a21a2ace85",
+        "uid" : "aeff5c7dae1844e0",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061326226,
-          "stop" : 1753061336043,
-          "duration" : 9817
+          "start" : 1753666185494,
+          "stop" : 1753666194939,
+          "duration" : 9445
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC 01.01.09 functionality of the dropdown list button",
-        "uid" : "9ba07e56f39b6d04",
+        "uid" : "b715cb9627541e2b",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061337545,
-          "stop" : 1753061348448,
-          "duration" : 10903
+          "start" : 1753666196424,
+          "stop" : 1753666205668,
+          "duration" : 9244
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC 01.01.10 functionality of the \"My account\" section in the dropdown list",
-        "uid" : "c401f044194b05eb",
+        "uid" : "ff820d0baf1805be",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061375772,
-          "stop" : 1753061385688,
-          "duration" : 9916
+          "start" : 1753666232242,
+          "stop" : 1753666242297,
+          "duration" : 10055
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC 01.01.11 functionality of the \"My Wish List\" section in the dropdown list",
-        "uid" : "4f23d261b46fbff7",
+        "uid" : "7fcbb21b5b1b27b8",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061387174,
-          "stop" : 1753061397157,
-          "duration" : 9983
+          "start" : 1753666243790,
+          "stop" : 1753666254675,
+          "duration" : 10885
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "TC 01.01.12 functionality of the \"Sign In\" section in the dropdown list",
-        "uid" : "b8d4e3f0acdd2d64",
+        "uid" : "a8a3ad2c4bb95c92",
         "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1753061398637,
-          "stop" : 1753061408513,
-          "duration" : 9876
+          "start" : 1753666256175,
+          "stop" : 1753666265797,
+          "duration" : 9622
         },
         "flaky" : false,
         "newFailed" : false,
@@ -221,957 +204,923 @@
       } ],
       "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562b1e7fe23a <unknown>\n#1 0x562b1e2a8ab0 <unknown>\n#2 0x562b1e2fa6f0 <unknown>\n#3 0x562b1e2fa8e1 <unknown>\n#4 0x562b1e348b94 <unknown>\n#5 0x562b1e3201cd <unknown>\n#6 0x562b1e345fee <unknown>\n#7 0x562b1e31ff73 <unknown>\n#8 0x562b1e2ecaeb <unknown>\n#9 0x562b1e2ed751 <unknown>\n#10 0x562b1e7c2b4b <unknown>\n#11 0x562b1e7c6929 <unknown>\n#12 0x562b1e7a9929 <unknown>\n#13 0x562b1e7c74e8 <unknown>\n#14 0x562b1e78e0df <unknown>\n#15 0x562b1e7eb8e8 <unknown>\n#16 0x562b1e7ebac6 <unknown>\n#17 0x562b1e7fd556 <unknown>\n#18 0x7f5bd889caa4 <unknown>\n#19 0x7f5bd8929c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e10c8717da <unknown>\n#1 0x55e10c3162e0 <unknown>\n#2 0x55e10c367e00 <unknown>\n#3 0x55e10c367ff1 <unknown>\n#4 0x55e10c3b6324 <unknown>\n#5 0x55e10c38d8dd <unknown>\n#6 0x55e10c3b371c <unknown>\n#7 0x55e10c38d683 <unknown>\n#8 0x55e10c359b5b <unknown>\n#9 0x55e10c35af31 <unknown>\n#10 0x55e10c83672b <unknown>\n#11 0x55e10c83a534 <unknown>\n#12 0x55e10c81d229 <unknown>\n#13 0x55e10c83b0d8 <unknown>\n#14 0x55e10c80161f <unknown>\n#15 0x55e10c85edd8 <unknown>\n#16 0x55e10c85efb6 <unknown>\n#17 0x55e10c870af6 <unknown>\n#18 0x7f0a07e9caa4 <unknown>\n#19 0x7f0a07f29c3c <unknown>",
+      "children" : [ {
+        "name" : "TC 01.03.13 correctness of the \"Pants\" link of the \"Women\" section",
+        "uid" : "3b07eb87d3e30b69",
+        "parentUid" : "47f631c53c0b500d1e00e24cfc55636c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1753666303591,
+          "stop" : 1753666310390,
+          "duration" : 6799
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "47f631c53c0b500d1e00e24cfc55636c"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d7ab8967da <unknown>\n#1 0x55d7ab33b2e0 <unknown>\n#2 0x55d7ab38ce00 <unknown>\n#3 0x55d7ab38cff1 <unknown>\n#4 0x55d7ab3db324 <unknown>\n#5 0x55d7ab3b28dd <unknown>\n#6 0x55d7ab3d871c <unknown>\n#7 0x55d7ab3b2683 <unknown>\n#8 0x55d7ab37eb5b <unknown>\n#9 0x55d7ab37ff31 <unknown>\n#10 0x55d7ab85b72b <unknown>\n#11 0x55d7ab85f534 <unknown>\n#12 0x55d7ab842229 <unknown>\n#13 0x55d7ab8600d8 <unknown>\n#14 0x55d7ab82661f <unknown>\n#15 0x55d7ab883dd8 <unknown>\n#16 0x55d7ab883fb6 <unknown>\n#17 0x55d7ab895af6 <unknown>\n#18 0x7f1771a9caa4 <unknown>\n#19 0x7f1771b29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.09 - Check the display of Section 2 in the Promo Block",
-        "uid" : "f3abf796b888c25f",
-        "parentUid" : "8dbd83406523e1fc94539c227f1a829c",
+        "uid" : "5b7222e53b62f914",
+        "parentUid" : "9e8ee14d8bea35bff6a4d6cf604957e2",
         "status" : "broken",
         "time" : {
-          "start" : 1753061574786,
-          "stop" : 1753061581577,
-          "duration" : 6791
+          "start" : 1753666408269,
+          "stop" : 1753666414758,
+          "duration" : 6489
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8dbd83406523e1fc94539c227f1a829c"
+      "uid" : "9e8ee14d8bea35bff6a4d6cf604957e2"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55adf245b23a <unknown>\n#1 0x55adf1f05ab0 <unknown>\n#2 0x55adf1f576f0 <unknown>\n#3 0x55adf1f578e1 <unknown>\n#4 0x55adf1fa5b94 <unknown>\n#5 0x55adf1f7d1cd <unknown>\n#6 0x55adf1fa2fee <unknown>\n#7 0x55adf1f7cf73 <unknown>\n#8 0x55adf1f49aeb <unknown>\n#9 0x55adf1f4a751 <unknown>\n#10 0x55adf241fb4b <unknown>\n#11 0x55adf2423929 <unknown>\n#12 0x55adf2406929 <unknown>\n#13 0x55adf24244e8 <unknown>\n#14 0x55adf23eb0df <unknown>\n#15 0x55adf24488e8 <unknown>\n#16 0x55adf2448ac6 <unknown>\n#17 0x55adf245a556 <unknown>\n#18 0x7f6988e9caa4 <unknown>\n#19 0x7f6988f29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562754d627da <unknown>\n#1 0x5627548072e0 <unknown>\n#2 0x562754858e00 <unknown>\n#3 0x562754858ff1 <unknown>\n#4 0x5627548a7324 <unknown>\n#5 0x56275487e8dd <unknown>\n#6 0x5627548a471c <unknown>\n#7 0x56275487e683 <unknown>\n#8 0x56275484ab5b <unknown>\n#9 0x56275484bf31 <unknown>\n#10 0x562754d2772b <unknown>\n#11 0x562754d2b534 <unknown>\n#12 0x562754d0e229 <unknown>\n#13 0x562754d2c0d8 <unknown>\n#14 0x562754cf261f <unknown>\n#15 0x562754d4fdd8 <unknown>\n#16 0x562754d4ffb6 <unknown>\n#17 0x562754d61af6 <unknown>\n#18 0x7fc72989caa4 <unknown>\n#19 0x7fc729929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.10 - Check display of block 1 'home-pants' in section 2 in the Promo Block",
-        "uid" : "36ecaeab26236efe",
-        "parentUid" : "429c64c711a7312ea41c593df8e564a2",
+        "uid" : "ec18f36449d8e2ee",
+        "parentUid" : "dc40a22a7ef5cc9b39d319a17474f2cf",
         "status" : "broken",
         "time" : {
-          "start" : 1753061583103,
-          "stop" : 1753061589799,
-          "duration" : 6696
+          "start" : 1753666416351,
+          "stop" : 1753666422760,
+          "duration" : 6409
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "429c64c711a7312ea41c593df8e564a2"
+      "uid" : "dc40a22a7ef5cc9b39d319a17474f2cf"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55708c8a423a <unknown>\n#1 0x55708c34eab0 <unknown>\n#2 0x55708c3a06f0 <unknown>\n#3 0x55708c3a08e1 <unknown>\n#4 0x55708c3eeb94 <unknown>\n#5 0x55708c3c61cd <unknown>\n#6 0x55708c3ebfee <unknown>\n#7 0x55708c3c5f73 <unknown>\n#8 0x55708c392aeb <unknown>\n#9 0x55708c393751 <unknown>\n#10 0x55708c868b4b <unknown>\n#11 0x55708c86c929 <unknown>\n#12 0x55708c84f929 <unknown>\n#13 0x55708c86d4e8 <unknown>\n#14 0x55708c8340df <unknown>\n#15 0x55708c8918e8 <unknown>\n#16 0x55708c891ac6 <unknown>\n#17 0x55708c8a3556 <unknown>\n#18 0x7f567a69caa4 <unknown>\n#19 0x7f567a729c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560668f8f7da <unknown>\n#1 0x560668a342e0 <unknown>\n#2 0x560668a85e00 <unknown>\n#3 0x560668a85ff1 <unknown>\n#4 0x560668ad4324 <unknown>\n#5 0x560668aab8dd <unknown>\n#6 0x560668ad171c <unknown>\n#7 0x560668aab683 <unknown>\n#8 0x560668a77b5b <unknown>\n#9 0x560668a78f31 <unknown>\n#10 0x560668f5472b <unknown>\n#11 0x560668f58534 <unknown>\n#12 0x560668f3b229 <unknown>\n#13 0x560668f590d8 <unknown>\n#14 0x560668f1f61f <unknown>\n#15 0x560668f7cdd8 <unknown>\n#16 0x560668f7cfb6 <unknown>\n#17 0x560668f8eaf6 <unknown>\n#18 0x7f3662c9caa4 <unknown>\n#19 0x7f3662d29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.11 - Check display of block 2 'home-t-shirts' in section 2 in the Promo Block",
-        "uid" : "736e72b1514310d6",
-        "parentUid" : "970feacdb0c1181cf28635f1091f0b16",
+        "uid" : "720a3df846299d92",
+        "parentUid" : "eef5e7b50fbae052040c74d637d71108",
         "status" : "broken",
         "time" : {
-          "start" : 1753061591332,
-          "stop" : 1753061598013,
-          "duration" : 6681
+          "start" : 1753666424352,
+          "stop" : 1753666430855,
+          "duration" : 6503
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "970feacdb0c1181cf28635f1091f0b16"
+      "uid" : "eef5e7b50fbae052040c74d637d71108"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560a437e323a <unknown>\n#1 0x560a4328dab0 <unknown>\n#2 0x560a432df6f0 <unknown>\n#3 0x560a432df8e1 <unknown>\n#4 0x560a4332db94 <unknown>\n#5 0x560a433051cd <unknown>\n#6 0x560a4332afee <unknown>\n#7 0x560a43304f73 <unknown>\n#8 0x560a432d1aeb <unknown>\n#9 0x560a432d2751 <unknown>\n#10 0x560a437a7b4b <unknown>\n#11 0x560a437ab929 <unknown>\n#12 0x560a4378e929 <unknown>\n#13 0x560a437ac4e8 <unknown>\n#14 0x560a437730df <unknown>\n#15 0x560a437d08e8 <unknown>\n#16 0x560a437d0ac6 <unknown>\n#17 0x560a437e2556 <unknown>\n#18 0x7f73fda9caa4 <unknown>\n#19 0x7f73fdb29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f0ea7907da <unknown>\n#1 0x55f0ea2352e0 <unknown>\n#2 0x55f0ea286e00 <unknown>\n#3 0x55f0ea286ff1 <unknown>\n#4 0x55f0ea2d5324 <unknown>\n#5 0x55f0ea2ac8dd <unknown>\n#6 0x55f0ea2d271c <unknown>\n#7 0x55f0ea2ac683 <unknown>\n#8 0x55f0ea278b5b <unknown>\n#9 0x55f0ea279f31 <unknown>\n#10 0x55f0ea75572b <unknown>\n#11 0x55f0ea759534 <unknown>\n#12 0x55f0ea73c229 <unknown>\n#13 0x55f0ea75a0d8 <unknown>\n#14 0x55f0ea72061f <unknown>\n#15 0x55f0ea77ddd8 <unknown>\n#16 0x55f0ea77dfb6 <unknown>\n#17 0x55f0ea78faf6 <unknown>\n#18 0x7fdf6be9caa4 <unknown>\n#19 0x7fdf6bf29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.12 - Check display of block 3 'home-erin' in section 2 in the Promo Block",
-        "uid" : "f0e8e0edab8a7376",
-        "parentUid" : "8d7de4b5dd2876e561e45cc511b8e653",
+        "uid" : "a9bf06b779d0bfcb",
+        "parentUid" : "de572d77c3494f08b74a9aaff7010a13",
         "status" : "broken",
         "time" : {
-          "start" : 1753061599547,
-          "stop" : 1753061606153,
-          "duration" : 6606
+          "start" : 1753666432451,
+          "stop" : 1753666438853,
+          "duration" : 6402
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8d7de4b5dd2876e561e45cc511b8e653"
+      "uid" : "de572d77c3494f08b74a9aaff7010a13"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55bfa876b23a <unknown>\n#1 0x55bfa8215ab0 <unknown>\n#2 0x55bfa82676f0 <unknown>\n#3 0x55bfa82678e1 <unknown>\n#4 0x55bfa82b5b94 <unknown>\n#5 0x55bfa828d1cd <unknown>\n#6 0x55bfa82b2fee <unknown>\n#7 0x55bfa828cf73 <unknown>\n#8 0x55bfa8259aeb <unknown>\n#9 0x55bfa825a751 <unknown>\n#10 0x55bfa872fb4b <unknown>\n#11 0x55bfa8733929 <unknown>\n#12 0x55bfa8716929 <unknown>\n#13 0x55bfa87344e8 <unknown>\n#14 0x55bfa86fb0df <unknown>\n#15 0x55bfa87588e8 <unknown>\n#16 0x55bfa8758ac6 <unknown>\n#17 0x55bfa876a556 <unknown>\n#18 0x7f342f09caa4 <unknown>\n#19 0x7f342f129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562ecf5cd7da <unknown>\n#1 0x562ecf0722e0 <unknown>\n#2 0x562ecf0c3e00 <unknown>\n#3 0x562ecf0c3ff1 <unknown>\n#4 0x562ecf112324 <unknown>\n#5 0x562ecf0e98dd <unknown>\n#6 0x562ecf10f71c <unknown>\n#7 0x562ecf0e9683 <unknown>\n#8 0x562ecf0b5b5b <unknown>\n#9 0x562ecf0b6f31 <unknown>\n#10 0x562ecf59272b <unknown>\n#11 0x562ecf596534 <unknown>\n#12 0x562ecf579229 <unknown>\n#13 0x562ecf5970d8 <unknown>\n#14 0x562ecf55d61f <unknown>\n#15 0x562ecf5badd8 <unknown>\n#16 0x562ecf5bafb6 <unknown>\n#17 0x562ecf5ccaf6 <unknown>\n#18 0x7f5e4629caa4 <unknown>\n#19 0x7f5e46329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.13 - Check display of block 4 'home-performance' in section 2 in the Promo Block",
-        "uid" : "3c0c634daec4fd87",
-        "parentUid" : "0a988b6453f2cb7f5ba11930f7ee4c3a",
+        "uid" : "61002780c4dc577",
+        "parentUid" : "3d104ec88aa531d19689590e6a631ea9",
         "status" : "broken",
         "time" : {
-          "start" : 1753061607696,
-          "stop" : 1753061614372,
-          "duration" : 6676
+          "start" : 1753666440435,
+          "stop" : 1753666447019,
+          "duration" : 6584
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "0a988b6453f2cb7f5ba11930f7ee4c3a"
+      "uid" : "3d104ec88aa531d19689590e6a631ea9"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c80d29c23a <unknown>\n#1 0x55c80cd46ab0 <unknown>\n#2 0x55c80cd986f0 <unknown>\n#3 0x55c80cd988e1 <unknown>\n#4 0x55c80cde6b94 <unknown>\n#5 0x55c80cdbe1cd <unknown>\n#6 0x55c80cde3fee <unknown>\n#7 0x55c80cdbdf73 <unknown>\n#8 0x55c80cd8aaeb <unknown>\n#9 0x55c80cd8b751 <unknown>\n#10 0x55c80d260b4b <unknown>\n#11 0x55c80d264929 <unknown>\n#12 0x55c80d247929 <unknown>\n#13 0x55c80d2654e8 <unknown>\n#14 0x55c80d22c0df <unknown>\n#15 0x55c80d2898e8 <unknown>\n#16 0x55c80d289ac6 <unknown>\n#17 0x55c80d29b556 <unknown>\n#18 0x7f144649caa4 <unknown>\n#19 0x7f1446529c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556e097bd7da <unknown>\n#1 0x556e092622e0 <unknown>\n#2 0x556e092b3e00 <unknown>\n#3 0x556e092b3ff1 <unknown>\n#4 0x556e09302324 <unknown>\n#5 0x556e092d98dd <unknown>\n#6 0x556e092ff71c <unknown>\n#7 0x556e092d9683 <unknown>\n#8 0x556e092a5b5b <unknown>\n#9 0x556e092a6f31 <unknown>\n#10 0x556e0978272b <unknown>\n#11 0x556e09786534 <unknown>\n#12 0x556e09769229 <unknown>\n#13 0x556e097870d8 <unknown>\n#14 0x556e0974d61f <unknown>\n#15 0x556e097aadd8 <unknown>\n#16 0x556e097aafb6 <unknown>\n#17 0x556e097bcaf6 <unknown>\n#18 0x7fcfc1e9caa4 <unknown>\n#19 0x7fcfc1f29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.14 - Check display of block 5 'home-eco' in section 2 in the Promo Block",
-        "uid" : "cfe51e9c5956e14f",
-        "parentUid" : "4bf166ec33ef1845c4109b8373b7a308",
+        "uid" : "40d5c020ed00ea43",
+        "parentUid" : "2716b652a3b03621966a483be8ada9c7",
         "status" : "broken",
         "time" : {
-          "start" : 1753061615897,
-          "stop" : 1753061622661,
-          "duration" : 6764
+          "start" : 1753666448625,
+          "stop" : 1753666454956,
+          "duration" : 6331
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "4bf166ec33ef1845c4109b8373b7a308"
+      "uid" : "2716b652a3b03621966a483be8ada9c7"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c9fd45f23a <unknown>\n#1 0x55c9fcf09ab0 <unknown>\n#2 0x55c9fcf5b6f0 <unknown>\n#3 0x55c9fcf5b8e1 <unknown>\n#4 0x55c9fcfa9b94 <unknown>\n#5 0x55c9fcf811cd <unknown>\n#6 0x55c9fcfa6fee <unknown>\n#7 0x55c9fcf80f73 <unknown>\n#8 0x55c9fcf4daeb <unknown>\n#9 0x55c9fcf4e751 <unknown>\n#10 0x55c9fd423b4b <unknown>\n#11 0x55c9fd427929 <unknown>\n#12 0x55c9fd40a929 <unknown>\n#13 0x55c9fd4284e8 <unknown>\n#14 0x55c9fd3ef0df <unknown>\n#15 0x55c9fd44c8e8 <unknown>\n#16 0x55c9fd44cac6 <unknown>\n#17 0x55c9fd45e556 <unknown>\n#18 0x7f638589caa4 <unknown>\n#19 0x7f6385929c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5617e2f1c7da <unknown>\n#1 0x5617e29c12e0 <unknown>\n#2 0x5617e2a12e00 <unknown>\n#3 0x5617e2a12ff1 <unknown>\n#4 0x5617e2a61324 <unknown>\n#5 0x5617e2a388dd <unknown>\n#6 0x5617e2a5e71c <unknown>\n#7 0x5617e2a38683 <unknown>\n#8 0x5617e2a04b5b <unknown>\n#9 0x5617e2a05f31 <unknown>\n#10 0x5617e2ee172b <unknown>\n#11 0x5617e2ee5534 <unknown>\n#12 0x5617e2ec8229 <unknown>\n#13 0x5617e2ee60d8 <unknown>\n#14 0x5617e2eac61f <unknown>\n#15 0x5617e2f09dd8 <unknown>\n#16 0x5617e2f09fb6 <unknown>\n#17 0x5617e2f1baf6 <unknown>\n#18 0x7f1f1509caa4 <unknown>\n#19 0x7f1f15129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.15 - Check the display of an image in block 1 'home-pants' in the Promo Block",
-        "uid" : "8425d680d474e9c",
-        "parentUid" : "f99250764b884ce91ffc3d09cae36924",
+        "uid" : "aceb20beb67cb211",
+        "parentUid" : "5a81f3c03bba63fb0eecb7da6b6d7f2d",
         "status" : "broken",
         "time" : {
-          "start" : 1753061624196,
-          "stop" : 1753061630732,
-          "duration" : 6536
+          "start" : 1753666456535,
+          "stop" : 1753666463041,
+          "duration" : 6506
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f99250764b884ce91ffc3d09cae36924"
+      "uid" : "5a81f3c03bba63fb0eecb7da6b6d7f2d"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-pants img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x560579bcf23a <unknown>\n#1 0x560579679ab0 <unknown>\n#2 0x5605796cb6f0 <unknown>\n#3 0x5605796cb8e1 <unknown>\n#4 0x560579719b94 <unknown>\n#5 0x5605796f11cd <unknown>\n#6 0x560579716fee <unknown>\n#7 0x5605796f0f73 <unknown>\n#8 0x5605796bdaeb <unknown>\n#9 0x5605796be751 <unknown>\n#10 0x560579b93b4b <unknown>\n#11 0x560579b97929 <unknown>\n#12 0x560579b7a929 <unknown>\n#13 0x560579b984e8 <unknown>\n#14 0x560579b5f0df <unknown>\n#15 0x560579bbc8e8 <unknown>\n#16 0x560579bbcac6 <unknown>\n#17 0x560579bce556 <unknown>\n#18 0x7f0d1369caa4 <unknown>\n#19 0x7f0d13729c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-pants img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x559ad0daf7da <unknown>\n#1 0x559ad08542e0 <unknown>\n#2 0x559ad08a5e00 <unknown>\n#3 0x559ad08a5ff1 <unknown>\n#4 0x559ad08f4324 <unknown>\n#5 0x559ad08cb8dd <unknown>\n#6 0x559ad08f171c <unknown>\n#7 0x559ad08cb683 <unknown>\n#8 0x559ad0897b5b <unknown>\n#9 0x559ad0898f31 <unknown>\n#10 0x559ad0d7472b <unknown>\n#11 0x559ad0d78534 <unknown>\n#12 0x559ad0d5b229 <unknown>\n#13 0x559ad0d790d8 <unknown>\n#14 0x559ad0d3f61f <unknown>\n#15 0x559ad0d9cdd8 <unknown>\n#16 0x559ad0d9cfb6 <unknown>\n#17 0x559ad0daeaf6 <unknown>\n#18 0x7f1595e9caa4 <unknown>\n#19 0x7f1595f29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.16 - Check correctness of the image in block 1 'home-pants' in the Promo Block",
-        "uid" : "87cb377dcfc85ca0",
-        "parentUid" : "87b02314bd10c6e68f71b4cd6179443b",
+        "uid" : "5566b4b1176c5831",
+        "parentUid" : "a4228bdff73818478c196e72d6b417f6",
         "status" : "broken",
         "time" : {
-          "start" : 1753061632265,
-          "stop" : 1753061633613,
-          "duration" : 1348
+          "start" : 1753666464633,
+          "stop" : 1753666466710,
+          "duration" : 2077
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "87b02314bd10c6e68f71b4cd6179443b"
+      "uid" : "a4228bdff73818478c196e72d6b417f6"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56321ebe023a <unknown>\n#1 0x56321e68aab0 <unknown>\n#2 0x56321e6dc6f0 <unknown>\n#3 0x56321e6dc8e1 <unknown>\n#4 0x56321e72ab94 <unknown>\n#5 0x56321e7021cd <unknown>\n#6 0x56321e727fee <unknown>\n#7 0x56321e701f73 <unknown>\n#8 0x56321e6ceaeb <unknown>\n#9 0x56321e6cf751 <unknown>\n#10 0x56321eba4b4b <unknown>\n#11 0x56321eba8929 <unknown>\n#12 0x56321eb8b929 <unknown>\n#13 0x56321eba94e8 <unknown>\n#14 0x56321eb700df <unknown>\n#15 0x56321ebcd8e8 <unknown>\n#16 0x56321ebcdac6 <unknown>\n#17 0x56321ebdf556 <unknown>\n#18 0x7fa81e09caa4 <unknown>\n#19 0x7fa81e129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ac0530b7da <unknown>\n#1 0x55ac04db02e0 <unknown>\n#2 0x55ac04e01e00 <unknown>\n#3 0x55ac04e01ff1 <unknown>\n#4 0x55ac04e50324 <unknown>\n#5 0x55ac04e278dd <unknown>\n#6 0x55ac04e4d71c <unknown>\n#7 0x55ac04e27683 <unknown>\n#8 0x55ac04df3b5b <unknown>\n#9 0x55ac04df4f31 <unknown>\n#10 0x55ac052d072b <unknown>\n#11 0x55ac052d4534 <unknown>\n#12 0x55ac052b7229 <unknown>\n#13 0x55ac052d50d8 <unknown>\n#14 0x55ac0529b61f <unknown>\n#15 0x55ac052f8dd8 <unknown>\n#16 0x55ac052f8fb6 <unknown>\n#17 0x55ac0530aaf6 <unknown>\n#18 0x7f481729caa4 <unknown>\n#19 0x7f4817329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.17 - Check the display of the info block in block 1 'home-pants' in the Promo Block",
-        "uid" : "f6c1d6b124e1817c",
-        "parentUid" : "154a475025d7e5c2a6f543341f92ceab",
+        "uid" : "3a998c52ba3cc89a",
+        "parentUid" : "92e0d3ed45fce76a6f0a1c2d12ffd61d",
         "status" : "broken",
         "time" : {
-          "start" : 1753061635264,
-          "stop" : 1753061642214,
-          "duration" : 6950
+          "start" : 1753666468467,
+          "stop" : 1753666474980,
+          "duration" : 6513
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "154a475025d7e5c2a6f543341f92ceab"
+      "uid" : "92e0d3ed45fce76a6f0a1c2d12ffd61d"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56014696923a <unknown>\n#1 0x560146413ab0 <unknown>\n#2 0x5601464656f0 <unknown>\n#3 0x5601464658e1 <unknown>\n#4 0x5601464b3b94 <unknown>\n#5 0x56014648b1cd <unknown>\n#6 0x5601464b0fee <unknown>\n#7 0x56014648af73 <unknown>\n#8 0x560146457aeb <unknown>\n#9 0x560146458751 <unknown>\n#10 0x56014692db4b <unknown>\n#11 0x560146931929 <unknown>\n#12 0x560146914929 <unknown>\n#13 0x5601469324e8 <unknown>\n#14 0x5601468f90df <unknown>\n#15 0x5601469568e8 <unknown>\n#16 0x560146956ac6 <unknown>\n#17 0x560146968556 <unknown>\n#18 0x7f9a7589caa4 <unknown>\n#19 0x7f9a75929c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5600c97867da <unknown>\n#1 0x5600c922b2e0 <unknown>\n#2 0x5600c927ce00 <unknown>\n#3 0x5600c927cff1 <unknown>\n#4 0x5600c92cb324 <unknown>\n#5 0x5600c92a28dd <unknown>\n#6 0x5600c92c871c <unknown>\n#7 0x5600c92a2683 <unknown>\n#8 0x5600c926eb5b <unknown>\n#9 0x5600c926ff31 <unknown>\n#10 0x5600c974b72b <unknown>\n#11 0x5600c974f534 <unknown>\n#12 0x5600c9732229 <unknown>\n#13 0x5600c97500d8 <unknown>\n#14 0x5600c971661f <unknown>\n#15 0x5600c9773dd8 <unknown>\n#16 0x5600c9773fb6 <unknown>\n#17 0x5600c9785af6 <unknown>\n#18 0x7f9bbcc9caa4 <unknown>\n#19 0x7f9bbcd29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.18 - Check the display of the title in block 1 'home-pants' in the Promo Block",
-        "uid" : "e1ea1ac5731be930",
-        "parentUid" : "82d812bfa3831985906acbd3af4dd6a5",
+        "uid" : "4ceeba989646d996",
+        "parentUid" : "6be20378869d7bb038ef7da6a0f887fb",
         "status" : "broken",
         "time" : {
-          "start" : 1753061643787,
-          "stop" : 1753061650686,
-          "duration" : 6899
+          "start" : 1753666476587,
+          "stop" : 1753666482958,
+          "duration" : 6371
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "82d812bfa3831985906acbd3af4dd6a5"
+      "uid" : "6be20378869d7bb038ef7da6a0f887fb"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55bb8bb7123a <unknown>\n#1 0x55bb8b61bab0 <unknown>\n#2 0x55bb8b66d6f0 <unknown>\n#3 0x55bb8b66d8e1 <unknown>\n#4 0x55bb8b6bbb94 <unknown>\n#5 0x55bb8b6931cd <unknown>\n#6 0x55bb8b6b8fee <unknown>\n#7 0x55bb8b692f73 <unknown>\n#8 0x55bb8b65faeb <unknown>\n#9 0x55bb8b660751 <unknown>\n#10 0x55bb8bb35b4b <unknown>\n#11 0x55bb8bb39929 <unknown>\n#12 0x55bb8bb1c929 <unknown>\n#13 0x55bb8bb3a4e8 <unknown>\n#14 0x55bb8bb010df <unknown>\n#15 0x55bb8bb5e8e8 <unknown>\n#16 0x55bb8bb5eac6 <unknown>\n#17 0x55bb8bb70556 <unknown>\n#18 0x7fb97de9caa4 <unknown>\n#19 0x7fb97df29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e37c5877da <unknown>\n#1 0x55e37c02c2e0 <unknown>\n#2 0x55e37c07de00 <unknown>\n#3 0x55e37c07dff1 <unknown>\n#4 0x55e37c0cc324 <unknown>\n#5 0x55e37c0a38dd <unknown>\n#6 0x55e37c0c971c <unknown>\n#7 0x55e37c0a3683 <unknown>\n#8 0x55e37c06fb5b <unknown>\n#9 0x55e37c070f31 <unknown>\n#10 0x55e37c54c72b <unknown>\n#11 0x55e37c550534 <unknown>\n#12 0x55e37c533229 <unknown>\n#13 0x55e37c5510d8 <unknown>\n#14 0x55e37c51761f <unknown>\n#15 0x55e37c574dd8 <unknown>\n#16 0x55e37c574fb6 <unknown>\n#17 0x55e37c586af6 <unknown>\n#18 0x7f7afdc9caa4 <unknown>\n#19 0x7f7afdd29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.19 - Check the display of the text in block 1 'home-pants' in the Promo Block",
-        "uid" : "494b05f05d689d0e",
-        "parentUid" : "6d4ff142394bc5109d30193b9f21d056",
+        "uid" : "94d24334d63b75a5",
+        "parentUid" : "f6a86896c86b984ccff5f422a4a7fee2",
         "status" : "broken",
         "time" : {
-          "start" : 1753061652249,
-          "stop" : 1753061658949,
-          "duration" : 6700
+          "start" : 1753666484566,
+          "stop" : 1753666490704,
+          "duration" : 6138
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "6d4ff142394bc5109d30193b9f21d056"
+      "uid" : "f6a86896c86b984ccff5f422a4a7fee2"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b3d551b23a <unknown>\n#1 0x55b3d4fc5ab0 <unknown>\n#2 0x55b3d50176f0 <unknown>\n#3 0x55b3d50178e1 <unknown>\n#4 0x55b3d5065b94 <unknown>\n#5 0x55b3d503d1cd <unknown>\n#6 0x55b3d5062fee <unknown>\n#7 0x55b3d503cf73 <unknown>\n#8 0x55b3d5009aeb <unknown>\n#9 0x55b3d500a751 <unknown>\n#10 0x55b3d54dfb4b <unknown>\n#11 0x55b3d54e3929 <unknown>\n#12 0x55b3d54c6929 <unknown>\n#13 0x55b3d54e44e8 <unknown>\n#14 0x55b3d54ab0df <unknown>\n#15 0x55b3d55088e8 <unknown>\n#16 0x55b3d5508ac6 <unknown>\n#17 0x55b3d551a556 <unknown>\n#18 0x7f8e4609caa4 <unknown>\n#19 0x7f8e46129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55977d0897da <unknown>\n#1 0x55977cb2e2e0 <unknown>\n#2 0x55977cb7fe00 <unknown>\n#3 0x55977cb7fff1 <unknown>\n#4 0x55977cbce324 <unknown>\n#5 0x55977cba58dd <unknown>\n#6 0x55977cbcb71c <unknown>\n#7 0x55977cba5683 <unknown>\n#8 0x55977cb71b5b <unknown>\n#9 0x55977cb72f31 <unknown>\n#10 0x55977d04e72b <unknown>\n#11 0x55977d052534 <unknown>\n#12 0x55977d035229 <unknown>\n#13 0x55977d0530d8 <unknown>\n#14 0x55977d01961f <unknown>\n#15 0x55977d076dd8 <unknown>\n#16 0x55977d076fb6 <unknown>\n#17 0x55977d088af6 <unknown>\n#18 0x7fe362a9caa4 <unknown>\n#19 0x7fe362b29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.20 - Check the display of the sign in block 1 'home-pants' in the Promo Block",
-        "uid" : "b668191222c661a8",
-        "parentUid" : "e6c66d93badefb14446785aa84b2a361",
+        "uid" : "cf3aebf6791986e1",
+        "parentUid" : "0e5c8016ca0902003703f3549cc0c2eb",
         "status" : "broken",
         "time" : {
-          "start" : 1753061660479,
-          "stop" : 1753061667254,
-          "duration" : 6775
+          "start" : 1753666492303,
+          "stop" : 1753666498618,
+          "duration" : 6315
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "e6c66d93badefb14446785aa84b2a361"
+      "uid" : "0e5c8016ca0902003703f3549cc0c2eb"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x564a6426823a <unknown>\n#1 0x564a63d12ab0 <unknown>\n#2 0x564a63d646f0 <unknown>\n#3 0x564a63d648e1 <unknown>\n#4 0x564a63db2b94 <unknown>\n#5 0x564a63d8a1cd <unknown>\n#6 0x564a63daffee <unknown>\n#7 0x564a63d89f73 <unknown>\n#8 0x564a63d56aeb <unknown>\n#9 0x564a63d57751 <unknown>\n#10 0x564a6422cb4b <unknown>\n#11 0x564a64230929 <unknown>\n#12 0x564a64213929 <unknown>\n#13 0x564a642314e8 <unknown>\n#14 0x564a641f80df <unknown>\n#15 0x564a642558e8 <unknown>\n#16 0x564a64255ac6 <unknown>\n#17 0x564a64267556 <unknown>\n#18 0x7fe86409caa4 <unknown>\n#19 0x7fe864129c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5629c3c457da <unknown>\n#1 0x5629c36ea2e0 <unknown>\n#2 0x5629c373be00 <unknown>\n#3 0x5629c373bff1 <unknown>\n#4 0x5629c378a324 <unknown>\n#5 0x5629c37618dd <unknown>\n#6 0x5629c378771c <unknown>\n#7 0x5629c3761683 <unknown>\n#8 0x5629c372db5b <unknown>\n#9 0x5629c372ef31 <unknown>\n#10 0x5629c3c0a72b <unknown>\n#11 0x5629c3c0e534 <unknown>\n#12 0x5629c3bf1229 <unknown>\n#13 0x5629c3c0f0d8 <unknown>\n#14 0x5629c3bd561f <unknown>\n#15 0x5629c3c32dd8 <unknown>\n#16 0x5629c3c32fb6 <unknown>\n#17 0x5629c3c44af6 <unknown>\n#18 0x7f00dfc9caa4 <unknown>\n#19 0x7f00dfd29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.21 - Check the display of an image in block 2 'home-t-shirts' in the Promo Block",
-        "uid" : "80edbce9194d7200",
-        "parentUid" : "38af08029e4a0612a5b99ef0c4dff924",
+        "uid" : "c709d32004e04b7c",
+        "parentUid" : "93a804db6a0a7ec4369f76d373da50a9",
         "status" : "broken",
         "time" : {
-          "start" : 1753061668764,
-          "stop" : 1753061670080,
-          "duration" : 1316
+          "start" : 1753666500267,
+          "stop" : 1753666501924,
+          "duration" : 1657
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "38af08029e4a0612a5b99ef0c4dff924"
+      "uid" : "93a804db6a0a7ec4369f76d373da50a9"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55ad4257923a <unknown>\n#1 0x55ad42023ab0 <unknown>\n#2 0x55ad420756f0 <unknown>\n#3 0x55ad420758e1 <unknown>\n#4 0x55ad420c3b94 <unknown>\n#5 0x55ad4209b1cd <unknown>\n#6 0x55ad420c0fee <unknown>\n#7 0x55ad4209af73 <unknown>\n#8 0x55ad42067aeb <unknown>\n#9 0x55ad42068751 <unknown>\n#10 0x55ad4253db4b <unknown>\n#11 0x55ad42541929 <unknown>\n#12 0x55ad42524929 <unknown>\n#13 0x55ad425424e8 <unknown>\n#14 0x55ad425090df <unknown>\n#15 0x55ad425668e8 <unknown>\n#16 0x55ad42566ac6 <unknown>\n#17 0x55ad42578556 <unknown>\n#18 0x7ff6a429caa4 <unknown>\n#19 0x7ff6a4329c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5577d4a297da <unknown>\n#1 0x5577d44ce2e0 <unknown>\n#2 0x5577d451fe00 <unknown>\n#3 0x5577d451fff1 <unknown>\n#4 0x5577d456e324 <unknown>\n#5 0x5577d45458dd <unknown>\n#6 0x5577d456b71c <unknown>\n#7 0x5577d4545683 <unknown>\n#8 0x5577d4511b5b <unknown>\n#9 0x5577d4512f31 <unknown>\n#10 0x5577d49ee72b <unknown>\n#11 0x5577d49f2534 <unknown>\n#12 0x5577d49d5229 <unknown>\n#13 0x5577d49f30d8 <unknown>\n#14 0x5577d49b961f <unknown>\n#15 0x5577d4a16dd8 <unknown>\n#16 0x5577d4a16fb6 <unknown>\n#17 0x5577d4a28af6 <unknown>\n#18 0x7fb4c369caa4 <unknown>\n#19 0x7fb4c3729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.21_01 - Check correctness of the image in block 2 'home-t-shirts' in the Promo Block",
-        "uid" : "db2e1879184bbdfc",
-        "parentUid" : "491cbb8bfbd74632b8dc99545b41399e",
+        "uid" : "c24f839850e5d0fb",
+        "parentUid" : "a450ca344a61774a0ffa8f0da4d39e41",
         "status" : "broken",
         "time" : {
-          "start" : 1753061671713,
-          "stop" : 1753061673166,
-          "duration" : 1453
+          "start" : 1753666503633,
+          "stop" : 1753666504910,
+          "duration" : 1277
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "491cbb8bfbd74632b8dc99545b41399e"
+      "uid" : "a450ca344a61774a0ffa8f0da4d39e41"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x557246a0f23a <unknown>\n#1 0x5572464b9ab0 <unknown>\n#2 0x55724650b6f0 <unknown>\n#3 0x55724650b8e1 <unknown>\n#4 0x557246559b94 <unknown>\n#5 0x5572465311cd <unknown>\n#6 0x557246556fee <unknown>\n#7 0x557246530f73 <unknown>\n#8 0x5572464fdaeb <unknown>\n#9 0x5572464fe751 <unknown>\n#10 0x5572469d3b4b <unknown>\n#11 0x5572469d7929 <unknown>\n#12 0x5572469ba929 <unknown>\n#13 0x5572469d84e8 <unknown>\n#14 0x55724699f0df <unknown>\n#15 0x5572469fc8e8 <unknown>\n#16 0x5572469fcac6 <unknown>\n#17 0x557246a0e556 <unknown>\n#18 0x7f549aa9caa4 <unknown>\n#19 0x7f549ab29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55de27db17da <unknown>\n#1 0x55de278562e0 <unknown>\n#2 0x55de278a7e00 <unknown>\n#3 0x55de278a7ff1 <unknown>\n#4 0x55de278f6324 <unknown>\n#5 0x55de278cd8dd <unknown>\n#6 0x55de278f371c <unknown>\n#7 0x55de278cd683 <unknown>\n#8 0x55de27899b5b <unknown>\n#9 0x55de2789af31 <unknown>\n#10 0x55de27d7672b <unknown>\n#11 0x55de27d7a534 <unknown>\n#12 0x55de27d5d229 <unknown>\n#13 0x55de27d7b0d8 <unknown>\n#14 0x55de27d4161f <unknown>\n#15 0x55de27d9edd8 <unknown>\n#16 0x55de27d9efb6 <unknown>\n#17 0x55de27db0af6 <unknown>\n#18 0x7f1bb209caa4 <unknown>\n#19 0x7f1bb2129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.22 - Check the display of the info block in block 2 't-shirts' in the Promo Block",
-        "uid" : "6af565d523288024",
-        "parentUid" : "ab50d935f6898603764a8a430b77db8f",
+        "uid" : "66efaed8eb75656",
+        "parentUid" : "01ad4dbe27f676d10b8a8bc3279b3568",
         "status" : "broken",
         "time" : {
-          "start" : 1753061674778,
-          "stop" : 1753061681458,
-          "duration" : 6680
+          "start" : 1753666506616,
+          "stop" : 1753666513023,
+          "duration" : 6407
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "ab50d935f6898603764a8a430b77db8f"
+      "uid" : "01ad4dbe27f676d10b8a8bc3279b3568"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts .content .title\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55d1a50c623a <unknown>\n#1 0x55d1a4b70ab0 <unknown>\n#2 0x55d1a4bc26f0 <unknown>\n#3 0x55d1a4bc28e1 <unknown>\n#4 0x55d1a4c10b94 <unknown>\n#5 0x55d1a4be81cd <unknown>\n#6 0x55d1a4c0dfee <unknown>\n#7 0x55d1a4be7f73 <unknown>\n#8 0x55d1a4bb4aeb <unknown>\n#9 0x55d1a4bb5751 <unknown>\n#10 0x55d1a508ab4b <unknown>\n#11 0x55d1a508e929 <unknown>\n#12 0x55d1a5071929 <unknown>\n#13 0x55d1a508f4e8 <unknown>\n#14 0x55d1a50560df <unknown>\n#15 0x55d1a50b38e8 <unknown>\n#16 0x55d1a50b3ac6 <unknown>\n#17 0x55d1a50c5556 <unknown>\n#18 0x7f51aba9caa4 <unknown>\n#19 0x7f51abb29c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts .content .title\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55a6d3be37da <unknown>\n#1 0x55a6d36882e0 <unknown>\n#2 0x55a6d36d9e00 <unknown>\n#3 0x55a6d36d9ff1 <unknown>\n#4 0x55a6d3728324 <unknown>\n#5 0x55a6d36ff8dd <unknown>\n#6 0x55a6d372571c <unknown>\n#7 0x55a6d36ff683 <unknown>\n#8 0x55a6d36cbb5b <unknown>\n#9 0x55a6d36ccf31 <unknown>\n#10 0x55a6d3ba872b <unknown>\n#11 0x55a6d3bac534 <unknown>\n#12 0x55a6d3b8f229 <unknown>\n#13 0x55a6d3bad0d8 <unknown>\n#14 0x55a6d3b7361f <unknown>\n#15 0x55a6d3bd0dd8 <unknown>\n#16 0x55a6d3bd0fb6 <unknown>\n#17 0x55a6d3be2af6 <unknown>\n#18 0x7f0dc969caa4 <unknown>\n#19 0x7f0dc9729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block",
-        "uid" : "ca2d02e0a01c3a0",
-        "parentUid" : "dd5c7b9b93d0d0c7133885b804ed35f6",
+        "uid" : "1a18b65ae392406f",
+        "parentUid" : "b7090d85dc613378dd6837c9002aa2a2",
         "status" : "broken",
         "time" : {
-          "start" : 1753061682976,
-          "stop" : 1753061684817,
-          "duration" : 1841
+          "start" : 1753666514617,
+          "stop" : 1753666516032,
+          "duration" : 1415
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "dd5c7b9b93d0d0c7133885b804ed35f6"
+      "uid" : "b7090d85dc613378dd6837c9002aa2a2"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts .content .info\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x560b0352123a <unknown>\n#1 0x560b02fcbab0 <unknown>\n#2 0x560b0301d6f0 <unknown>\n#3 0x560b0301d8e1 <unknown>\n#4 0x560b0306bb94 <unknown>\n#5 0x560b030431cd <unknown>\n#6 0x560b03068fee <unknown>\n#7 0x560b03042f73 <unknown>\n#8 0x560b0300faeb <unknown>\n#9 0x560b03010751 <unknown>\n#10 0x560b034e5b4b <unknown>\n#11 0x560b034e9929 <unknown>\n#12 0x560b034cc929 <unknown>\n#13 0x560b034ea4e8 <unknown>\n#14 0x560b034b10df <unknown>\n#15 0x560b0350e8e8 <unknown>\n#16 0x560b0350eac6 <unknown>\n#17 0x560b03520556 <unknown>\n#18 0x7fd1ec29caa4 <unknown>\n#19 0x7fd1ec329c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts .content .info\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x564754bb37da <unknown>\n#1 0x5647546582e0 <unknown>\n#2 0x5647546a9e00 <unknown>\n#3 0x5647546a9ff1 <unknown>\n#4 0x5647546f8324 <unknown>\n#5 0x5647546cf8dd <unknown>\n#6 0x5647546f571c <unknown>\n#7 0x5647546cf683 <unknown>\n#8 0x56475469bb5b <unknown>\n#9 0x56475469cf31 <unknown>\n#10 0x564754b7872b <unknown>\n#11 0x564754b7c534 <unknown>\n#12 0x564754b5f229 <unknown>\n#13 0x564754b7d0d8 <unknown>\n#14 0x564754b4361f <unknown>\n#15 0x564754ba0dd8 <unknown>\n#16 0x564754ba0fb6 <unknown>\n#17 0x564754bb2af6 <unknown>\n#18 0x7f00e069caa4 <unknown>\n#19 0x7f00e0729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.24 - Check the display of the text in block 2 'home-t-shirts' in the Promo Block",
-        "uid" : "2fd9ab1d270bb98a",
-        "parentUid" : "59b96c6c078cc1a3f603d28fedb0acb4",
+        "uid" : "763417b07c6c9793",
+        "parentUid" : "5a57e39606f8824a18dc60eb753cda39",
         "status" : "broken",
         "time" : {
-          "start" : 1753061686445,
-          "stop" : 1753061687829,
-          "duration" : 1384
+          "start" : 1753666517732,
+          "stop" : 1753666518966,
+          "duration" : 1234
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "59b96c6c078cc1a3f603d28fedb0acb4"
+      "uid" : "5a57e39606f8824a18dc60eb753cda39"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts .content .icon\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55a11e05e23a <unknown>\n#1 0x55a11db08ab0 <unknown>\n#2 0x55a11db5a6f0 <unknown>\n#3 0x55a11db5a8e1 <unknown>\n#4 0x55a11dba8b94 <unknown>\n#5 0x55a11db801cd <unknown>\n#6 0x55a11dba5fee <unknown>\n#7 0x55a11db7ff73 <unknown>\n#8 0x55a11db4caeb <unknown>\n#9 0x55a11db4d751 <unknown>\n#10 0x55a11e022b4b <unknown>\n#11 0x55a11e026929 <unknown>\n#12 0x55a11e009929 <unknown>\n#13 0x55a11e0274e8 <unknown>\n#14 0x55a11dfee0df <unknown>\n#15 0x55a11e04b8e8 <unknown>\n#16 0x55a11e04bac6 <unknown>\n#17 0x55a11e05d556 <unknown>\n#18 0x7fc70549caa4 <unknown>\n#19 0x7fc705529c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-t-shirts .content .icon\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55fe276687da <unknown>\n#1 0x55fe2710d2e0 <unknown>\n#2 0x55fe2715ee00 <unknown>\n#3 0x55fe2715eff1 <unknown>\n#4 0x55fe271ad324 <unknown>\n#5 0x55fe271848dd <unknown>\n#6 0x55fe271aa71c <unknown>\n#7 0x55fe27184683 <unknown>\n#8 0x55fe27150b5b <unknown>\n#9 0x55fe27151f31 <unknown>\n#10 0x55fe2762d72b <unknown>\n#11 0x55fe27631534 <unknown>\n#12 0x55fe27614229 <unknown>\n#13 0x55fe276320d8 <unknown>\n#14 0x55fe275f861f <unknown>\n#15 0x55fe27655dd8 <unknown>\n#16 0x55fe27655fb6 <unknown>\n#17 0x55fe27667af6 <unknown>\n#18 0x7f841889caa4 <unknown>\n#19 0x7f8418929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.25 - Check the display of the sign in block 2 'home-t-shirts' in the Promo Block",
-        "uid" : "73e6312d2563366a",
-        "parentUid" : "88c0b8daa3de06e0ca31059f9c13242a",
+        "uid" : "70d7fff9d3c80ed3",
+        "parentUid" : "3c9fecb21a30f85111dd9e35e50bf08c",
         "status" : "broken",
         "time" : {
-          "start" : 1753061689448,
-          "stop" : 1753061690849,
-          "duration" : 1401
+          "start" : 1753666520665,
+          "stop" : 1753666521852,
+          "duration" : 1187
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "88c0b8daa3de06e0ca31059f9c13242a"
+      "uid" : "3c9fecb21a30f85111dd9e35e50bf08c"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55b04528023a <unknown>\n#1 0x55b044d2aab0 <unknown>\n#2 0x55b044d7c6f0 <unknown>\n#3 0x55b044d7c8e1 <unknown>\n#4 0x55b044dcab94 <unknown>\n#5 0x55b044da21cd <unknown>\n#6 0x55b044dc7fee <unknown>\n#7 0x55b044da1f73 <unknown>\n#8 0x55b044d6eaeb <unknown>\n#9 0x55b044d6f751 <unknown>\n#10 0x55b045244b4b <unknown>\n#11 0x55b045248929 <unknown>\n#12 0x55b04522b929 <unknown>\n#13 0x55b0452494e8 <unknown>\n#14 0x55b0452100df <unknown>\n#15 0x55b04526d8e8 <unknown>\n#16 0x55b04526dac6 <unknown>\n#17 0x55b04527f556 <unknown>\n#18 0x7f9bb809caa4 <unknown>\n#19 0x7f9bb8129c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55e89f0907da <unknown>\n#1 0x55e89eb352e0 <unknown>\n#2 0x55e89eb86e00 <unknown>\n#3 0x55e89eb86ff1 <unknown>\n#4 0x55e89ebd5324 <unknown>\n#5 0x55e89ebac8dd <unknown>\n#6 0x55e89ebd271c <unknown>\n#7 0x55e89ebac683 <unknown>\n#8 0x55e89eb78b5b <unknown>\n#9 0x55e89eb79f31 <unknown>\n#10 0x55e89f05572b <unknown>\n#11 0x55e89f059534 <unknown>\n#12 0x55e89f03c229 <unknown>\n#13 0x55e89f05a0d8 <unknown>\n#14 0x55e89f02061f <unknown>\n#15 0x55e89f07ddd8 <unknown>\n#16 0x55e89f07dfb6 <unknown>\n#17 0x55e89f08faf6 <unknown>\n#18 0x7f267269caa4 <unknown>\n#19 0x7f2672729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.26 - Check the display of an image in block 3 'home-erin' in the Promo Block",
-        "uid" : "970748d43f7e7ae5",
-        "parentUid" : "17a35e4d9f19f86cf58e1927f00fe06c",
+        "uid" : "bf96753b74525786",
+        "parentUid" : "2ff592ae5cb94f76d68a3b104cc17491",
         "status" : "broken",
         "time" : {
-          "start" : 1753061692416,
-          "stop" : 1753061694008,
-          "duration" : 1592
+          "start" : 1753666523584,
+          "stop" : 1753666524810,
+          "duration" : 1226
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "17a35e4d9f19f86cf58e1927f00fe06c"
+      "uid" : "2ff592ae5cb94f76d68a3b104cc17491"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5626437ec23a <unknown>\n#1 0x562643296ab0 <unknown>\n#2 0x5626432e86f0 <unknown>\n#3 0x5626432e88e1 <unknown>\n#4 0x562643336b94 <unknown>\n#5 0x56264330e1cd <unknown>\n#6 0x562643333fee <unknown>\n#7 0x56264330df73 <unknown>\n#8 0x5626432daaeb <unknown>\n#9 0x5626432db751 <unknown>\n#10 0x5626437b0b4b <unknown>\n#11 0x5626437b4929 <unknown>\n#12 0x562643797929 <unknown>\n#13 0x5626437b54e8 <unknown>\n#14 0x56264377c0df <unknown>\n#15 0x5626437d98e8 <unknown>\n#16 0x5626437d9ac6 <unknown>\n#17 0x5626437eb556 <unknown>\n#18 0x7fd00129caa4 <unknown>\n#19 0x7fd001329c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5590bd1fb7da <unknown>\n#1 0x5590bcca02e0 <unknown>\n#2 0x5590bccf1e00 <unknown>\n#3 0x5590bccf1ff1 <unknown>\n#4 0x5590bcd40324 <unknown>\n#5 0x5590bcd178dd <unknown>\n#6 0x5590bcd3d71c <unknown>\n#7 0x5590bcd17683 <unknown>\n#8 0x5590bcce3b5b <unknown>\n#9 0x5590bcce4f31 <unknown>\n#10 0x5590bd1c072b <unknown>\n#11 0x5590bd1c4534 <unknown>\n#12 0x5590bd1a7229 <unknown>\n#13 0x5590bd1c50d8 <unknown>\n#14 0x5590bd18b61f <unknown>\n#15 0x5590bd1e8dd8 <unknown>\n#16 0x5590bd1e8fb6 <unknown>\n#17 0x5590bd1faaf6 <unknown>\n#18 0x7f65d869caa4 <unknown>\n#19 0x7f65d8729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.26_01 - Check correctness of the image in block 3 'home-erin' in the Promo Block",
-        "uid" : "e4f348267c86f6c7",
-        "parentUid" : "0c3be6e630ff576b4173802f02d49474",
+        "uid" : "c6452afe97da884e",
+        "parentUid" : "93837f1faa23a995d3e4773061304a30",
         "status" : "broken",
         "time" : {
-          "start" : 1753061695582,
-          "stop" : 1753061697118,
-          "duration" : 1536
+          "start" : 1753666526565,
+          "stop" : 1753666527916,
+          "duration" : 1351
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "0c3be6e630ff576b4173802f02d49474"
+      "uid" : "93837f1faa23a995d3e4773061304a30"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55aeb733523a <unknown>\n#1 0x55aeb6ddfab0 <unknown>\n#2 0x55aeb6e316f0 <unknown>\n#3 0x55aeb6e318e1 <unknown>\n#4 0x55aeb6e7fb94 <unknown>\n#5 0x55aeb6e571cd <unknown>\n#6 0x55aeb6e7cfee <unknown>\n#7 0x55aeb6e56f73 <unknown>\n#8 0x55aeb6e23aeb <unknown>\n#9 0x55aeb6e24751 <unknown>\n#10 0x55aeb72f9b4b <unknown>\n#11 0x55aeb72fd929 <unknown>\n#12 0x55aeb72e0929 <unknown>\n#13 0x55aeb72fe4e8 <unknown>\n#14 0x55aeb72c50df <unknown>\n#15 0x55aeb73228e8 <unknown>\n#16 0x55aeb7322ac6 <unknown>\n#17 0x55aeb7334556 <unknown>\n#18 0x7f5585e9caa4 <unknown>\n#19 0x7f5585f29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556d41d737da <unknown>\n#1 0x556d418182e0 <unknown>\n#2 0x556d41869e00 <unknown>\n#3 0x556d41869ff1 <unknown>\n#4 0x556d418b8324 <unknown>\n#5 0x556d4188f8dd <unknown>\n#6 0x556d418b571c <unknown>\n#7 0x556d4188f683 <unknown>\n#8 0x556d4185bb5b <unknown>\n#9 0x556d4185cf31 <unknown>\n#10 0x556d41d3872b <unknown>\n#11 0x556d41d3c534 <unknown>\n#12 0x556d41d1f229 <unknown>\n#13 0x556d41d3d0d8 <unknown>\n#14 0x556d41d0361f <unknown>\n#15 0x556d41d60dd8 <unknown>\n#16 0x556d41d60fb6 <unknown>\n#17 0x556d41d72af6 <unknown>\n#18 0x7f544ce9caa4 <unknown>\n#19 0x7f544cf29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.27 - Check the display of the info block in block 3 'home-erin' in the Promo Block",
-        "uid" : "f4ca8cf1b2630c0e",
-        "parentUid" : "e503bd097d2d5d0f0748376519dc5dbf",
+        "uid" : "8e127657ed314ae1",
+        "parentUid" : "b01c19bf8734769860b19e130ea4c917",
         "status" : "broken",
         "time" : {
-          "start" : 1753061698712,
-          "stop" : 1753061705151,
-          "duration" : 6439
+          "start" : 1753666529556,
+          "stop" : 1753666535966,
+          "duration" : 6410
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "e503bd097d2d5d0f0748376519dc5dbf"
+      "uid" : "b01c19bf8734769860b19e130ea4c917"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin .content .title\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55b0a669823a <unknown>\n#1 0x55b0a6142ab0 <unknown>\n#2 0x55b0a61946f0 <unknown>\n#3 0x55b0a61948e1 <unknown>\n#4 0x55b0a61e2b94 <unknown>\n#5 0x55b0a61ba1cd <unknown>\n#6 0x55b0a61dffee <unknown>\n#7 0x55b0a61b9f73 <unknown>\n#8 0x55b0a6186aeb <unknown>\n#9 0x55b0a6187751 <unknown>\n#10 0x55b0a665cb4b <unknown>\n#11 0x55b0a6660929 <unknown>\n#12 0x55b0a6643929 <unknown>\n#13 0x55b0a66614e8 <unknown>\n#14 0x55b0a66280df <unknown>\n#15 0x55b0a66858e8 <unknown>\n#16 0x55b0a6685ac6 <unknown>\n#17 0x55b0a6697556 <unknown>\n#18 0x7f66c889caa4 <unknown>\n#19 0x7f66c8929c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin .content .title\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55b3def8c7da <unknown>\n#1 0x55b3dea312e0 <unknown>\n#2 0x55b3dea82e00 <unknown>\n#3 0x55b3dea82ff1 <unknown>\n#4 0x55b3dead1324 <unknown>\n#5 0x55b3deaa88dd <unknown>\n#6 0x55b3deace71c <unknown>\n#7 0x55b3deaa8683 <unknown>\n#8 0x55b3dea74b5b <unknown>\n#9 0x55b3dea75f31 <unknown>\n#10 0x55b3def5172b <unknown>\n#11 0x55b3def55534 <unknown>\n#12 0x55b3def38229 <unknown>\n#13 0x55b3def560d8 <unknown>\n#14 0x55b3def1c61f <unknown>\n#15 0x55b3def79dd8 <unknown>\n#16 0x55b3def79fb6 <unknown>\n#17 0x55b3def8baf6 <unknown>\n#18 0x7f1b4b29caa4 <unknown>\n#19 0x7f1b4b329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.28 - Check the display of the title in block 3 'home-erin' in the Promo Block",
-        "uid" : "462902850c79ce5a",
-        "parentUid" : "f1cc2aef5c191a578c90aabf801be7bc",
+        "uid" : "cd328b5b8eb4feee",
+        "parentUid" : "bbfb2042cffef40d2c5aac69fdf5df70",
         "status" : "broken",
         "time" : {
-          "start" : 1753061706669,
-          "stop" : 1753061708321,
-          "duration" : 1652
+          "start" : 1753666537579,
+          "stop" : 1753666538968,
+          "duration" : 1389
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f1cc2aef5c191a578c90aabf801be7bc"
+      "uid" : "bbfb2042cffef40d2c5aac69fdf5df70"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin .content .info\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5595b135823a <unknown>\n#1 0x5595b0e02ab0 <unknown>\n#2 0x5595b0e546f0 <unknown>\n#3 0x5595b0e548e1 <unknown>\n#4 0x5595b0ea2b94 <unknown>\n#5 0x5595b0e7a1cd <unknown>\n#6 0x5595b0e9ffee <unknown>\n#7 0x5595b0e79f73 <unknown>\n#8 0x5595b0e46aeb <unknown>\n#9 0x5595b0e47751 <unknown>\n#10 0x5595b131cb4b <unknown>\n#11 0x5595b1320929 <unknown>\n#12 0x5595b1303929 <unknown>\n#13 0x5595b13214e8 <unknown>\n#14 0x5595b12e80df <unknown>\n#15 0x5595b13458e8 <unknown>\n#16 0x5595b1345ac6 <unknown>\n#17 0x5595b1357556 <unknown>\n#18 0x7fddb449caa4 <unknown>\n#19 0x7fddb4529c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin .content .info\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55a3434207da <unknown>\n#1 0x55a342ec52e0 <unknown>\n#2 0x55a342f16e00 <unknown>\n#3 0x55a342f16ff1 <unknown>\n#4 0x55a342f65324 <unknown>\n#5 0x55a342f3c8dd <unknown>\n#6 0x55a342f6271c <unknown>\n#7 0x55a342f3c683 <unknown>\n#8 0x55a342f08b5b <unknown>\n#9 0x55a342f09f31 <unknown>\n#10 0x55a3433e572b <unknown>\n#11 0x55a3433e9534 <unknown>\n#12 0x55a3433cc229 <unknown>\n#13 0x55a3433ea0d8 <unknown>\n#14 0x55a3433b061f <unknown>\n#15 0x55a34340ddd8 <unknown>\n#16 0x55a34340dfb6 <unknown>\n#17 0x55a34341faf6 <unknown>\n#18 0x7fe450c9caa4 <unknown>\n#19 0x7fe450d29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.29 - Check the display of the text in block 3 'home-erin' in the Promo Block",
-        "uid" : "a92b558b5a5db93e",
-        "parentUid" : "55faefa738fbb94e3e26226fa2edc7e4",
+        "uid" : "e011694c566435b4",
+        "parentUid" : "0b53df2e19e74906197994fd2bfa2c61",
         "status" : "broken",
         "time" : {
-          "start" : 1753061709944,
-          "stop" : 1753061711703,
-          "duration" : 1759
+          "start" : 1753666540673,
+          "stop" : 1753666542944,
+          "duration" : 2271
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "55faefa738fbb94e3e26226fa2edc7e4"
+      "uid" : "0b53df2e19e74906197994fd2bfa2c61"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin .content .icon\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5572d3b6623a <unknown>\n#1 0x5572d3610ab0 <unknown>\n#2 0x5572d36626f0 <unknown>\n#3 0x5572d36628e1 <unknown>\n#4 0x5572d36b0b94 <unknown>\n#5 0x5572d36881cd <unknown>\n#6 0x5572d36adfee <unknown>\n#7 0x5572d3687f73 <unknown>\n#8 0x5572d3654aeb <unknown>\n#9 0x5572d3655751 <unknown>\n#10 0x5572d3b2ab4b <unknown>\n#11 0x5572d3b2e929 <unknown>\n#12 0x5572d3b11929 <unknown>\n#13 0x5572d3b2f4e8 <unknown>\n#14 0x5572d3af60df <unknown>\n#15 0x5572d3b538e8 <unknown>\n#16 0x5572d3b53ac6 <unknown>\n#17 0x5572d3b65556 <unknown>\n#18 0x7f271a49caa4 <unknown>\n#19 0x7f271a529c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-erin .content .icon\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55eecca087da <unknown>\n#1 0x55eecc4ad2e0 <unknown>\n#2 0x55eecc4fee00 <unknown>\n#3 0x55eecc4feff1 <unknown>\n#4 0x55eecc54d324 <unknown>\n#5 0x55eecc5248dd <unknown>\n#6 0x55eecc54a71c <unknown>\n#7 0x55eecc524683 <unknown>\n#8 0x55eecc4f0b5b <unknown>\n#9 0x55eecc4f1f31 <unknown>\n#10 0x55eecc9cd72b <unknown>\n#11 0x55eecc9d1534 <unknown>\n#12 0x55eecc9b4229 <unknown>\n#13 0x55eecc9d20d8 <unknown>\n#14 0x55eecc99861f <unknown>\n#15 0x55eecc9f5dd8 <unknown>\n#16 0x55eecc9f5fb6 <unknown>\n#17 0x55eecca07af6 <unknown>\n#18 0x7fda1a69caa4 <unknown>\n#19 0x7fda1a729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.30 - Check the display of the sign in block 3 'home-erin' in the Promo Block",
-        "uid" : "3c14cc3df0fd30c2",
-        "parentUid" : "45dea1dfcbb0f0d5257d519e4afe96d5",
+        "uid" : "42d451572f4e2571",
+        "parentUid" : "45b4d166161ec3fd35d594e08a80a64b",
         "status" : "broken",
         "time" : {
-          "start" : 1753061713312,
-          "stop" : 1753061715122,
-          "duration" : 1810
+          "start" : 1753666544664,
+          "stop" : 1753666546238,
+          "duration" : 1574
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "45dea1dfcbb0f0d5257d519e4afe96d5"
+      "uid" : "45b4d166161ec3fd35d594e08a80a64b"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x559b5ccfa23a <unknown>\n#1 0x559b5c7a4ab0 <unknown>\n#2 0x559b5c7f66f0 <unknown>\n#3 0x559b5c7f68e1 <unknown>\n#4 0x559b5c844b94 <unknown>\n#5 0x559b5c81c1cd <unknown>\n#6 0x559b5c841fee <unknown>\n#7 0x559b5c81bf73 <unknown>\n#8 0x559b5c7e8aeb <unknown>\n#9 0x559b5c7e9751 <unknown>\n#10 0x559b5ccbeb4b <unknown>\n#11 0x559b5ccc2929 <unknown>\n#12 0x559b5cca5929 <unknown>\n#13 0x559b5ccc34e8 <unknown>\n#14 0x559b5cc8a0df <unknown>\n#15 0x559b5cce78e8 <unknown>\n#16 0x559b5cce7ac6 <unknown>\n#17 0x559b5ccf9556 <unknown>\n#18 0x7f376309caa4 <unknown>\n#19 0x7f3763129c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55ce167e37da <unknown>\n#1 0x55ce162882e0 <unknown>\n#2 0x55ce162d9e00 <unknown>\n#3 0x55ce162d9ff1 <unknown>\n#4 0x55ce16328324 <unknown>\n#5 0x55ce162ff8dd <unknown>\n#6 0x55ce1632571c <unknown>\n#7 0x55ce162ff683 <unknown>\n#8 0x55ce162cbb5b <unknown>\n#9 0x55ce162ccf31 <unknown>\n#10 0x55ce167a872b <unknown>\n#11 0x55ce167ac534 <unknown>\n#12 0x55ce1678f229 <unknown>\n#13 0x55ce167ad0d8 <unknown>\n#14 0x55ce1677361f <unknown>\n#15 0x55ce167d0dd8 <unknown>\n#16 0x55ce167d0fb6 <unknown>\n#17 0x55ce167e2af6 <unknown>\n#18 0x7f9a7ec9caa4 <unknown>\n#19 0x7f9a7ed29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.31 - Check the display of an image in block 4 'home-performance' in the Promo Block",
-        "uid" : "4f7bc3af5e540e56",
-        "parentUid" : "9db7830e65794e68d4e1f545f10906ef",
+        "uid" : "3e5cc34cdbc0256c",
+        "parentUid" : "0bd77319db6c1dac9a8cf1ef052667c6",
         "status" : "broken",
         "time" : {
-          "start" : 1753061716760,
-          "stop" : 1753061718206,
-          "duration" : 1446
+          "start" : 1753666547963,
+          "stop" : 1753666549527,
+          "duration" : 1564
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "9db7830e65794e68d4e1f545f10906ef"
+      "uid" : "0bd77319db6c1dac9a8cf1ef052667c6"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x561eb442923a <unknown>\n#1 0x561eb3ed3ab0 <unknown>\n#2 0x561eb3f256f0 <unknown>\n#3 0x561eb3f258e1 <unknown>\n#4 0x561eb3f73b94 <unknown>\n#5 0x561eb3f4b1cd <unknown>\n#6 0x561eb3f70fee <unknown>\n#7 0x561eb3f4af73 <unknown>\n#8 0x561eb3f17aeb <unknown>\n#9 0x561eb3f18751 <unknown>\n#10 0x561eb43edb4b <unknown>\n#11 0x561eb43f1929 <unknown>\n#12 0x561eb43d4929 <unknown>\n#13 0x561eb43f24e8 <unknown>\n#14 0x561eb43b90df <unknown>\n#15 0x561eb44168e8 <unknown>\n#16 0x561eb4416ac6 <unknown>\n#17 0x561eb4428556 <unknown>\n#18 0x7f4677e9caa4 <unknown>\n#19 0x7f4677f29c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55d5b9d2c7da <unknown>\n#1 0x55d5b97d12e0 <unknown>\n#2 0x55d5b9822e00 <unknown>\n#3 0x55d5b9822ff1 <unknown>\n#4 0x55d5b9871324 <unknown>\n#5 0x55d5b98488dd <unknown>\n#6 0x55d5b986e71c <unknown>\n#7 0x55d5b9848683 <unknown>\n#8 0x55d5b9814b5b <unknown>\n#9 0x55d5b9815f31 <unknown>\n#10 0x55d5b9cf172b <unknown>\n#11 0x55d5b9cf5534 <unknown>\n#12 0x55d5b9cd8229 <unknown>\n#13 0x55d5b9cf60d8 <unknown>\n#14 0x55d5b9cbc61f <unknown>\n#15 0x55d5b9d19dd8 <unknown>\n#16 0x55d5b9d19fb6 <unknown>\n#17 0x55d5b9d2baf6 <unknown>\n#18 0x7f406089caa4 <unknown>\n#19 0x7f4060929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.31_01 - Check correctness of the image in block 4 'home-performance' in the Promo Block",
-        "uid" : "11cd709a9fe5ca1c",
-        "parentUid" : "51a83c39f5f55cfb6b739cf3de1ce356",
+        "uid" : "7de82e0a75885e16",
+        "parentUid" : "55b79591e191efd1b39185d5042ee17d",
         "status" : "broken",
         "time" : {
-          "start" : 1753061719877,
-          "stop" : 1753061721925,
-          "duration" : 2048
+          "start" : 1753666551246,
+          "stop" : 1753666552578,
+          "duration" : 1332
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "51a83c39f5f55cfb6b739cf3de1ce356"
+      "uid" : "55b79591e191efd1b39185d5042ee17d"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5608f7aeb23a <unknown>\n#1 0x5608f7595ab0 <unknown>\n#2 0x5608f75e76f0 <unknown>\n#3 0x5608f75e78e1 <unknown>\n#4 0x5608f7635b94 <unknown>\n#5 0x5608f760d1cd <unknown>\n#6 0x5608f7632fee <unknown>\n#7 0x5608f760cf73 <unknown>\n#8 0x5608f75d9aeb <unknown>\n#9 0x5608f75da751 <unknown>\n#10 0x5608f7aafb4b <unknown>\n#11 0x5608f7ab3929 <unknown>\n#12 0x5608f7a96929 <unknown>\n#13 0x5608f7ab44e8 <unknown>\n#14 0x5608f7a7b0df <unknown>\n#15 0x5608f7ad88e8 <unknown>\n#16 0x5608f7ad8ac6 <unknown>\n#17 0x5608f7aea556 <unknown>\n#18 0x7f7b7709caa4 <unknown>\n#19 0x7f7b77129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5581c46d57da <unknown>\n#1 0x5581c417a2e0 <unknown>\n#2 0x5581c41cbe00 <unknown>\n#3 0x5581c41cbff1 <unknown>\n#4 0x5581c421a324 <unknown>\n#5 0x5581c41f18dd <unknown>\n#6 0x5581c421771c <unknown>\n#7 0x5581c41f1683 <unknown>\n#8 0x5581c41bdb5b <unknown>\n#9 0x5581c41bef31 <unknown>\n#10 0x5581c469a72b <unknown>\n#11 0x5581c469e534 <unknown>\n#12 0x5581c4681229 <unknown>\n#13 0x5581c469f0d8 <unknown>\n#14 0x5581c466561f <unknown>\n#15 0x5581c46c2dd8 <unknown>\n#16 0x5581c46c2fb6 <unknown>\n#17 0x5581c46d4af6 <unknown>\n#18 0x7f475429caa4 <unknown>\n#19 0x7f4754329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.32 - Check the display of the info block in block 4 'home-performance' in the Promo Block",
-        "uid" : "6e914954882a7bea",
-        "parentUid" : "7073eb9c18a23d1cbfbed89a400eb36e",
+        "uid" : "bb4365912846536a",
+        "parentUid" : "9de71239560885106d12f20e8d4db901",
         "status" : "broken",
         "time" : {
-          "start" : 1753061723496,
-          "stop" : 1753061730383,
-          "duration" : 6887
+          "start" : 1753666554246,
+          "stop" : 1753666561344,
+          "duration" : 7098
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "7073eb9c18a23d1cbfbed89a400eb36e"
+      "uid" : "9de71239560885106d12f20e8d4db901"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance .content .title\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x555d2fd6a23a <unknown>\n#1 0x555d2f814ab0 <unknown>\n#2 0x555d2f8666f0 <unknown>\n#3 0x555d2f8668e1 <unknown>\n#4 0x555d2f8b4b94 <unknown>\n#5 0x555d2f88c1cd <unknown>\n#6 0x555d2f8b1fee <unknown>\n#7 0x555d2f88bf73 <unknown>\n#8 0x555d2f858aeb <unknown>\n#9 0x555d2f859751 <unknown>\n#10 0x555d2fd2eb4b <unknown>\n#11 0x555d2fd32929 <unknown>\n#12 0x555d2fd15929 <unknown>\n#13 0x555d2fd334e8 <unknown>\n#14 0x555d2fcfa0df <unknown>\n#15 0x555d2fd578e8 <unknown>\n#16 0x555d2fd57ac6 <unknown>\n#17 0x555d2fd69556 <unknown>\n#18 0x7ff73a29caa4 <unknown>\n#19 0x7ff73a329c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance .content .title\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55ec013157da <unknown>\n#1 0x55ec00dba2e0 <unknown>\n#2 0x55ec00e0be00 <unknown>\n#3 0x55ec00e0bff1 <unknown>\n#4 0x55ec00e5a324 <unknown>\n#5 0x55ec00e318dd <unknown>\n#6 0x55ec00e5771c <unknown>\n#7 0x55ec00e31683 <unknown>\n#8 0x55ec00dfdb5b <unknown>\n#9 0x55ec00dfef31 <unknown>\n#10 0x55ec012da72b <unknown>\n#11 0x55ec012de534 <unknown>\n#12 0x55ec012c1229 <unknown>\n#13 0x55ec012df0d8 <unknown>\n#14 0x55ec012a561f <unknown>\n#15 0x55ec01302dd8 <unknown>\n#16 0x55ec01302fb6 <unknown>\n#17 0x55ec01314af6 <unknown>\n#18 0x7f977789caa4 <unknown>\n#19 0x7f9777929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.33 - Check the display of the title in block 4 'home-performance' in the Promo Block",
-        "uid" : "e6b731e5b724a451",
-        "parentUid" : "130f41fde3eea9d68982726d85c00fc6",
+        "uid" : "afcfea87b4cba81e",
+        "parentUid" : "7b1b66dbad73e67d38fb18a85ada4f5e",
         "status" : "broken",
         "time" : {
-          "start" : 1753061731912,
-          "stop" : 1753061733220,
-          "duration" : 1308
+          "start" : 1753666562950,
+          "stop" : 1753666564395,
+          "duration" : 1445
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "130f41fde3eea9d68982726d85c00fc6"
+      "uid" : "7b1b66dbad73e67d38fb18a85ada4f5e"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance .content .info\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x560eadfae23a <unknown>\n#1 0x560eada58ab0 <unknown>\n#2 0x560eadaaa6f0 <unknown>\n#3 0x560eadaaa8e1 <unknown>\n#4 0x560eadaf8b94 <unknown>\n#5 0x560eadad01cd <unknown>\n#6 0x560eadaf5fee <unknown>\n#7 0x560eadacff73 <unknown>\n#8 0x560eada9caeb <unknown>\n#9 0x560eada9d751 <unknown>\n#10 0x560eadf72b4b <unknown>\n#11 0x560eadf76929 <unknown>\n#12 0x560eadf59929 <unknown>\n#13 0x560eadf774e8 <unknown>\n#14 0x560eadf3e0df <unknown>\n#15 0x560eadf9b8e8 <unknown>\n#16 0x560eadf9bac6 <unknown>\n#17 0x560eadfad556 <unknown>\n#18 0x7fb4db09caa4 <unknown>\n#19 0x7fb4db129c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance .content .info\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55f72b54e7da <unknown>\n#1 0x55f72aff32e0 <unknown>\n#2 0x55f72b044e00 <unknown>\n#3 0x55f72b044ff1 <unknown>\n#4 0x55f72b093324 <unknown>\n#5 0x55f72b06a8dd <unknown>\n#6 0x55f72b09071c <unknown>\n#7 0x55f72b06a683 <unknown>\n#8 0x55f72b036b5b <unknown>\n#9 0x55f72b037f31 <unknown>\n#10 0x55f72b51372b <unknown>\n#11 0x55f72b517534 <unknown>\n#12 0x55f72b4fa229 <unknown>\n#13 0x55f72b5180d8 <unknown>\n#14 0x55f72b4de61f <unknown>\n#15 0x55f72b53bdd8 <unknown>\n#16 0x55f72b53bfb6 <unknown>\n#17 0x55f72b54daf6 <unknown>\n#18 0x7fb1f0c9caa4 <unknown>\n#19 0x7fb1f0d29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.34 - Check the display of the text in block 4 'home-performance' in the Promo Block",
-        "uid" : "450282e4ac6ab101",
-        "parentUid" : "09828d3dfc33f48642383c07b67e9e8a",
+        "uid" : "fa4fb080402427e5",
+        "parentUid" : "de64b39514a422b87dfddd38122e55c1",
         "status" : "broken",
         "time" : {
-          "start" : 1753061734846,
-          "stop" : 1753061736226,
-          "duration" : 1380
+          "start" : 1753666566133,
+          "stop" : 1753666567576,
+          "duration" : 1443
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "09828d3dfc33f48642383c07b67e9e8a"
+      "uid" : "de64b39514a422b87dfddd38122e55c1"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance .content .icon\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5616b9d9723a <unknown>\n#1 0x5616b9841ab0 <unknown>\n#2 0x5616b98936f0 <unknown>\n#3 0x5616b98938e1 <unknown>\n#4 0x5616b98e1b94 <unknown>\n#5 0x5616b98b91cd <unknown>\n#6 0x5616b98defee <unknown>\n#7 0x5616b98b8f73 <unknown>\n#8 0x5616b9885aeb <unknown>\n#9 0x5616b9886751 <unknown>\n#10 0x5616b9d5bb4b <unknown>\n#11 0x5616b9d5f929 <unknown>\n#12 0x5616b9d42929 <unknown>\n#13 0x5616b9d604e8 <unknown>\n#14 0x5616b9d270df <unknown>\n#15 0x5616b9d848e8 <unknown>\n#16 0x5616b9d84ac6 <unknown>\n#17 0x5616b9d96556 <unknown>\n#18 0x7f354da9caa4 <unknown>\n#19 0x7f354db29c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-performance .content .icon\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55d32783a7da <unknown>\n#1 0x55d3272df2e0 <unknown>\n#2 0x55d327330e00 <unknown>\n#3 0x55d327330ff1 <unknown>\n#4 0x55d32737f324 <unknown>\n#5 0x55d3273568dd <unknown>\n#6 0x55d32737c71c <unknown>\n#7 0x55d327356683 <unknown>\n#8 0x55d327322b5b <unknown>\n#9 0x55d327323f31 <unknown>\n#10 0x55d3277ff72b <unknown>\n#11 0x55d327803534 <unknown>\n#12 0x55d3277e6229 <unknown>\n#13 0x55d3278040d8 <unknown>\n#14 0x55d3277ca61f <unknown>\n#15 0x55d327827dd8 <unknown>\n#16 0x55d327827fb6 <unknown>\n#17 0x55d327839af6 <unknown>\n#18 0x7fc0f489caa4 <unknown>\n#19 0x7fc0f4929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.35 - Check the display of the sign in block 4 'home-performance' in the Promo Block",
-        "uid" : "35fc944cb6dd8856",
-        "parentUid" : "a1b463c631a370a6594c317302c812eb",
+        "uid" : "9903622b4214d64a",
+        "parentUid" : "7ff00d90050b304383fad7bf6d7b4ef3",
         "status" : "broken",
         "time" : {
-          "start" : 1753061737941,
-          "stop" : 1753061739274,
-          "duration" : 1333
+          "start" : 1753666569245,
+          "stop" : 1753666570565,
+          "duration" : 1320
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a1b463c631a370a6594c317302c812eb"
+      "uid" : "7ff00d90050b304383fad7bf6d7b4ef3"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cbd861823a <unknown>\n#1 0x55cbd80c2ab0 <unknown>\n#2 0x55cbd81146f0 <unknown>\n#3 0x55cbd81148e1 <unknown>\n#4 0x55cbd8162b94 <unknown>\n#5 0x55cbd813a1cd <unknown>\n#6 0x55cbd815ffee <unknown>\n#7 0x55cbd8139f73 <unknown>\n#8 0x55cbd8106aeb <unknown>\n#9 0x55cbd8107751 <unknown>\n#10 0x55cbd85dcb4b <unknown>\n#11 0x55cbd85e0929 <unknown>\n#12 0x55cbd85c3929 <unknown>\n#13 0x55cbd85e14e8 <unknown>\n#14 0x55cbd85a80df <unknown>\n#15 0x55cbd86058e8 <unknown>\n#16 0x55cbd8605ac6 <unknown>\n#17 0x55cbd8617556 <unknown>\n#18 0x7efcf849caa4 <unknown>\n#19 0x7efcf8529c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55bd24ba87da <unknown>\n#1 0x55bd2464d2e0 <unknown>\n#2 0x55bd2469ee00 <unknown>\n#3 0x55bd2469eff1 <unknown>\n#4 0x55bd246ed324 <unknown>\n#5 0x55bd246c48dd <unknown>\n#6 0x55bd246ea71c <unknown>\n#7 0x55bd246c4683 <unknown>\n#8 0x55bd24690b5b <unknown>\n#9 0x55bd24691f31 <unknown>\n#10 0x55bd24b6d72b <unknown>\n#11 0x55bd24b71534 <unknown>\n#12 0x55bd24b54229 <unknown>\n#13 0x55bd24b720d8 <unknown>\n#14 0x55bd24b3861f <unknown>\n#15 0x55bd24b95dd8 <unknown>\n#16 0x55bd24b95fb6 <unknown>\n#17 0x55bd24ba7af6 <unknown>\n#18 0x7f34f269caa4 <unknown>\n#19 0x7f34f2729c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block",
-        "uid" : "2a48a804f2b287df",
-        "parentUid" : "9835a803af98a54ae1c9911b26854ff1",
+        "uid" : "c383cd7cf9aad9fc",
+        "parentUid" : "48b27a3d9becc286e4753d688e6e125d",
         "status" : "broken",
         "time" : {
-          "start" : 1753061740862,
-          "stop" : 1753061747453,
-          "duration" : 6591
+          "start" : 1753666572277,
+          "stop" : 1753666578790,
+          "duration" : 6513
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "9835a803af98a54ae1c9911b26854ff1"
+      "uid" : "48b27a3d9becc286e4753d688e6e125d"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x562a01c5323a <unknown>\n#1 0x562a016fdab0 <unknown>\n#2 0x562a0174f6f0 <unknown>\n#3 0x562a0174f8e1 <unknown>\n#4 0x562a0179db94 <unknown>\n#5 0x562a017751cd <unknown>\n#6 0x562a0179afee <unknown>\n#7 0x562a01774f73 <unknown>\n#8 0x562a01741aeb <unknown>\n#9 0x562a01742751 <unknown>\n#10 0x562a01c17b4b <unknown>\n#11 0x562a01c1b929 <unknown>\n#12 0x562a01bfe929 <unknown>\n#13 0x562a01c1c4e8 <unknown>\n#14 0x562a01be30df <unknown>\n#15 0x562a01c408e8 <unknown>\n#16 0x562a01c40ac6 <unknown>\n#17 0x562a01c52556 <unknown>\n#18 0x7f0a6b29caa4 <unknown>\n#19 0x7f0a6b329c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x557e416107da <unknown>\n#1 0x557e410b52e0 <unknown>\n#2 0x557e41106e00 <unknown>\n#3 0x557e41106ff1 <unknown>\n#4 0x557e41155324 <unknown>\n#5 0x557e4112c8dd <unknown>\n#6 0x557e4115271c <unknown>\n#7 0x557e4112c683 <unknown>\n#8 0x557e410f8b5b <unknown>\n#9 0x557e410f9f31 <unknown>\n#10 0x557e415d572b <unknown>\n#11 0x557e415d9534 <unknown>\n#12 0x557e415bc229 <unknown>\n#13 0x557e415da0d8 <unknown>\n#14 0x557e415a061f <unknown>\n#15 0x557e415fddd8 <unknown>\n#16 0x557e415fdfb6 <unknown>\n#17 0x557e4160faf6 <unknown>\n#18 0x7f6bc9e9caa4 <unknown>\n#19 0x7f6bc9f29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.36 - Check the display of an image in block 5 'home-eco' in the Promo Block",
-        "uid" : "49d5268d3957a5a4",
-        "parentUid" : "3d485d2f32f5df25893668842f57b057",
+        "uid" : "fc9f4680649ce544",
+        "parentUid" : "577654f999fd235fa4c9ed34da1a183e",
         "status" : "broken",
         "time" : {
-          "start" : 1753061748962,
-          "stop" : 1753061750125,
-          "duration" : 1163
+          "start" : 1753666580399,
+          "stop" : 1753666581291,
+          "duration" : 892
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "3d485d2f32f5df25893668842f57b057"
+      "uid" : "577654f999fd235fa4c9ed34da1a183e"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55cb8ac2823a <unknown>\n#1 0x55cb8a6d2ab0 <unknown>\n#2 0x55cb8a7246f0 <unknown>\n#3 0x55cb8a7248e1 <unknown>\n#4 0x55cb8a772b94 <unknown>\n#5 0x55cb8a74a1cd <unknown>\n#6 0x55cb8a76ffee <unknown>\n#7 0x55cb8a749f73 <unknown>\n#8 0x55cb8a716aeb <unknown>\n#9 0x55cb8a717751 <unknown>\n#10 0x55cb8abecb4b <unknown>\n#11 0x55cb8abf0929 <unknown>\n#12 0x55cb8abd3929 <unknown>\n#13 0x55cb8abf14e8 <unknown>\n#14 0x55cb8abb80df <unknown>\n#15 0x55cb8ac158e8 <unknown>\n#16 0x55cb8ac15ac6 <unknown>\n#17 0x55cb8ac27556 <unknown>\n#18 0x7f25da69caa4 <unknown>\n#19 0x7f25da729c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco img\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x556cdc3297da <unknown>\n#1 0x556cdbdce2e0 <unknown>\n#2 0x556cdbe1fe00 <unknown>\n#3 0x556cdbe1fff1 <unknown>\n#4 0x556cdbe6e324 <unknown>\n#5 0x556cdbe458dd <unknown>\n#6 0x556cdbe6b71c <unknown>\n#7 0x556cdbe45683 <unknown>\n#8 0x556cdbe11b5b <unknown>\n#9 0x556cdbe12f31 <unknown>\n#10 0x556cdc2ee72b <unknown>\n#11 0x556cdc2f2534 <unknown>\n#12 0x556cdc2d5229 <unknown>\n#13 0x556cdc2f30d8 <unknown>\n#14 0x556cdc2b961f <unknown>\n#15 0x556cdc316dd8 <unknown>\n#16 0x556cdc316fb6 <unknown>\n#17 0x556cdc328af6 <unknown>\n#18 0x7f144c29caa4 <unknown>\n#19 0x7f144c329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.36_01 - Check correctness of the image in block 5 'home-eco' in the Promo Block",
-        "uid" : "d72800eb8fd64710",
-        "parentUid" : "343210f9cf05b9813763521262cd67ac",
+        "uid" : "7a34eafc8f07e102",
+        "parentUid" : "fea2f8570e9d46053495aa01a202d45d",
         "status" : "broken",
         "time" : {
-          "start" : 1753061751742,
-          "stop" : 1753061752996,
-          "duration" : 1254
+          "start" : 1753666583095,
+          "stop" : 1753666584353,
+          "duration" : 1258
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "343210f9cf05b9813763521262cd67ac"
+      "uid" : "fea2f8570e9d46053495aa01a202d45d"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558053d8b23a <unknown>\n#1 0x558053835ab0 <unknown>\n#2 0x5580538876f0 <unknown>\n#3 0x5580538878e1 <unknown>\n#4 0x5580538d5b94 <unknown>\n#5 0x5580538ad1cd <unknown>\n#6 0x5580538d2fee <unknown>\n#7 0x5580538acf73 <unknown>\n#8 0x558053879aeb <unknown>\n#9 0x55805387a751 <unknown>\n#10 0x558053d4fb4b <unknown>\n#11 0x558053d53929 <unknown>\n#12 0x558053d36929 <unknown>\n#13 0x558053d544e8 <unknown>\n#14 0x558053d1b0df <unknown>\n#15 0x558053d788e8 <unknown>\n#16 0x558053d78ac6 <unknown>\n#17 0x558053d8a556 <unknown>\n#18 0x7f920a69caa4 <unknown>\n#19 0x7f920a729c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e7e911a7da <unknown>\n#1 0x55e7e8bbf2e0 <unknown>\n#2 0x55e7e8c10e00 <unknown>\n#3 0x55e7e8c10ff1 <unknown>\n#4 0x55e7e8c5f324 <unknown>\n#5 0x55e7e8c368dd <unknown>\n#6 0x55e7e8c5c71c <unknown>\n#7 0x55e7e8c36683 <unknown>\n#8 0x55e7e8c02b5b <unknown>\n#9 0x55e7e8c03f31 <unknown>\n#10 0x55e7e90df72b <unknown>\n#11 0x55e7e90e3534 <unknown>\n#12 0x55e7e90c6229 <unknown>\n#13 0x55e7e90e40d8 <unknown>\n#14 0x55e7e90aa61f <unknown>\n#15 0x55e7e9107dd8 <unknown>\n#16 0x55e7e9107fb6 <unknown>\n#17 0x55e7e9119af6 <unknown>\n#18 0x7f4b5489caa4 <unknown>\n#19 0x7f4b54929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.37 - Check the display of the info block in block 5 'home-eco' in the Promo Block",
-        "uid" : "45545bb2e6d935e2",
-        "parentUid" : "dc5dae82f79ef25fc98f43827941874b",
+        "uid" : "19d651c41d0cc439",
+        "parentUid" : "458ef37ef239801d8953da6176466031",
         "status" : "broken",
         "time" : {
-          "start" : 1753061754592,
-          "stop" : 1753061761063,
-          "duration" : 6471
+          "start" : 1753666586045,
+          "stop" : 1753666592411,
+          "duration" : 6366
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "dc5dae82f79ef25fc98f43827941874b"
+      "uid" : "458ef37ef239801d8953da6176466031"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco .content .title\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5571163f723a <unknown>\n#1 0x557115ea1ab0 <unknown>\n#2 0x557115ef36f0 <unknown>\n#3 0x557115ef38e1 <unknown>\n#4 0x557115f41b94 <unknown>\n#5 0x557115f191cd <unknown>\n#6 0x557115f3efee <unknown>\n#7 0x557115f18f73 <unknown>\n#8 0x557115ee5aeb <unknown>\n#9 0x557115ee6751 <unknown>\n#10 0x5571163bbb4b <unknown>\n#11 0x5571163bf929 <unknown>\n#12 0x5571163a2929 <unknown>\n#13 0x5571163c04e8 <unknown>\n#14 0x5571163870df <unknown>\n#15 0x5571163e48e8 <unknown>\n#16 0x5571163e4ac6 <unknown>\n#17 0x5571163f6556 <unknown>\n#18 0x7f8316c9caa4 <unknown>\n#19 0x7f8316d29c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco .content .title\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55b2f438c7da <unknown>\n#1 0x55b2f3e312e0 <unknown>\n#2 0x55b2f3e82e00 <unknown>\n#3 0x55b2f3e82ff1 <unknown>\n#4 0x55b2f3ed1324 <unknown>\n#5 0x55b2f3ea88dd <unknown>\n#6 0x55b2f3ece71c <unknown>\n#7 0x55b2f3ea8683 <unknown>\n#8 0x55b2f3e74b5b <unknown>\n#9 0x55b2f3e75f31 <unknown>\n#10 0x55b2f435172b <unknown>\n#11 0x55b2f4355534 <unknown>\n#12 0x55b2f4338229 <unknown>\n#13 0x55b2f43560d8 <unknown>\n#14 0x55b2f431c61f <unknown>\n#15 0x55b2f4379dd8 <unknown>\n#16 0x55b2f4379fb6 <unknown>\n#17 0x55b2f438baf6 <unknown>\n#18 0x7fae1e09caa4 <unknown>\n#19 0x7fae1e129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.38 - Check the display of the title in block 5 'home-eco' in the Promo Block",
-        "uid" : "bce54b7dfa74e63b",
-        "parentUid" : "b0170381a755116afb02005bbe474475",
+        "uid" : "eae4175482917f9",
+        "parentUid" : "795b5a6726fb6238b699e2d9c91e0615",
         "status" : "broken",
         "time" : {
-          "start" : 1753061762580,
-          "stop" : 1753061764238,
-          "duration" : 1658
+          "start" : 1753666594010,
+          "stop" : 1753666595324,
+          "duration" : 1314
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b0170381a755116afb02005bbe474475"
+      "uid" : "795b5a6726fb6238b699e2d9c91e0615"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco .content .info\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x555fffe6723a <unknown>\n#1 0x555fff911ab0 <unknown>\n#2 0x555fff9636f0 <unknown>\n#3 0x555fff9638e1 <unknown>\n#4 0x555fff9b1b94 <unknown>\n#5 0x555fff9891cd <unknown>\n#6 0x555fff9aefee <unknown>\n#7 0x555fff988f73 <unknown>\n#8 0x555fff955aeb <unknown>\n#9 0x555fff956751 <unknown>\n#10 0x555fffe2bb4b <unknown>\n#11 0x555fffe2f929 <unknown>\n#12 0x555fffe12929 <unknown>\n#13 0x555fffe304e8 <unknown>\n#14 0x555fffdf70df <unknown>\n#15 0x555fffe548e8 <unknown>\n#16 0x555fffe54ac6 <unknown>\n#17 0x555fffe66556 <unknown>\n#18 0x7f6223e9caa4 <unknown>\n#19 0x7f6223f29c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco .content .info\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x555c329bf7da <unknown>\n#1 0x555c324642e0 <unknown>\n#2 0x555c324b5e00 <unknown>\n#3 0x555c324b5ff1 <unknown>\n#4 0x555c32504324 <unknown>\n#5 0x555c324db8dd <unknown>\n#6 0x555c3250171c <unknown>\n#7 0x555c324db683 <unknown>\n#8 0x555c324a7b5b <unknown>\n#9 0x555c324a8f31 <unknown>\n#10 0x555c3298472b <unknown>\n#11 0x555c32988534 <unknown>\n#12 0x555c3296b229 <unknown>\n#13 0x555c329890d8 <unknown>\n#14 0x555c3294f61f <unknown>\n#15 0x555c329acdd8 <unknown>\n#16 0x555c329acfb6 <unknown>\n#17 0x555c329beaf6 <unknown>\n#18 0x7f400fc9caa4 <unknown>\n#19 0x7f400fd29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.39 - Check the display of the text in block 5 'home-eco' in the Promo Block",
-        "uid" : "70ddffc97d2e31fc",
-        "parentUid" : "ace7707e999fc46428975abe90cab399",
+        "uid" : "d8ef992d9719fc34",
+        "parentUid" : "b6608970e1b4ea355dc3daea5cd6e44b",
         "status" : "broken",
         "time" : {
-          "start" : 1753061765856,
-          "stop" : 1753061767252,
-          "duration" : 1396
+          "start" : 1753666597042,
+          "stop" : 1753666598403,
+          "duration" : 1361
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "ace7707e999fc46428975abe90cab399"
+      "uid" : "b6608970e1b4ea355dc3daea5cd6e44b"
     }, {
-      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco .content .icon\"}\n  (Session info: chrome=138.0.7204.100); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x55688cfba23a <unknown>\n#1 0x55688ca64ab0 <unknown>\n#2 0x55688cab66f0 <unknown>\n#3 0x55688cab68e1 <unknown>\n#4 0x55688cb04b94 <unknown>\n#5 0x55688cadc1cd <unknown>\n#6 0x55688cb01fee <unknown>\n#7 0x55688cadbf73 <unknown>\n#8 0x55688caa8aeb <unknown>\n#9 0x55688caa9751 <unknown>\n#10 0x55688cf7eb4b <unknown>\n#11 0x55688cf82929 <unknown>\n#12 0x55688cf65929 <unknown>\n#13 0x55688cf834e8 <unknown>\n#14 0x55688cf4a0df <unknown>\n#15 0x55688cfa78e8 <unknown>\n#16 0x55688cfa7ac6 <unknown>\n#17 0x55688cfb9556 <unknown>\n#18 0x7fc510c9caa4 <unknown>\n#19 0x7fc510d29c3c <unknown>",
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".home-eco .content .icon\"}\n  (Session info: chrome=138.0.7204.157); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n#0 0x5581325bc7da <unknown>\n#1 0x5581320612e0 <unknown>\n#2 0x5581320b2e00 <unknown>\n#3 0x5581320b2ff1 <unknown>\n#4 0x558132101324 <unknown>\n#5 0x5581320d88dd <unknown>\n#6 0x5581320fe71c <unknown>\n#7 0x5581320d8683 <unknown>\n#8 0x5581320a4b5b <unknown>\n#9 0x5581320a5f31 <unknown>\n#10 0x55813258172b <unknown>\n#11 0x558132585534 <unknown>\n#12 0x558132568229 <unknown>\n#13 0x5581325860d8 <unknown>\n#14 0x55813254c61f <unknown>\n#15 0x5581325a9dd8 <unknown>\n#16 0x5581325a9fb6 <unknown>\n#17 0x5581325bbaf6 <unknown>\n#18 0x7f91e1c9caa4 <unknown>\n#19 0x7f91e1d29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.40 - Check the display of the sign in block 5 'home-eco' in the Promo Block",
-        "uid" : "f713b768b3235310",
-        "parentUid" : "27ea962a639d2df92210eacff3088206",
+        "uid" : "b29a4c996f09c535",
+        "parentUid" : "a2d983c0db26282fdacba5a75cdfdc0e",
         "status" : "broken",
         "time" : {
-          "start" : 1753061769041,
-          "stop" : 1753061770339,
-          "duration" : 1298
+          "start" : 1753666600098,
+          "stop" : 1753666601474,
+          "duration" : 1376
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "27ea962a639d2df92210eacff3088206"
+      "uid" : "a2d983c0db26282fdacba5a75cdfdc0e"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ded96fd23a <unknown>\n#1 0x55ded91a7ab0 <unknown>\n#2 0x55ded91f96f0 <unknown>\n#3 0x55ded91f98e1 <unknown>\n#4 0x55ded9247b94 <unknown>\n#5 0x55ded921f1cd <unknown>\n#6 0x55ded9244fee <unknown>\n#7 0x55ded921ef73 <unknown>\n#8 0x55ded91ebaeb <unknown>\n#9 0x55ded91ec751 <unknown>\n#10 0x55ded96c1b4b <unknown>\n#11 0x55ded96c5929 <unknown>\n#12 0x55ded96a8929 <unknown>\n#13 0x55ded96c64e8 <unknown>\n#14 0x55ded968d0df <unknown>\n#15 0x55ded96ea8e8 <unknown>\n#16 0x55ded96eaac6 <unknown>\n#17 0x55ded96fc556 <unknown>\n#18 0x7fb11869caa4 <unknown>\n#19 0x7fb118729c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x563bdf6c17da <unknown>\n#1 0x563bdf1662e0 <unknown>\n#2 0x563bdf1b7e00 <unknown>\n#3 0x563bdf1b7ff1 <unknown>\n#4 0x563bdf206324 <unknown>\n#5 0x563bdf1dd8dd <unknown>\n#6 0x563bdf20371c <unknown>\n#7 0x563bdf1dd683 <unknown>\n#8 0x563bdf1a9b5b <unknown>\n#9 0x563bdf1aaf31 <unknown>\n#10 0x563bdf68672b <unknown>\n#11 0x563bdf68a534 <unknown>\n#12 0x563bdf66d229 <unknown>\n#13 0x563bdf68b0d8 <unknown>\n#14 0x563bdf65161f <unknown>\n#15 0x563bdf6aedd8 <unknown>\n#16 0x563bdf6aefb6 <unknown>\n#17 0x563bdf6c0af6 <unknown>\n#18 0x7f072f29caa4 <unknown>\n#19 0x7f072f329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.43 - Check section 2 in the Promo Block is present in the DOM tree",
-        "uid" : "18aa8c5024637176",
-        "parentUid" : "8acce81604cb247888b405e72a648498",
+        "uid" : "dd2014cbba441eae",
+        "parentUid" : "cd3244eb6838f5fdc01618825b8a8777",
         "status" : "broken",
         "time" : {
-          "start" : 1753061777523,
-          "stop" : 1753061783902,
-          "duration" : 6379
+          "start" : 1753666608151,
+          "stop" : 1753666614550,
+          "duration" : 6399
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8acce81604cb247888b405e72a648498"
+      "uid" : "cd3244eb6838f5fdc01618825b8a8777"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555d4b52023a <unknown>\n#1 0x555d4afcaab0 <unknown>\n#2 0x555d4b01c6f0 <unknown>\n#3 0x555d4b01c8e1 <unknown>\n#4 0x555d4b06ab94 <unknown>\n#5 0x555d4b0421cd <unknown>\n#6 0x555d4b067fee <unknown>\n#7 0x555d4b041f73 <unknown>\n#8 0x555d4b00eaeb <unknown>\n#9 0x555d4b00f751 <unknown>\n#10 0x555d4b4e4b4b <unknown>\n#11 0x555d4b4e8929 <unknown>\n#12 0x555d4b4cb929 <unknown>\n#13 0x555d4b4e94e8 <unknown>\n#14 0x555d4b4b00df <unknown>\n#15 0x555d4b50d8e8 <unknown>\n#16 0x555d4b50dac6 <unknown>\n#17 0x555d4b51f556 <unknown>\n#18 0x7febce09caa4 <unknown>\n#19 0x7febce129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5627ea1427da <unknown>\n#1 0x5627e9be72e0 <unknown>\n#2 0x5627e9c38e00 <unknown>\n#3 0x5627e9c38ff1 <unknown>\n#4 0x5627e9c87324 <unknown>\n#5 0x5627e9c5e8dd <unknown>\n#6 0x5627e9c8471c <unknown>\n#7 0x5627e9c5e683 <unknown>\n#8 0x5627e9c2ab5b <unknown>\n#9 0x5627e9c2bf31 <unknown>\n#10 0x5627ea10772b <unknown>\n#11 0x5627ea10b534 <unknown>\n#12 0x5627ea0ee229 <unknown>\n#13 0x5627ea10c0d8 <unknown>\n#14 0x5627ea0d261f <unknown>\n#15 0x5627ea12fdd8 <unknown>\n#16 0x5627ea12ffb6 <unknown>\n#17 0x5627ea141af6 <unknown>\n#18 0x7f6453e9caa4 <unknown>\n#19 0x7f6453f29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.44 - Check block 1 'home-pants' in section 2 of the Promo Block is present in the DOM tree",
-        "uid" : "9dbf20a1e6b35c12",
-        "parentUid" : "1d24a00c3fec3be6afb8da573e813f2a",
+        "uid" : "4ba2b3ca9523dc82",
+        "parentUid" : "b0502cf66572e139a998adcef3446eef",
         "status" : "broken",
         "time" : {
-          "start" : 1753061785422,
-          "stop" : 1753061792064,
-          "duration" : 6642
+          "start" : 1753666616162,
+          "stop" : 1753666622534,
+          "duration" : 6372
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "1d24a00c3fec3be6afb8da573e813f2a"
+      "uid" : "b0502cf66572e139a998adcef3446eef"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fa6517623a <unknown>\n#1 0x55fa64c20ab0 <unknown>\n#2 0x55fa64c726f0 <unknown>\n#3 0x55fa64c728e1 <unknown>\n#4 0x55fa64cc0b94 <unknown>\n#5 0x55fa64c981cd <unknown>\n#6 0x55fa64cbdfee <unknown>\n#7 0x55fa64c97f73 <unknown>\n#8 0x55fa64c64aeb <unknown>\n#9 0x55fa64c65751 <unknown>\n#10 0x55fa6513ab4b <unknown>\n#11 0x55fa6513e929 <unknown>\n#12 0x55fa65121929 <unknown>\n#13 0x55fa6513f4e8 <unknown>\n#14 0x55fa651060df <unknown>\n#15 0x55fa651638e8 <unknown>\n#16 0x55fa65163ac6 <unknown>\n#17 0x55fa65175556 <unknown>\n#18 0x7f3210a9caa4 <unknown>\n#19 0x7f3210b29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564e493b07da <unknown>\n#1 0x564e48e552e0 <unknown>\n#2 0x564e48ea6e00 <unknown>\n#3 0x564e48ea6ff1 <unknown>\n#4 0x564e48ef5324 <unknown>\n#5 0x564e48ecc8dd <unknown>\n#6 0x564e48ef271c <unknown>\n#7 0x564e48ecc683 <unknown>\n#8 0x564e48e98b5b <unknown>\n#9 0x564e48e99f31 <unknown>\n#10 0x564e4937572b <unknown>\n#11 0x564e49379534 <unknown>\n#12 0x564e4935c229 <unknown>\n#13 0x564e4937a0d8 <unknown>\n#14 0x564e4934061f <unknown>\n#15 0x564e4939ddd8 <unknown>\n#16 0x564e4939dfb6 <unknown>\n#17 0x564e493afaf6 <unknown>\n#18 0x7f0b4449caa4 <unknown>\n#19 0x7f0b44529c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.45 - Check block 2 'home-t-shirts' in section 2 of the Promo Block is present in the DOM tree",
-        "uid" : "19b9a19555983954",
-        "parentUid" : "7a2b9971a7619b02144cf1c3775a37f4",
+        "uid" : "88c9ad01e506ea18",
+        "parentUid" : "eb186158e5a39901851ee425a1db62cb",
         "status" : "broken",
         "time" : {
-          "start" : 1753061793599,
-          "stop" : 1753061800106,
-          "duration" : 6507
+          "start" : 1753666624144,
+          "stop" : 1753666630753,
+          "duration" : 6609
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "7a2b9971a7619b02144cf1c3775a37f4"
+      "uid" : "eb186158e5a39901851ee425a1db62cb"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cee4b6023a <unknown>\n#1 0x55cee460aab0 <unknown>\n#2 0x55cee465c6f0 <unknown>\n#3 0x55cee465c8e1 <unknown>\n#4 0x55cee46aab94 <unknown>\n#5 0x55cee46821cd <unknown>\n#6 0x55cee46a7fee <unknown>\n#7 0x55cee4681f73 <unknown>\n#8 0x55cee464eaeb <unknown>\n#9 0x55cee464f751 <unknown>\n#10 0x55cee4b24b4b <unknown>\n#11 0x55cee4b28929 <unknown>\n#12 0x55cee4b0b929 <unknown>\n#13 0x55cee4b294e8 <unknown>\n#14 0x55cee4af00df <unknown>\n#15 0x55cee4b4d8e8 <unknown>\n#16 0x55cee4b4dac6 <unknown>\n#17 0x55cee4b5f556 <unknown>\n#18 0x7fdb0fe9caa4 <unknown>\n#19 0x7fdb0ff29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ed55cbc7da <unknown>\n#1 0x55ed557612e0 <unknown>\n#2 0x55ed557b2e00 <unknown>\n#3 0x55ed557b2ff1 <unknown>\n#4 0x55ed55801324 <unknown>\n#5 0x55ed557d88dd <unknown>\n#6 0x55ed557fe71c <unknown>\n#7 0x55ed557d8683 <unknown>\n#8 0x55ed557a4b5b <unknown>\n#9 0x55ed557a5f31 <unknown>\n#10 0x55ed55c8172b <unknown>\n#11 0x55ed55c85534 <unknown>\n#12 0x55ed55c68229 <unknown>\n#13 0x55ed55c860d8 <unknown>\n#14 0x55ed55c4c61f <unknown>\n#15 0x55ed55ca9dd8 <unknown>\n#16 0x55ed55ca9fb6 <unknown>\n#17 0x55ed55cbbaf6 <unknown>\n#18 0x7fa0f909caa4 <unknown>\n#19 0x7fa0f9129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.46 - Check block 3 'home-erin' in section 2 of the Promo Block is present in the DOM tree",
-        "uid" : "809e022e5bfa9536",
-        "parentUid" : "2f239a3e8483aa8d26fb058db6edb20b",
+        "uid" : "e57690fb1ab234f0",
+        "parentUid" : "0405d631fec71b1a90304d1b0af962e6",
         "status" : "broken",
         "time" : {
-          "start" : 1753061801641,
-          "stop" : 1753061808284,
-          "duration" : 6643
+          "start" : 1753666632360,
+          "stop" : 1753666639278,
+          "duration" : 6918
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2f239a3e8483aa8d26fb058db6edb20b"
+      "uid" : "0405d631fec71b1a90304d1b0af962e6"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5623c376f23a <unknown>\n#1 0x5623c3219ab0 <unknown>\n#2 0x5623c326b6f0 <unknown>\n#3 0x5623c326b8e1 <unknown>\n#4 0x5623c32b9b94 <unknown>\n#5 0x5623c32911cd <unknown>\n#6 0x5623c32b6fee <unknown>\n#7 0x5623c3290f73 <unknown>\n#8 0x5623c325daeb <unknown>\n#9 0x5623c325e751 <unknown>\n#10 0x5623c3733b4b <unknown>\n#11 0x5623c3737929 <unknown>\n#12 0x5623c371a929 <unknown>\n#13 0x5623c37384e8 <unknown>\n#14 0x5623c36ff0df <unknown>\n#15 0x5623c375c8e8 <unknown>\n#16 0x5623c375cac6 <unknown>\n#17 0x5623c376e556 <unknown>\n#18 0x7f723289caa4 <unknown>\n#19 0x7f7232929c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56334b4847da <unknown>\n#1 0x56334af292e0 <unknown>\n#2 0x56334af7ae00 <unknown>\n#3 0x56334af7aff1 <unknown>\n#4 0x56334afc9324 <unknown>\n#5 0x56334afa08dd <unknown>\n#6 0x56334afc671c <unknown>\n#7 0x56334afa0683 <unknown>\n#8 0x56334af6cb5b <unknown>\n#9 0x56334af6df31 <unknown>\n#10 0x56334b44972b <unknown>\n#11 0x56334b44d534 <unknown>\n#12 0x56334b430229 <unknown>\n#13 0x56334b44e0d8 <unknown>\n#14 0x56334b41461f <unknown>\n#15 0x56334b471dd8 <unknown>\n#16 0x56334b471fb6 <unknown>\n#17 0x56334b483af6 <unknown>\n#18 0x7f781649caa4 <unknown>\n#19 0x7f7816529c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.47 - Check block 4 'home-performance' in section 2 of the Promo Block is present in the DOM tree",
-        "uid" : "b8ad851e3f6da6fc",
-        "parentUid" : "7ff66c0718d3557491495c8ad91ac8cf",
+        "uid" : "a475647f53cad8f5",
+        "parentUid" : "d6aee9fa70bfc7bb1ba62e81ab3fcab4",
         "status" : "broken",
         "time" : {
-          "start" : 1753061809778,
-          "stop" : 1753061816489,
-          "duration" : 6711
+          "start" : 1753666640878,
+          "stop" : 1753666647260,
+          "duration" : 6382
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "7ff66c0718d3557491495c8ad91ac8cf"
+      "uid" : "d6aee9fa70bfc7bb1ba62e81ab3fcab4"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a9474d623a <unknown>\n#1 0x55a946f80ab0 <unknown>\n#2 0x55a946fd26f0 <unknown>\n#3 0x55a946fd28e1 <unknown>\n#4 0x55a947020b94 <unknown>\n#5 0x55a946ff81cd <unknown>\n#6 0x55a94701dfee <unknown>\n#7 0x55a946ff7f73 <unknown>\n#8 0x55a946fc4aeb <unknown>\n#9 0x55a946fc5751 <unknown>\n#10 0x55a94749ab4b <unknown>\n#11 0x55a94749e929 <unknown>\n#12 0x55a947481929 <unknown>\n#13 0x55a94749f4e8 <unknown>\n#14 0x55a9474660df <unknown>\n#15 0x55a9474c38e8 <unknown>\n#16 0x55a9474c3ac6 <unknown>\n#17 0x55a9474d5556 <unknown>\n#18 0x7f9e4809caa4 <unknown>\n#19 0x7f9e48129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558ca4f4c7da <unknown>\n#1 0x558ca49f12e0 <unknown>\n#2 0x558ca4a42e00 <unknown>\n#3 0x558ca4a42ff1 <unknown>\n#4 0x558ca4a91324 <unknown>\n#5 0x558ca4a688dd <unknown>\n#6 0x558ca4a8e71c <unknown>\n#7 0x558ca4a68683 <unknown>\n#8 0x558ca4a34b5b <unknown>\n#9 0x558ca4a35f31 <unknown>\n#10 0x558ca4f1172b <unknown>\n#11 0x558ca4f15534 <unknown>\n#12 0x558ca4ef8229 <unknown>\n#13 0x558ca4f160d8 <unknown>\n#14 0x558ca4edc61f <unknown>\n#15 0x558ca4f39dd8 <unknown>\n#16 0x558ca4f39fb6 <unknown>\n#17 0x558ca4f4baf6 <unknown>\n#18 0x7f3e2f29caa4 <unknown>\n#19 0x7f3e2f329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.48 - Check block 5 'home-eco' in section 2 of the Promo Block is present in the DOM tree",
-        "uid" : "cca8e450d6549fd0",
-        "parentUid" : "28a5611a144c83e3273c2628f7647da5",
+        "uid" : "71355a0a032ca2cf",
+        "parentUid" : "9667d6cec0ac7e54a38b5d2854a23a23",
         "status" : "broken",
         "time" : {
-          "start" : 1753061818006,
-          "stop" : 1753061824766,
-          "duration" : 6760
+          "start" : 1753666648876,
+          "stop" : 1753666655210,
+          "duration" : 6334
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "28a5611a144c83e3273c2628f7647da5"
+      "uid" : "9667d6cec0ac7e54a38b5d2854a23a23"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e553a3723a <unknown>\n#1 0x55e5534e1ab0 <unknown>\n#2 0x55e5535336f0 <unknown>\n#3 0x55e5535338e1 <unknown>\n#4 0x55e553581b94 <unknown>\n#5 0x55e5535591cd <unknown>\n#6 0x55e55357efee <unknown>\n#7 0x55e553558f73 <unknown>\n#8 0x55e553525aeb <unknown>\n#9 0x55e553526751 <unknown>\n#10 0x55e5539fbb4b <unknown>\n#11 0x55e5539ff929 <unknown>\n#12 0x55e5539e2929 <unknown>\n#13 0x55e553a004e8 <unknown>\n#14 0x55e5539c70df <unknown>\n#15 0x55e553a248e8 <unknown>\n#16 0x55e553a24ac6 <unknown>\n#17 0x55e553a36556 <unknown>\n#18 0x7fcfe649caa4 <unknown>\n#19 0x7fcfe6529c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55861c0867da <unknown>\n#1 0x55861bb2b2e0 <unknown>\n#2 0x55861bb7ce00 <unknown>\n#3 0x55861bb7cff1 <unknown>\n#4 0x55861bbcb324 <unknown>\n#5 0x55861bba28dd <unknown>\n#6 0x55861bbc871c <unknown>\n#7 0x55861bba2683 <unknown>\n#8 0x55861bb6eb5b <unknown>\n#9 0x55861bb6ff31 <unknown>\n#10 0x55861c04b72b <unknown>\n#11 0x55861c04f534 <unknown>\n#12 0x55861c032229 <unknown>\n#13 0x55861c0500d8 <unknown>\n#14 0x55861c01661f <unknown>\n#15 0x55861c073dd8 <unknown>\n#16 0x55861c073fb6 <unknown>\n#17 0x55861c085af6 <unknown>\n#18 0x7f07dc89caa4 <unknown>\n#19 0x7f07dc929c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.50 - Check if block 1 'home-pants' in section 2 is clickablein the Promo Block on the main page",
-        "uid" : "b7ef9fe7f14a5662",
-        "parentUid" : "d312fe9d2c7eea7ef4a08b2b9bf9a742",
+        "uid" : "c4834a601110af1d",
+        "parentUid" : "9c03fd703effb7f9419a99498c489790",
         "status" : "broken",
         "time" : {
-          "start" : 1753061829039,
-          "stop" : 1753061835861,
-          "duration" : 6822
+          "start" : 1753666659408,
+          "stop" : 1753666665830,
+          "duration" : 6422
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d312fe9d2c7eea7ef4a08b2b9bf9a742"
+      "uid" : "9c03fd703effb7f9419a99498c489790"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55dffe80323a <unknown>\n#1 0x55dffe2adab0 <unknown>\n#2 0x55dffe2ff6f0 <unknown>\n#3 0x55dffe2ff8e1 <unknown>\n#4 0x55dffe34db94 <unknown>\n#5 0x55dffe3251cd <unknown>\n#6 0x55dffe34afee <unknown>\n#7 0x55dffe324f73 <unknown>\n#8 0x55dffe2f1aeb <unknown>\n#9 0x55dffe2f2751 <unknown>\n#10 0x55dffe7c7b4b <unknown>\n#11 0x55dffe7cb929 <unknown>\n#12 0x55dffe7ae929 <unknown>\n#13 0x55dffe7cc4e8 <unknown>\n#14 0x55dffe7930df <unknown>\n#15 0x55dffe7f08e8 <unknown>\n#16 0x55dffe7f0ac6 <unknown>\n#17 0x55dffe802556 <unknown>\n#18 0x7efd6fe9caa4 <unknown>\n#19 0x7efd6ff29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f3560d17da <unknown>\n#1 0x55f355b762e0 <unknown>\n#2 0x55f355bc7e00 <unknown>\n#3 0x55f355bc7ff1 <unknown>\n#4 0x55f355c16324 <unknown>\n#5 0x55f355bed8dd <unknown>\n#6 0x55f355c1371c <unknown>\n#7 0x55f355bed683 <unknown>\n#8 0x55f355bb9b5b <unknown>\n#9 0x55f355bbaf31 <unknown>\n#10 0x55f35609672b <unknown>\n#11 0x55f35609a534 <unknown>\n#12 0x55f35607d229 <unknown>\n#13 0x55f35609b0d8 <unknown>\n#14 0x55f35606161f <unknown>\n#15 0x55f3560bedd8 <unknown>\n#16 0x55f3560befb6 <unknown>\n#17 0x55f3560d0af6 <unknown>\n#18 0x7f3d0ec9caa4 <unknown>\n#19 0x7f3d0ed29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickablein the Promo Block on the main page",
-        "uid" : "9908c7c19c00b69c",
-        "parentUid" : "1d86d3243f4c388eb21d9cbe76718e16",
+        "uid" : "775d4ee53939ca3b",
+        "parentUid" : "4a30afae5861d9b5142ef5ddd38c6ffa",
         "status" : "broken",
         "time" : {
-          "start" : 1753061837389,
-          "stop" : 1753061843988,
-          "duration" : 6599
+          "start" : 1753666667426,
+          "stop" : 1753666673875,
+          "duration" : 6449
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "1d86d3243f4c388eb21d9cbe76718e16"
+      "uid" : "4a30afae5861d9b5142ef5ddd38c6ffa"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55872af9e23a <unknown>\n#1 0x55872aa48ab0 <unknown>\n#2 0x55872aa9a6f0 <unknown>\n#3 0x55872aa9a8e1 <unknown>\n#4 0x55872aae8b94 <unknown>\n#5 0x55872aac01cd <unknown>\n#6 0x55872aae5fee <unknown>\n#7 0x55872aabff73 <unknown>\n#8 0x55872aa8caeb <unknown>\n#9 0x55872aa8d751 <unknown>\n#10 0x55872af62b4b <unknown>\n#11 0x55872af66929 <unknown>\n#12 0x55872af49929 <unknown>\n#13 0x55872af674e8 <unknown>\n#14 0x55872af2e0df <unknown>\n#15 0x55872af8b8e8 <unknown>\n#16 0x55872af8bac6 <unknown>\n#17 0x55872af9d556 <unknown>\n#18 0x7f55b509caa4 <unknown>\n#19 0x7f55b5129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e17d5df7da <unknown>\n#1 0x55e17d0842e0 <unknown>\n#2 0x55e17d0d5e00 <unknown>\n#3 0x55e17d0d5ff1 <unknown>\n#4 0x55e17d124324 <unknown>\n#5 0x55e17d0fb8dd <unknown>\n#6 0x55e17d12171c <unknown>\n#7 0x55e17d0fb683 <unknown>\n#8 0x55e17d0c7b5b <unknown>\n#9 0x55e17d0c8f31 <unknown>\n#10 0x55e17d5a472b <unknown>\n#11 0x55e17d5a8534 <unknown>\n#12 0x55e17d58b229 <unknown>\n#13 0x55e17d5a90d8 <unknown>\n#14 0x55e17d56f61f <unknown>\n#15 0x55e17d5ccdd8 <unknown>\n#16 0x55e17d5ccfb6 <unknown>\n#17 0x55e17d5deaf6 <unknown>\n#18 0x7fd86929caa4 <unknown>\n#19 0x7fd869329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.52 - Check if block 3 'home-erin' in section 2 is clickablein the Promo Block on the main page",
-        "uid" : "3a4672e2536bbaff",
-        "parentUid" : "dee9a2cd7c06ef3f5b8909d522dbadf4",
+        "uid" : "93200a43c39a9f89",
+        "parentUid" : "635a927e44c899f23c9ac6aa01560d10",
         "status" : "broken",
         "time" : {
-          "start" : 1753061845506,
-          "stop" : 1753061852149,
-          "duration" : 6643
+          "start" : 1753666675489,
+          "stop" : 1753666681845,
+          "duration" : 6356
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "dee9a2cd7c06ef3f5b8909d522dbadf4"
+      "uid" : "635a927e44c899f23c9ac6aa01560d10"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a4bff9a23a <unknown>\n#1 0x55a4bfa44ab0 <unknown>\n#2 0x55a4bfa966f0 <unknown>\n#3 0x55a4bfa968e1 <unknown>\n#4 0x55a4bfae4b94 <unknown>\n#5 0x55a4bfabc1cd <unknown>\n#6 0x55a4bfae1fee <unknown>\n#7 0x55a4bfabbf73 <unknown>\n#8 0x55a4bfa88aeb <unknown>\n#9 0x55a4bfa89751 <unknown>\n#10 0x55a4bff5eb4b <unknown>\n#11 0x55a4bff62929 <unknown>\n#12 0x55a4bff45929 <unknown>\n#13 0x55a4bff634e8 <unknown>\n#14 0x55a4bff2a0df <unknown>\n#15 0x55a4bff878e8 <unknown>\n#16 0x55a4bff87ac6 <unknown>\n#17 0x55a4bff99556 <unknown>\n#18 0x7fef08c9caa4 <unknown>\n#19 0x7fef08d29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555fc094f7da <unknown>\n#1 0x555fc03f42e0 <unknown>\n#2 0x555fc0445e00 <unknown>\n#3 0x555fc0445ff1 <unknown>\n#4 0x555fc0494324 <unknown>\n#5 0x555fc046b8dd <unknown>\n#6 0x555fc049171c <unknown>\n#7 0x555fc046b683 <unknown>\n#8 0x555fc0437b5b <unknown>\n#9 0x555fc0438f31 <unknown>\n#10 0x555fc091472b <unknown>\n#11 0x555fc0918534 <unknown>\n#12 0x555fc08fb229 <unknown>\n#13 0x555fc09190d8 <unknown>\n#14 0x555fc08df61f <unknown>\n#15 0x555fc093cdd8 <unknown>\n#16 0x555fc093cfb6 <unknown>\n#17 0x555fc094eaf6 <unknown>\n#18 0x7fa44ac9caa4 <unknown>\n#19 0x7fa44ad29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.53 - Check if block 4 'home-performance' in section 2 is clickablein the Promo Block on the main page",
-        "uid" : "83abfc23dc4961d8",
-        "parentUid" : "6103b199c62838bf999e3fb4bacb1e67",
+        "uid" : "18ace2487edd6dbf",
+        "parentUid" : "2eefbc3152917eff801642c59ffb7c74",
         "status" : "broken",
         "time" : {
-          "start" : 1753061853669,
-          "stop" : 1753061860174,
-          "duration" : 6505
+          "start" : 1753666683441,
+          "stop" : 1753666689785,
+          "duration" : 6344
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "6103b199c62838bf999e3fb4bacb1e67"
+      "uid" : "2eefbc3152917eff801642c59ffb7c74"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5558a31de23a <unknown>\n#1 0x5558a2c88ab0 <unknown>\n#2 0x5558a2cda6f0 <unknown>\n#3 0x5558a2cda8e1 <unknown>\n#4 0x5558a2d28b94 <unknown>\n#5 0x5558a2d001cd <unknown>\n#6 0x5558a2d25fee <unknown>\n#7 0x5558a2cfff73 <unknown>\n#8 0x5558a2cccaeb <unknown>\n#9 0x5558a2ccd751 <unknown>\n#10 0x5558a31a2b4b <unknown>\n#11 0x5558a31a6929 <unknown>\n#12 0x5558a3189929 <unknown>\n#13 0x5558a31a74e8 <unknown>\n#14 0x5558a316e0df <unknown>\n#15 0x5558a31cb8e8 <unknown>\n#16 0x5558a31cbac6 <unknown>\n#17 0x5558a31dd556 <unknown>\n#18 0x7fd7d149caa4 <unknown>\n#19 0x7fd7d1529c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564f123837da <unknown>\n#1 0x564f11e282e0 <unknown>\n#2 0x564f11e79e00 <unknown>\n#3 0x564f11e79ff1 <unknown>\n#4 0x564f11ec8324 <unknown>\n#5 0x564f11e9f8dd <unknown>\n#6 0x564f11ec571c <unknown>\n#7 0x564f11e9f683 <unknown>\n#8 0x564f11e6bb5b <unknown>\n#9 0x564f11e6cf31 <unknown>\n#10 0x564f1234872b <unknown>\n#11 0x564f1234c534 <unknown>\n#12 0x564f1232f229 <unknown>\n#13 0x564f1234d0d8 <unknown>\n#14 0x564f1231361f <unknown>\n#15 0x564f12370dd8 <unknown>\n#16 0x564f12370fb6 <unknown>\n#17 0x564f12382af6 <unknown>\n#18 0x7f6654c9caa4 <unknown>\n#19 0x7f6654d29c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.01.54 - Check if block 5 'home-eco' in section 2 is clickablein the Promo Block on the main page",
-        "uid" : "2811b58b529ea30e",
-        "parentUid" : "62bcd4f917e622ae5233a20bb44e739f",
+        "uid" : "3c87a3a414871f6f",
+        "parentUid" : "ff1f6185f272a783257d1eec198890b6",
         "status" : "broken",
         "time" : {
-          "start" : 1753061861697,
-          "stop" : 1753061868452,
-          "duration" : 6755
+          "start" : 1753666691376,
+          "stop" : 1753666697756,
+          "duration" : 6380
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "62bcd4f917e622ae5233a20bb44e739f"
+      "uid" : "ff1f6185f272a783257d1eec198890b6"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c8789ce23a <unknown>\n#1 0x55c878478ab0 <unknown>\n#2 0x55c8784ca6f0 <unknown>\n#3 0x55c8784ca8e1 <unknown>\n#4 0x55c878518b94 <unknown>\n#5 0x55c8784f01cd <unknown>\n#6 0x55c878515fee <unknown>\n#7 0x55c8784eff73 <unknown>\n#8 0x55c8784bcaeb <unknown>\n#9 0x55c8784bd751 <unknown>\n#10 0x55c878992b4b <unknown>\n#11 0x55c878996929 <unknown>\n#12 0x55c878979929 <unknown>\n#13 0x55c8789974e8 <unknown>\n#14 0x55c87895e0df <unknown>\n#15 0x55c8789bb8e8 <unknown>\n#16 0x55c8789bbac6 <unknown>\n#17 0x55c8789cd556 <unknown>\n#18 0x7fe0c189caa4 <unknown>\n#19 0x7fe0c1929c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5598fc7bc7da <unknown>\n#1 0x5598fc2612e0 <unknown>\n#2 0x5598fc2b2e00 <unknown>\n#3 0x5598fc2b2ff1 <unknown>\n#4 0x5598fc301324 <unknown>\n#5 0x5598fc2d88dd <unknown>\n#6 0x5598fc2fe71c <unknown>\n#7 0x5598fc2d8683 <unknown>\n#8 0x5598fc2a4b5b <unknown>\n#9 0x5598fc2a5f31 <unknown>\n#10 0x5598fc78172b <unknown>\n#11 0x5598fc785534 <unknown>\n#12 0x5598fc768229 <unknown>\n#13 0x5598fc7860d8 <unknown>\n#14 0x5598fc74c61f <unknown>\n#15 0x5598fc7a9dd8 <unknown>\n#16 0x5598fc7a9fb6 <unknown>\n#17 0x5598fc7bbaf6 <unknown>\n#18 0x7fafb809caa4 <unknown>\n#19 0x7fafb8129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block leads to the correct page",
-        "uid" : "37ede07ffe460e34",
-        "parentUid" : "372bfa13d153cd2bd8b79f14b6adf4b6",
+        "uid" : "58eea8b056a55c87",
+        "parentUid" : "9a1100e5f430910ee83b0e1b38285e8c",
         "status" : "broken",
         "time" : {
-          "start" : 1753061874790,
-          "stop" : 1753061881482,
-          "duration" : 6692
+          "start" : 1753666704526,
+          "stop" : 1753666710916,
+          "duration" : 6390
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "372bfa13d153cd2bd8b79f14b6adf4b6"
+      "uid" : "9a1100e5f430910ee83b0e1b38285e8c"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e4413f923a <unknown>\n#1 0x55e440ea3ab0 <unknown>\n#2 0x55e440ef56f0 <unknown>\n#3 0x55e440ef58e1 <unknown>\n#4 0x55e440f43b94 <unknown>\n#5 0x55e440f1b1cd <unknown>\n#6 0x55e440f40fee <unknown>\n#7 0x55e440f1af73 <unknown>\n#8 0x55e440ee7aeb <unknown>\n#9 0x55e440ee8751 <unknown>\n#10 0x55e4413bdb4b <unknown>\n#11 0x55e4413c1929 <unknown>\n#12 0x55e4413a4929 <unknown>\n#13 0x55e4413c24e8 <unknown>\n#14 0x55e4413890df <unknown>\n#15 0x55e4413e68e8 <unknown>\n#16 0x55e4413e6ac6 <unknown>\n#17 0x55e4413f8556 <unknown>\n#18 0x7ff1e9e9caa4 <unknown>\n#19 0x7ff1e9f29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562cfee4e7da <unknown>\n#1 0x562cfe8f32e0 <unknown>\n#2 0x562cfe944e00 <unknown>\n#3 0x562cfe944ff1 <unknown>\n#4 0x562cfe993324 <unknown>\n#5 0x562cfe96a8dd <unknown>\n#6 0x562cfe99071c <unknown>\n#7 0x562cfe96a683 <unknown>\n#8 0x562cfe936b5b <unknown>\n#9 0x562cfe937f31 <unknown>\n#10 0x562cfee1372b <unknown>\n#11 0x562cfee17534 <unknown>\n#12 0x562cfedfa229 <unknown>\n#13 0x562cfee180d8 <unknown>\n#14 0x562cfedde61f <unknown>\n#15 0x562cfee3bdd8 <unknown>\n#16 0x562cfee3bfb6 <unknown>\n#17 0x562cfee4daf6 <unknown>\n#18 0x7f5df309caa4 <unknown>\n#19 0x7f5df3129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.02.03 - Check the link in section 2 block 2 'home-t-shirts' in the Promo Block leads to the correct page",
-        "uid" : "c411fec13df9b303",
-        "parentUid" : "eed9f825b5a69b926f786deda590c674",
+        "uid" : "882fa9e20b0da11c",
+        "parentUid" : "a40aff0dafc943b5757be86844ff453e",
         "status" : "broken",
         "time" : {
-          "start" : 1753061883003,
-          "stop" : 1753061890641,
-          "duration" : 7638
+          "start" : 1753666712492,
+          "stop" : 1753666719063,
+          "duration" : 6571
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "eed9f825b5a69b926f786deda590c674"
+      "uid" : "a40aff0dafc943b5757be86844ff453e"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5598a17b523a <unknown>\n#1 0x5598a125fab0 <unknown>\n#2 0x5598a12b16f0 <unknown>\n#3 0x5598a12b18e1 <unknown>\n#4 0x5598a12ffb94 <unknown>\n#5 0x5598a12d71cd <unknown>\n#6 0x5598a12fcfee <unknown>\n#7 0x5598a12d6f73 <unknown>\n#8 0x5598a12a3aeb <unknown>\n#9 0x5598a12a4751 <unknown>\n#10 0x5598a1779b4b <unknown>\n#11 0x5598a177d929 <unknown>\n#12 0x5598a1760929 <unknown>\n#13 0x5598a177e4e8 <unknown>\n#14 0x5598a17450df <unknown>\n#15 0x5598a17a28e8 <unknown>\n#16 0x5598a17a2ac6 <unknown>\n#17 0x5598a17b4556 <unknown>\n#18 0x7f9d3109caa4 <unknown>\n#19 0x7f9d31129c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555c447477da <unknown>\n#1 0x555c441ec2e0 <unknown>\n#2 0x555c4423de00 <unknown>\n#3 0x555c4423dff1 <unknown>\n#4 0x555c4428c324 <unknown>\n#5 0x555c442638dd <unknown>\n#6 0x555c4428971c <unknown>\n#7 0x555c44263683 <unknown>\n#8 0x555c4422fb5b <unknown>\n#9 0x555c44230f31 <unknown>\n#10 0x555c4470c72b <unknown>\n#11 0x555c44710534 <unknown>\n#12 0x555c446f3229 <unknown>\n#13 0x555c447110d8 <unknown>\n#14 0x555c446d761f <unknown>\n#15 0x555c44734dd8 <unknown>\n#16 0x555c44734fb6 <unknown>\n#17 0x555c44746af6 <unknown>\n#18 0x7fc0b329caa4 <unknown>\n#19 0x7fc0b3329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.02.04 - Check the link in section 2 block 3 'home-erin' in the Promo Block leads to the correct page",
-        "uid" : "881f2ca73758b842",
-        "parentUid" : "8b7b986728ff3d1db0f34e8841f89318",
+        "uid" : "4b9f881bf101f1ea",
+        "parentUid" : "b605fcc21f23429f487c56060f732d62",
         "status" : "broken",
         "time" : {
-          "start" : 1753061892184,
-          "stop" : 1753061898385,
-          "duration" : 6201
+          "start" : 1753666720658,
+          "stop" : 1753666727090,
+          "duration" : 6432
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8b7b986728ff3d1db0f34e8841f89318"
+      "uid" : "b605fcc21f23429f487c56060f732d62"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x559d38b8c23a <unknown>\n#1 0x559d38636ab0 <unknown>\n#2 0x559d386886f0 <unknown>\n#3 0x559d386888e1 <unknown>\n#4 0x559d386d6b94 <unknown>\n#5 0x559d386ae1cd <unknown>\n#6 0x559d386d3fee <unknown>\n#7 0x559d386adf73 <unknown>\n#8 0x559d3867aaeb <unknown>\n#9 0x559d3867b751 <unknown>\n#10 0x559d38b50b4b <unknown>\n#11 0x559d38b54929 <unknown>\n#12 0x559d38b37929 <unknown>\n#13 0x559d38b554e8 <unknown>\n#14 0x559d38b1c0df <unknown>\n#15 0x559d38b798e8 <unknown>\n#16 0x559d38b79ac6 <unknown>\n#17 0x559d38b8b556 <unknown>\n#18 0x7f5a9729caa4 <unknown>\n#19 0x7f5a97329c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5581c273f7da <unknown>\n#1 0x5581c21e42e0 <unknown>\n#2 0x5581c2235e00 <unknown>\n#3 0x5581c2235ff1 <unknown>\n#4 0x5581c2284324 <unknown>\n#5 0x5581c225b8dd <unknown>\n#6 0x5581c228171c <unknown>\n#7 0x5581c225b683 <unknown>\n#8 0x5581c2227b5b <unknown>\n#9 0x5581c2228f31 <unknown>\n#10 0x5581c270472b <unknown>\n#11 0x5581c2708534 <unknown>\n#12 0x5581c26eb229 <unknown>\n#13 0x5581c27090d8 <unknown>\n#14 0x5581c26cf61f <unknown>\n#15 0x5581c272cdd8 <unknown>\n#16 0x5581c272cfb6 <unknown>\n#17 0x5581c273eaf6 <unknown>\n#18 0x7f117629caa4 <unknown>\n#19 0x7f1176329c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.02.05 - Check the link in section 2 block 4 'home-performance' in the Promo Block leads to the correct page",
-        "uid" : "9720a2c146b83a26",
-        "parentUid" : "8c16ef32786c4772e5240a7ef8816e7d",
+        "uid" : "f3add32942f30af4",
+        "parentUid" : "30cc541068a27a35aeb6fc14ef965746",
         "status" : "broken",
         "time" : {
-          "start" : 1753061899904,
-          "stop" : 1753061906220,
-          "duration" : 6316
+          "start" : 1753666728687,
+          "stop" : 1753666735163,
+          "duration" : 6476
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8c16ef32786c4772e5240a7ef8816e7d"
+      "uid" : "30cc541068a27a35aeb6fc14ef965746"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55781cb7b23a <unknown>\n#1 0x55781c625ab0 <unknown>\n#2 0x55781c6776f0 <unknown>\n#3 0x55781c6778e1 <unknown>\n#4 0x55781c6c5b94 <unknown>\n#5 0x55781c69d1cd <unknown>\n#6 0x55781c6c2fee <unknown>\n#7 0x55781c69cf73 <unknown>\n#8 0x55781c669aeb <unknown>\n#9 0x55781c66a751 <unknown>\n#10 0x55781cb3fb4b <unknown>\n#11 0x55781cb43929 <unknown>\n#12 0x55781cb26929 <unknown>\n#13 0x55781cb444e8 <unknown>\n#14 0x55781cb0b0df <unknown>\n#15 0x55781cb688e8 <unknown>\n#16 0x55781cb68ac6 <unknown>\n#17 0x55781cb7a556 <unknown>\n#18 0x7efec2e9caa4 <unknown>\n#19 0x7efec2f29c3c <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56315d2367da <unknown>\n#1 0x56315ccdb2e0 <unknown>\n#2 0x56315cd2ce00 <unknown>\n#3 0x56315cd2cff1 <unknown>\n#4 0x56315cd7b324 <unknown>\n#5 0x56315cd528dd <unknown>\n#6 0x56315cd7871c <unknown>\n#7 0x56315cd52683 <unknown>\n#8 0x56315cd1eb5b <unknown>\n#9 0x56315cd1ff31 <unknown>\n#10 0x56315d1fb72b <unknown>\n#11 0x56315d1ff534 <unknown>\n#12 0x56315d1e2229 <unknown>\n#13 0x56315d2000d8 <unknown>\n#14 0x56315d1c661f <unknown>\n#15 0x56315d223dd8 <unknown>\n#16 0x56315d223fb6 <unknown>\n#17 0x56315d235af6 <unknown>\n#18 0x7fbfff09caa4 <unknown>\n#19 0x7fbfff129c3c <unknown>",
       "children" : [ {
         "name" : "TC 13.02.06 - Check the link in section 2 block 5 'home-eco' in the Promo Block leads to the correct page",
-        "uid" : "3d5192b2796c6611",
-        "parentUid" : "4042ce1bdf82368f0ca6099a84e88392",
+        "uid" : "47ca05fb4cdf1b52",
+        "parentUid" : "d0602d642473780a78fd6e6f5f4d6954",
         "status" : "broken",
         "time" : {
-          "start" : 1753061907770,
-          "stop" : 1753061914636,
-          "duration" : 6866
+          "start" : 1753666736773,
+          "stop" : 1753666743308,
+          "duration" : 6535
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "4042ce1bdf82368f0ca6099a84e88392"
-    }, {
-      "name" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input id=\"cart-867377-qty\" name=\"cart[867377][qty]\" data-cart-item-id=\"WT07-XS-Green\" value=\"1\" type=\"number\" size=\"4\" step=\"any\" title=\"Qty\" class=\"input-text qty\" data-validate=\"{required:true,'validate-greater-than-zero':true}\" data-role=\"cart-item-qty\"> is not clickable at point (1027, 743). Other element would receive the click: <path d=\"m456-200 174-340H510v-220L330-420h126v220Zm24 120q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z\"></path>\n  (Session info: chrome=138.0.7204.100)\nStacktrace:\n#0 0x55a9a0d9723a <unknown>\n#1 0x55a9a0841ab0 <unknown>\n#2 0x55a9a089a55c <unknown>\n#3 0x55a9a08983f4 <unknown>\n#4 0x55a9a0895a62 <unknown>\n#5 0x55a9a0895180 <unknown>\n#6 0x55a9a088790a <unknown>\n#7 0x55a9a08b91a2 <unknown>\n#8 0x55a9a088728a <unknown>\n#9 0x55a9a08b936e <unknown>\n#10 0x55a9a08defee <unknown>\n#11 0x55a9a08b8f73 <unknown>\n#12 0x55a9a0885aeb <unknown>\n#13 0x55a9a0886751 <unknown>\n#14 0x55a9a0d5bb4b <unknown>\n#15 0x55a9a0d5f929 <unknown>\n#16 0x55a9a0d42929 <unknown>\n#17 0x55a9a0d604e8 <unknown>\n#18 0x55a9a0d270df <unknown>\n#19 0x55a9a0d848e8 <unknown>\n#20 0x55a9a0d84ac6 <unknown>\n#21 0x55a9a0d96556 <unknown>\n#22 0x7fce6b29caa4 <unknown>\n#23 0x7fce6b329c3c <unknown>",
-      "children" : [ {
-        "name" : "tc 07.02.22 Verify subtotal in Summury Card: subtotal = price * qty and displayed correctly.",
-        "uid" : "a83406bdfba2e7a9",
-        "parentUid" : "38c2deb35d88e9770d0729182d0ce814",
-        "status" : "broken",
-        "time" : {
-          "start" : 1753062294032,
-          "stop" : 1753062295347,
-          "duration" : 1315
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "38c2deb35d88e9770d0729182d0ce814"
-    }, {
-      "name" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div class=\"swatch-option text\" id=\"option-label-size-143-item-166\" index=\"0\" aria-checked=\"false\" aria-describedby=\"option-label-size-143\" tabindex=\"0\" option-type=\"0\" option-id=\"166\" option-label=\"...\" aria-label=\"XS\" option-tooltip-thumb=\"\" option-tooltip-value=\"XS\" role=\"option\" thumb-width=\"110\" thumb-height=\"90\">XS</div> is not clickable at point (1086, 854). Other element would receive the click: <iframe id=\"aswift_7\" name=\"aswift_7\" browsingtopics=\"true\" style=\"min-height: auto; max-height: none; min-width: auto; max-width: none; width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" width=\"1005\" height=\"124\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" vspace=\"0\" hspace=\"0\" allowtransparency=\"true\" scrolling=\"no\" allow=\"attribution-reporting; run-ad-auction\" src=\"https://googleads.g.doubleclick.net/pagead/html/r20250716/r20190131/zrt_lookup_fy2021.html#RS-3-&amp;adk=1812271801&amp;client=ca-pub-7399332034053978&amp;fa=1&amp;ifi=8&amp;uci=a!8&amp;btvi=5\" data-google-container-id=\"a!8\" tabindex=\"0\" title=\"Advertisement\" aria-label=\"Advertisement\" data-google-query-id=\"CKzJjJHqzI4DFQnbGAIdWS0iaA\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=138.0.7204.100)\nStacktrace:\n#0 0x56203d7c623a <unknown>\n#1 0x56203d270ab0 <unknown>\n#2 0x56203d2c955c <unknown>\n#3 0x56203d2c73f4 <unknown>\n#4 0x56203d2c4a62 <unknown>\n#5 0x56203d2c4180 <unknown>\n#6 0x56203d2b690a <unknown>\n#7 0x56203d2e81a2 <unknown>\n#8 0x56203d2b628a <unknown>\n#9 0x56203d2e836e <unknown>\n#10 0x56203d30dfee <unknown>\n#11 0x56203d2e7f73 <unknown>\n#12 0x56203d2b4aeb <unknown>\n#13 0x56203d2b5751 <unknown>\n#14 0x56203d78ab4b <unknown>\n#15 0x56203d78e929 <unknown>\n#16 0x56203d771929 <unknown>\n#17 0x56203d78f4e8 <unknown>\n#18 0x56203d7560df <unknown>\n#19 0x56203d7b38e8 <unknown>\n#20 0x56203d7b3ac6 <unknown>\n#21 0x56203d7c5556 <unknown>\n#22 0x7f25eea9caa4 <unknown>\n#23 0x7f25eeb29c3c <unknown>",
-      "children" : [ {
-        "name" : "test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible[t_header2]",
-        "uid" : "fba83d874b1d4b9e",
-        "parentUid" : "bebe075521be3135bb7472c8c5fa0ae8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1753062339587,
-          "stop" : 1753062339587,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "('css selector', 'th.col.qty span')" ]
-      } ],
-      "uid" : "bebe075521be3135bb7472c8c5fa0ae8"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5570b12b723a <unknown>\n#1 0x5570b0d61ab0 <unknown>\n#2 0x5570b0db36f0 <unknown>\n#3 0x5570b0db38e1 <unknown>\n#4 0x5570b0e01b94 <unknown>\n#5 0x5570b0dd91cd <unknown>\n#6 0x5570b0dfefee <unknown>\n#7 0x5570b0dd8f73 <unknown>\n#8 0x5570b0da5aeb <unknown>\n#9 0x5570b0da6751 <unknown>\n#10 0x5570b127bb4b <unknown>\n#11 0x5570b127f929 <unknown>\n#12 0x5570b1262929 <unknown>\n#13 0x5570b12804e8 <unknown>\n#14 0x5570b12470df <unknown>\n#15 0x5570b12a48e8 <unknown>\n#16 0x5570b12a4ac6 <unknown>\n#17 0x5570b12b6556 <unknown>\n#18 0x7fbb7ac9caa4 <unknown>\n#19 0x7fbb7ad29c3c <unknown>",
-      "children" : [ {
-        "name" : "tc 07.02.24 Verify the Apply Discount Code is displayed",
-        "uid" : "2b8049406e52dc8d",
-        "parentUid" : "01f210eb401e70404bab22c4e81b4800",
-        "status" : "broken",
-        "time" : {
-          "start" : 1753062351953,
-          "stop" : 1753062351953,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "01f210eb401e70404bab22c4e81b4800"
+      "uid" : "d0602d642473780a78fd6e6f5f4d6954"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
