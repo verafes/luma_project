@@ -1,0 +1,497 @@
+{
+  "uid" : "f7d8153ce640e4fa",
+  "name" : "TC 01.03.30 correctly redirected the link \"Gear - Fitness Equipment\"",
+  "fullName" : "tests.test_header.TestHeader#test_tc_01_03_30_correctly_redirected_the_link_gear_fitness_equipment",
+  "historyId" : "e60b6f0b7c558a3c2018df9e4fff5df8",
+  "time" : {
+    "start" : 1754876205070,
+    "stop" : 1754876207121,
+    "duration" : 2051
+  },
+  "description" : "Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed",
+  "descriptionHtml" : "<p>Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: The 'Fitness Equipment' page isn't opened or the page header is incorrect\nassert False",
+  "statusTrace" : "self = <test_header.TestHeader object at 0x7f2eefd5acc0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e63c8ebab482ecbcf035f8d71f1383ca\")>\n\n    @allure.title('TC 01.03.30 correctly redirected the link \"Gear - Fitness Equipment\"')\n    def test_tc_01_03_30_correctly_redirected_the_link_gear_fitness_equipment(self, driver):\n        \"\"\"Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed\"\"\"\n        page = HeaderPage(driver, MAIN_PAGE_URL)\n        page.open()\n        current_page = page.redirected_the_link_gear_fitness_equipment()\n>       assert current_page, \"The 'Fitness Equipment' page isn't opened or the page header is incorrect\"\nE       AssertionError: The 'Fitness Equipment' page isn't opened or the page header is incorrect\nE       assert False\n\ntests/test_header.py:266: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1754876203799,
+      "stop" : 1754876205069,
+      "duration" : 1270
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1754875194582,
+      "stop" : 1754875194651,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1754875194651,
+      "stop" : 1754875194651,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: The 'Fitness Equipment' page isn't opened or the page header is incorrect\nassert False",
+    "statusTrace" : "self = <test_header.TestHeader object at 0x7f2eefd5acc0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e63c8ebab482ecbcf035f8d71f1383ca\")>\n\n    @allure.title('TC 01.03.30 correctly redirected the link \"Gear - Fitness Equipment\"')\n    def test_tc_01_03_30_correctly_redirected_the_link_gear_fitness_equipment(self, driver):\n        \"\"\"Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed\"\"\"\n        page = HeaderPage(driver, MAIN_PAGE_URL)\n        page.open()\n        current_page = page.redirected_the_link_gear_fitness_equipment()\n>       assert current_page, \"The 'Fitness Equipment' page isn't opened or the page header is incorrect\"\nE       AssertionError: The 'Fitness Equipment' page isn't opened or the page header is incorrect\nE       assert False\n\ntests/test_header.py:266: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1754876205070,
+        "stop" : 1754876206318,
+        "duration" : 1248
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Redirected the link \"Gear - Fitness - Equipment\"",
+      "time" : {
+        "start" : 1754876206319,
+        "stop" : 1754876207121,
+        "duration" : 802
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1754876206319,
+          "stop" : 1754876206592,
+          "duration" : 273
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1754876206319,
+            "stop" : 1754876206485,
+            "duration" : 166
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('id', 'ui-id-6')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1754876206485,
+            "stop" : 1754876206571,
+            "duration" : 86
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e63c8ebab482ecbcf035f8d71f1383ca\", element=\"f.D86D2B8EA763C96989AF75C897FC7CC8.d.D9497479B7E4EBD8CA2239A98851BD89.e.24\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('id', 'ui-id-6')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check element hover style",
+        "time" : {
+          "start" : 1754876206593,
+          "stop" : 1754876206921,
+          "duration" : 328
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1754876206593,
+            "stop" : 1754876206625,
+            "duration" : 32
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1754876206593,
+              "stop" : 1754876206598,
+              "duration" : 5
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('id', 'ui-id-6')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1754876206598,
+              "stop" : 1754876206613,
+              "duration" : 15
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e63c8ebab482ecbcf035f8d71f1383ca\", element=\"f.D86D2B8EA763C96989AF75C897FC7CC8.d.D9497479B7E4EBD8CA2239A98851BD89.e.24\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('id', 'ui-id-6')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Move cursor to element",
+          "time" : {
+            "start" : 1754876206626,
+            "stop" : 1754876206912,
+            "duration" : 286
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e63c8ebab482ecbcf035f8d71f1383ca\", element=\"f.D86D2B8EA763C96989AF75C897FC7CC8.d.D9497479B7E4EBD8CA2239A98851BD89.e.24\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('id', 'ui-id-6')"
+        }, {
+          "name" : "css_property",
+          "value" : "'pointer'"
+        }, {
+          "name" : "seconds",
+          "value" : "1"
+        } ],
+        "stepsCount" : 4,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1754876206921,
+          "stop" : 1754876206954,
+          "duration" : 33
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1754876206921,
+            "stop" : 1754876206932,
+            "duration" : 11
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('id', 'ui-id-26')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1754876206932,
+            "stop" : 1754876206941,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e63c8ebab482ecbcf035f8d71f1383ca\", element=\"f.D86D2B8EA763C96989AF75C897FC7CC8.d.D9497479B7E4EBD8CA2239A98851BD89.e.81\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('id', 'ui-id-26')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get element text",
+        "time" : {
+          "start" : 1754876207056,
+          "stop" : 1754876207121,
+          "duration" : 65
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1754876207056,
+            "stop" : 1754876207106,
+            "duration" : 50
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1754876207056,
+              "stop" : 1754876207076,
+              "duration" : 20
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '[data-ui-id=\"page-title-wrapper\"]')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1754876207077,
+              "stop" : 1754876207088,
+              "duration" : 11
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e63c8ebab482ecbcf035f8d71f1383ca\", element=\"f.D86D2B8EA763C96989AF75C897FC7CC8.d.D9497479B7E4EBD8CA2239A98851BD89.e.82\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '[data-ui-id=\"page-title-wrapper\"]')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '[data-ui-id=\"page-title-wrapper\"]')"
+        } ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 15,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "6459adbc0e8973cb",
+      "name" : "Screenshot",
+      "source" : "6459adbc0e8973cb.png",
+      "type" : "image/png",
+      "size" : 60496
+    }, {
+      "uid" : "cadaded045172e8",
+      "name" : "HTML source",
+      "source" : "cadaded045172e8.html",
+      "type" : "text/html",
+      "size" : 268725
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 17,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1754876207373,
+      "stop" : 1754876207445,
+      "duration" : 72
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1754877931589,
+      "stop" : 1754877931589,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Header"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_header"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestHeader"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmsl9tci6h6u"
+  }, {
+    "name" : "thread",
+    "value" : "3000-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_header"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f7d8153ce640e4fa.json",
+  "parameterValues" : [ ]
+}
