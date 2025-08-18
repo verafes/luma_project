@@ -1,0 +1,338 @@
+{
+  "uid" : "99e622a5172e0c9f",
+  "name" : "TC 14.03.09 Verify the link 'Tanks' redirects to a correct page.",
+  "fullName" : "tests.test_men.TestMenPage#test_tc_14_03_09",
+  "historyId" : "74168bc270724fd77596cb2b0a97db86",
+  "time" : {
+    "start" : 1755480999018,
+    "stop" : 1755481001127,
+    "duration" : 2109
+  },
+  "description" : "Verify that the link 'Tanks' correctly opens and redirects to a new webpage,         the header 'Tanks' is displayed",
+  "descriptionHtml" : "<p>Verify that the link 'Tanks' correctly opens and redirects to a new webpage,         the header 'Tanks' is displayed</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: New page isn't open or the 'Tanks' subhead is incorrect\nassert False",
+  "statusTrace" : "self = <test_men.TestMenPage object at 0x7f46209417f0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"cc7d40e44ac075ac982508ff0a3ee42e\")>\n\n    @allure.title(\"TC 14.03.09 Verify the link 'Tanks' redirects to a correct page.\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_tc_14_03_09(self, driver):\n        \"\"\"Verify that the link 'Tanks' correctly opens and redirects to a new webpage,\\\n         the header 'Tanks' is displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n        current_page = page.verify_tanks_redirects_to_a_correct_page()\n>       assert current_page, \"New page isn't open or the 'Tanks' subhead is incorrect\"\nE       AssertionError: New page isn't open or the 'Tanks' subhead is incorrect\nE       assert False\n\ntests/test_men.py:128: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1755479903640,
+      "stop" : 1755479903709,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1755480997776,
+      "stop" : 1755480999017,
+      "duration" : 1241
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1755479903709,
+      "stop" : 1755479903709,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify that the link 'Tanks' correctly opens and redirects to a new webpage,         the header 'Tanks' is displayed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: New page isn't open or the 'Tanks' subhead is incorrect\nassert False",
+    "statusTrace" : "self = <test_men.TestMenPage object at 0x7f46209417f0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"cc7d40e44ac075ac982508ff0a3ee42e\")>\n\n    @allure.title(\"TC 14.03.09 Verify the link 'Tanks' redirects to a correct page.\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_tc_14_03_09(self, driver):\n        \"\"\"Verify that the link 'Tanks' correctly opens and redirects to a new webpage,\\\n         the header 'Tanks' is displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n        current_page = page.verify_tanks_redirects_to_a_correct_page()\n>       assert current_page, \"New page isn't open or the 'Tanks' subhead is incorrect\"\nE       AssertionError: New page isn't open or the 'Tanks' subhead is incorrect\nE       assert False\n\ntests/test_men.py:128: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1755480999018,
+        "stop" : 1755481000313,
+        "duration" : 1295
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Correct redirection of the link \"Tanks\" on Men page",
+      "time" : {
+        "start" : 1755481000314,
+        "stop" : 1755481001127,
+        "duration" : 813
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1755481000314,
+          "stop" : 1755481000672,
+          "duration" : 358
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1755481000314,
+            "stop" : 1755481000410,
+            "duration" : 96
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//*[@id=\"maincontent\"]/div[4]/div[2]/div[2]/div/ul[1]/li[4]/a')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1755481000410,
+            "stop" : 1755481000432,
+            "duration" : 22
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"cc7d40e44ac075ac982508ff0a3ee42e\", element=\"f.8E1FC40FBF11F45A74E2170BBB629DFD.d.B1D63D1DDF1781F2040029A7A8745E4D.e.51\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//*[@id=\"maincontent\"]/div[4]/div[2]/div[2]/div/ul[1]/li[4]/a')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get element text",
+        "time" : {
+          "start" : 1755481000912,
+          "stop" : 1755481001126,
+          "duration" : 214
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1755481000913,
+            "stop" : 1755481001083,
+            "duration" : 170
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1755481000913,
+              "stop" : 1755481000947,
+              "duration" : 34
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('xpath', '//*[@id=\"page-title-heading\"]/span')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1755481000948,
+              "stop" : 1755481000966,
+              "duration" : 18
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"cc7d40e44ac075ac982508ff0a3ee42e\", element=\"f.8E1FC40FBF11F45A74E2170BBB629DFD.d.B1D63D1DDF1781F2040029A7A8745E4D.e.60\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//*[@id=\"page-title-heading\"]/span')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//*[@id=\"page-title-heading\"]/span')"
+        } ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "87334d8c7c0f0969",
+      "name" : "Screenshot",
+      "source" : "87334d8c7c0f0969.png",
+      "type" : "image/png",
+      "size" : 269521
+    }, {
+      "uid" : "77258f7de121e8ed",
+      "name" : "HTML source",
+      "source" : "77258f7de121e8ed.html",
+      "type" : "text/html",
+      "size" : 195513
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1755481001549,
+      "stop" : 1755481001625,
+      "duration" : 76
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1755481680743,
+      "stop" : 1755481680743,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "MenPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_men"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMenPage"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmubgrv54qmi"
+  }, {
+    "name" : "thread",
+    "value" : "2981-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_men"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "99e622a5172e0c9f.json",
+  "parameterValues" : [ ]
+}

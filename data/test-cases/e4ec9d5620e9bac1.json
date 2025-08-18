@@ -1,0 +1,239 @@
+{
+  "uid" : "e4ec9d5620e9bac1",
+  "name" : "test_TC_11_01_05",
+  "fullName" : "tests.test_gear.TestGearPage#test_TC_11_01_05",
+  "historyId" : "7d5500f43f04ab501b459428d2c0b979",
+  "time" : {
+    "start" : 1755480212969,
+    "stop" : 1755480215343,
+    "duration" : 2374
+  },
+  "description" : "Check that fitness_equipment link is correct",
+  "descriptionHtml" : "<p>Check that fitness_equipment link is correct</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: The link is not correct\nassert 'https://mage...ogle_vignette' == 'https://mage...quipment.html'\n  - https://magento.softwaretestingboard.com/gear/fitness-equipment.html\n  + https://magento.softwaretestingboard.com/gear.html#google_vignette",
+  "statusTrace" : "self = <test_gear.TestGearPage object at 0x7f46209252b0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6366fd3aa6b7e3a0ce8716b771aa0628\")>\n\n    def test_TC_11_01_05(self, driver):\n        \"\"\"Check that fitness_equipment link is correct\"\"\"\n        page = GearPage(driver, GEAR_PAGE_URL)\n        page.open()\n        page.check_fitness_equipment_functionality()\n>       assert page.get_actual_url(driver) == expected_link['fitness_equipment_url'], \\\n            'The link is not correct'\nE       AssertionError: The link is not correct\nE       assert 'https://mage...ogle_vignette' == 'https://mage...quipment.html'\nE         - https://magento.softwaretestingboard.com/gear/fitness-equipment.html\nE         + https://magento.softwaretestingboard.com/gear.html#google_vignette\n\ntests/test_gear.py:42: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1755479903640,
+      "stop" : 1755479903709,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1755480211738,
+      "stop" : 1755480212969,
+      "duration" : 1231
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1755479903709,
+      "stop" : 1755479903709,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that fitness_equipment link is correct",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: The link is not correct\nassert 'https://mage...ogle_vignette' == 'https://mage...quipment.html'\n  - https://magento.softwaretestingboard.com/gear/fitness-equipment.html\n  + https://magento.softwaretestingboard.com/gear.html#google_vignette",
+    "statusTrace" : "self = <test_gear.TestGearPage object at 0x7f46209252b0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6366fd3aa6b7e3a0ce8716b771aa0628\")>\n\n    def test_TC_11_01_05(self, driver):\n        \"\"\"Check that fitness_equipment link is correct\"\"\"\n        page = GearPage(driver, GEAR_PAGE_URL)\n        page.open()\n        page.check_fitness_equipment_functionality()\n>       assert page.get_actual_url(driver) == expected_link['fitness_equipment_url'], \\\n            'The link is not correct'\nE       AssertionError: The link is not correct\nE       assert 'https://mage...ogle_vignette' == 'https://mage...quipment.html'\nE         - https://magento.softwaretestingboard.com/gear/fitness-equipment.html\nE         + https://magento.softwaretestingboard.com/gear.html#google_vignette\n\ntests/test_gear.py:42: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1755480212969,
+        "stop" : 1755480215160,
+        "duration" : 2191
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find a visible element",
+      "time" : {
+        "start" : 1755480215160,
+        "stop" : 1755480215203,
+        "duration" : 43
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a present element",
+        "time" : {
+          "start" : 1755480215160,
+          "stop" : 1755480215172,
+          "duration" : 12
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"//dl[@id='narrow-by-list2']//a[text()='Fitness Equipment']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Go to specified element",
+        "time" : {
+          "start" : 1755480215172,
+          "stop" : 1755480215177,
+          "duration" : 5
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"6366fd3aa6b7e3a0ce8716b771aa0628\", element=\"f.A76F024B0007C12DDC1EF7F6F1C6845F.d.F511A4B37DC9B09FEF926E75B005717B.e.48\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('xpath', \"//dl[@id='narrow-by-list2']//a[text()='Fitness Equipment']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "10"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "f851c0712ffe104b",
+      "name" : "Screenshot",
+      "source" : "f851c0712ffe104b.png",
+      "type" : "image/png",
+      "size" : 297680
+    }, {
+      "uid" : "90191b7be806d46a",
+      "name" : "HTML source",
+      "source" : "90191b7be806d46a.html",
+      "type" : "text/html",
+      "size" : 173181
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1755480215716,
+      "stop" : 1755480215785,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1755481680743,
+      "stop" : 1755481680743,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_gear"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGearPage"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmubgrv54qmi"
+  }, {
+    "name" : "thread",
+    "value" : "2981-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_gear"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e4ec9d5620e9bac1.json",
+  "parameterValues" : [ ]
+}
