@@ -1,0 +1,338 @@
+{
+  "uid" : "c7d07bd541f87fd8",
+  "name" : "TC 14.02.03 Verify the link Tops redirects to a correct page.",
+  "fullName" : "tests.test_men.TestMenPage#test_tc_14_02_03",
+  "historyId" : "35d7d597a7ad7553afa076d7d07fe036",
+  "time" : {
+    "start" : 1756690573082,
+    "stop" : 1756690575085,
+    "duration" : 2003
+  },
+  "description" : "Verify that the link 'Tops' correctly opens and redirects to a new webpage, the header 'Tops' is\n              displayed",
+  "descriptionHtml" : "<p>Verify that the link 'Tops' correctly opens and redirects to a new webpage, the header 'Tops' is\ndisplayed</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: New page isn't open or the 'Tops' subhead is incorrect\nassert False",
+  "statusTrace" : "self = <test_men.TestMenPage object at 0x7fc89ae22510>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"968342cb59eadda77520d3fc0a427555\")>\n\n    @allure.title(\"TC 14.02.03 Verify the link Tops redirects to a correct page.\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_tc_14_02_03(self, driver):\n        \"\"\"Verify that the link 'Tops' correctly opens and redirects to a new webpage, the header 'Tops' is\n              displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n        current_page = page.verify_tops_link_redirects_to_a_correct_page()\n>       assert current_page, \"New page isn't open or the 'Tops' subhead is incorrect\"\nE       AssertionError: New page isn't open or the 'Tops' subhead is incorrect\nE       assert False\n\ntests/test_men.py:25: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1756689493202,
+      "stop" : 1756689493202,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1756689493137,
+      "stop" : 1756689493202,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1756690571854,
+      "stop" : 1756690573082,
+      "duration" : 1228
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify that the link 'Tops' correctly opens and redirects to a new webpage, the header 'Tops' is\n              displayed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: New page isn't open or the 'Tops' subhead is incorrect\nassert False",
+    "statusTrace" : "self = <test_men.TestMenPage object at 0x7fc89ae22510>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"968342cb59eadda77520d3fc0a427555\")>\n\n    @allure.title(\"TC 14.02.03 Verify the link Tops redirects to a correct page.\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_tc_14_02_03(self, driver):\n        \"\"\"Verify that the link 'Tops' correctly opens and redirects to a new webpage, the header 'Tops' is\n              displayed\"\"\"\n        page = MenPage(driver, MEN_PAGE_URL)\n        page.open()\n        current_page = page.verify_tops_link_redirects_to_a_correct_page()\n>       assert current_page, \"New page isn't open or the 'Tops' subhead is incorrect\"\nE       AssertionError: New page isn't open or the 'Tops' subhead is incorrect\nE       assert False\n\ntests/test_men.py:25: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1756690573082,
+        "stop" : 1756690574798,
+        "duration" : 1716
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Correct redirection of the link \"Tops\"",
+      "time" : {
+        "start" : 1756690574799,
+        "stop" : 1756690575084,
+        "duration" : 285
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1756690574799,
+          "stop" : 1756690574863,
+          "duration" : 64
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1756690574799,
+            "stop" : 1756690574818,
+            "duration" : 19
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#narrow-by-list2 a:first-child')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1756690574818,
+            "stop" : 1756690574823,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"968342cb59eadda77520d3fc0a427555\", element=\"f.185676CE324CFC515988946E45A0263A.d.A94065F0FA06C8B79DFC92DC1E88AFE0.e.53\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#narrow-by-list2 a:first-child')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get element text",
+        "time" : {
+          "start" : 1756690574996,
+          "stop" : 1756690575084,
+          "duration" : 88
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1756690574996,
+            "stop" : 1756690575071,
+            "duration" : 75
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1756690574996,
+              "stop" : 1756690575030,
+              "duration" : 34
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '#page-title-heading')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1756690575030,
+              "stop" : 1756690575035,
+              "duration" : 5
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"968342cb59eadda77520d3fc0a427555\", element=\"f.185676CE324CFC515988946E45A0263A.d.A94065F0FA06C8B79DFC92DC1E88AFE0.e.56\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#page-title-heading')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#page-title-heading')"
+        } ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "5daf3063d77de8bd",
+      "name" : "Screenshot",
+      "source" : "5daf3063d77de8bd.png",
+      "type" : "image/png",
+      "size" : 246373
+    }, {
+      "uid" : "717fcbbabe887e83",
+      "name" : "HTML source",
+      "source" : "717fcbbabe887e83.html",
+      "type" : "text/html",
+      "size" : 206307
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1756692178082,
+      "stop" : 1756692178082,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1756690575338,
+      "stop" : 1756690575409,
+      "duration" : 71
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "MenPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_men"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMenPage"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmccyg1gnepe"
+  }, {
+    "name" : "thread",
+    "value" : "3024-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_men"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c7d07bd541f87fd8.json",
+  "parameterValues" : [ ]
+}

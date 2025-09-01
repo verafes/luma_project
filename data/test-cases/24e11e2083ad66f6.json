@@ -1,0 +1,409 @@
+{
+  "uid" : "24e11e2083ad66f6",
+  "name" : "TC 01_15_01 Verify possibility to vote with 3 stars",
+  "fullName" : "tests.test_reviews_page.TestReviews#test_tc_01_15_03_check_that_it_is_possible_to_vote_for_3_star",
+  "historyId" : "a09b3b388c7a950ae742890d45064f2f",
+  "time" : {
+    "start" : 1756690670681,
+    "stop" : 1756690681764,
+    "duration" : 11083
+  },
+  "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 3 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+  "descriptionHtml" : "<pre><code>    The user is NOT logged in, located in the product card, section &quot;Reviews&quot;\n    1. All required fields are filled with correct data\n    2. Pressed 3 star\n    3.The &quot;Submit Review&quot; button is pressed\n    Result: Present in the DOM and visible on the page the message: &quot;You submitted your review for moderation.\n    This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n    When interacting with the GitHub Action, it checks not for the text of the &quot;Success&quot; message, but for the &quot;Success&quot; URL&quot;\n</code></pre>\n",
+  "status" : "passed",
+  "statusMessage" : "XPASS Flaky behavior on CI",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1756689493202,
+      "stop" : 1756689493202,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1756689493137,
+      "stop" : 1756689493202,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1756690669443,
+      "stop" : 1756690670681,
+      "duration" : 1238
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 3 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+    "status" : "passed",
+    "statusMessage" : "XPASS Flaky behavior on CI",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1756690670681,
+        "stop" : 1756690672448,
+        "duration" : 1767
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1756690672452,
+        "stop" : 1756690672482,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#tab-label-reviews-title')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels",
+      "time" : {
+        "start" : 1756690673622,
+        "stop" : 1756690673901,
+        "duration" : 279
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#Rating_3_label')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1756690673901,
+        "stop" : 1756690673921,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#nickname_field')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1756690674032,
+        "stop" : 1756690674052,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#summary_field')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1756690674148,
+        "stop" : 1756690674168,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#review_field')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Move cursor to element. Perform a click action without navigating to a new page",
+      "time" : {
+        "start" : 1756690675264,
+        "stop" : 1756690675552,
+        "duration" : 288
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find element (unpacking)",
+        "time" : {
+          "start" : 1756690675264,
+          "stop" : 1756690675276,
+          "duration" : 12
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.submit')"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.submit')"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Find a present element",
+      "time" : {
+        "start" : 1756690676552,
+        "stop" : 1756690681721,
+        "duration" : 5169
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564646a0802a <unknown>\n#1 0x5646464a7a70 <unknown>\n#2 0x5646464f9907 <unknown>\n#3 0x5646464f9b01 <unknown>\n#4 0x564646547d54 <unknown>\n#5 0x56464651f40d <unknown>\n#6 0x56464654514f <unknown>\n#7 0x56464651f1b3 <unknown>\n#8 0x5646464eb59b <unknown>\n#9 0x5646464ec971 <unknown>\n#10 0x5646469cd1fb <unknown>\n#11 0x5646469d0f49 <unknown>\n#12 0x5646469b42d9 <unknown>\n#13 0x5646469d1af8 <unknown>\n#14 0x564646998bbf <unknown>\n#15 0x5646469f50b8 <unknown>\n#16 0x5646469f5296 <unknown>\n#17 0x564646a07006 <unknown>\n#18 0x7fa743e9caa4 <unknown>\n#19 0x7fa743f29c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.mage-error')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Get element text",
+      "time" : {
+        "start" : 1756690681722,
+        "stop" : 1756690681761,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1756690681722,
+          "stop" : 1756690681749,
+          "duration" : 27
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1756690681722,
+            "stop" : 1756690681730,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.message-success')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1756690681731,
+            "stop" : 1756690681736,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"117e9befa36dcda0b9546b53c2e46cbd\", element=\"f.14D5A1FA3A71310D23E79066B091DE5D.d.B7D0CC5F19C1B5829DDDDD4C81996219.e.168\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.message-success')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.message-success')"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1756692178082,
+      "stop" : 1756692178082,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1756690681764,
+      "stop" : 1756690681842,
+      "duration" : 78
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Review Page"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='Flaky behavior on CI')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_reviews_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestReviews"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmccyg1gnepe"
+  }, {
+    "name" : "thread",
+    "value" : "3024-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_reviews_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='Flaky behavior on CI')" ]
+  },
+  "source" : "24e11e2083ad66f6.json",
+  "parameterValues" : [ ]
+}
