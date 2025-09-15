@@ -1,0 +1,263 @@
+{
+  "uid" : "6e5e17931c20c9f0",
+  "name" : "TC 03.01.08 Verify displayed email matches the entered email in Email field",
+  "fullName" : "tests.test_sign_in.TestRegisteredCustomers#test_03_01_08_value_in_email_matches",
+  "historyId" : "0527a5aa90b8948774702f21c0b679c3",
+  "time" : {
+    "start" : 1757900674604,
+    "stop" : 1757900679704,
+    "duration" : 5100
+  },
+  "description" : "Check if the displayed email matches the entered email in Email field",
+  "descriptionHtml" : "<p>Check if the displayed email matches the entered email in Email field</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e359ea094a <unknown>\n#1 0x55e3599158a0 <unknown>\n#2 0x55e359967540 <unknown>\n#3 0x55e359967731 <unknown>\n#4 0x55e3599b5824 <unknown>\n#5 0x55e35998d05d <unknown>\n#6 0x55e3599b2c23 <unknown>\n#7 0x55e35998ce03 <unknown>\n#8 0x55e359959968 <unknown>\n#9 0x55e35995a5e1 <unknown>\n#10 0x55e359e64548 <unknown>\n#11 0x55e359e68272 <unknown>\n#12 0x55e359e4b313 <unknown>\n#13 0x55e359e68dc5 <unknown>\n#14 0x55e359e3049f <unknown>\n#15 0x55e359e8d158 <unknown>\n#16 0x55e359e8d332 <unknown>\n#17 0x55e359e9fa53 <unknown>\n#18 0x7f696149caa4 <unknown>\n#19 0x7f6961529c3c <unknown>",
+  "statusTrace" : "self = <test_sign_in.TestRegisteredCustomers object at 0x7f9ca24841a0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3f51d24565af5ab62ead3e4c95c00cf1\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7f9ca2375220>\n\n    @allure.title('TC 03.01.08 Verify displayed email matches the entered email in Email field')\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_03_01_08_value_in_email_matches(self, driver, sign_in_page):\n        \"\"\"Check if the displayed email matches the entered email in Email field\"\"\"\n>       sign_in_page.fill_in_email_field(credentials['email'])\n\ntests/test_sign_in.py:87: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/sign_in_page.py:54: in fill_in_email_field\n    self.fill_in_field(self.check_customer_email_field_is_clickable(), email)\npages/sign_in_page.py:41: in check_customer_email_field_is_clickable\n    return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"3f51d24565af5ab62ead3e4c95c00cf1\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f9ca21411c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55e359ea094a <unknown>\nE       #1 0x55e3599158a0 <unknown>\nE       #2 0x55e359967540 <unknown>\nE       #3 0x55e359967731 <unknown>\nE       #4 0x55e3599b5824 <unknown>\nE       #5 0x55e35998d05d <unknown>\nE       #6 0x55e3599b2c23 <unknown>\nE       #7 0x55e35998ce03 <unknown>\nE       #8 0x55e359959968 <unknown>\nE       #9 0x55e35995a5e1 <unknown>\nE       #10 0x55e359e64548 <unknown>\nE       #11 0x55e359e68272 <unknown>\nE       #12 0x55e359e4b313 <unknown>\nE       #13 0x55e359e68dc5 <unknown>\nE       #14 0x55e359e3049f <unknown>\nE       #15 0x55e359e8d158 <unknown>\nE       #16 0x55e359e8d332 <unknown>\nE       #17 0x55e359e9fa53 <unknown>\nE       #18 0x7f696149caa4 <unknown>\nE       #19 0x7f6961529c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1757898622011,
+      "stop" : 1757898622079,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1757900674461,
+      "stop" : 1757900674603,
+      "duration" : 142
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1757900674461,
+        "stop" : 1757900674603,
+        "duration" : 142
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1757898622079,
+      "stop" : 1757898622079,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1757900673206,
+      "stop" : 1757900674461,
+      "duration" : 1255
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check if the displayed email matches the entered email in Email field",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e359ea094a <unknown>\n#1 0x55e3599158a0 <unknown>\n#2 0x55e359967540 <unknown>\n#3 0x55e359967731 <unknown>\n#4 0x55e3599b5824 <unknown>\n#5 0x55e35998d05d <unknown>\n#6 0x55e3599b2c23 <unknown>\n#7 0x55e35998ce03 <unknown>\n#8 0x55e359959968 <unknown>\n#9 0x55e35995a5e1 <unknown>\n#10 0x55e359e64548 <unknown>\n#11 0x55e359e68272 <unknown>\n#12 0x55e359e4b313 <unknown>\n#13 0x55e359e68dc5 <unknown>\n#14 0x55e359e3049f <unknown>\n#15 0x55e359e8d158 <unknown>\n#16 0x55e359e8d332 <unknown>\n#17 0x55e359e9fa53 <unknown>\n#18 0x7f696149caa4 <unknown>\n#19 0x7f6961529c3c <unknown>",
+    "statusTrace" : "self = <test_sign_in.TestRegisteredCustomers object at 0x7f9ca24841a0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3f51d24565af5ab62ead3e4c95c00cf1\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7f9ca2375220>\n\n    @allure.title('TC 03.01.08 Verify displayed email matches the entered email in Email field')\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_03_01_08_value_in_email_matches(self, driver, sign_in_page):\n        \"\"\"Check if the displayed email matches the entered email in Email field\"\"\"\n>       sign_in_page.fill_in_email_field(credentials['email'])\n\ntests/test_sign_in.py:87: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/sign_in_page.py:54: in fill_in_email_field\n    self.fill_in_field(self.check_customer_email_field_is_clickable(), email)\npages/sign_in_page.py:41: in check_customer_email_field_is_clickable\n    return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"3f51d24565af5ab62ead3e4c95c00cf1\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f9ca21411c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55e359ea094a <unknown>\nE       #1 0x55e3599158a0 <unknown>\nE       #2 0x55e359967540 <unknown>\nE       #3 0x55e359967731 <unknown>\nE       #4 0x55e3599b5824 <unknown>\nE       #5 0x55e35998d05d <unknown>\nE       #6 0x55e3599b2c23 <unknown>\nE       #7 0x55e35998ce03 <unknown>\nE       #8 0x55e359959968 <unknown>\nE       #9 0x55e35995a5e1 <unknown>\nE       #10 0x55e359e64548 <unknown>\nE       #11 0x55e359e68272 <unknown>\nE       #12 0x55e359e4b313 <unknown>\nE       #13 0x55e359e68dc5 <unknown>\nE       #14 0x55e359e3049f <unknown>\nE       #15 0x55e359e8d158 <unknown>\nE       #16 0x55e359e8d332 <unknown>\nE       #17 0x55e359e9fa53 <unknown>\nE       #18 0x7f696149caa4 <unknown>\nE       #19 0x7f6961529c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Fill in Email field",
+      "time" : {
+        "start" : 1757900674604,
+        "stop" : 1757900679703,
+        "duration" : 5099
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e359ea094a <unknown>\n#1 0x55e3599158a0 <unknown>\n#2 0x55e359967540 <unknown>\n#3 0x55e359967731 <unknown>\n#4 0x55e3599b5824 <unknown>\n#5 0x55e35998d05d <unknown>\n#6 0x55e3599b2c23 <unknown>\n#7 0x55e35998ce03 <unknown>\n#8 0x55e359959968 <unknown>\n#9 0x55e35995a5e1 <unknown>\n#10 0x55e359e64548 <unknown>\n#11 0x55e359e68272 <unknown>\n#12 0x55e359e4b313 <unknown>\n#13 0x55e359e68dc5 <unknown>\n#14 0x55e359e3049f <unknown>\n#15 0x55e359e8d158 <unknown>\n#16 0x55e359e8d332 <unknown>\n#17 0x55e359e9fa53 <unknown>\n#18 0x7f696149caa4 <unknown>\n#19 0x7f6961529c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/sign_in_page.py\", line 54, in fill_in_email_field\n    self.fill_in_field(self.check_customer_email_field_is_clickable(), email)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/sign_in_page.py\", line 41, in check_customer_email_field_is_clickable\n    return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Check Email field is clickable",
+        "time" : {
+          "start" : 1757900674604,
+          "stop" : 1757900679703,
+          "duration" : 5099
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e359ea094a <unknown>\n#1 0x55e3599158a0 <unknown>\n#2 0x55e359967540 <unknown>\n#3 0x55e359967731 <unknown>\n#4 0x55e3599b5824 <unknown>\n#5 0x55e35998d05d <unknown>\n#6 0x55e3599b2c23 <unknown>\n#7 0x55e35998ce03 <unknown>\n#8 0x55e359959968 <unknown>\n#9 0x55e35995a5e1 <unknown>\n#10 0x55e359e64548 <unknown>\n#11 0x55e359e68272 <unknown>\n#12 0x55e359e4b313 <unknown>\n#13 0x55e359e68dc5 <unknown>\n#14 0x55e359e3049f <unknown>\n#15 0x55e359e8d158 <unknown>\n#16 0x55e359e8d332 <unknown>\n#17 0x55e359e9fa53 <unknown>\n#18 0x7f696149caa4 <unknown>\n#19 0x7f6961529c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/sign_in_page.py\", line 41, in check_customer_email_field_is_clickable\n    return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1757900674605,
+            "stop" : 1757900679703,
+            "duration" : 5098
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e359ea094a <unknown>\n#1 0x55e3599158a0 <unknown>\n#2 0x55e359967540 <unknown>\n#3 0x55e359967731 <unknown>\n#4 0x55e3599b5824 <unknown>\n#5 0x55e35998d05d <unknown>\n#6 0x55e3599b2c23 <unknown>\n#7 0x55e35998ce03 <unknown>\n#8 0x55e359959968 <unknown>\n#9 0x55e35995a5e1 <unknown>\n#10 0x55e359e64548 <unknown>\n#11 0x55e359e68272 <unknown>\n#12 0x55e359e4b313 <unknown>\n#13 0x55e359e68dc5 <unknown>\n#14 0x55e359e3049f <unknown>\n#15 0x55e359e8d158 <unknown>\n#16 0x55e359e8d332 <unknown>\n#17 0x55e359e9fa53 <unknown>\n#18 0x7f696149caa4 <unknown>\n#19 0x7f6961529c3c <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'teston120@mailinator.com'"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "820661262e66b081",
+      "name" : "Screenshot",
+      "source" : "820661262e66b081.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "4c88f16b34ad12bd",
+      "name" : "HTML source",
+      "source" : "4c88f16b34ad12bd.html",
+      "type" : "text/html",
+      "size" : 786
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1757901039531,
+      "stop" : 1757901039531,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1757900679773,
+      "stop" : 1757900679833,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "Sign In Page"
+  }, {
+    "name" : "feature",
+    "value" : "Registered Customers"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegisteredCustomers"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "3099-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "6e5e17931c20c9f0.json",
+  "parameterValues" : [ ]
+}

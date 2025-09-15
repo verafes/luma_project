@@ -1,0 +1,159 @@
+{
+  "uid" : "b3b1556f446cbd08",
+  "name" : "TC 07.02.27 Verify that the list of items in the Shopping Cart is displayed correct",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCartFull#test_tc_07_02_27_verify_title_in_cart_vs_title_item_from_more_choices_is_displayed_correct",
+  "historyId" : "2e7b998e5cb68cd34c7b49678920fbdb",
+  "time" : {
+    "start" : 1757900618783,
+    "stop" : 1757900618783,
+    "duration" : 0
+  },
+  "description" : "Check that the list of items in the Shopping Cart contains title item which was added from More Choices",
+  "descriptionHtml" : "<p>Check that the list of items in the Shopping Cart contains title item which was added from More Choices</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f6e085994a <unknown>\n#1 0x55f6e02ce8a0 <unknown>\n#2 0x55f6e0320540 <unknown>\n#3 0x55f6e0320731 <unknown>\n#4 0x55f6e036e824 <unknown>\n#5 0x55f6e034605d <unknown>\n#6 0x55f6e036bc23 <unknown>\n#7 0x55f6e0345e03 <unknown>\n#8 0x55f6e0312968 <unknown>\n#9 0x55f6e03135e1 <unknown>\n#10 0x55f6e081d548 <unknown>\n#11 0x55f6e0821272 <unknown>\n#12 0x55f6e0804313 <unknown>\n#13 0x55f6e0821dc5 <unknown>\n#14 0x55f6e07e949f <unknown>\n#15 0x55f6e0846158 <unknown>\n#16 0x55f6e0846332 <unknown>\n#17 0x55f6e0858a53 <unknown>\n#18 0x7f5b5a09caa4 <unknown>\n#19 0x7f5b5a129c3c <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"69533fede9678cf112bba9155bf1aa2f\")>\n\n    @pytest.fixture(scope=\"function\")\n    def full_cart_page(driver):\n        driver.get(ITEM_CART_URL)\n>       size_button = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SIZE_BUTTON))\n\ntests/test_shopping_cart.py:13: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"69533fede9678cf112bba9155bf1aa2f\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f9ca20220c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55f6e085994a <unknown>\nE       #1 0x55f6e02ce8a0 <unknown>\nE       #2 0x55f6e0320540 <unknown>\nE       #3 0x55f6e0320731 <unknown>\nE       #4 0x55f6e036e824 <unknown>\nE       #5 0x55f6e034605d <unknown>\nE       #6 0x55f6e036bc23 <unknown>\nE       #7 0x55f6e0345e03 <unknown>\nE       #8 0x55f6e0312968 <unknown>\nE       #9 0x55f6e03135e1 <unknown>\nE       #10 0x55f6e081d548 <unknown>\nE       #11 0x55f6e0821272 <unknown>\nE       #12 0x55f6e0804313 <unknown>\nE       #13 0x55f6e0821dc5 <unknown>\nE       #14 0x55f6e07e949f <unknown>\nE       #15 0x55f6e0846158 <unknown>\nE       #16 0x55f6e0846332 <unknown>\nE       #17 0x55f6e0858a53 <unknown>\nE       #18 0x7f5b5a09caa4 <unknown>\nE       #19 0x7f5b5a129c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1757898622011,
+      "stop" : 1757898622079,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "full_cart_page",
+    "time" : {
+      "start" : 1757900620033,
+      "stop" : 1757900625280,
+      "duration" : 5247
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f6e085994a <unknown>\n#1 0x55f6e02ce8a0 <unknown>\n#2 0x55f6e0320540 <unknown>\n#3 0x55f6e0320731 <unknown>\n#4 0x55f6e036e824 <unknown>\n#5 0x55f6e034605d <unknown>\n#6 0x55f6e036bc23 <unknown>\n#7 0x55f6e0345e03 <unknown>\n#8 0x55f6e0312968 <unknown>\n#9 0x55f6e03135e1 <unknown>\n#10 0x55f6e081d548 <unknown>\n#11 0x55f6e0821272 <unknown>\n#12 0x55f6e0804313 <unknown>\n#13 0x55f6e0821dc5 <unknown>\n#14 0x55f6e07e949f <unknown>\n#15 0x55f6e0846158 <unknown>\n#16 0x55f6e0846332 <unknown>\n#17 0x55f6e0858a53 <unknown>\n#18 0x7f5b5a09caa4 <unknown>\n#19 0x7f5b5a129c3c <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 38, in run_old_style_hookwrapper\n    res = yield\n          ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 139, in _multicall\n    teardown.throw(exception)\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 53, in run_old_style_hookwrapper\n    return result.get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_result.py\", line 103, in get_result\n    raise exc.with_traceback(tb)\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 38, in run_old_style_hookwrapper\n    res = yield\n          ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/tests/test_shopping_cart.py\", line 13, in full_cart_page\n    size_button = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SIZE_BUTTON))\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1757898622079,
+      "stop" : 1757898622079,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1757900618783,
+      "stop" : 1757900620033,
+      "duration" : 1250
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1757901039531,
+      "stop" : 1757901039531,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1757900625288,
+      "stop" : 1757900625348,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Shopping Cart is full"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCartFull"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "3099-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b3b1556f446cbd08.json",
+  "parameterValues" : [ ]
+}
