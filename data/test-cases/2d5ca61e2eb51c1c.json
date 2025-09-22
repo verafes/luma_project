@@ -1,0 +1,278 @@
+{
+  "uid" : "2d5ca61e2eb51c1c",
+  "name" : "TC 03.01.01 Verify Sign In Page h1 Header",
+  "fullName" : "tests.test_sign_in.TestRegisteredCustomers#test_03_01_01_h1_heading",
+  "historyId" : "cdaccf7e4598092aef6446678044133e",
+  "time" : {
+    "start" : 1758505479782,
+    "stop" : 1758505479828,
+    "duration" : 46
+  },
+  "description" : "Check Login Page Heading is present ",
+  "descriptionHtml" : "<p>Check Login Page Heading is present</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: H1 Heading is incorrect or not present\nassert (<selenium.webdriver.remote.webelement.WebElement (session=\"72a77a95f7bb475ba4ab6a5c419c091f\", element=\"f.1DACE70E3D6CDAE3FAB1E48792CAE68D.d.2613B740997087E5FBDBF04E43D3D8F2.e.3\")> is not None and '503' == 'Customer Login'\n  - Customer Login\n  + 503)",
+  "statusTrace" : "self = <test_sign_in.TestRegisteredCustomers object at 0x7f22c0f95d60>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"72a77a95f7bb475ba4ab6a5c419c091f\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7f22c0e7fb30>\n\n    @allure.title('TC 03.01.01 Verify Sign In Page h1 Header')\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_03_01_01_h1_heading(self, driver, sign_in_page):\n        \"\"\"Check Login Page Heading is present \"\"\"\n        h1_heading = sign_in_page.check_h1_header()\n>       assert h1_heading is not None and h1_heading.text == sign_in_data[\"h1_heading\"], \\\n            \"H1 Heading is incorrect or not present\"\nE       AssertionError: H1 Heading is incorrect or not present\nE       assert (<selenium.webdriver.remote.webelement.WebElement (session=\"72a77a95f7bb475ba4ab6a5c419c091f\", element=\"f.1DACE70E3D6CDAE3FAB1E48792CAE68D.d.2613B740997087E5FBDBF04E43D3D8F2.e.3\")> is not None and '503' == 'Customer Login'\nE         - Customer Login\nE         + 503)\n\ntests/test_sign_in.py:29: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1758503447562,
+      "stop" : 1758503447629,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1758503447630,
+      "stop" : 1758503447630,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1758505479590,
+      "stop" : 1758505479782,
+      "duration" : 192
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1758505479590,
+        "stop" : 1758505479782,
+        "duration" : 192
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1758505478351,
+      "stop" : 1758505479590,
+      "duration" : 1239
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check Login Page Heading is present ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: H1 Heading is incorrect or not present\nassert (<selenium.webdriver.remote.webelement.WebElement (session=\"72a77a95f7bb475ba4ab6a5c419c091f\", element=\"f.1DACE70E3D6CDAE3FAB1E48792CAE68D.d.2613B740997087E5FBDBF04E43D3D8F2.e.3\")> is not None and '503' == 'Customer Login'\n  - Customer Login\n  + 503)",
+    "statusTrace" : "self = <test_sign_in.TestRegisteredCustomers object at 0x7f22c0f95d60>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"72a77a95f7bb475ba4ab6a5c419c091f\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7f22c0e7fb30>\n\n    @allure.title('TC 03.01.01 Verify Sign In Page h1 Header')\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_03_01_01_h1_heading(self, driver, sign_in_page):\n        \"\"\"Check Login Page Heading is present \"\"\"\n        h1_heading = sign_in_page.check_h1_header()\n>       assert h1_heading is not None and h1_heading.text == sign_in_data[\"h1_heading\"], \\\n            \"H1 Heading is incorrect or not present\"\nE       AssertionError: H1 Heading is incorrect or not present\nE       assert (<selenium.webdriver.remote.webelement.WebElement (session=\"72a77a95f7bb475ba4ab6a5c419c091f\", element=\"f.1DACE70E3D6CDAE3FAB1E48792CAE68D.d.2613B740997087E5FBDBF04E43D3D8F2.e.3\")> is not None and '503' == 'Customer Login'\nE         - Customer Login\nE         + 503)\n\ntests/test_sign_in.py:29: AssertionError",
+    "steps" : [ {
+      "name" : "Check Sign In h1 header is visible",
+      "time" : {
+        "start" : 1758505479783,
+        "stop" : 1758505479818,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1758505479783,
+          "stop" : 1758505479818,
+          "duration" : 35
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1758505479783,
+            "stop" : 1758505479797,
+            "duration" : 14
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'h1')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1758505479797,
+            "stop" : 1758505479802,
+            "duration" : 5
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"72a77a95f7bb475ba4ab6a5c419c091f\", element=\"f.1DACE70E3D6CDAE3FAB1E48792CAE68D.d.2613B740997087E5FBDBF04E43D3D8F2.e.3\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'h1')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "2098fb4a1a04b25c",
+      "name" : "Screenshot",
+      "source" : "2098fb4a1a04b25c.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "4c400dc6401a5633",
+      "name" : "HTML source",
+      "source" : "4c400dc6401a5633.html",
+      "type" : "text/html",
+      "size" : 786
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1758505893826,
+      "stop" : 1758505893826,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1758505479911,
+      "stop" : 1758505479970,
+      "duration" : 59
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Registered Customers"
+  }, {
+    "name" : "epic",
+    "value" : "Sign In Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegisteredCustomers"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "2993-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2d5ca61e2eb51c1c.json",
+  "parameterValues" : [ ]
+}

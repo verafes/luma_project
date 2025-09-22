@@ -1,0 +1,225 @@
+{
+  "uid" : "5e56c8a9b5dfeccb",
+  "name" : "TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_05_check_clickability_of_search_terms_link_on_pages",
+  "historyId" : "d0baa454b6576d33d3400927dda74fb4",
+  "time" : {
+    "start" : 1758503695182,
+    "stop" : 1758503700656,
+    "duration" : 5474
+  },
+  "description" : "This test checks if Search Terms link is clickable on each page specified in DATA_1",
+  "descriptionHtml" : "<p>This test checks if Search Terms link is clickable on each page specified in DATA_1</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5588090a694a <unknown>\n#1 0x558808b1b8a0 <unknown>\n#2 0x558808b6d540 <unknown>\n#3 0x558808b6d731 <unknown>\n#4 0x558808bbb824 <unknown>\n#5 0x558808b9305d <unknown>\n#6 0x558808bb8c23 <unknown>\n#7 0x558808b92e03 <unknown>\n#8 0x558808b5f968 <unknown>\n#9 0x558808b605e1 <unknown>\n#10 0x55880906a548 <unknown>\n#11 0x55880906e272 <unknown>\n#12 0x558809051313 <unknown>\n#13 0x55880906edc5 <unknown>\n#14 0x55880903649f <unknown>\n#15 0x558809093158 <unknown>\n#16 0x558809093332 <unknown>\n#17 0x5588090a5a53 <unknown>\n#18 0x7f70fa69caa4 <unknown>\n#19 0x7f70fa729c3c <unknown>",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7f22c15a0470>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"78c4ece13d601d89ce581ee9fcad0ed1\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_05_check_clickability_of_search_terms_link_on_pages(self, driver, URL):\n        \"\"\"This test checks if Search Terms link is clickable on each page specified in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n>       search_terms_link = page.check_search_terms_link_clickability()\n\ntests/test_footer.py:56: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/footer_page.py:179: in check_search_terms_link_clickability\n    return self.element_is_clickable(self.footer_locators.SEARCH_TERMS_LINK)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"78c4ece13d601d89ce581ee9fcad0ed1\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f22c13a3c40>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x5588090a694a <unknown>\nE       #1 0x558808b1b8a0 <unknown>\nE       #2 0x558808b6d540 <unknown>\nE       #3 0x558808b6d731 <unknown>\nE       #4 0x558808bbb824 <unknown>\nE       #5 0x558808b9305d <unknown>\nE       #6 0x558808bb8c23 <unknown>\nE       #7 0x558808b92e03 <unknown>\nE       #8 0x558808b5f968 <unknown>\nE       #9 0x558808b605e1 <unknown>\nE       #10 0x55880906a548 <unknown>\nE       #11 0x55880906e272 <unknown>\nE       #12 0x558809051313 <unknown>\nE       #13 0x55880906edc5 <unknown>\nE       #14 0x55880903649f <unknown>\nE       #15 0x558809093158 <unknown>\nE       #16 0x558809093332 <unknown>\nE       #17 0x5588090a5a53 <unknown>\nE       #18 0x7f70fa69caa4 <unknown>\nE       #19 0x7f70fa729c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1758503447562,
+      "stop" : 1758503447629,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1758503447630,
+      "stop" : 1758503447630,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1758503693944,
+      "stop" : 1758503695182,
+      "duration" : 1238
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks if Search Terms link is clickable on each page specified in DATA_1",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5588090a694a <unknown>\n#1 0x558808b1b8a0 <unknown>\n#2 0x558808b6d540 <unknown>\n#3 0x558808b6d731 <unknown>\n#4 0x558808bbb824 <unknown>\n#5 0x558808b9305d <unknown>\n#6 0x558808bb8c23 <unknown>\n#7 0x558808b92e03 <unknown>\n#8 0x558808b5f968 <unknown>\n#9 0x558808b605e1 <unknown>\n#10 0x55880906a548 <unknown>\n#11 0x55880906e272 <unknown>\n#12 0x558809051313 <unknown>\n#13 0x55880906edc5 <unknown>\n#14 0x55880903649f <unknown>\n#15 0x558809093158 <unknown>\n#16 0x558809093332 <unknown>\n#17 0x5588090a5a53 <unknown>\n#18 0x7f70fa69caa4 <unknown>\n#19 0x7f70fa729c3c <unknown>",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7f22c15a0470>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"78c4ece13d601d89ce581ee9fcad0ed1\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_05_check_clickability_of_search_terms_link_on_pages(self, driver, URL):\n        \"\"\"This test checks if Search Terms link is clickable on each page specified in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n>       search_terms_link = page.check_search_terms_link_clickability()\n\ntests/test_footer.py:56: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/footer_page.py:179: in check_search_terms_link_clickability\n    return self.element_is_clickable(self.footer_locators.SEARCH_TERMS_LINK)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"78c4ece13d601d89ce581ee9fcad0ed1\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f22c13a3c40>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x5588090a694a <unknown>\nE       #1 0x558808b1b8a0 <unknown>\nE       #2 0x558808b6d540 <unknown>\nE       #3 0x558808b6d731 <unknown>\nE       #4 0x558808bbb824 <unknown>\nE       #5 0x558808b9305d <unknown>\nE       #6 0x558808bb8c23 <unknown>\nE       #7 0x558808b92e03 <unknown>\nE       #8 0x558808b5f968 <unknown>\nE       #9 0x558808b605e1 <unknown>\nE       #10 0x55880906a548 <unknown>\nE       #11 0x55880906e272 <unknown>\nE       #12 0x558809051313 <unknown>\nE       #13 0x55880906edc5 <unknown>\nE       #14 0x55880903649f <unknown>\nE       #15 0x558809093158 <unknown>\nE       #16 0x558809093332 <unknown>\nE       #17 0x5588090a5a53 <unknown>\nE       #18 0x7f70fa69caa4 <unknown>\nE       #19 0x7f70fa729c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1758503695182,
+        "stop" : 1758503695558,
+        "duration" : 376
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check Search Terms link is clickable",
+      "time" : {
+        "start" : 1758503695558,
+        "stop" : 1758503700656,
+        "duration" : 5098
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5588090a694a <unknown>\n#1 0x558808b1b8a0 <unknown>\n#2 0x558808b6d540 <unknown>\n#3 0x558808b6d731 <unknown>\n#4 0x558808bbb824 <unknown>\n#5 0x558808b9305d <unknown>\n#6 0x558808bb8c23 <unknown>\n#7 0x558808b92e03 <unknown>\n#8 0x558808b5f968 <unknown>\n#9 0x558808b605e1 <unknown>\n#10 0x55880906a548 <unknown>\n#11 0x55880906e272 <unknown>\n#12 0x558809051313 <unknown>\n#13 0x55880906edc5 <unknown>\n#14 0x55880903649f <unknown>\n#15 0x558809093158 <unknown>\n#16 0x558809093332 <unknown>\n#17 0x5588090a5a53 <unknown>\n#18 0x7f70fa69caa4 <unknown>\n#19 0x7f70fa729c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/footer_page.py\", line 179, in check_search_terms_link_clickability\n    return self.element_is_clickable(self.footer_locators.SEARCH_TERMS_LINK)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1758503695559,
+          "stop" : 1758503700656,
+          "duration" : 5097
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5588090a694a <unknown>\n#1 0x558808b1b8a0 <unknown>\n#2 0x558808b6d540 <unknown>\n#3 0x558808b6d731 <unknown>\n#4 0x558808bbb824 <unknown>\n#5 0x558808b9305d <unknown>\n#6 0x558808bb8c23 <unknown>\n#7 0x558808b92e03 <unknown>\n#8 0x558808b5f968 <unknown>\n#9 0x558808b605e1 <unknown>\n#10 0x55880906a548 <unknown>\n#11 0x55880906e272 <unknown>\n#12 0x558809051313 <unknown>\n#13 0x55880906edc5 <unknown>\n#14 0x55880903649f <unknown>\n#15 0x558809093158 <unknown>\n#16 0x558809093332 <unknown>\n#17 0x5588090a5a53 <unknown>\n#18 0x7f70fa69caa4 <unknown>\n#19 0x7f70fa729c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.footer > :nth-child(1) > a')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "8c2386288d4ab988",
+      "name" : "Screenshot",
+      "source" : "8c2386288d4ab988.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "f3c4a2ff575876ec",
+      "name" : "HTML source",
+      "source" : "f3c4a2ff575876ec.html",
+      "type" : "text/html",
+      "size" : 786
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1758505893826,
+      "stop" : 1758505893826,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1758503700746,
+      "stop" : 1758503700806,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "2993-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5e56c8a9b5dfeccb.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}

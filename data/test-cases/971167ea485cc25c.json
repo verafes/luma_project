@@ -1,0 +1,263 @@
+{
+  "uid" : "971167ea485cc25c",
+  "name" : "TC 16.01.03 Verify Sidebar title Video Download is visible and contains text 'Video Download'",
+  "fullName" : "tests.test_training.TestTrainingSidebar#test_tc_16_01_03_check_sidebar_video_download_title",
+  "historyId" : "8f7b8593a3c286dc866848aa8c14bb94",
+  "time" : {
+    "start" : 1758505778880,
+    "stop" : 1758505783975,
+    "duration" : 5095
+  },
+  "description" : "Check Sidebar Video Download title has correct text and is visible",
+  "descriptionHtml" : "<p>Check Sidebar Video Download title has correct text and is visible</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c80d20394a <unknown>\n#1 0x55c80cc788a0 <unknown>\n#2 0x55c80ccca540 <unknown>\n#3 0x55c80ccca731 <unknown>\n#4 0x55c80cd18824 <unknown>\n#5 0x55c80ccf005d <unknown>\n#6 0x55c80cd15c23 <unknown>\n#7 0x55c80ccefe03 <unknown>\n#8 0x55c80ccbc968 <unknown>\n#9 0x55c80ccbd5e1 <unknown>\n#10 0x55c80d1c7548 <unknown>\n#11 0x55c80d1cb272 <unknown>\n#12 0x55c80d1ae313 <unknown>\n#13 0x55c80d1cbdc5 <unknown>\n#14 0x55c80d19349f <unknown>\n#15 0x55c80d1f0158 <unknown>\n#16 0x55c80d1f0332 <unknown>\n#17 0x55c80d202a53 <unknown>\n#18 0x7fd2e4c9caa4 <unknown>\n#19 0x7fd2e4d29c3c <unknown>",
+  "statusTrace" : "self = <test_training.TestMainPage.TestTrainingSidebar object at 0x7f22c0f9f2c0>\ntraining_page = <pages.training_page.TrainingPage object at 0x7f22c09f3a10>\n\n    @allure.title(\"TC 16.01.03 Verify Sidebar title Video Download is visible and contains text 'Video Download'\")\n    def test_tc_16_01_03_check_sidebar_video_download_title(self, training_page):\n        \"\"\"Check Sidebar Video Download title has correct text and is visible\"\"\"\n>       title = training_page.check_sidebar_panel_video_download()\n\ntests/test_training.py:36: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/training_page.py:28: in check_sidebar_panel_video_download\n    video_download = self.element_is_visible(self.locators.VIDEO_DOWNLOAD)\npages/base_page.py:30: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:51: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"137d3ebc33e9fb35093426b2db4cd1ce\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f22c0b58540>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55c80d20394a <unknown>\nE       #1 0x55c80cc788a0 <unknown>\nE       #2 0x55c80ccca540 <unknown>\nE       #3 0x55c80ccca731 <unknown>\nE       #4 0x55c80cd18824 <unknown>\nE       #5 0x55c80ccf005d <unknown>\nE       #6 0x55c80cd15c23 <unknown>\nE       #7 0x55c80ccefe03 <unknown>\nE       #8 0x55c80ccbc968 <unknown>\nE       #9 0x55c80ccbd5e1 <unknown>\nE       #10 0x55c80d1c7548 <unknown>\nE       #11 0x55c80d1cb272 <unknown>\nE       #12 0x55c80d1ae313 <unknown>\nE       #13 0x55c80d1cbdc5 <unknown>\nE       #14 0x55c80d19349f <unknown>\nE       #15 0x55c80d1f0158 <unknown>\nE       #16 0x55c80d1f0332 <unknown>\nE       #17 0x55c80d202a53 <unknown>\nE       #18 0x7fd2e4c9caa4 <unknown>\nE       #19 0x7fd2e4d29c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1758503447562,
+      "stop" : 1758503447629,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1758503447630,
+      "stop" : 1758503447630,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1758505777350,
+      "stop" : 1758505778581,
+      "duration" : 1231
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "training_page",
+    "time" : {
+      "start" : 1758505778581,
+      "stop" : 1758505778879,
+      "duration" : 298
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1758505778582,
+        "stop" : 1758505778879,
+        "duration" : 297
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "Check Sidebar Video Download title has correct text and is visible",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c80d20394a <unknown>\n#1 0x55c80cc788a0 <unknown>\n#2 0x55c80ccca540 <unknown>\n#3 0x55c80ccca731 <unknown>\n#4 0x55c80cd18824 <unknown>\n#5 0x55c80ccf005d <unknown>\n#6 0x55c80cd15c23 <unknown>\n#7 0x55c80ccefe03 <unknown>\n#8 0x55c80ccbc968 <unknown>\n#9 0x55c80ccbd5e1 <unknown>\n#10 0x55c80d1c7548 <unknown>\n#11 0x55c80d1cb272 <unknown>\n#12 0x55c80d1ae313 <unknown>\n#13 0x55c80d1cbdc5 <unknown>\n#14 0x55c80d19349f <unknown>\n#15 0x55c80d1f0158 <unknown>\n#16 0x55c80d1f0332 <unknown>\n#17 0x55c80d202a53 <unknown>\n#18 0x7fd2e4c9caa4 <unknown>\n#19 0x7fd2e4d29c3c <unknown>",
+    "statusTrace" : "self = <test_training.TestMainPage.TestTrainingSidebar object at 0x7f22c0f9f2c0>\ntraining_page = <pages.training_page.TrainingPage object at 0x7f22c09f3a10>\n\n    @allure.title(\"TC 16.01.03 Verify Sidebar title Video Download is visible and contains text 'Video Download'\")\n    def test_tc_16_01_03_check_sidebar_video_download_title(self, training_page):\n        \"\"\"Check Sidebar Video Download title has correct text and is visible\"\"\"\n>       title = training_page.check_sidebar_panel_video_download()\n\ntests/test_training.py:36: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/training_page.py:28: in check_sidebar_panel_video_download\n    video_download = self.element_is_visible(self.locators.VIDEO_DOWNLOAD)\npages/base_page.py:30: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:51: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"137d3ebc33e9fb35093426b2db4cd1ce\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f22c0b58540>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55c80d20394a <unknown>\nE       #1 0x55c80cc788a0 <unknown>\nE       #2 0x55c80ccca540 <unknown>\nE       #3 0x55c80ccca731 <unknown>\nE       #4 0x55c80cd18824 <unknown>\nE       #5 0x55c80ccf005d <unknown>\nE       #6 0x55c80cd15c23 <unknown>\nE       #7 0x55c80ccefe03 <unknown>\nE       #8 0x55c80ccbc968 <unknown>\nE       #9 0x55c80ccbd5e1 <unknown>\nE       #10 0x55c80d1c7548 <unknown>\nE       #11 0x55c80d1cb272 <unknown>\nE       #12 0x55c80d1ae313 <unknown>\nE       #13 0x55c80d1cbdc5 <unknown>\nE       #14 0x55c80d19349f <unknown>\nE       #15 0x55c80d1f0158 <unknown>\nE       #16 0x55c80d1f0332 <unknown>\nE       #17 0x55c80d202a53 <unknown>\nE       #18 0x7fd2e4c9caa4 <unknown>\nE       #19 0x7fd2e4d29c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Check the Sidebar Video Download is visible and contains text \"Video Download\"",
+      "time" : {
+        "start" : 1758505778880,
+        "stop" : 1758505783975,
+        "duration" : 5095
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c80d20394a <unknown>\n#1 0x55c80cc788a0 <unknown>\n#2 0x55c80ccca540 <unknown>\n#3 0x55c80ccca731 <unknown>\n#4 0x55c80cd18824 <unknown>\n#5 0x55c80ccf005d <unknown>\n#6 0x55c80cd15c23 <unknown>\n#7 0x55c80ccefe03 <unknown>\n#8 0x55c80ccbc968 <unknown>\n#9 0x55c80ccbd5e1 <unknown>\n#10 0x55c80d1c7548 <unknown>\n#11 0x55c80d1cb272 <unknown>\n#12 0x55c80d1ae313 <unknown>\n#13 0x55c80d1cbdc5 <unknown>\n#14 0x55c80d19349f <unknown>\n#15 0x55c80d1f0158 <unknown>\n#16 0x55c80d1f0332 <unknown>\n#17 0x55c80d202a53 <unknown>\n#18 0x7fd2e4c9caa4 <unknown>\n#19 0x7fd2e4d29c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/training_page.py\", line 28, in check_sidebar_panel_video_download\n    video_download = self.element_is_visible(self.locators.VIDEO_DOWNLOAD)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 30, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1758505778880,
+          "stop" : 1758505783974,
+          "duration" : 5094
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c80d20394a <unknown>\n#1 0x55c80cc788a0 <unknown>\n#2 0x55c80ccca540 <unknown>\n#3 0x55c80ccca731 <unknown>\n#4 0x55c80cd18824 <unknown>\n#5 0x55c80ccf005d <unknown>\n#6 0x55c80cd15c23 <unknown>\n#7 0x55c80ccefe03 <unknown>\n#8 0x55c80ccbc968 <unknown>\n#9 0x55c80ccbd5e1 <unknown>\n#10 0x55c80d1c7548 <unknown>\n#11 0x55c80d1cb272 <unknown>\n#12 0x55c80d1ae313 <unknown>\n#13 0x55c80d1cbdc5 <unknown>\n#14 0x55c80d19349f <unknown>\n#15 0x55c80d1f0158 <unknown>\n#16 0x55c80d1f0332 <unknown>\n#17 0x55c80d202a53 <unknown>\n#18 0x7fd2e4c9caa4 <unknown>\n#19 0x7fd2e4d29c3c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 30, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1758505778880,
+            "stop" : 1758505783974,
+            "duration" : 5094
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c80d20394a <unknown>\n#1 0x55c80cc788a0 <unknown>\n#2 0x55c80ccca540 <unknown>\n#3 0x55c80ccca731 <unknown>\n#4 0x55c80cd18824 <unknown>\n#5 0x55c80ccf005d <unknown>\n#6 0x55c80cd15c23 <unknown>\n#7 0x55c80ccefe03 <unknown>\n#8 0x55c80ccbc968 <unknown>\n#9 0x55c80ccbd5e1 <unknown>\n#10 0x55c80d1c7548 <unknown>\n#11 0x55c80d1cb272 <unknown>\n#12 0x55c80d1ae313 <unknown>\n#13 0x55c80d1cbdc5 <unknown>\n#14 0x55c80d19349f <unknown>\n#15 0x55c80d1f0158 <unknown>\n#16 0x55c80d1f0332 <unknown>\n#17 0x55c80d202a53 <unknown>\n#18 0x7fd2e4c9caa4 <unknown>\n#19 0x7fd2e4d29c3c <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//*[@id=\"narrow-by-list2\"]/dd/ol/li/a')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//*[@id=\"narrow-by-list2\"]/dd/ol/li/a')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "bf7c7c4d7f5b24ed",
+      "name" : "Screenshot",
+      "source" : "bf7c7c4d7f5b24ed.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "844842649dcbd252",
+      "name" : "HTML source",
+      "source" : "844842649dcbd252.html",
+      "type" : "text/html",
+      "size" : 786
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1758505893826,
+      "stop" : 1758505893826,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1758505784060,
+      "stop" : 1758505784120,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Training Page Sidebar"
+  }, {
+    "name" : "epic",
+    "value" : "Training Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_training"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "2993-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_training"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "971167ea485cc25c.json",
+  "parameterValues" : [ ]
+}

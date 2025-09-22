@@ -1,0 +1,205 @@
+{
+  "uid" : "af1e18daedcfa7e5",
+  "name" : "TC 01_15_01 Verify possibility to vote with 1 star",
+  "fullName" : "tests.test_reviews_page.TestReviews#test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star",
+  "historyId" : "cfd828a389f57bf8c414a44a924590cf",
+  "time" : {
+    "start" : 1758504999213,
+    "stop" : 1758505004676,
+    "duration" : 5463
+  },
+  "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 1 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\"\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+  "descriptionHtml" : "<pre><code>    The user is NOT logged in, located in the product card, section &quot;Reviews&quot;\n    1. All required fields are filled with correct data\n    2. Pressed 1 star\n    3.The &quot;Submit Review&quot; button is pressed\n    Result: Present in the DOM and visible on the page the message: &quot;You submitted your review for moderation.&quot;\n    This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n    When interacting with the GitHub Action, it checks not for the text of the &quot;Success&quot; message, but for the &quot;Success&quot; URL&quot;\n</code></pre>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ef32bb094a <unknown>\n#1 0x55ef326258a0 <unknown>\n#2 0x55ef32677540 <unknown>\n#3 0x55ef32677731 <unknown>\n#4 0x55ef326c5824 <unknown>\n#5 0x55ef3269d05d <unknown>\n#6 0x55ef326c2c23 <unknown>\n#7 0x55ef3269ce03 <unknown>\n#8 0x55ef32669968 <unknown>\n#9 0x55ef3266a5e1 <unknown>\n#10 0x55ef32b74548 <unknown>\n#11 0x55ef32b78272 <unknown>\n#12 0x55ef32b5b313 <unknown>\n#13 0x55ef32b78dc5 <unknown>\n#14 0x55ef32b4049f <unknown>\n#15 0x55ef32b9d158 <unknown>\n#16 0x55ef32b9d332 <unknown>\n#17 0x55ef32bafa53 <unknown>\n#18 0x7f92be69caa4 <unknown>\n#19 0x7f92be729c3c <unknown>",
+  "statusTrace" : "self = <test_reviews_page.TestReviews object at 0x7f22c0f86bd0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"50c97ad9433258294331ffaf186efa8b\")>\n\n    @allure.title('TC 01_15_01 Verify possibility to vote with 1 star')\n    def test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star(self, driver):\n        \"\"\"\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 1 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\"\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        \"\"\"\n    \n        \"\"\"Steps\"\"\"\n        page = ReviewsPage(driver, REVIEWS_URL_GENERAL)\n        page.open()\n    \n        \"\"\"Get the current URL and print it\"\"\"\n        page.get_the_current_URL_and_print_it()\n    \n        \"\"\"Steps\"\"\"\n>       page.open_review_menu()\n\ntests/test_reviews_page.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/reviews_page.py:14: in open_review_menu\n    review_menu = self.element_is_clickable(self.locators.REVIEW_MENU)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"50c97ad9433258294331ffaf186efa8b\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f22c0cbb2e0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55ef32bb094a <unknown>\nE       #1 0x55ef326258a0 <unknown>\nE       #2 0x55ef32677540 <unknown>\nE       #3 0x55ef32677731 <unknown>\nE       #4 0x55ef326c5824 <unknown>\nE       #5 0x55ef3269d05d <unknown>\nE       #6 0x55ef326c2c23 <unknown>\nE       #7 0x55ef3269ce03 <unknown>\nE       #8 0x55ef32669968 <unknown>\nE       #9 0x55ef3266a5e1 <unknown>\nE       #10 0x55ef32b74548 <unknown>\nE       #11 0x55ef32b78272 <unknown>\nE       #12 0x55ef32b5b313 <unknown>\nE       #13 0x55ef32b78dc5 <unknown>\nE       #14 0x55ef32b4049f <unknown>\nE       #15 0x55ef32b9d158 <unknown>\nE       #16 0x55ef32b9d332 <unknown>\nE       #17 0x55ef32bafa53 <unknown>\nE       #18 0x7f92be69caa4 <unknown>\nE       #19 0x7f92be729c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1758503447562,
+      "stop" : 1758503447629,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1758503447630,
+      "stop" : 1758503447630,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1758504997962,
+      "stop" : 1758504999213,
+      "duration" : 1251
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 1 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\"\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        ",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ef32bb094a <unknown>\n#1 0x55ef326258a0 <unknown>\n#2 0x55ef32677540 <unknown>\n#3 0x55ef32677731 <unknown>\n#4 0x55ef326c5824 <unknown>\n#5 0x55ef3269d05d <unknown>\n#6 0x55ef326c2c23 <unknown>\n#7 0x55ef3269ce03 <unknown>\n#8 0x55ef32669968 <unknown>\n#9 0x55ef3266a5e1 <unknown>\n#10 0x55ef32b74548 <unknown>\n#11 0x55ef32b78272 <unknown>\n#12 0x55ef32b5b313 <unknown>\n#13 0x55ef32b78dc5 <unknown>\n#14 0x55ef32b4049f <unknown>\n#15 0x55ef32b9d158 <unknown>\n#16 0x55ef32b9d332 <unknown>\n#17 0x55ef32bafa53 <unknown>\n#18 0x7f92be69caa4 <unknown>\n#19 0x7f92be729c3c <unknown>",
+    "statusTrace" : "self = <test_reviews_page.TestReviews object at 0x7f22c0f86bd0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"50c97ad9433258294331ffaf186efa8b\")>\n\n    @allure.title('TC 01_15_01 Verify possibility to vote with 1 star')\n    def test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star(self, driver):\n        \"\"\"\n        The user is NOT logged in, located in the product card, section \"Reviews\"\n        1. All required fields are filled with correct data\n        2. Pressed 1 star\n        3.The \"Submit Review\" button is pressed\n        Result: Present in the DOM and visible on the page the message: \"You submitted your review for moderation.\"\n        This code works when run on Win, Mac, Ubuntu on a real laptop and has the features of working on GitHub Action.\n        When interacting with the GitHub Action, it checks not for the text of the \"Success\" message, but for the \"Success\" URL\"\n        \"\"\"\n    \n        \"\"\"Steps\"\"\"\n        page = ReviewsPage(driver, REVIEWS_URL_GENERAL)\n        page.open()\n    \n        \"\"\"Get the current URL and print it\"\"\"\n        page.get_the_current_URL_and_print_it()\n    \n        \"\"\"Steps\"\"\"\n>       page.open_review_menu()\n\ntests/test_reviews_page.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/reviews_page.py:14: in open_review_menu\n    review_menu = self.element_is_clickable(self.locators.REVIEW_MENU)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"50c97ad9433258294331ffaf186efa8b\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f22c0cbb2e0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55ef32bb094a <unknown>\nE       #1 0x55ef326258a0 <unknown>\nE       #2 0x55ef32677540 <unknown>\nE       #3 0x55ef32677731 <unknown>\nE       #4 0x55ef326c5824 <unknown>\nE       #5 0x55ef3269d05d <unknown>\nE       #6 0x55ef326c2c23 <unknown>\nE       #7 0x55ef3269ce03 <unknown>\nE       #8 0x55ef32669968 <unknown>\nE       #9 0x55ef3266a5e1 <unknown>\nE       #10 0x55ef32b74548 <unknown>\nE       #11 0x55ef32b78272 <unknown>\nE       #12 0x55ef32b5b313 <unknown>\nE       #13 0x55ef32b78dc5 <unknown>\nE       #14 0x55ef32b4049f <unknown>\nE       #15 0x55ef32b9d158 <unknown>\nE       #16 0x55ef32b9d332 <unknown>\nE       #17 0x55ef32bafa53 <unknown>\nE       #18 0x7f92be69caa4 <unknown>\nE       #19 0x7f92be729c3c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1758504999213,
+        "stop" : 1758504999567,
+        "duration" : 354
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1758504999577,
+        "stop" : 1758505004675,
+        "duration" : 5098
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ef32bb094a <unknown>\n#1 0x55ef326258a0 <unknown>\n#2 0x55ef32677540 <unknown>\n#3 0x55ef32677731 <unknown>\n#4 0x55ef326c5824 <unknown>\n#5 0x55ef3269d05d <unknown>\n#6 0x55ef326c2c23 <unknown>\n#7 0x55ef3269ce03 <unknown>\n#8 0x55ef32669968 <unknown>\n#9 0x55ef3266a5e1 <unknown>\n#10 0x55ef32b74548 <unknown>\n#11 0x55ef32b78272 <unknown>\n#12 0x55ef32b5b313 <unknown>\n#13 0x55ef32b78dc5 <unknown>\n#14 0x55ef32b4049f <unknown>\n#15 0x55ef32b9d158 <unknown>\n#16 0x55ef32b9d332 <unknown>\n#17 0x55ef32bafa53 <unknown>\n#18 0x7f92be69caa4 <unknown>\n#19 0x7f92be729c3c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '#tab-label-reviews-title')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "25bf7695319c3abc",
+      "name" : "Screenshot",
+      "source" : "25bf7695319c3abc.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "2a370841eae6038e",
+      "name" : "HTML source",
+      "source" : "2a370841eae6038e.html",
+      "type" : "text/html",
+      "size" : 786
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1758505893826,
+      "stop" : 1758505893826,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1758505004736,
+      "stop" : 1758505004796,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Review Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_reviews_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestReviews"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "2993-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_reviews_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "af1e18daedcfa7e5.json",
+  "parameterValues" : [ ]
+}
