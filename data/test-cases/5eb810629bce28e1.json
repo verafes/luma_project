@@ -1,0 +1,242 @@
+{
+  "uid" : "5eb810629bce28e1",
+  "name" : "TC 06.01.09 - check the color change to add to cart button",
+  "fullName" : "tests.test_main_page.TestHotSellerSection#test_tc_06_01_09_check_the_color_change_to_add_to_cart_button",
+  "historyId" : "099481615c734e9a24f63f4f2ba04a33",
+  "time" : {
+    "start" : 1759109106453,
+    "stop" : 1759109111767,
+    "duration" : 5314
+  },
+  "description" : "This test check the color change when hovering over the Add to Cart button",
+  "descriptionHtml" : "<p>This test check the color change when hovering over the Add to Cart button</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558e3fc1dcba <unknown>\n#1 0x558e3f6928e0 <unknown>\n#2 0x558e3f6e4580 <unknown>\n#3 0x558e3f6e4771 <unknown>\n#4 0x558e3f732864 <unknown>\n#5 0x558e3f70a09d <unknown>\n#6 0x558e3f72fc63 <unknown>\n#7 0x558e3f709e43 <unknown>\n#8 0x558e3f6d69a8 <unknown>\n#9 0x558e3f6d7621 <unknown>\n#10 0x558e3fbe18b8 <unknown>\n#11 0x558e3fbe55e2 <unknown>\n#12 0x558e3fbc8683 <unknown>\n#13 0x558e3fbe6135 <unknown>\n#14 0x558e3fbad80f <unknown>\n#15 0x558e3fc0a4c8 <unknown>\n#16 0x558e3fc0a6a2 <unknown>\n#17 0x558e3fc1cdc3 <unknown>\n#18 0x7f458169caa4 <unknown>\n#19 0x7f4581729c6c <unknown>",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7f0da85346e0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2dec7facc3c56ed79217fa4638a9bfcd\")>\n\n    @allure.title(\"TC 06.01.09 - check the color change to add to cart button\")\n    def test_tc_06_01_09_check_the_color_change_to_add_to_cart_button(self, driver):\n        \"\"\"This test check the color change when hovering over the Add to Cart button\"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        background_before, background_after = \\\n>           page.check_the_color_change_to_add_to_cart_button()\n\ntests/test_main_page.py:68: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:73: in check_the_color_change_to_add_to_cart_button\n    add_to_card_button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_card\"])\npages/base_page.py:51: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"2dec7facc3c56ed79217fa4638a9bfcd\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f0da82eea20>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x558e3fc1dcba <unknown>\nE       #1 0x558e3f6928e0 <unknown>\nE       #2 0x558e3f6e4580 <unknown>\nE       #3 0x558e3f6e4771 <unknown>\nE       #4 0x558e3f732864 <unknown>\nE       #5 0x558e3f70a09d <unknown>\nE       #6 0x558e3f72fc63 <unknown>\nE       #7 0x558e3f709e43 <unknown>\nE       #8 0x558e3f6d69a8 <unknown>\nE       #9 0x558e3f6d7621 <unknown>\nE       #10 0x558e3fbe18b8 <unknown>\nE       #11 0x558e3fbe55e2 <unknown>\nE       #12 0x558e3fbc8683 <unknown>\nE       #13 0x558e3fbe6135 <unknown>\nE       #14 0x558e3fbad80f <unknown>\nE       #15 0x558e3fc0a4c8 <unknown>\nE       #16 0x558e3fc0a6a2 <unknown>\nE       #17 0x558e3fc1cdc3 <unknown>\nE       #18 0x7f458169caa4 <unknown>\nE       #19 0x7f4581729c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1759109105182,
+      "stop" : 1759109106453,
+      "duration" : 1271
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1759108091635,
+      "stop" : 1759108091636,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1759108091552,
+      "stop" : 1759108091635,
+      "duration" : 83
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test check the color change when hovering over the Add to Cart button",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558e3fc1dcba <unknown>\n#1 0x558e3f6928e0 <unknown>\n#2 0x558e3f6e4580 <unknown>\n#3 0x558e3f6e4771 <unknown>\n#4 0x558e3f732864 <unknown>\n#5 0x558e3f70a09d <unknown>\n#6 0x558e3f72fc63 <unknown>\n#7 0x558e3f709e43 <unknown>\n#8 0x558e3f6d69a8 <unknown>\n#9 0x558e3f6d7621 <unknown>\n#10 0x558e3fbe18b8 <unknown>\n#11 0x558e3fbe55e2 <unknown>\n#12 0x558e3fbc8683 <unknown>\n#13 0x558e3fbe6135 <unknown>\n#14 0x558e3fbad80f <unknown>\n#15 0x558e3fc0a4c8 <unknown>\n#16 0x558e3fc0a6a2 <unknown>\n#17 0x558e3fc1cdc3 <unknown>\n#18 0x7f458169caa4 <unknown>\n#19 0x7f4581729c6c <unknown>",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7f0da85346e0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"2dec7facc3c56ed79217fa4638a9bfcd\")>\n\n    @allure.title(\"TC 06.01.09 - check the color change to add to cart button\")\n    def test_tc_06_01_09_check_the_color_change_to_add_to_cart_button(self, driver):\n        \"\"\"This test check the color change when hovering over the Add to Cart button\"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n        background_before, background_after = \\\n>           page.check_the_color_change_to_add_to_cart_button()\n\ntests/test_main_page.py:68: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:73: in check_the_color_change_to_add_to_cart_button\n    add_to_card_button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_card\"])\npages/base_page.py:51: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"2dec7facc3c56ed79217fa4638a9bfcd\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f0da82eea20>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x558e3fc1dcba <unknown>\nE       #1 0x558e3f6928e0 <unknown>\nE       #2 0x558e3f6e4580 <unknown>\nE       #3 0x558e3f6e4771 <unknown>\nE       #4 0x558e3f732864 <unknown>\nE       #5 0x558e3f70a09d <unknown>\nE       #6 0x558e3f72fc63 <unknown>\nE       #7 0x558e3f709e43 <unknown>\nE       #8 0x558e3f6d69a8 <unknown>\nE       #9 0x558e3f6d7621 <unknown>\nE       #10 0x558e3fbe18b8 <unknown>\nE       #11 0x558e3fbe55e2 <unknown>\nE       #12 0x558e3fbc8683 <unknown>\nE       #13 0x558e3fbe6135 <unknown>\nE       #14 0x558e3fbad80f <unknown>\nE       #15 0x558e3fc0a4c8 <unknown>\nE       #16 0x558e3fc0a6a2 <unknown>\nE       #17 0x558e3fc1cdc3 <unknown>\nE       #18 0x7f458169caa4 <unknown>\nE       #19 0x7f4581729c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1759109106454,
+        "stop" : 1759109106662,
+        "duration" : 208
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check the color change on hover on the Add to Cart button",
+      "time" : {
+        "start" : 1759109106662,
+        "stop" : 1759109111767,
+        "duration" : 5105
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558e3fc1dcba <unknown>\n#1 0x558e3f6928e0 <unknown>\n#2 0x558e3f6e4580 <unknown>\n#3 0x558e3f6e4771 <unknown>\n#4 0x558e3f732864 <unknown>\n#5 0x558e3f70a09d <unknown>\n#6 0x558e3f72fc63 <unknown>\n#7 0x558e3f709e43 <unknown>\n#8 0x558e3f6d69a8 <unknown>\n#9 0x558e3f6d7621 <unknown>\n#10 0x558e3fbe18b8 <unknown>\n#11 0x558e3fbe55e2 <unknown>\n#12 0x558e3fbc8683 <unknown>\n#13 0x558e3fbe6135 <unknown>\n#14 0x558e3fbad80f <unknown>\n#15 0x558e3fc0a4c8 <unknown>\n#16 0x558e3fc0a6a2 <unknown>\n#17 0x558e3fc1cdc3 <unknown>\n#18 0x7f458169caa4 <unknown>\n#19 0x7f4581729c6c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/main_page.py\", line 73, in check_the_color_change_to_add_to_cart_button\n    add_to_card_button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_card\"])\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Get button properties before hover",
+        "time" : {
+          "start" : 1759109106662,
+          "stop" : 1759109111766,
+          "duration" : 5104
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558e3fc1dcba <unknown>\n#1 0x558e3f6928e0 <unknown>\n#2 0x558e3f6e4580 <unknown>\n#3 0x558e3f6e4771 <unknown>\n#4 0x558e3f732864 <unknown>\n#5 0x558e3f70a09d <unknown>\n#6 0x558e3f72fc63 <unknown>\n#7 0x558e3f709e43 <unknown>\n#8 0x558e3f6d69a8 <unknown>\n#9 0x558e3f6d7621 <unknown>\n#10 0x558e3fbe18b8 <unknown>\n#11 0x558e3fbe55e2 <unknown>\n#12 0x558e3fbc8683 <unknown>\n#13 0x558e3fbe6135 <unknown>\n#14 0x558e3fbad80f <unknown>\n#15 0x558e3fc0a4c8 <unknown>\n#16 0x558e3fc0a6a2 <unknown>\n#17 0x558e3fc1cdc3 <unknown>\n#18 0x7f458169caa4 <unknown>\n#19 0x7f4581729c6c <unknown>\n\n",
+        "statusTrace" : "  File \"/home/runner/work/luma_project/luma_project/pages/main_page.py\", line 73, in check_the_color_change_to_add_to_cart_button\n    add_to_card_button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_card\"])\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1759109106662,
+            "stop" : 1759109111766,
+            "duration" : 5104
+          },
+          "status" : "broken",
+          "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558e3fc1dcba <unknown>\n#1 0x558e3f6928e0 <unknown>\n#2 0x558e3f6e4580 <unknown>\n#3 0x558e3f6e4771 <unknown>\n#4 0x558e3f732864 <unknown>\n#5 0x558e3f70a09d <unknown>\n#6 0x558e3f72fc63 <unknown>\n#7 0x558e3f709e43 <unknown>\n#8 0x558e3f6d69a8 <unknown>\n#9 0x558e3f6d7621 <unknown>\n#10 0x558e3fbe18b8 <unknown>\n#11 0x558e3fbe55e2 <unknown>\n#12 0x558e3fbc8683 <unknown>\n#13 0x558e3fbe6135 <unknown>\n#14 0x558e3fbad80f <unknown>\n#15 0x558e3fc0a4c8 <unknown>\n#16 0x558e3fc0a6a2 <unknown>\n#17 0x558e3fc1cdc3 <unknown>\n#18 0x7f458169caa4 <unknown>\n#19 0x7f4581729c6c <unknown>\n\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 51, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(6) button[class='action tocart primary']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "7fc50424438b0765",
+      "name" : "Screenshot",
+      "source" : "7fc50424438b0765.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "836729e4e3766327",
+      "name" : "HTML source",
+      "source" : "836729e4e3766327.html",
+      "type" : "text/html",
+      "size" : 786
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1759109111846,
+      "stop" : 1759109111907,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1759110554884,
+      "stop" : 1759110554884,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "feature",
+    "value" : "Testing Hot Seller Section"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "runnervm3ublj"
+  }, {
+    "name" : "thread",
+    "value" : "3001-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5eb810629bce28e1.json",
+  "parameterValues" : [ ]
+}
