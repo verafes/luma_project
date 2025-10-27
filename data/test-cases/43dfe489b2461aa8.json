@@ -1,0 +1,237 @@
+{
+  "uid" : "43dfe489b2461aa8",
+  "name" : "TC 17.01.20 Verify Reset My Password button is clickable",
+  "fullName" : "tests.test_forgot_your_password.TestForgotYourPassword#test_17_01_20_reset_my_password_button_is_clickable",
+  "historyId" : "b1c1a3818d9d0853a19f023cc67ba21e",
+  "time" : {
+    "start" : 1761528215093,
+    "stop" : 1761528220193,
+    "duration" : 5100
+  },
+  "description" : "Check that the 'Reset My Password' button is clickable",
+  "descriptionHtml" : "<p>Check that the 'Reset My Password' button is clickable</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564efc29afba <unknown>\n#1 0x564efbd1f6d0 <unknown>\n#2 0x564efbd712aa <unknown>\n#3 0x564efbd71541 <unknown>\n#4 0x564efbdbf6c4 <unknown>\n#5 0x564efbd96e5d <unknown>\n#6 0x564efbdbcb54 <unknown>\n#7 0x564efbd96c03 <unknown>\n#8 0x564efbd637a8 <unknown>\n#9 0x564efbd64421 <unknown>\n#10 0x564efc25fb28 <unknown>\n#11 0x564efc26387f <unknown>\n#12 0x564efc247c49 <unknown>\n#13 0x564efc264405 <unknown>\n#14 0x564efc22d4ff <unknown>\n#15 0x564efc288258 <unknown>\n#16 0x564efc288432 <unknown>\n#17 0x564efc299fa3 <unknown>\n#18 0x7f557149caa4 <unknown>\n#19 0x7f5571529c6c <unknown>",
+  "statusTrace" : "self = <test_forgot_your_password.TestForgotYourPassword object at 0x7f5f03dc1eb0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6e9463920bdcb7307133b768ac5d658f\")>\nforgot_psw_page = <pages.forgot_your_password_page.ForgotYourPasswordPage object at 0x7f5f038aa840>\n\n    @allure.title('TC 17.01.20 Verify Reset My Password button is clickable')\n    def test_17_01_20_reset_my_password_button_is_clickable(self, driver, forgot_psw_page):\n        \"\"\"Check that the 'Reset My Password' button is clickable\"\"\"\n>       reset_my_psw_button = forgot_psw_page.check_reset_my_password_button_is_clickable()\n\ntests/test_forgot_your_password.py:188: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/forgot_your_password_page.py:119: in check_reset_my_password_button_is_clickable\n    return self.element_is_clickable(self.locators.RESET_MY_PASSWORD_BUTTON)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"6e9463920bdcb7307133b768ac5d658f\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f5f03befb00>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x564efc29afba <unknown>\nE       #1 0x564efbd1f6d0 <unknown>\nE       #2 0x564efbd712aa <unknown>\nE       #3 0x564efbd71541 <unknown>\nE       #4 0x564efbdbf6c4 <unknown>\nE       #5 0x564efbd96e5d <unknown>\nE       #6 0x564efbdbcb54 <unknown>\nE       #7 0x564efbd96c03 <unknown>\nE       #8 0x564efbd637a8 <unknown>\nE       #9 0x564efbd64421 <unknown>\nE       #10 0x564efc25fb28 <unknown>\nE       #11 0x564efc26387f <unknown>\nE       #12 0x564efc247c49 <unknown>\nE       #13 0x564efc264405 <unknown>\nE       #14 0x564efc22d4ff <unknown>\nE       #15 0x564efc288258 <unknown>\nE       #16 0x564efc288432 <unknown>\nE       #17 0x564efc299fa3 <unknown>\nE       #18 0x7f557149caa4 <unknown>\nE       #19 0x7f5571529c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "forgot_psw_page",
+    "time" : {
+      "start" : 1761528214917,
+      "stop" : 1761528215092,
+      "duration" : 175
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1761528214917,
+        "stop" : 1761528215092,
+        "duration" : 175
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761528213661,
+      "stop" : 1761528214917,
+      "duration" : 1256
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1761527678629,
+      "stop" : 1761527678696,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1761527678696,
+      "stop" : 1761527678696,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that the 'Reset My Password' button is clickable",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564efc29afba <unknown>\n#1 0x564efbd1f6d0 <unknown>\n#2 0x564efbd712aa <unknown>\n#3 0x564efbd71541 <unknown>\n#4 0x564efbdbf6c4 <unknown>\n#5 0x564efbd96e5d <unknown>\n#6 0x564efbdbcb54 <unknown>\n#7 0x564efbd96c03 <unknown>\n#8 0x564efbd637a8 <unknown>\n#9 0x564efbd64421 <unknown>\n#10 0x564efc25fb28 <unknown>\n#11 0x564efc26387f <unknown>\n#12 0x564efc247c49 <unknown>\n#13 0x564efc264405 <unknown>\n#14 0x564efc22d4ff <unknown>\n#15 0x564efc288258 <unknown>\n#16 0x564efc288432 <unknown>\n#17 0x564efc299fa3 <unknown>\n#18 0x7f557149caa4 <unknown>\n#19 0x7f5571529c6c <unknown>",
+    "statusTrace" : "self = <test_forgot_your_password.TestForgotYourPassword object at 0x7f5f03dc1eb0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6e9463920bdcb7307133b768ac5d658f\")>\nforgot_psw_page = <pages.forgot_your_password_page.ForgotYourPasswordPage object at 0x7f5f038aa840>\n\n    @allure.title('TC 17.01.20 Verify Reset My Password button is clickable')\n    def test_17_01_20_reset_my_password_button_is_clickable(self, driver, forgot_psw_page):\n        \"\"\"Check that the 'Reset My Password' button is clickable\"\"\"\n>       reset_my_psw_button = forgot_psw_page.check_reset_my_password_button_is_clickable()\n\ntests/test_forgot_your_password.py:188: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/forgot_your_password_page.py:119: in check_reset_my_password_button_is_clickable\n    return self.element_is_clickable(self.locators.RESET_MY_PASSWORD_BUTTON)\npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"6e9463920bdcb7307133b768ac5d658f\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f5f03befb00>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x564efc29afba <unknown>\nE       #1 0x564efbd1f6d0 <unknown>\nE       #2 0x564efbd712aa <unknown>\nE       #3 0x564efbd71541 <unknown>\nE       #4 0x564efbdbf6c4 <unknown>\nE       #5 0x564efbd96e5d <unknown>\nE       #6 0x564efbdbcb54 <unknown>\nE       #7 0x564efbd96c03 <unknown>\nE       #8 0x564efbd637a8 <unknown>\nE       #9 0x564efbd64421 <unknown>\nE       #10 0x564efc25fb28 <unknown>\nE       #11 0x564efc26387f <unknown>\nE       #12 0x564efc247c49 <unknown>\nE       #13 0x564efc264405 <unknown>\nE       #14 0x564efc22d4ff <unknown>\nE       #15 0x564efc288258 <unknown>\nE       #16 0x564efc288432 <unknown>\nE       #17 0x564efc299fa3 <unknown>\nE       #18 0x7f557149caa4 <unknown>\nE       #19 0x7f5571529c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Check Reset My Password button is clickable",
+      "time" : {
+        "start" : 1761528215093,
+        "stop" : 1761528220192,
+        "duration" : 5099
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564efc29afba <unknown>\n#1 0x564efbd1f6d0 <unknown>\n#2 0x564efbd712aa <unknown>\n#3 0x564efbd71541 <unknown>\n#4 0x564efbdbf6c4 <unknown>\n#5 0x564efbd96e5d <unknown>\n#6 0x564efbdbcb54 <unknown>\n#7 0x564efbd96c03 <unknown>\n#8 0x564efbd637a8 <unknown>\n#9 0x564efbd64421 <unknown>\n#10 0x564efc25fb28 <unknown>\n#11 0x564efc26387f <unknown>\n#12 0x564efc247c49 <unknown>\n#13 0x564efc264405 <unknown>\n#14 0x564efc22d4ff <unknown>\n#15 0x564efc288258 <unknown>\n#16 0x564efc288432 <unknown>\n#17 0x564efc299fa3 <unknown>\n#18 0x7f557149caa4 <unknown>\n#19 0x7f5571529c6c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/forgot_your_password_page.py\", line 119, in check_reset_my_password_button_is_clickable\n    return self.element_is_clickable(self.locators.RESET_MY_PASSWORD_BUTTON)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1761528215093,
+          "stop" : 1761528220192,
+          "duration" : 5099
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564efc29afba <unknown>\n#1 0x564efbd1f6d0 <unknown>\n#2 0x564efbd712aa <unknown>\n#3 0x564efbd71541 <unknown>\n#4 0x564efbdbf6c4 <unknown>\n#5 0x564efbd96e5d <unknown>\n#6 0x564efbdbcb54 <unknown>\n#7 0x564efbd96c03 <unknown>\n#8 0x564efbd637a8 <unknown>\n#9 0x564efbd64421 <unknown>\n#10 0x564efc25fb28 <unknown>\n#11 0x564efc26387f <unknown>\n#12 0x564efc247c49 <unknown>\n#13 0x564efc264405 <unknown>\n#14 0x564efc22d4ff <unknown>\n#15 0x564efc288258 <unknown>\n#16 0x564efc288432 <unknown>\n#17 0x564efc299fa3 <unknown>\n#18 0x7f557149caa4 <unknown>\n#19 0x7f5571529c6c <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'button[class=\"action submit primary\"]')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "5ca5bbafcb6dbe14",
+      "name" : "Screenshot",
+      "source" : "5ca5bbafcb6dbe14.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "6e7b9ede3e766b0e",
+      "name" : "HTML source",
+      "source" : "6e7b9ede3e766b0e.html",
+      "type" : "text/html",
+      "size" : 1433
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761528220254,
+      "stop" : 1761528220314,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1761530087586,
+      "stop" : 1761530087586,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Forgot Your Password Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_forgot_your_password"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestForgotYourPassword"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "3173-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_forgot_your_password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "43dfe489b2461aa8.json",
+  "parameterValues" : [ ]
+}

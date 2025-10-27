@@ -1,0 +1,232 @@
+{
+  "uid" : "efbf29ef702f0ee5",
+  "name" : "TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - Verify 5 links in Men's Deals open the correct pages",
+  "fullName" : "tests.test_sale.TestSideMenuBarMen#test_tc_10_01_03__05_07_09_11_13",
+  "historyId" : "43d60aadc30792aa4e5b0e2f9f7fad97",
+  "time" : {
+    "start" : 1761529375511,
+    "stop" : 1761529380609,
+    "duration" : 5098
+  },
+  "description" : "Check that five links in Men's Deals section lead to the correct pages after click",
+  "descriptionHtml" : "<p>Check that five links in Men's Deals section lead to the correct pages after click</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5653daa38fba <unknown>\n#1 0x5653da4bd6d0 <unknown>\n#2 0x5653da50f2aa <unknown>\n#3 0x5653da50f541 <unknown>\n#4 0x5653da55d6c4 <unknown>\n#5 0x5653da534e5d <unknown>\n#6 0x5653da55ab54 <unknown>\n#7 0x5653da534c03 <unknown>\n#8 0x5653da5017a8 <unknown>\n#9 0x5653da502421 <unknown>\n#10 0x5653da9fdb28 <unknown>\n#11 0x5653daa0187f <unknown>\n#12 0x5653da9e5c49 <unknown>\n#13 0x5653daa02405 <unknown>\n#14 0x5653da9cb4ff <unknown>\n#15 0x5653daa26258 <unknown>\n#16 0x5653daa26432 <unknown>\n#17 0x5653daa37fa3 <unknown>\n#18 0x7f4b6a89caa4 <unknown>\n#19 0x7f4b6a929c6c <unknown>",
+  "statusTrace" : "self = <test_sale.TestSalePage.TestSideMenuBarMen object at 0x7f5f038569f0>\nsale_page = <pages.sale_page.SalePage object at 0x7f5f0371bc20>\nelement_locator = ('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')\nexpected_title = 'Jackets - Tops - Men'\nexpected_url = 'https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html'\n\n    @allure.title(\"TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - \"\n                  \"Verify 5 links in Men's Deals open the correct pages\")\n    @pytest.mark.parametrize(\n        \"element_locator, expected_title, expected_url\",\n        zip(\n            SideBarLocators.MEN_DEALS_ELEMENTS.values(),\n            expected_titles_m.values(),\n            expected_urls_m.values(),\n        )\n    )\n    def test_tc_10_01_03__05_07_09_11_13(self, sale_page, element_locator, expected_title, expected_url):\n        \"\"\"Check that five links in Men's Deals section lead to the correct pages after click\"\"\"\n>       element_in_men_deals = sale_page.element_is_clickable(element_locator)\n\ntests/test_sale.py:88: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"c6b10a77a5d60abb2cbedcddb62d1c30\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f5f035358a0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x5653daa38fba <unknown>\nE       #1 0x5653da4bd6d0 <unknown>\nE       #2 0x5653da50f2aa <unknown>\nE       #3 0x5653da50f541 <unknown>\nE       #4 0x5653da55d6c4 <unknown>\nE       #5 0x5653da534e5d <unknown>\nE       #6 0x5653da55ab54 <unknown>\nE       #7 0x5653da534c03 <unknown>\nE       #8 0x5653da5017a8 <unknown>\nE       #9 0x5653da502421 <unknown>\nE       #10 0x5653da9fdb28 <unknown>\nE       #11 0x5653daa0187f <unknown>\nE       #12 0x5653da9e5c49 <unknown>\nE       #13 0x5653daa02405 <unknown>\nE       #14 0x5653da9cb4ff <unknown>\nE       #15 0x5653daa26258 <unknown>\nE       #16 0x5653daa26432 <unknown>\nE       #17 0x5653daa37fa3 <unknown>\nE       #18 0x7f4b6a89caa4 <unknown>\nE       #19 0x7f4b6a929c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "sale_page",
+    "time" : {
+      "start" : 1761529375333,
+      "stop" : 1761529375511,
+      "duration" : 178
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1761529375333,
+        "stop" : 1761529375511,
+        "duration" : 178
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1761527678629,
+      "stop" : 1761527678696,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761529374083,
+      "stop" : 1761529375333,
+      "duration" : 1250
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1761527678696,
+      "stop" : 1761527678696,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that five links in Men's Deals section lead to the correct pages after click",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5653daa38fba <unknown>\n#1 0x5653da4bd6d0 <unknown>\n#2 0x5653da50f2aa <unknown>\n#3 0x5653da50f541 <unknown>\n#4 0x5653da55d6c4 <unknown>\n#5 0x5653da534e5d <unknown>\n#6 0x5653da55ab54 <unknown>\n#7 0x5653da534c03 <unknown>\n#8 0x5653da5017a8 <unknown>\n#9 0x5653da502421 <unknown>\n#10 0x5653da9fdb28 <unknown>\n#11 0x5653daa0187f <unknown>\n#12 0x5653da9e5c49 <unknown>\n#13 0x5653daa02405 <unknown>\n#14 0x5653da9cb4ff <unknown>\n#15 0x5653daa26258 <unknown>\n#16 0x5653daa26432 <unknown>\n#17 0x5653daa37fa3 <unknown>\n#18 0x7f4b6a89caa4 <unknown>\n#19 0x7f4b6a929c6c <unknown>",
+    "statusTrace" : "self = <test_sale.TestSalePage.TestSideMenuBarMen object at 0x7f5f038569f0>\nsale_page = <pages.sale_page.SalePage object at 0x7f5f0371bc20>\nelement_locator = ('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')\nexpected_title = 'Jackets - Tops - Men'\nexpected_url = 'https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html'\n\n    @allure.title(\"TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - \"\n                  \"Verify 5 links in Men's Deals open the correct pages\")\n    @pytest.mark.parametrize(\n        \"element_locator, expected_title, expected_url\",\n        zip(\n            SideBarLocators.MEN_DEALS_ELEMENTS.values(),\n            expected_titles_m.values(),\n            expected_urls_m.values(),\n        )\n    )\n    def test_tc_10_01_03__05_07_09_11_13(self, sale_page, element_locator, expected_title, expected_url):\n        \"\"\"Check that five links in Men's Deals section lead to the correct pages after click\"\"\"\n>       element_in_men_deals = sale_page.element_is_clickable(element_locator)\n\ntests/test_sale.py:88: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/base_page.py:81: in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"c6b10a77a5d60abb2cbedcddb62d1c30\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f5f035358a0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x5653daa38fba <unknown>\nE       #1 0x5653da4bd6d0 <unknown>\nE       #2 0x5653da50f2aa <unknown>\nE       #3 0x5653da50f541 <unknown>\nE       #4 0x5653da55d6c4 <unknown>\nE       #5 0x5653da534e5d <unknown>\nE       #6 0x5653da55ab54 <unknown>\nE       #7 0x5653da534c03 <unknown>\nE       #8 0x5653da5017a8 <unknown>\nE       #9 0x5653da502421 <unknown>\nE       #10 0x5653da9fdb28 <unknown>\nE       #11 0x5653daa0187f <unknown>\nE       #12 0x5653da9e5c49 <unknown>\nE       #13 0x5653daa02405 <unknown>\nE       #14 0x5653da9cb4ff <unknown>\nE       #15 0x5653daa26258 <unknown>\nE       #16 0x5653daa26432 <unknown>\nE       #17 0x5653daa37fa3 <unknown>\nE       #18 0x7f4b6a89caa4 <unknown>\nE       #19 0x7f4b6a929c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1761529375512,
+        "stop" : 1761529380608,
+        "duration" : 5096
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5653daa38fba <unknown>\n#1 0x5653da4bd6d0 <unknown>\n#2 0x5653da50f2aa <unknown>\n#3 0x5653da50f541 <unknown>\n#4 0x5653da55d6c4 <unknown>\n#5 0x5653da534e5d <unknown>\n#6 0x5653da55ab54 <unknown>\n#7 0x5653da534c03 <unknown>\n#8 0x5653da5017a8 <unknown>\n#9 0x5653da502421 <unknown>\n#10 0x5653da9fdb28 <unknown>\n#11 0x5653daa0187f <unknown>\n#12 0x5653da9e5c49 <unknown>\n#13 0x5653daa02405 <unknown>\n#14 0x5653da9cb4ff <unknown>\n#15 0x5653daa26258 <unknown>\n#16 0x5653daa26432 <unknown>\n#17 0x5653daa37fa3 <unknown>\n#18 0x7f4b6a89caa4 <unknown>\n#19 0x7f4b6a929c6c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 81, in element_is_clickable\n    return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "18f7a84be0bb69d1",
+      "name" : "Screenshot",
+      "source" : "18f7a84be0bb69d1.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "f598fedd7b0734f",
+      "name" : "HTML source",
+      "source" : "f598fedd7b0734f.html",
+      "type" : "text/html",
+      "size" : 1433
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761529380672,
+      "stop" : 1761529380732,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1761530087586,
+      "stop" : 1761530087586,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Side Menu Bar - Men's Deals Section"
+  }, {
+    "name" : "epic",
+    "value" : "Sale Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sale"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSalePage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "3173-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sale"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "element_locator",
+    "value" : "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')"
+  }, {
+    "name" : "expected_title",
+    "value" : "'Jackets - Tops - Men'"
+  }, {
+    "name" : "expected_url",
+    "value" : "'https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "efbf29ef702f0ee5.json",
+  "parameterValues" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')", "'Jackets - Tops - Men'", "'https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html'" ]
+}

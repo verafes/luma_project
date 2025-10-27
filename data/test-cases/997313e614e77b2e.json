@@ -1,0 +1,275 @@
+{
+  "uid" : "997313e614e77b2e",
+  "name" : "TC 04_01_01 Verify Create An Account Page h1 Header",
+  "fullName" : "tests.test_create_an_account.TestCreateAnAccount#test_04_01_01_h1_heading",
+  "historyId" : "9b3a6a9fb86471708b3d4920c794cf69",
+  "time" : {
+    "start" : 1761527697117,
+    "stop" : 1761527697281,
+    "duration" : 164
+  },
+  "description" : " Verify that the Create An Account page heading is present. ",
+  "descriptionHtml" : "<p>Verify that the Create An Account page heading is present.</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: h1 heading is not present\nassert (<selenium.webdriver.remote.webelement.WebElement (session=\"f30457e400d09cd994e0038100067daf\", element=\"f.9983F87916E2F913C6B45E0967CC91DC.d.E13A2D3DD624414472D0D6393F2428A5.e.5\")> and '503' == 'Create New Customer Account'\n  - Create New Customer Account\n  + 503)",
+  "statusTrace" : "self = <test_create_an_account.TestCreateAnAccount object at 0x7f5f040dac60>\ncreate_account_page = <pages.create_an_account_page.CreateAccountPage object at 0x7f5f0386ecc0>\n\n    @allure.title('TC 04_01_01 Verify Create An Account Page h1 Header')\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_04_01_01_h1_heading(self, create_account_page):\n        \"\"\" Verify that the Create An Account page heading is present. \"\"\"\n        h1_heading = create_account_page.check_h1_header()\n>       assert h1_heading and h1_heading.text == create_account_data['h1_heading'], \\\n            \"h1 heading is not present\"\nE       AssertionError: h1 heading is not present\nE       assert (<selenium.webdriver.remote.webelement.WebElement (session=\"f30457e400d09cd994e0038100067daf\", element=\"f.9983F87916E2F913C6B45E0967CC91DC.d.E13A2D3DD624414472D0D6393F2428A5.e.5\")> and '503' == 'Create New Customer Account'\nE         - Create New Customer Account\nE         + 503)\n\ntests/test_create_an_account.py:23: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1761527678629,
+      "stop" : 1761527678696,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "create_account_page",
+    "time" : {
+      "start" : 1761527696441,
+      "stop" : 1761527697117,
+      "duration" : 676
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1761527696441,
+        "stop" : 1761527697117,
+        "duration" : 676
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761527678696,
+      "stop" : 1761527696441,
+      "duration" : 17745
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1761527678696,
+      "stop" : 1761527678696,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : " Verify that the Create An Account page heading is present. ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: h1 heading is not present\nassert (<selenium.webdriver.remote.webelement.WebElement (session=\"f30457e400d09cd994e0038100067daf\", element=\"f.9983F87916E2F913C6B45E0967CC91DC.d.E13A2D3DD624414472D0D6393F2428A5.e.5\")> and '503' == 'Create New Customer Account'\n  - Create New Customer Account\n  + 503)",
+    "statusTrace" : "self = <test_create_an_account.TestCreateAnAccount object at 0x7f5f040dac60>\ncreate_account_page = <pages.create_an_account_page.CreateAccountPage object at 0x7f5f0386ecc0>\n\n    @allure.title('TC 04_01_01 Verify Create An Account Page h1 Header')\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_04_01_01_h1_heading(self, create_account_page):\n        \"\"\" Verify that the Create An Account page heading is present. \"\"\"\n        h1_heading = create_account_page.check_h1_header()\n>       assert h1_heading and h1_heading.text == create_account_data['h1_heading'], \\\n            \"h1 heading is not present\"\nE       AssertionError: h1 heading is not present\nE       assert (<selenium.webdriver.remote.webelement.WebElement (session=\"f30457e400d09cd994e0038100067daf\", element=\"f.9983F87916E2F913C6B45E0967CC91DC.d.E13A2D3DD624414472D0D6393F2428A5.e.5\")> and '503' == 'Create New Customer Account'\nE         - Create New Customer Account\nE         + 503)\n\ntests/test_create_an_account.py:23: AssertionError",
+    "steps" : [ {
+      "name" : "Check Create An Account h1 header is visible",
+      "time" : {
+        "start" : 1761527697118,
+        "stop" : 1761527697250,
+        "duration" : 132
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1761527697118,
+          "stop" : 1761527697250,
+          "duration" : 132
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1761527697118,
+            "stop" : 1761527697193,
+            "duration" : 75
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'h1')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1761527697194,
+            "stop" : 1761527697235,
+            "duration" : 41
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"f30457e400d09cd994e0038100067daf\", element=\"f.9983F87916E2F913C6B45E0967CC91DC.d.E13A2D3DD624414472D0D6393F2428A5.e.5\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'h1')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "ab9d959cb105b637",
+      "name" : "Screenshot",
+      "source" : "ab9d959cb105b637.png",
+      "type" : "image/png",
+      "size" : 23875
+    }, {
+      "uid" : "92b1bbe0b5b64f7e",
+      "name" : "HTML source",
+      "source" : "92b1bbe0b5b64f7e.html",
+      "type" : "text/html",
+      "size" : 1433
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761527697398,
+      "stop" : 1761527697474,
+      "duration" : 76
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1761530087586,
+      "stop" : 1761530087586,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Create An Account"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_create_an_account"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCreateAnAccount"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "3173-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_create_an_account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "997313e614e77b2e.json",
+  "parameterValues" : [ ]
+}
